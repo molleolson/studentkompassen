@@ -16,19 +16,14 @@ body {
     font-size: 55px;
     font-weight: 200;
 }
-
-
-.header div span{
-    color: #fff !important;
-}
-.nav ul {
+.menu ul {
     list-style: none;
     background-color: #444;
     text-align: center;
     padding: 0;
     margin: 0;
 }
-.nav li {
+.menu li {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
     line-height: 40px;
@@ -36,25 +31,25 @@ body {
     border-bottom: 1px solid #888;
 }
 
-.nav a {
+.menu a {
     text-decoration: none;
     color: #fff;
     display: block;
     transition: .3s background-color;
 }
 
-.nav a:hover {
+.menu a:hover {
     background-color: #005f5f;
 }
 
-.nav a.active {
+.menu a.active {
     background-color: #fff;
     color: #444;
     cursor: default;
 }
 
 @media screen and (min-width: 600px) {
-    .nav li {
+    .menu li {
         width: 120px;
         border-bottom: none;
         height: 50px;
@@ -63,67 +58,75 @@ body {
     }
 
     /* Option 1 - Display Inline */
-    .nav li {
+    .menu li {
         display: inline-block;
         margin-right: -4px;
     }
 
-#middlebox {
-    margin:auto;
-    width:400px;
-    height: 200px;
+    .header div span {
+        color: #fff !important;
+    }
 
-    border: 10px solid goldenrod;
-    border-radius: 10px;
-    text-align: center;
+    #middlebox {
+        margin: auto;
+        width: 400px;
+        height: 200px;
 
-}
+        border: 10px solid goldenrod;
+        border-radius: 10px;
+        text-align: center;
 
-.topinbox div{
-    width:100%;
-    height:20px;
-    margin:auto;
-}
-.boxwithin div{
+    }
 
-}
-#firstRightNow{
-     width:24.5555%;
-     height:180px;
-     float:left;
-     border: 1px solid goldenrod;
-     border-radius: 10px;
- }
-#secondRightNow{
-    width:24.5555%;
-    height:180px;
-    float:left;
-    border: 1px solid goldenrod;
-    border-radius: 10px;
-}
-#thirdRightNow{
-    width:24.5555%;
-    height:180px;
-    float:left;
-    border: 1px solid goldenrod;
-    border-radius: 10px;
-}
-#fourthRightNow{
-    width:24.5555%;
-    height:180px;
-    float:left;
-    border: 1px solid goldenrod;
-    border-radius: 10px;
-}
+    .topinbox div {
+        width: 100%;
+        height: 20px;
+        margin: auto;
+    }
 
-.order {
-    text-align: center;
-}
+    .boxwithin div {
 
+    }
 
+    #firstRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
 
-.auto-resize {
-    position: absolute;
-    max-width:100%;
-    max-height:100%;
+    #secondRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #thirdRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #fourthRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    .order {
+        text-align: center;
+    }
+
+    .auto-resize {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
