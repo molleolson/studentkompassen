@@ -8,7 +8,7 @@ body {
 .header div{
     position: relative;
     text-align: center;
-    margin: 10% 0 0 0;
+    margin: 0 0 0 0;
     color: #000;
     font-family: 'Exo', sans-serif;
     font-size: 55px;
@@ -19,6 +19,18 @@ body {
     color: #fff !important;
 }
 
+#middlebox {
+    margin:auto;
+    width:400px;
+    height: 200px;
+    padding:10px;
+    border: 10px solid goldenrod;
+    border-radius: 10px;
+    text-align: center;
+
+
+
+}
 
 .order {
     text-align: center;
