@@ -121,6 +121,23 @@ body {
         text-align: center;
     }
 
+    .button{
+        border-radius: 10px;
+        border-spacing: 3px;
+        background-color: goldenrod;
+        color: #2e4660;
+        margin: 2px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #logOutButton{
+        float: right;
+        max-width: 200px;
+        top: 30%;
+        margin-right: 3%;
+    }
+
     .auto-resize {
         position: absolute;
         max-width: 100%;
