@@ -33,15 +33,50 @@ body {
 
 #middlebox {
     margin:auto;
-    width:410px;
+    width:400px;
     height: 200px;
-    padding:10px;
+
     border: 10px solid goldenrod;
     border-radius: 10px;
     text-align: center;
 
+}
 
+.topinbox div{
+    width:100%;
+    height:20px;
+    margin:auto;
+}
+.boxwithin div{
 
+}
+#firstRightNow{
+     width:24.5555%;
+     height:180px;
+     float:left;
+     border: 1px solid goldenrod;
+     border-radius: 10px;
+ }
+#secondRightNow{
+    width:24.5555%;
+    height:180px;
+    float:left;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+}
+#thirdRightNow{
+    width:24.5555%;
+    height:180px;
+    float:left;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+}
+#fourthRightNow{
+    width:24.5555%;
+    height:180px;
+    float:left;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
 }
 
 .order {
