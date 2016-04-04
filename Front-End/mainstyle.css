@@ -1,5 +1,6 @@
 body {
     background-color: #F0C172;
+
 }
 
 
@@ -74,6 +75,7 @@ body {
         border-radius: 10px;
         text-align: center;
 
+
     }
 
     .topinbox div {
@@ -87,6 +89,7 @@ body {
     }
 
     #firstRightNow {
+
         width: 24.5555%;
         height: 180px;
         float: left;
