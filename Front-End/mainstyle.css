@@ -1,7 +1,5 @@
 body {
     background-color: #F0C172;
-    margin: 0;
-    padding: 0;
 }
 
 .header div{
@@ -59,6 +57,7 @@ body {
         display: inline-block;
         margin-right: -4px;
     }
+}
 
     .header div span {
         color: #fff !important;
@@ -73,6 +72,7 @@ body {
         border-radius: 10px;
         text-align: center;
 
+
     }
 
     .topinbox div {
@@ -86,6 +86,7 @@ body {
     }
 
     #firstRightNow {
+        overflow-y:scroll;
         width: 24.5555%;
         height: 180px;
         float: left;
@@ -94,6 +95,7 @@ body {
     }
 
     #secondRightNow {
+        overflow-y:scroll;
         width: 24.5555%;
         height: 180px;
         float: left;
@@ -102,6 +104,7 @@ body {
     }
 
     #thirdRightNow {
+        overflow-y:scroll;
         width: 24.5555%;
         height: 180px;
         float: left;
@@ -110,6 +113,7 @@ body {
     }
 
     #fourthRightNow {
+        overflow-y:scroll;
         width: 24.5555%;
         height: 180px;
         float: left;
@@ -143,4 +147,22 @@ body {
         max-width: 100%;
         max-height: 100%;
     }
+
+::-webkit-scrollbar {
+    width: 5px;
 }
+::-webkit-scrollbar-track {
+    background-color: #F0C172;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+    background-color: goldenrod;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
