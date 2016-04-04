@@ -1,5 +1,6 @@
 def test():
     x = 2
     y=4
+    z =2
     print x
 
