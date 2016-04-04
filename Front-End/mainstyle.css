@@ -1,5 +1,7 @@
 body {
     background-color: #F0C172;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -14,44 +16,117 @@ body {
     font-size: 55px;
     font-weight: 200;
 }
-.container{
-    background-color: white;
-    border-radius: 15px;
-    opacity:0.8;
-    width: 100%;
-    height:100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    /*border: 10px solid blue; */
-
-}
-
-.header div span{
-    color: #fff !important;
-}
-
-#middlebox {
-    margin:auto;
-    width:410px;
-    height: 200px;
-    padding:10px;
-    border: 10px solid goldenrod;
-    border-radius: 10px;
+.menu ul {
+    list-style: none;
+    background-color: #444;
     text-align: center;
-
-
-
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
 }
 
-.order {
-    text-align: center;
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .3s background-color;
 }
 
+.menu a:hover {
+    background-color: #005f5f;
+}
 
+.menu a.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default;
+}
 
-.auto-resize {
-    position: absolute;
-    max-width:100%;
-    max-height:100%;
+@media screen and (min-width: 600px) {
+    .menu li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+    /* Option 1 - Display Inline */
+    .menu li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+
+    .header div span {
+        color: #fff !important;
+    }
+
+    #middlebox {
+        margin: auto;
+        width: 400px;
+        height: 200px;
+
+        border: 10px solid goldenrod;
+        border-radius: 10px;
+        text-align: center;
+
+    }
+
+    .topinbox div {
+        width: 100%;
+        height: 20px;
+        margin: auto;
+    }
+
+    .boxwithin div {
+
+    }
+
+    #firstRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #secondRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #thirdRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #fourthRightNow {
+        width: 24.5555%;
+        height: 180px;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    .order {
+        text-align: center;
+    }
+
+    .auto-resize {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
