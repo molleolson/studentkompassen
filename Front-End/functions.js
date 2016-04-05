@@ -17,9 +17,32 @@ $(document).ready(function(){
     $('#justnuklick').on('click',function(){
         if($('#middleboxJustnu').css('display')!='none'){
 
-            $('#middleboxJustnu').hide();
+            /*$('#middleboxJustnu').hide();*/
         }else {
             $('#middleboxJustnu').show();
+            $('#middleboxFrukost').hide();
+            $('#middleboxLunch').hide();
+
+        }
+    });
+});
+$(document).ready(function(){
+    $('#frukostklick').on('click',function(){
+        if($('#middleboxFrukost').css('display')=='none')
+            $('#middleboxJustnu').hide();
+            $('#middleboxFrukost').show();
+        $('#middleboxLunch').hide();
+
+
+    });
+});
+$(document).ready(function(){
+    $('#lunchklick').on('click',function(){
+        if($('#middleboxLunch').css('display')=='none'){
+
+            $('#middleboxJustnu').hide();
+            $('#middleboxFrukost').hide();
+            $('#middleboxLunch').show();
 
         }
     });

@@ -124,6 +124,51 @@ body {
         border: 1px solid goldenrod;
         border-radius: 10px;
     }
+    #middleboxFrukost{
+        display: none;
+        margin: auto;
+        width: 50%;
+        height: 200px;
+
+        border: 10px solid goldenrod;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #firstFrukost {
+        overflow-y:scroll;
+        width: 100%;
+        height: 80%;
+
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+#middleboxLunch{
+    display: none;
+    margin: auto;
+    width: 50%;
+    height: 200px;
+
+    border: 10px solid goldenrod;
+    border-radius: 10px;
+    text-align: center;
+}
+#firstLunch {
+    overflow-y:scroll;
+    width: 49%;
+    height: 80%;
+    float:left;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+}
+#secondLunch{
+    overflow-y:scroll;
+    width: 49%;
+    height: 80%;
+    floar:left;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+}
 
     .order {
         text-align: center;
