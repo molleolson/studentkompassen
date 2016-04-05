@@ -50,7 +50,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend_studentkompassen.urls'
+ROOT_URLCONF = 'back-end.urls'
 
 TEMPLATES = [
     {
