@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'back-end.urls'
+ROOT_URLCONF = 'studentkompassen.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'back-end.wsgi.application'
+WSGI_APPLICATION = 'studentkompassen.wsgi.application'
 
 
 # Database
