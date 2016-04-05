@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.conf.urls import url
+from django.contrib import admin
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,23 +77,24 @@ WSGI_APPLICATION = 'back-end.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
 DATABASES = {
     'default': {
-        'NAME': 'user_data',
-        'ENGINE': 'mysql.connector.django',
-        'USER': 'mysql_user',
-        'PASSWORD': 'password',
-        'OPTIONS': {
-          'autocommit': True,
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+#DATABASES = {
+#    'default': {
+#        'NAME': 'user_data',
+#        'ENGINE': 'django.db.backends.mysql',
+        #'mysql.connector.django',
+#        'USER': 'mysql_user',
+#        'PASSWORD': 'password',
+#        'OPTIONS': {
+#          'autocommit': True,
+#        },
+#    }
+#}
 
 
 # Password validation
