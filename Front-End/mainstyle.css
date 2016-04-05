@@ -1,5 +1,7 @@
 body {
     background-color: #F0C172;
+    margin: 0;
+    padding: 0;
 }
 
 .header div{
@@ -11,12 +13,14 @@ body {
     font-size: 55px;
     font-weight: 200;
 }
+/*Menubar*/
 .nav ul {
     list-style: none;
     background-color: #444;
     text-align: center;
     padding: 0;
     margin: 0;
+    height: 30px;;
 }
 .nav li {
     font-family: 'Oswald', sans-serif;
@@ -58,6 +62,7 @@ body {
         margin-right: -4px;
     }
 }
+/*Menubar End*/
 
     .header div span {
         color: #fff !important;
@@ -71,7 +76,6 @@ body {
         border: 10px solid goldenrod;
         border-radius: 10px;
         text-align: center;
-
 
     }
 
