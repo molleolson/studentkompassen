@@ -2,32 +2,167 @@ body {
     background-color: #F0C172;
 }
 
-
-
-
 .header div{
     position: relative;
     text-align: center;
-    margin: 10% 0 0 0;
+    margin: 0 0 0 0;
     color: #000;
     font-family: 'Exo', sans-serif;
     font-size: 55px;
     font-weight: 200;
 }
-
-.header div span{
-    color: #fff !important;
-}
-
-
-.order {
+.nav ul {
+    list-style: none;
+    background-color: #444;
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.nav li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
 }
 
-
-
-.auto-resize {
-    position: absolute;
-    max-width:100%;
-    max-height:100%;
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .3s background-color;
 }
+
+.nav a:hover {
+    background-color: #005f5f;
+}
+
+.nav a.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+    /* Option 1 - Display Inline */
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+}
+
+    .header div span {
+        color: #fff !important;
+    }
+
+    #middlebox {
+        margin: auto;
+        width: 50%;
+        height: 200px;
+
+        border: 10px solid goldenrod;
+        border-radius: 10px;
+        text-align: center;
+
+
+    }
+
+    .topinbox div {
+        width: 100%;
+        height: 20%;
+        margin: auto;
+    }
+
+    .boxwithin div {
+
+    }
+
+    #firstRightNow {
+        overflow-y:scroll;
+        width: 24.5555%;
+        height: 79%;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #secondRightNow {
+        overflow-y:scroll;
+        width: 24.5555%;
+        height: 79%;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #thirdRightNow {
+        overflow-y:scroll;
+        width: 24.5555%;
+        height: 79%;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    #fourthRightNow {
+        overflow-y:scroll;
+        width: 24.5555%;
+        height: 79%;
+        float: left;
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+    }
+
+    .order {
+        text-align: center;
+    }
+
+    .button{
+        border-radius: 10px;
+        border-spacing: 3px;
+        background-color: goldenrod;
+        color: #2e4660;
+        margin: 2px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #logOutButton{
+        float: right;
+        max-width: 200px;
+        top: 30%;
+        margin-right: 3%;
+    }
+
+    .auto-resize {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #F0C172;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+    background-color: goldenrod;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
