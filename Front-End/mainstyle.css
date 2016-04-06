@@ -75,7 +75,7 @@ body {
         width: 98%;
         height: 600px;
         float: left;
-        border: 10px solid red;
+        border: 10px transparent;
         border-radius: 10px;
 
     }
@@ -138,9 +138,12 @@ body {
     #middleboxFrukost{
         display: none;
         margin: auto;
+        float: left;
         border: 10px solid goldenrod;
         border-radius: 10px;
         text-align: center;
+
+
     }
     #firstFrukost {
         overflow-y:scroll;
@@ -154,7 +157,7 @@ body {
 #middleboxLunch{
     display: none;
     margin: auto;
-
+    float: left;
 
     border: 10px solid goldenrod;
     border-radius: 10px;
