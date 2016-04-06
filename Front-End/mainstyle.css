@@ -63,19 +63,30 @@ body {
     }
 }
 /*Menubar End*/
-
+    .innermainbox{
+        width: 80%;
+        height: 50%;
+    }
     .header div span {
         color: #fff !important;
+    }
+    #main-box {
+        maring: auto;
+        width: 98%;
+        height: 600px;
+        float: left;
+        border: 10px solid red;
+        border-radius: 10px;
+
     }
 
     #middleboxJustnu {
         margin: auto;
-        width: 50%;
-        height: 200px;
-
+        float: left;
         border: 10px solid goldenrod;
         border-radius: 10px;
         text-align: center;
+
 
     }
 
@@ -127,9 +138,6 @@ body {
     #middleboxFrukost{
         display: none;
         margin: auto;
-        width: 50%;
-        height: 200px;
-
         border: 10px solid goldenrod;
         border-radius: 10px;
         text-align: center;
@@ -146,8 +154,7 @@ body {
 #middleboxLunch{
     display: none;
     margin: auto;
-    width: 50%;
-    height: 200px;
+
 
     border: 10px solid goldenrod;
     border-radius: 10px;
@@ -225,8 +232,8 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     padding: 15px;
-    width: 220px;
-    float: right;
+    width: 15%;
+    float: left;
 }
 header {
     /*overflow: clear;*/
