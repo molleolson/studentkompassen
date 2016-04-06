@@ -14,24 +14,30 @@
 
 <div class = "button" id = "logOutButton">Log Out</div>
 <body class = "kalendarpage">
-<div id ="loader-holder">
 <div class="header">
     <div>Studentkompassen!</div>
 </div>
-
-<div class="nav">
-    <nav>
-        <ul>
-            <li class ="justnu" id="justnuklick"><a href="#">Just Nu!</a></li>
-            <li class ="frukost" id="frukostklick"><a href="#">Frukost</a></li>
-            <li class ="lunchen" id="lunchklick"><a href="#">Lunch</a></li>
-            <li class ="fika"><a href="#">Pub</a></li>
-            <li class ="pub"><a href="#">Klubb/Släpp</a></li>
-            <li class ="klubb/slapp"><a href="#">Fika</a></li>
-            <li class ="ovrigt"><a href="#">Övrigt</a></li>
-        </ul>
-    </nav>
+<div id="menu-holder">
+    <div class="nav">
+        <nav>
+            <ul>
+                <li class ="justnu" id="justnuklick"><a href="#">Just Nu!</a></li>
+                <li class ="frukost" id="frukostklick"><a href="#">Frukost</a></li>
+                <li class ="lunchen" id="lunchklick"><a href="#">Lunch</a></li>
+                <li class ="fika"><a href="#">Pub</a></li>
+                <li class ="pub"><a href="#">Klubb/Släpp</a></li>
+                <li class ="klubb/slapp"><a href="#">Fika</a></li>
+                <li class ="ovrigt"><a href="#">Övrigt</a></li>
+            </ul>
+        </nav>
+    </div>
 </div>
+
+<div id ="loader-holder">
+<div id ="days-holder">
+    Dagens Datum
+</div>
+
 <div id="middleboxJustnu">
     <div class="topinbox">
         Just nu!
@@ -140,9 +146,10 @@
 
 </div>
 
-</div>
-<!-- HÄR ÄR KALENDERN!! -->
-<style>
+
+<!-- HÄR ÄR KALENDERN!!-->
+<!--
+    <style>
     body {
         line-height: 1;
         margin: 50px;
@@ -200,12 +207,11 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, .5) inset;
     }
 </style>
+-->
 
-</head>
 
+<div id = kalendar-holder>
 
-<div>
-    <header>
         <button>«</button>
         <h2>July 2013</h2>
         <button>»</button>
@@ -267,11 +273,9 @@
         </tr>
     </table>
 </div>
-<!-- HÄR SLUTAR KALENDERN! -->
 
-<div id="2" style="display:none;">
-    My Dynamic Content
+
 </div>
-<button id="btnClick">Click me!</button> -->
+
 </body>
 </html>
