@@ -185,19 +185,25 @@ body {
 }
 
 .button{
-        border-radius: 10px;
-        background-color: goldenrod;
-        color: #2e4660;
-        margin: 2px;
-        cursor: pointer;
-        text-align: center;
+    border-radius: 10px;
+    border-spacing: 3px;
+    background-color: goldenrod;
+    color: #2e4660;
+    margin: 2px;
+    cursor: pointer;
+    text-align: center;
 }
 
 #logOutButton{
         float: right;
-        max-width: 200px;
         top: 10%;
         margin-right: 3%;
+}
+
+#myProfileButton{
+    float: right;
+    top: 10%;
+    margin-right: 3%;
 }
 
 .auto-resize {
