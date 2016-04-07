@@ -48,59 +48,6 @@ body {
 
 }
 
-/*Menubar*/
-/*/*.nav ul {
-    list-style: none;
-    background-color: #444;
-    text-align: center;
-    overflow: hidden;
-    margin: 0;
-    height: 100px;
-
-    }
-.nav li {
-    font-family: 'Oswald', sans-serif;
-    font-size: 10px;
-    line-height: 40px;
-    display: block;
-    border-bottom: 1px solid #888;
-}
-
-.nav a {
-    text-decoration: none;
-    color: white;
-    transition: .9s background-color;
-    padding: 50px 40px ; /*ändrar höjden på navbar, behövs för att markeringen */
-/*
-}
-
-.nav a:hover {
-    background-color: red;/*#005f5f;
-}*/
-/*
-.nav a.active {
-    background-color: #fff;
-    color: #444;
-    cursor: default;
-}*/
-/*
-@media screen and (min-width: 600px) {
-    .nav li {
-        width: 120px;
-        border-bottom: none;
-        height: 50px;
-        line-height: 50px;
-        font-size: 0.5em;
-    }
-
-    /* Option 1 - Display Inline */
-/*
-.nav li {
-        display: inline-block;
-        margin-right: -4px;
-    }*/
-/*}
-/*Menubar End*/
     .innermainbox{
         width: 80%;
         height: 96%;
@@ -130,6 +77,21 @@ body {
 
 
     }
+#calendertop{
+
+}
+#calendertopdaybox{
+ float:left;
+    border: 10px solid goldenrod;
+    width: 78%;
+    height: 50%;
+}
+#calendebuttonbox{
+    float: right;
+    border: 10px solid goldenrod;
+    width: 10%;
+}
+
 
     .topinbox div {
         width: 100%;
