@@ -15,41 +15,77 @@ body {
     font-size: 55px;
     font-weight: 200;
 }
-/*Menubar*/
+
+
 .nav ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background: gray;
+
+
+}
+.nav li {
+    font-family: 'Oswald', sans-serif;
+   display: inline-block;
+
+}
+.nav li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+    text-decoration: none;
+
+}
+.nav li a:hover {
+    background-color: yellow;
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+.nav a {
+    padding: 20px 50px;
+    transition: .9s background-color;
+
+}
+
+/*Menubar*/
+/*/*.nav ul {
     list-style: none;
     background-color: #444;
     text-align: center;
-    padding: 15px;
+    overflow: hidden;
     margin: 0;
-    height: 100px;;
-}
+    height: 100px;
+
+    }
 .nav li {
     font-family: 'Oswald', sans-serif;
     font-size: 10px;
     line-height: 40px;
-    height: 40px;
+    display: block;
     border-bottom: 1px solid #888;
 }
 
 .nav a {
     text-decoration: none;
-    color: #fff;
-    display: block;
-    transition: .3s background-color;
+    color: white;
+    transition: .9s background-color;
+    padding: 50px 40px ; /*ändrar höjden på navbar, behövs för att markeringen */
+/*
 }
 
 .nav a:hover {
-    background-color: red;/*#005f5f;*/
-
-}
-
+    background-color: red;/*#005f5f;
+}*/
+/*
 .nav a.active {
     background-color: #fff;
     color: #444;
     cursor: default;
-}
-
+}*/
+/*
 @media screen and (min-width: 600px) {
     .nav li {
         width: 120px;
@@ -60,11 +96,12 @@ body {
     }
 
     /* Option 1 - Display Inline */
-    .nav li {
+/*
+.nav li {
         display: inline-block;
         margin-right: -4px;
-    }
-}
+    }*/
+/*}
 /*Menubar End*/
     .innermainbox{
         width: 80%;
