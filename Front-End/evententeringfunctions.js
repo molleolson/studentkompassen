@@ -3,21 +3,22 @@
  *
  * http://bootsnipp.com/snippets/featured/input-file-popover-preview-image
  */
-
-$(document).on('click', '#close-preview', function(){
-    $('.image-preview').popover('hide');
-    // Hover befor close the preview
-    $('.image-preview').hover(
-        function () {
-            $('.image-preview').popover('show');
-        },
-        function () {
-            $('.image-preview').popover('hide');
-        }
-    );
+$(document).ready(function() {
+    $(document).on('click', '#close-preview', function () {
+        $('.image-preview').popover('hide');
+        // Hover before close the preview
+        $('.image-preview').hover(
+            function () {
+                $('.image-preview').popover('show');
+            },
+            function () {
+                $('.image-preview').popover('hide');
+            }
+        );
+    });
 });
 
-$(function() {
+$(document).ready(function() {
     // Create the close button
     var closebtn = $('<button/>', {
         type:"button",
