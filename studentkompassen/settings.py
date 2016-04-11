@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'studentkompassen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'studentkompassen',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
