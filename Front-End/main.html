@@ -2,158 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Studentkompassen</title>
-    <!--<link href="login.css" type="text/css" rel="stylesheet">-->
+
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link rel="stylesheet" href="mainstyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="application/javascript" src="functions.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet" />
+    <link href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <link href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" rel="stylesheet" />
 
-</head>
-
+  </head>
+<body>
 <div class = "button" id = "logOutButton">Log Out</div>
 <div class = "button" id = "myProfileButton">My Profile</div>
 
-<body>
-<div id = "container">
 
-    <!-- HEADER -->
-    <div class="header">
-        <div id = "logo">Studentkompassen!</div>
-
-        <div id = "top_info"></div>
-        <div class="nav">
-        <nav>
-            <ul>
-                <li class ="justnu" id="justnuklick"><a href="#">Just Nu!</a></li>
-                <li class ="frukost" id="frukostklick"><a href="#">Frukost</a></li>
-                <li class ="lunchen" id="lunchklick"><a href="#">Lunch</a></li>
-                <li class ="fika"><a href="#">Pub</a></li>
-                <li class ="pub"><a href="#">Klubb/Släpp</a></li>
-                <li class ="klubb/slapp"><a href="#">Fika</a></li>
-                <li class ="ovrigt"><a href="#">Övrigt</a></li>
-            </ul>
-        </nav>
+<div class = "container">
+    <div class="container">
+        <div id= "BannerRow" class="row">
+            <h1>STUDENTKOMPASSEN
+            </h1>
+        </div>
     </div>
-    </div>
+    <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
+    <div class="container">
+        <div class="navbar navbar-inverse opaque-navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
+                        <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
+                    </button>
 
-    <!--CONTENT AREA-->
-    <div id="main-box">
-            <div id="middleboxJustnu" class = "innermainbox">
-                <div class="topinbox">
-                    Just nu!
                 </div>
-                <div class="boxwithin"id="firstRightNow">
-                    1
-                    <p>
-                        Just nu!
-                        Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu!
-                        Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu!
-                        Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu!
-                        Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu!
-                        Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu! Just nu!</p>
+                <div class="collapse navbar-collapse" id="navMain">
+                    <ul class="nav navbar-nav ">
+                        <li><a href="#">Just Nu!</a></li>
+                        <li><a href="#">Frukost</a></li>
+                        <li><a href="#">Lunch</a></li>
+                        <li><a href="#">Fika</a></li>
+                        <li><a href="#">Pub</a></li>
+                        <li><a href="#">Klubb</a></li>
+                        <li><a href="#">Övrigt</a></li>
+                    </ul>
                 </div>
-                <div class="boxwithin"id="secondRightNow">
-                    2
-                </div>
-                <div class="boxwithin"id="thirdRightNow">
-                    3
-                </div>
-                <div class="boxwithin"id="fourthRightNow">
-                    4
-                </div>
+            </div>
+        </div>
 
+
+    <div id = "maingrid" class="container">
+
+        <div class = "row col-md-10">
+            <div class="row">
+                <div class="small-6 medium-2 columns add-top">
+                    <div class="overview">
+                        <!--  <div><span class="icon-full"></span> <strong>Fullbokat</strong> </div>-->
+                        <div><span class="icon-booked"></span> <strong>Bokat pass</strong> </div>
+                    </div>
+                </div>
+                <div class="medium-2 columns">
+                    <div class="week">
+                        <a class="previous" href="" style="display: none;">
+                            <i class="fa fa-chevron-left"></i>
+                        </a>
+                        <span>v.14</span>
+
+                        <div style="display:none">
+                            <input type="radio" name="week" data-year="2016" data-week="14" value="14" checked="">
+                            <input type="radio" name="week" data-year="2016" data-week="15" value="15">
+                            <input type="radio" name="week" data-year="2016" data-week="16" value="16">
+                        </div>
+                        <a class="next" href="">
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                        <p class="date">
+                            <strong>Idag</strong> fredag 8 april
+                        </p>
+                    </div>
+                </div>
+                <div class="medium-5 columns add-top hide-for-small-only">
+                    <div class="sort">
+                        <div class="grid-view">
+                            <a href="" data-view="grid">
+                                <i class="fa fa-th"></i>
+                            </a>
+                        </div>
+                        <div class="list-view">
+                            <a href="" data-view="list" class="active">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             </div>
-            <div id="middleboxFrukost" class = "innermainbox">
-                <div class="topinbox">
-                    Frukost
-                </div>
-                <div class="boxwithin"id="firstFrukost">
-                    <p>
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!
-                        Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!Frukost!</p>
-                </div>
 
-            </div>
+                <table class="table table-striped">
+                    <tr><td class ="col-md-1">Time</td><td class="col-md-2">Nation</td><td class="col-md-4">Event</td></tr>
+                    <tr><td class ="col-md-1">Time</td><td class="col-md-2">Nation</td><td class="col-md-4">Event</td></tr>
+                    <tr><td class ="col-md-1">Time</td><td class="col-md-2">Nation</td><td class="col-md-4">Event</td></tr>
+                    <tr><td class ="col-md-1">Time</td><td class="col-md-2">Nation</td><td class="col-md-4">Event</td></tr>
+                    <tr><td class ="col-md-1">Time</td><td class="col-md-2">Nation</td><td class="col-md-4">Event</td></tr>
+                </table>
 
+        </div>
 
-            <div id="middleboxLunch" class = "innermainbox">
-                <div class="topinbox">
-                    Lunch
-                </div>
-                <div class="boxwithin"id="firstLunch">
-                    <p>
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-                        LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH! LUNCHlunchLUNCH!
-
-                    </p>
-                </div>
-                <div class="boxwithin"id="secondLunch">
-                    <p>
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch V1eg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                        Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch Veg-Lunch
-                    </p>
-                </div>
-
-
-            </div>
-            <!-- HÄR ÄR KALENDERN!! -->
-
-            <div class="calender">
+        <div class = "row col-md-offset-2">
+            Ruta till merahöger 1
+            <div class = "test">
                 <header>
-                    <button>«</button>
-                    <h2>July 2013</h2>
-                    <button>»</button>
+                    <button class=" glyphicon glyphicon-chevron-left"></button>
+                    <h4>July 2013</h4>
+                    <button class = "glyphicon glyphicon-chevron-right"></button>
                 </header>
                 <table>
                     <tr>
@@ -211,9 +176,19 @@
                         <td></td>
                     </tr>
                 </table>
+
             </div>
-            <!-- HÄR SLUTAR KALENDERN! -->
+
+
         </div>
+
+    </div>
+
+        <!-- HÄR ÄR KALENDERN!! -->
+
+
+        <!-- HÄR SLUTAR KALENDERN! -->
+    </div>
 
     <!--FOOTER-->
     <div id="footer">
@@ -230,10 +205,13 @@
 
 
 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 
-
-
-
+</script>
+<script class="cssdesk" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+<script class="cssdesk" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script class="cssdesk" src="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
 
 </body>
 </html>
