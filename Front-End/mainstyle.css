@@ -1,21 +1,4 @@
-section
-{
-    background:yellow;
-}
-.banner
-{
-    background:red;
-    min-height:200px;
-}
-.banner .row
-{
-    text-align:center;
-    margin-top:50px;
-}
-.banner h1
-{
-    color:white;
-}
+
 
 /***********************************************************************
 *  Banner SECTION
@@ -60,19 +43,7 @@ ul.dropdown-menu {
 /***********************************************************************
 *  Container SECTION
 ***********************************************************************/
- .row{
 
- }
-#maingrid{
-}
-.col-md-10{
-    background-color: lightblue;
-    height: auto;
-    border-radius: 10px;
-}
-.col-md-2{
-    background-color: green;
-}
 
 /***********************************************************************
 *  Calendar SECTION
@@ -82,9 +53,7 @@ ul.dropdown-menu {
     margin: 0 auto;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
-.container{
-    margin-top:20px;
-}
+
 .image-preview-input {
     position: relative;
     overflow: hidden;
