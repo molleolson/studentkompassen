@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'studentkompassen',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'llconsulting',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
