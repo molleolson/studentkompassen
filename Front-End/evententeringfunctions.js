@@ -35,7 +35,7 @@ $(document).ready(function() {
         content: "There's no image",
         placement:'bottom'
     });
-    // Clear event
+    // Clear start
     $('.image-preview-clear').click(function(){
         $('.image-preview').attr("data-content","").popover('hide');
         $('.image-preview-filename').val("");
