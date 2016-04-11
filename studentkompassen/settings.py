@@ -77,22 +77,14 @@ WSGI_APPLICATION = 'studentkompassen.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
-#DATABASES = {
-#    'default': {
-#        'NAME': 'user_data',
-#        'ENGINE': 'django.db.backends.mysql',
-        #'mysql.connector.django',
-#        'USER': 'mysql_user',
-#        'PASSWORD': 'password',
-#        'OPTIONS': {
-#          'autocommit': True,
-#        },
-#    }
-#}
 
 
 # Password validation
