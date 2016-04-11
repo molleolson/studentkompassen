@@ -64,11 +64,11 @@ ul.dropdown-menu {
 
  }
 #maingrid{
-    height: 600px;
 }
 .col-md-10{
     background-color: lightblue;
-    height: 600px;
+    height: auto;
+    border-radius: 10px;
 }
 .col-md-2{
     background-color: green;
