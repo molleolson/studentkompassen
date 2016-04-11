@@ -44,6 +44,15 @@ ul.dropdown-menu {
 *  Container SECTION
 ***********************************************************************/
 
+#rightNow{
+    background-color: red;
+}
+#breakfast{
+    background-color: yellow;
+}
+#lunch{
+    background-color:blue;
+}
 
 /***********************************************************************
 *  Calendar SECTION

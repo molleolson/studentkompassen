@@ -2,112 +2,97 @@
  * Created by Sofie on 2016-04-05.
  */
 
-
 $(document).ready(function(){
-    $('#justnuklick').on('click',function(){
-        if($('#middleboxJustnu').css('display')!='none'){
-
-            /*$('#middleboxJustnu').hide();*/
-        }else {
-            $('#middleboxJustnu').show();
-            $('#middleboxFrukost').hide();
-            $('#middleboxLunch').hide();
-            $('#middleboxFika').hide();
-            $('#middleboxElse').hide();
-            $('#middleboxKlubb').hide();
-            $('#middleboxPub').hide();
-
-        }
-    });
-});
-$(document).ready(function(){
-    $('#frukostklick').on('click',function(){
-        if($('#middleboxFrukost').css('display')=='none')
-            $('#middleboxJustnu').hide();
-            $('#middleboxFrukost').show();
-            $('#middleboxLunch').hide();
-            $('#middleboxFika').hide();
-            $('#middleboxElse').hide();
-            $('#middleboxKlubb').hide();
-            $('#middleboxPub').hide();
-
+    $("#rnClick").click(function(){
+        $("#rightNow").collapse('show');
+        $("#breakfast,#lunch, #brunch,#fika,#pub, #club, #event").collapse('hide');
+        $("#rnL").attr('class','active');
+        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#eventL").attr('class',null);
 
     });
-});
-$(document).ready(function(){
-    $('#lunchklick').on('click',function(){
-        if($('#middleboxLunch').css('display')=='none'){
-
-            $('#middleboxJustnu').hide();
-            $('#middleboxFrukost').hide();
-            $('#middleboxPub').hide();
-            $('#middleboxFika').hide();
-            $('#middleboxElse').hide();
-            $('#middleboxKlubb').hide();
-
-            $('#middleboxLunch').show();
-
-        }
+    $("#bfClick").click(function(){
+        $("#breakfast").collapse('show');
+        $("#rightNow").collapse('hide');
+        $("#lunch").collapse('hide');
+        $("#brunch").collapse('hide');
+        $("#fika").collapse('hide');
+        $("#pub").collapse('hide');
+        $("#club").collapse('hide');
+        $("#event").collapse('hide');
+        $("#bfL").attr('class','active');
+        $("#rnL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#eventL").attr('class',null);
     });
-});
-$(document).ready(function(){
-    $('#fikaklick').on('click',function(){
-        if($('#middleboxFika').css('display')=='none'){
-
-            $('#middleboxJustnu').hide();
-            $('#middleboxFrukost').hide();
-            $('#middleboxLunch').hide();
-            $('#middleboxPub').hide();
-            $('#middleboxElse').hide();
-            $('#middleboxKlubb').hide();
-
-            $('#middleboxFika').show();
-
-        }
+    $("#lunchClick").click(function(){
+        $("#lunch").collapse('show');
+        $("#breakfast").collapse('hide');
+        $("#rightNow").collapse('hide');
+        $("#brunch").collapse('hide');
+        $("#fika").collapse('hide');
+        $("#pub").collapse('hide');
+        $("#club").collapse('hide');
+        $("#event").collapse('hide');
+        $("#lunchL").attr('class','active');
+        $("#bfL,#rnL,#brunchL, #fikaL, #pubL,#clubL,#eventL").attr('class',null);
     });
-});
-$(document).ready(function(){
-    $('#pubklick').on('click',function(){
-        if($('#middleboxPub').css('display')=='none'){
-
-            $('#middleboxJustnu').hide();
-            $('#middleboxFrukost').hide();
-            $('#middleboxLunch').hide();
-            $('#middleboxFika').hide();
-            $('#middleboxElse').hide();
-            $('#middleboxKlubb').hide();
-            $('#middleboxPub').show();
-
-        }
+    $("#brunchClick").click(function(){
+        $("#brunch").collapse('show');
+        $("#rightNow").collapse('hide');
+        $("#lunch").collapse('hide');
+        $("#breakfast").collapse('hide');
+        $("#fika").collapse('hide');
+        $("#pub").collapse('hide');
+        $("#club").collapse('hide');
+        $("#event").collapse('hide');
+        $("#brunchL").attr('class','active');
+        $("#bfL,#lunchL,#rnL, #fikaL, #pubL,#clubL,#eventL").attr('class',null);
     });
-});
-$(document).ready(function(){
-    $('#klubbklick').on('click',function(){
-        if($('#middleboxKlubb').css('display')=='none'){
-
-            $('#middleboxJustnu').hide();
-            $('#middleboxFrukost').hide();
-            $('#middleboxLunch').hide();
-            $('#middleboxFika').hide();
-            $('#middleboxPub').hide();
-            $('#middleboxElse').hide();
-            $('#middleboxKlubb').show();
-
-        }
+    $("#fikaClick").click(function(){
+        $("#fika").collapse('show');
+        $("#breakfast").collapse('hide');
+        $("#lunch").collapse('hide');
+        $("#brunch").collapse('hide');
+        $("#rightNow").collapse('hide');
+        $("#pub").collapse('hide');
+        $("#club").collapse('hide');
+        $("#event").collapse('hide');
+        $("#fikaL").attr('class','active');
+        $("#bfL,#lunchL,#brunchL, #rnL, #pubL,#clubL,#eventL").attr('class',null);
     });
-});
-$(document).ready(function(){
-    $('#elseklick').on('click',function(){
-        if($('#middleboxElse').css('display')=='none'){
-
-            $('#middleboxJustnu').hide();
-            $('#middleboxFrukost').hide();
-            $('#middleboxLunch').hide();
-            $('#middleboxFika').hide();
-            $('#middleboxPub').hide();
-            $('#middleboxKlubb').hide();
-            $('#middleboxElse').show();
-
-        }
+    $("#pubClick").click(function(){
+        $("#pub").collapse('show');
+        $("#rightNow").collapse('hide');
+        $("#lunch").collapse('hide');
+        $("#brunch").collapse('hide');
+        $("#fika").collapse('hide');
+        $("#breakfast").collapse('hide');
+        $("#club").collapse('hide');
+        $("#event").collapse('hide');
+        $("#pubL").attr('class','active');
+        $("#bfL,#lunchL,#brunchL, #fikaL, #rnL,#clubL,#eventL").attr('class',null);
     });
+    $("#clubClick").click(function(){
+        $("#club").collapse('show');
+        $("#breakfast").collapse('hide');
+        $("#lunch").collapse('hide');
+        $("#brunch").collapse('hide');
+        $("#rightNow").collapse('hide');
+        $("#pub").collapse('hide');
+        $("#fika").collapse('hide');
+        $("#event").collapse('hide');
+        $("#clubL").attr('class','active');
+        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#rnL,#eventL").attr('class',null);
+    });
+    $("#eventClick").click(function(){
+        $("#event").collapse('show');
+        $("#rightNow").collapse('hide');
+        $("#lunch").collapse('hide');
+        $("#brunch").collapse('hide');
+        $("#fika").collapse('hide');
+        $("#breakfast").collapse('hide');
+        $("#club").collapse('hide');
+        $("#pub").collapse('hide');
+        $("#eventL").attr('class','active');
+        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#rnL").attr('class',null);
+    });
+
 });
