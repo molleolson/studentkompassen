@@ -32,6 +32,7 @@ class Event(models.Model):
 
 
 
+
 #class Location(models.Model):
 
 
