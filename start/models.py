@@ -13,24 +13,25 @@ class Host(models.Model):
         return self.host_name
 
 class Event(models.Model):
-    event_name = models.CharField(max_length=200, default=None)
-    event_description = models.CharField(max_length=400, default=None)
-    event_start_day = models.CharField(max_length=200, default=None)           #Kanske ska va datum och ej string?
-    event_start_month = models.CharField(max_length=200, default=None)
-    event_start_year = models.CharField(max_length=200, default=None)
-    event_start_time = models.CharField(max_length=200, default=None)
-    event_end_day = models.CharField(max_length=200, default=None)
-    event_end_month = models.CharField(max_length=200, default=None)
-    event_end_year = models.CharField(max_length=200, default=None)
-    event_end_time = models.CharField(max_length=200, default=None)
+    event_name = models.CharField(max_length=200, blank=True, null=True)
+    event_description = models.CharField(max_length=400, blank=True, null=True)
+    event_start_day = models.CharField(max_length=200, blank=True, null=True)           #Kanske ska va datum och ej string?
+    event_start_month = models.CharField(max_length=200, blank=True, null=True)
+    event_start_year = models.CharField(max_length=200, blank=True, null=True)
+    event_start_time = models.CharField(max_length=200, blank=True, null=True)
+    event_end_day = models.CharField(max_length=200, blank=True, null=True)
+    event_end_month = models.CharField(max_length=200, blank=True, null=True)
+    event_end_year = models.CharField(max_length=200, blank=True, null=True)
+    event_end_time = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return self.event_name
 
-#class Lunch(Event):
-  #  lunch_menu = models.CharField(max_length=200) # Hr kanske vi sen kan testa lada in pdf?
+class Lunch(Event):
+    lunch_menu = models.CharField(max_length=200) # Hr kanske vi sen kan testa lada in pdf?
 
-
+class Other(Event):
+    pass
 
 #class Location(models.Model):
 
