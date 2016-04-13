@@ -1,0 +1,90 @@
+
+
+/***********************************************************************
+*  Banner SECTION
+***********************************************************************/
+#BannerRow{
+    background-color: green;
+    height: 85px;
+    border-bottom: 5px;
+}
+
+/***********************************************************************
+*  OPAQUE NAVBAR SECTION
+***********************************************************************/
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.5);
+    /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    border-bottom: 0px;
+    transition: banavbar-headerckground-color .5s ease 0s;
+}
+
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+ul.dropdown-menu {
+    background-color: black;
+}
+
+
+@media (max-width: 992px) {
+    body
+    {
+        background:red;
+    }
+    .opaque-navbar {
+        background-color: black;
+        height: 60px;
+        transition: background-color .5s ease 0s;
+    }
+
+}
+/***********************************************************************
+*  Container SECTION
+***********************************************************************/
+
+#rightNow{
+    background-color: red;
+}
+#breakfast{
+    background-color: yellow;
+}
+#lunch{
+    background-color:blue;
+}
+
+/***********************************************************************
+*  Calendar SECTION
+***********************************************************************/
+#calendar {
+    width: 100%;
+    margin: 0 auto;
+}
+/*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
+
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.image-preview-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studentkompassen</title>
+
+
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet" />
+    <link href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <link href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'start/evententeringfunctions.js'%}" type="application/javascript"></script>
+
+    <script src="{% static 'start/functions.js'%}" type="application/javascript"></script>
+
+  </head>
+<body>
+
+<!--BIG CONTAINTER-->
+
+<div class="container"> <!--gör om tillrow-->
+    <div id= "BannerRow" class="row col-md-12">
+            <h1>STUDENTKOMPASSEN
+            </h1>
+    </div>
+        </div>
+        <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
+
+    <nav class="navbar navbar-default navbar-inverse ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Studentkompassen</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav" >
+                    <li id="rnL"class="active"><a id="rnClick" href='#'>Just nu</a></li>
+                    <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
+                    <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
+                    <li id="brunchL"><a id="brunchClick" href='#' >Brunch</a></li>
+                    <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
+                    <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
+                    <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
+                    <li id="eventL"><a id="eventClick" href='#'>Event</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">My Account <span class="glyphicon glyphicon-user"</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class = "container">
+    <div class = "row col-md-9">Vänstersida
+
+        <div id="rightNow" class="collapse in">
+            Right now!
+        </div>
+
+        <div id="breakfast" class="collapse">
+            Breakfast!
+        </div>
+        <div id="lunch" class="collapse">
+            lunch
+        </div>
+
+        <div id="brunch" class="collapse">
+            brunch
+        </div>
+
+        <div id="fika" class="collapse">
+            fika
+        </div>
+
+        <div id="pub" class="collapse">
+            pub
+        </div>
+
+        <div id="club" class="collapse">
+            club
+        </div>
+        <div id="event" class="collapse">
+
+                <div>
+                    <div class="form-group">
+                        <label for="evName" >Eventnamn:</label>
+                        <input type="text" class="form-control" id="evName">
+                    </div>
+                    <div class="form-group">
+                        <label for="place">Arrangör:</label>
+                        <select class="form-control" id="place">
+                            <option>Stockholms nation</option>
+                            <option>Uplands nation</option>
+                            <option>Gästrike-Hälsinge nation</option>
+                            <option>Östgöta nation</option>
+                            <option>Västgöta nation</option>
+                            <option>Södermanlands-Nerikes nation</option>
+                            <option>Västmanlands-Dala nation</option>
+                            <option>Smålands nation</option>
+                            <option>Göteborgs nation</option>
+                            <option>Kalmar nation</option>
+                            <option>Värmlands nation</option>
+                            <option>Norrlands nation</option>
+                            <option>Gotlands nation</option>
+                            <option>UTN</option>
+                            <option>Uppsalaekonomerna</option>
+                            <option>Juridiska föreningen</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="radio-inline"><input type="radio" name="optradio">Medlemmar</label>
+                        <label class="radio-inline" ><input checked="checked" type="radio" name="optradio" >Öppet </label>
+                    </div>
+                    <div>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Fika</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Lunch</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Pub</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Klubb</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Släpp</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Gask</label>
+
+                    </div>
+
+                    <div class="form-group - time">
+                        <label for="time" >Tidpunkt:</label>
+                        <input type="datetime" class="form-control" id="time">
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="descript">Beskrivning:</label>
+                        <textarea class="form-control" rows="7" id="descript"></textarea>
+                    </div>
+                </div>
+                <!--http://bootsnipp.com/snippets/featured/input-file-popover-preview-image-->
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                        <div class="input-group image-preview">
+                            <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                <span class="input-group-btn">
+                    <!-- image-preview-clear button -->
+                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+                    </button>
+                    <!-- image-preview-input -->
+                    <div class="btn btn-default image-preview-input">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="image-preview-input-title">Browse</span>
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                    </div>
+                </span>
+                        </div><!-- /input-group image-preview [TO HERE]-->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+    </div>
+
+
+    <div class = "row col-md-3">Andra vänster</div>
+</div>
+
+
+
+<!--  </div> -->
+
+
+<!--END BIG CONTAINTER-->
+
+
+
+
+
+
+
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+
+</body>
+</html>
