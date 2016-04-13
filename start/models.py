@@ -9,7 +9,7 @@ class Host(models.Model):
     host_name = models.CharField(max_length=200)
     host_email = models.CharField(max_length=200)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.host_name
 
 class Event(models.Model):
@@ -24,7 +24,7 @@ class Event(models.Model):
     event_end_year = models.CharField(max_length=200, blank=True, null=True)
     event_end_time = models.CharField(max_length=200, blank=True, null=True)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.event_name
 
 class Lunch(Event):

@@ -4,7 +4,6 @@ from .models import Host, Event
 
 admin.site.register(Host)
 admin.site.register(Event)
-admin.site.register(Other)
-admin.site.register(Lunch)
+#admin.site.register(Lunch)
 
 # Register your models here.
