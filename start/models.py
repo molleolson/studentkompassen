@@ -17,9 +17,9 @@ class Host(models.Model):
 class Event(models.Model):
     event_name = models.CharField(max_length=200, blank=True, null=True)
     event_description = models.CharField(max_length=400, blank=True, null=True)
-    event_startdate = models.DateTimeField('start date')
-    event_enddate = models.DateTimeField('end date')
-    event_location = models.ForeignKey('Location', on_delete=models.CASCADE)
+    event_startdate = models.DateTimeField('start date', default=timezone.now())
+    event_enddate = models.DateTimeField('end date', default=timezone.now())
+    event_location = models.ForeignKey('Location', on_delete=models.CASCADE, default=0)
     # event_start_day = models.CharField(max_length=200, blank=True, null=True)
     # Kanske ska va datum och ej string?
     # event_start_month = models.CharField(max_length=200, blank=True, null=True)
@@ -56,6 +56,6 @@ class Location(models.Model):
         return self.event_name
 
 
-class Admin(models.Model):
+class Administrator(models.Model):
     admin_usrname = models.CharField(max_length=200)
 #class Event(models.Model):
