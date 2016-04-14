@@ -23,6 +23,7 @@
     <script src="evententeringfunctions.js" type="application/javascript"></script>
 
     <script src="functions.js" type="application/javascript"></script>
+    <script src="datefunctions.js" type="application/javascript"></script>
 
   </head>
 <body>
@@ -81,33 +82,33 @@
 <div class = "container">
     <div class = "row col-md-9">Vänstersida
 
-        <div id="rightNow" class="collapse in">
+        <div id="rightNow" class="collapse fade in">
             Right now!
         </div>
 
-        <div id="breakfast" class="collapse">
+        <div id="breakfast" class="collapse fade">
             Breakfast!
         </div>
-        <div id="lunch" class="collapse">
+        <div id="lunch" class="collapse fade">
             lunch
         </div>
 
-        <div id="brunch" class="collapse">
+        <div id="brunch" class="collapse fade">
             brunch
         </div>
 
-        <div id="fika" class="collapse">
+        <div id="fika" class="collapse fade">
             fika
         </div>
 
-        <div id="pub" class="collapse">
+        <div id="pub" class="collapse fade">
             pub
         </div>
 
-        <div id="club" class="collapse">
+        <div id="club" class="collapse fade">
             club
         </div>
-        <div id="event" class="collapse">
+        <div id="event" class="collapse fade">
 
                 <div>
                     <div class="form-group">
@@ -152,13 +153,17 @@
 
                     </div>
 
+                    <div class="input-group date">
+                        <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"> </i></span>
+                    </div>
+
                     <div class="form-group - time">
                         <label for="time" >Startpunkt:</label>
                         <input type="number" class="form-control" id="time">
                     </div>
                     <!-- Från facebook sidkälla -->
                     <div class="_ljlr">
-                        <span Class="5qcw _5c6j _3smo openToggler">
+                        <span Class="5qcw _5c6j _3smo" aria-owns="js_t" aria-haspopup="true" tabindex="0" id="js_i">
                             <label class>
                                 <input type="text" class="_3smp" placeholder="åååå-mm-dd">
                                 </label>
