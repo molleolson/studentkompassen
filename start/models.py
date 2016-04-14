@@ -38,5 +38,6 @@ class Other(Event):
 
 #class Location(models.Model):
 
-
+class Admin(models.Model):
+    admin_usrname = models.Charfield(max_length=200)
 #class Event(models.Model):
