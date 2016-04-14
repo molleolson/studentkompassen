@@ -36,7 +36,9 @@ class Lunch(Event):
 class Other(Event):
     pass
 
-#class Location(models.Model):
+class Location(models.Model):
+    location_name = models.CharField(max_length=200, blank=True, null=True)
+    location_gps =models.CharField(max_length=200, blank=True, null=True)
 
 class Admin(models.Model):
     admin_usrname = models.Charfield(max_length=200)
