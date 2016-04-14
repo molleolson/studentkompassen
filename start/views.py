@@ -5,11 +5,13 @@ from django.template import loader
 
 def index(request):
 
-    template = loader.get_template('start/main.html')
-    return HttpResponse(template.render(request))
+    hosts = Host.objects.all()
+    #template = loader.get_template('start/main.html')
+    #return HttpResponse(template.render(request))
+    return render(request, 'start/main.html', locals())
 
 
-#    list_of_hosts = Host.objects.order_by('id')
+#    
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
 

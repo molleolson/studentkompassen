@@ -80,9 +80,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'studentkompassen',
-        'USER': 'root',
+        'USER': 'molle',
         'PASSWORD': 'llconsulting',
-        'HOST': '127.0.0.1',
+        'HOST': '130.238.15.214',
         'PORT': '3306',
     }
 }
