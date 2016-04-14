@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
+
 class Host(models.Model):
     host_name = models.CharField(max_length=200)
     host_email = models.CharField(max_length=200)
@@ -23,6 +24,8 @@ class Event(models.Model):
     event_end_month = models.CharField(max_length=200, blank=True, null=True)
     event_end_year = models.CharField(max_length=200, blank=True, null=True)
     event_end_time = models.CharField(max_length=200, blank=True, null=True)
+ #   event_participants = BooleanField(required = False)
+
 
     def __unicode__(self):
         return self.event_name
