@@ -57,6 +57,13 @@ ul.dropdown-menu {
     background-color:blue;
 }
 
+.jumbotron{
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 5px;
+}
+
 /***********************************************************************
 *  Calendar SECTION
 ***********************************************************************/
