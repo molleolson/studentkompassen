@@ -13,19 +13,23 @@ class Host(models.Model):
     def __unicode__(self):
         return self.host_name
 
+
 class Event(models.Model):
     event_name = models.CharField(max_length=200, blank=True, null=True)
     event_description = models.CharField(max_length=400, blank=True, null=True)
-    event_start_day = models.CharField(max_length=200, blank=True, null=True)           #Kanske ska va datum och ej string?
-    event_start_month = models.CharField(max_length=200, blank=True, null=True)
-    event_start_year = models.CharField(max_length=200, blank=True, null=True)
-    event_start_time = models.CharField(max_length=200, blank=True, null=True)
-    event_end_day = models.CharField(max_length=200, blank=True, null=True)
-    event_end_month = models.CharField(max_length=200, blank=True, null=True)
-    event_end_year = models.CharField(max_length=200, blank=True, null=True)
-    event_end_time = models.CharField(max_length=200, blank=True, null=True)
- #   event_participants = BooleanField(required = False)
+    event_startdate = models.DateTimeField('start date')
+    event_enddate = models.DateTimeField('end date')
+    event_location = models.ForeignKey('Location', on_delete=models.CASCADE)
+    #event_start_day = models.CharField(max_length=200, blank=True, null=True)           #Kanske ska va datum och ej string?
+    #event_start_month = models.CharField(max_length=200, blank=True, null=True)
+    #event_start_year = models.CharField(max_length=200, blank=True, null=True)
+    #event_start_time = models.CharField(max_length=200, blank=True, null=True)
+    #event_end_day = models.CharField(max_length=200, blank=True, null=True)
+    #event_end_month = models.CharField(max_length=200, blank=True, null=True)
+    #event_end_year = models.CharField(max_length=200, blank=True, null=True)
+    #event_end_time = models.CharField(max_length=200, blank=True, null=True)
 
+    #   event_participants = BooleanField(required = False)
 
     def __unicode__(self):
         return self.event_name
@@ -38,7 +42,15 @@ class Other(Event):
 
 class Location(models.Model):
     location_name = models.CharField(max_length=200, blank=True, null=True)
-    location_gps =models.CharField(max_length=200, blank=True, null=True)
+    location_gps = models.CharField(max_length=200, blank=True, null=True)
+    location_street = models.CharField(max_length=200, blank=True, null=True)
+    location_streetnumber = models.IntegerField(max_length=5, blank=True, null=True)
+    location_zip = models.IntegerField(max_length=6, blank=True, null=True)
+    location_city = models.CharField(max_length=200, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.event_name
+
 
 class Admin(models.Model):
     admin_usrname = models.Charfield(max_length=200)
