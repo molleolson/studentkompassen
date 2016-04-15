@@ -23,6 +23,9 @@
     <script src="evententeringfunctions.js" type="application/javascript"></script>
 
     <script src="functions.js" type="application/javascript"></script>
+    <script src="dateAndTime.js"></script>
+
+
 
 </head>
 <body>
@@ -35,7 +38,7 @@
         </h1>
     </div>
 </div>
-<button><a id="tostudent" href='main.html'>Till oinloggadsida</a> </button>
+<button><a id="tonation" href='nationmain.html'>Till Nationssida</a> </button>
 <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
 <nav class="navbar navbar-default navbar-inverse ">
@@ -81,17 +84,20 @@
 </nav>
 <div class = "container">
     <div class = "row col-md-9">Vänstersida
-    <center>
+
         <div class="container">
-                <a href="#">
+            <center>
+               <a href="#">
+
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-    DAGENS DATUM
+            <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
                 <a href="#">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
+            </center>
         </div>
-    </center>
+
 
         <div id="rightNow" class="collapse fade in">
            <div class="jumbotron"> Right now!</div>
