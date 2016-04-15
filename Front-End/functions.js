@@ -5,9 +5,9 @@
 $(document).ready(function(){
     $("#rnClick").click(function(){
         $("#rightNow").collapse('show');
-        $("#breakfast,#lunch, #brunch,#fika,#pub, #club, #event").collapse('hide');
+        $("#breakfast,#lunch, #brunch,#fika,#pub, #club, #event, #ourEvent,#profile").collapse('hide');
         $("#rnL").attr('class','active');
-        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#eventL").attr('class',null);
+        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#eventL,#ourEventL,#profileL").attr('class',null);
 
     });
     $("#bfClick").click(function(){
@@ -48,9 +48,22 @@ $(document).ready(function(){
     });
     $("#eventClick").click(function(){
         $("#event").collapse('show');
-        $("#breakfast,#lunch, #brunch,#fika,#pub, #club, #rightNow").collapse('hide');
+        $("#breakfast,#lunch, #brunch,#fika,#pub, #club, #rightNow, #ourEvent,#profile").collapse('hide');
         $("#eventL").attr('class','active');
-        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#rnL").attr('class',null);
+        $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#rnL,#ourEventL,#profileL").attr('class',null);
     });
 
+    $("#oeClick").click(function(){
+        $("#ourEvent").collapse('show');
+        $("#event, #rightNow,#profile").collapse('hide');
+        $("#ourEventL").attr('class','active');
+        $("#eventL,#rnL,#profileL").attr('class',null);
+    });
+
+    $("#profileClick").click(function(){
+        $("#profile").collapse('show');
+        $("#event, #rightNow,#ourEvent").collapse('hide');
+        $("#profileL").attr('class','active');
+        $("#eventL,#rnL,#ourEventL").attr('class',null);
+    });
 });
