@@ -46,57 +46,20 @@ Alle hosts:
         </div>
         <div id="event" class="collapse">
 
-                <div>
-                    <div class="form-group">
-                        <label for="evName" >Eventnamn:</label>
-                        <input type="text" class="form-control" id="evName">
-                    </div>
-                    <div class="form-group">
-                        <label for="place">Arrangör:</label>
-                        <select class="form-control" id="place">
-                            <option>Stockholms nation</option>
-                            <option>Uplands nation</option>
-                            <option>Gästrike-Hälsinge nation</option>
-                            <option>Östgöta nation</option>
-                            <option>Västgöta nation</option>
-                            <option>Södermanlands-Nerikes nation</option>
-                            <option>Västmanlands-Dala nation</option>
-                            <option>Smålands nation</option>
-                            <option>Göteborgs nation</option>
-                            <option>Kalmar nation</option>
-                            <option>Värmlands nation</option>
-                            <option>Norrlands nation</option>
-                            <option>Gotlands nation</option>
-                            <option>UTN</option>
-                            <option>Uppsalaekonomerna</option>
-                            <option>Juridiska föreningen</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="radio-inline"><input type="radio" name="optradio">Medlemmar</label>
-                        <label class="radio-inline" ><input checked="checked" type="radio" name="optradio" >Öppet </label>
-                    </div>
-                    <div>
-                        <label class="checkbox-inline"><input type="checkbox" value="">Fika</label>
-                        <label class="checkbox-inline"><input type="checkbox" value="">Lunch</label>
-                        <label class="checkbox-inline"><input type="checkbox" value="">Pub</label>
-                        <label class="checkbox-inline"><input type="checkbox" value="">Klubb</label>
-                        <label class="checkbox-inline"><input type="checkbox" value="">Släpp</label>
-                        <label class="checkbox-inline"><input type="checkbox" value="">Gask</label>
+                <div align = "center">
+                    <tr>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <h5>Location:</h5>
+                            {{ form.as_p }}
 
-                    </div>
+                            <h5>Event:</h5>
+                            {{ formset.as_p }}
+                            <input type ="submit" value="submit">
 
-                    <div class="form-group - time">
-                        <label for="time" >Tidpunkt:</label>
-                        <input type="datetime" class="form-control" id="time">
-                    </div>
+                        </form>
+                    </tr>
 
-
-
-                    <div class="form-group">
-                        <label for="descript">Beskrivning:</label>
-                        <textarea class="form-control" rows="7" id="descript"></textarea>
-                    </div>
                 </div>
                 <!--http://bootsnipp.com/snippets/featured/input-file-popover-preview-image-->
 
