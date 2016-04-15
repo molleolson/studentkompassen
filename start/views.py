@@ -34,15 +34,16 @@ def addevent(request):
     if request.method == 'POST':
         form = HostForm(request.POST)                     # create a form instance and populate with data
         if form.is_valid():
-            form.save(commit=True)
-            #instance.host = Host.objects.get(name=offset)
-            #instance.save()
+            instance = form.save(commit=True)
+
+            instance.host = Host.objects.all()
+            instance.save()
 
             #event_formset = EventFormset(request.POST, instance=location)
             #if event_formset.is_valid():
             #   event_formset.save()
 
-            return redirect('/start/addevent')
+            return render('/start/addevent')
         else:
             print form.errors
     else:

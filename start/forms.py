@@ -2,7 +2,6 @@ from django import forms
 from django.forms import inlineformset_factory, ModelForm
 from start.models import Event, Location, Host
 
-
 #class LocationForm(ModelForm):
 #    class Meta:
 #        model = Location
