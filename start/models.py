@@ -65,6 +65,9 @@ class Gasque(Event):
     dresscode = models.CharField(max_length=200)
 
 class Club(Event):
+    pass
+class Pub(Event):
+    pass
 
 #class Administrator(models.Model):
 #    username = models.CharField(max_length=200)
