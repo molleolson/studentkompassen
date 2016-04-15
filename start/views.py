@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, render_to_response, RequestContext
 from django.http import HttpResponse
 from .models import Host, Event, Location
-from start.forms import LocationForm, EventFormset
+from start.forms import HostForm
 from django.template import loader
 
 def index(request):
@@ -28,20 +28,25 @@ def skapa(request, id):
 
 def addevent(request):
 
-    form = LocationForm()
-    event_formset = EventFormset(instance=Location())
+#   form = LocationForm()
+#    event_formset = EventFormset(instance=Location())
 
-    if request.POST:
-        form = LocationForm(request.POST)
+    if request.method == 'POST':
+        form = HostForm(request.POST)                     # create a form instance and populate with data
         if form.is_valid():
-            location = form.save()
-            event_formset = EventFormset(request.POST, instance=location)
-            if event_formset.is_valid():
-                event_formset.save()
+            instance = form.save(commit=False)
+            #instance.host = Host.objects.get(name=offset)
+            instance.save()
+
+            #event_formset = EventFormset(request.POST, instance=location)
+            #if event_formset.is_valid():
+            #   event_formset.save()
+
             return redirect('/start/addevent')
+    else:
+        form = HostForm()
 
     return render_to_response('start/addevent.html',{
-        'form': form, 'formset': event_formset
-    },context_instance=RequestContext(request))
+        'form': form},context_instance=RequestContext(request))
 
 
