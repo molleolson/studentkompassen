@@ -6,7 +6,7 @@ from start.models import Event, Location
 class LocationForm(ModelForm):
     class Meta:
         model = Location
-        fields = 'name'
+        fields =('name', )
 
 
 EventFormset = inlineformset_factory(Location, Event, fields=('name', 'description', 'startdate',
