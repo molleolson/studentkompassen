@@ -97,3 +97,41 @@ ul.dropdown-menu {
 .image-preview-input-title {
     margin-left:2px;
 }
+
+/* Profil ccs: */
+
+#nationDesc{
+    width:100%;
+    border: 1px solid black;
+
+    background-color: lightgoldenrodyellow;
+}
+
+#dontMiss{
+    width:100%;
+    border: 1px solid black;
+
+    background-color: lightgoldenrodyellow;
+}
+#findUs{
+    width:100%;
+    border: 1px solid black;
+
+    background-color: lightgoldenrodyellow;
+}
+
+#contact{
+    width:100%;
+    border: 1px solid black;
+
+    background-color: lightgoldenrodyellow;
+}
+#map{
+    left:5px;
+    border-radius: 20px;
+}
+
+#editNationDesc{
+    float:right;
+}
+
