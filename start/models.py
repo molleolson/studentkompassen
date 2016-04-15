@@ -61,11 +61,13 @@ class Cafe(Event):
 
 class Breakfast(Event):
     pass
+
 class Gasque(Event):
     dresscode = models.CharField(max_length=200)
 
 class Club(Event):
     pass
+
 class Pub(Event):
     pass
 
