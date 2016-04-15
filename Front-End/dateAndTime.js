@@ -12,6 +12,7 @@ weekday[4] = "Thursday";
 weekday[5] = "Friday";
 weekday[6] = "Saturday";
 
+
 var n = weekday[d.getDay()];
 document.getElementById("getDay").innerHTML = n;
 })
