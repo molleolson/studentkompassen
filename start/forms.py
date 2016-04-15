@@ -9,6 +9,7 @@ class LocationForm(ModelForm):
         fields = '__all__'
 
 
-EventFormset = inlineformset_factory(Location, Event, fields=('name', 'description', 'startdate', 'enddate'), extra=1, can_delete=False)
+EventFormset = inlineformset_factory(Location, Event, fields=('name', 'description', 'startdate',
+                                                              'enddate'), extra=1, can_delete=False)
 
 

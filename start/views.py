@@ -7,6 +7,7 @@ from django.template import loader
 def index(request):
 
     hosts = Host.objects.all()
+
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
     return render(request, 'start/main.html', locals())
@@ -25,7 +26,7 @@ def skapa(request, id):
     #response = "Nu ska vi skapa ett event for host %h"
     return HttpResponse("Nu ska vi skapa ett event for %s" % h)
 
-def addevent(request, id):
+def addevent(request):
 
     form = LocationForm()
     event_formset = EventFormset(instance=Location())
@@ -37,9 +38,9 @@ def addevent(request, id):
             event_formset = EventFormset(request.POST, instance=location)
             if event_formset.is_valid():
                 event_formset.save()
-            return redirect('/start/')
+            return redirect('/start/addevent')
 
-    return render_to_response('main.html',{
+    return render_to_response('start/addevent.html',{
         'form': form, 'formset': event_formset
     },context_instance=RequestContext(request))
 

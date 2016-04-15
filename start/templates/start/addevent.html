@@ -1,0 +1,56 @@
+
+
+
+
+<div class = "container">
+    <div class = "row col-md-9">Vänstersida
+
+        <div id="rightNow" class="collapse">
+            Right now!
+        </div>
+
+        <div id="breakfast" class="collapse">
+            Breakfast!
+        </div>
+        <div id="lunch" class="collapse">
+            lunch
+        </div>
+
+        <div id="brunch" class="collapse">
+            brunch
+        </div>
+
+        <div id="fika" class="collapse">
+            fika
+        </div>
+
+        <div id="pub" class="collapse">
+            pub
+        </div>
+
+        <div id="club" class="collapse">
+            club
+        </div>
+        <div id="event" class="collapse in"></div>
+
+
+{% block content %}
+<p> Hej funkar detta</p>
+
+    <div align = "center">
+    <tr>
+    <form action="/start/" method="POST">
+    {% csrf_token %}
+    <h5>Location:</h5>
+    {{ form.as_p }}
+    <h5>Event:</h5>
+    {{ formset.as_p }}
+    <input type ="submit" value="submit">
+
+    </form>
+    </tr>
+
+    </div>
+
+
+{% endblock %}

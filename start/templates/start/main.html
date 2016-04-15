@@ -46,21 +46,7 @@ Alle hosts:
         </div>
         <div id="event" class="collapse">
 
-                <div align = "center">
-                    <tr>
-                        <form method="POST">
-                            {% csrf_token %}
-                            <h5>Location:</h5>
-                            {{ form.as_p }}
 
-                            <h5>Event:</h5>
-                            {{ formset.as_p }}
-                            <input type ="submit" value="submit">
-
-                        </form>
-                    </tr>
-
-                </div>
                 <!--http://bootsnipp.com/snippets/featured/input-file-popover-preview-image-->
 
                 <div class="row">
