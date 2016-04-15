@@ -27,26 +27,27 @@ def skapa(request, id):
     return HttpResponse("Nu ska vi skapa ett event for %s" % h)
 
 def addevent(request):
-
+    context=RequestContext(request)
 #   form = LocationForm()
 #    event_formset = EventFormset(instance=Location())
 
     if request.method == 'POST':
         form = HostForm(request.POST)                     # create a form instance and populate with data
         if form.is_valid():
-            instance = form.save(commit=False)
+            form.save(commit=True)
             #instance.host = Host.objects.get(name=offset)
-            instance.save()
+            #instance.save()
 
             #event_formset = EventFormset(request.POST, instance=location)
             #if event_formset.is_valid():
             #   event_formset.save()
 
             return redirect('/start/addevent')
+        else:
+            print form.errors
     else:
         form = HostForm()
 
-    return render_to_response('start/addevent.html',{
-        'form': form},context_instance=RequestContext(request))
+    return render_to_response('start/addevent.html', {'form': form}, context)
 
 
