@@ -23,6 +23,7 @@
     <script src="evententeringfunctions.js" type="application/javascript"></script>
 
     <script src="functions.js" type="application/javascript"></script>
+    <script src="datefunctions.js" type="application/javascript"></script>
 
 </head>
 <body>
@@ -33,8 +34,11 @@
     <div id= "BannerRow" class="row col-md-12">
         <h1>STUDENTKOMPASSEN
         </h1>
+
     </div>
+
 </div>
+<button><a id="tostudent" href='main.html'>Till oinloggadsida</a> </button>
 <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
 <nav class="navbar navbar-default navbar-inverse ">
@@ -50,14 +54,13 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse" >
             <ul class="nav navbar-nav" >
-                <li id="rnL"class="active"><a id="rnClick" href='#'>Just nu</a></li>
-                <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
-                <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
-                <li id="brunchL"><a id="brunchClick" href='#' >Brunch</a></li>
-                <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
-                <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
-                <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                <li id="eventL"><a id="eventClick" href='#'>Event</a></li>
+                <li id="rnL"><a id="rnClick" href='#'>Just nu</a></li>
+
+                <li id="eventL" class="active"><a id="eventClick" href='#'>Skapa event</a></li>
+
+                <li id="ourEventL"><a id="oeClick" href='#'>Våra event</a></li>
+
+                <li id="profileL"><a id="profileClick" href='#'>Profil</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -80,47 +83,41 @@
 </nav>
 <div class = "container">
     <div class = "row col-md-9">Vänstersida
-    <center>
-        <div class="container">
-                <a href="#">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-    DAGENS DATUM
-                <a href="#">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-        </div>
-    </center>
 
-        <div id="rightNow" class="collapse fade in">
-           <div class="jumbotron"> Right now!</div>
+        <div id="rightNow" class="collapse fade">
+            Right now!
         </div>
 
-
-        <div id="breakfast" class="collapse fade">
-            <div class="jumbotron"> Breakfast</div>
+        <div id="ourEvent" class="collapse fade">
+            En lista på våra event och editknappar
         </div>
 
-        <div id="lunch" class="collapse fade">
-            <div class="jumbotron"> Lunch</div>
+        <div id="profile" class="collapse fade">
+            Vår profil och saker
+            <div class="row">
+                <div class="col-sm-4" >
+                    <div id="nationDesc">
+                    Nations beskrivning
+                    <button id="editNationDesc"type="button" class="btn btn-default">Redigera</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+
+                    Missa inte!
+                    <button id="editDontMiss"type="button" class="btn btn-default">Redigera</button>
+                </div>
+                <div class="col-sm-4">
+                    Hitta hit!
+                    (Karta - från google maps?)
+                </div>
+                <div class="col-sm-12">
+                    Kontaktinfo, adresser och andra rel permanenta grejor
+                    <button id="editContactInfo"type="button" class="btn btn-default">Redigera</button>
+                </div>
+            </div>
         </div>
 
-        <div id="brunch" class="collapse fade">
-            <div class="jumbotron"> Brunch</div>
-        </div>
-
-        <div id="fika" class="collapse fade">
-            <div class="jumbotron"> Fika</div>
-        </div>
-
-        <div id="pub" class="collapse fade">
-            <div class="jumbotron"> Pub</div>
-        </div>
-
-        <div id="club" class="collapse fade">
-            <div class="jumbotron"> Club</div>
-        </div>
-        <div id="event" class="collapse fade">
+        <div id="event" class="collapse in fade">
 
             <div>
                 <div class="form-group">
@@ -165,16 +162,20 @@
 
                 </div>
 
+                <div class="input-group date">
+                    <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"> </i></span>
+                </div>
+
                 <div class="form-group - time">
                     <label for="time" >Startpunkt:</label>
                     <input type="number" class="form-control" id="time">
                 </div>
                 <!-- Från facebook sidkälla -->
                 <div class="_ljlr">
-                        <span Class="5qcw _5c6j _3smo openToggler">
+                        <span Class="5qcw _5c6j _3smo" aria-owns="js_t" aria-haspopup="true" tabindex="0" id="js_i">
                             <label class>
                                 <input type="text" class="_3smp" placeholder="åååå-mm-dd">
-                            </label>
+                                </label>
                             <input type="hidden" value="1460498400000">
 
 
