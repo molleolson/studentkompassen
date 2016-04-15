@@ -47,14 +47,23 @@ ul.dropdown-menu {
 *  Container SECTION
 ***********************************************************************/
 
-#rightNow{
+/*#rightNow{
     background-color: red;
-}
+}*/
+
 #breakfast{
     background-color: yellow;
 }
 #lunch{
     background-color:blue;
+}
+
+.jumbotron{
+    color: red;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 5px;
 }
 
 /***********************************************************************

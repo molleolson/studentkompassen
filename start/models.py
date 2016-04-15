@@ -56,6 +56,20 @@ class Lunch(Event):
 class Other(Event):
     pass
 
+class Cafe(Event):
+    pass
+
+class Breakfast(Event):
+    pass
+
+class Gasque(Event):
+    dresscode = models.CharField(max_length=200)
+
+class Club(Event):
+    pass
+
+class Pub(Event):
+    pass
 
 #class Administrator(models.Model):
 #    username = models.CharField(max_length=200)
