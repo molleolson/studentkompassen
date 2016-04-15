@@ -89,3 +89,9 @@ ul.dropdown-menu {
     margin-left:2px;
 }
 
+#nationDesc{
+    border: 10px solid black;
+
+    background-color: red;
+}
+
