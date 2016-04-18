@@ -6,7 +6,7 @@ from django.template import loader
 from django.contrib.auth import authenticate, login
 
 def index(request):
-
+    menu_active_item = 'now'
     hosts = Host.objects.all()
 
     #template = loader.get_template('start/main.html')
@@ -28,6 +28,16 @@ def skapa(request, id):
     h = Host.objects.get(pk=id)
     #response = "Nu ska vi skapa ett event for host %h"
     return HttpResponse("Nu ska vi skapa ett event for %s" % h)
+
+
+def nationmain(request):
+    menu_active_item = 'now'
+    #hosts = Host.objects.all()
+
+    #template = loader.get_template('start/main.html')
+    #return HttpResponse(template.render(request))
+    return render(request, 'start/nationmain.html', locals())
+
 
 def addevent(request):
 
