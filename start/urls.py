@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^(?P<id>[0-9]+)/$', views.hostid, name='id'),
     url(r'^(?P<id>[0-9]+)/skapa/$', views.skapa, name='skapa'),
     url(r'^addevent/$', views.addevent, name='addevent'),
+    url(r'^login/$', views.login, name='login'),
 
 ]

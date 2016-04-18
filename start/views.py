@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Host, Event, Location
 from start.forms import HostForm
 from django.template import loader
+from django.contrib.auth import authenticate, login
 
 def index(request):
 
@@ -16,6 +17,25 @@ def index(request):
 #    
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
+
+def loginpage(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            login(request, user)
+            return render('/start/')
+            # Redirect to a success page.
+        else:
+            return HttpResponse("Incorrect password or username")
+            # Return a 'disabled account' error message
+
+    else:
+        return HttpResponse("Invalid login")
+        # Return an 'invalid login' error message.
+
+
 
 def hostid(request, id):
     h = Host.objects.get(pk = id)
