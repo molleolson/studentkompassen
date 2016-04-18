@@ -53,6 +53,7 @@ def addevent(request):
 
     if request.method == 'POST':
         form = HostForm(request.POST)                     # create a form instance and populate with data
+
         if form.is_valid():
             instance = form.save(commit=True)
 
