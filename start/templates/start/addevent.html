@@ -3,10 +3,7 @@
 {% block title %}Lägg till event{% endblock %}
 
 {% block main %}
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+
 
     <div class="form-group">
     <tr>
@@ -15,12 +12,6 @@
         <h5>Skapa ett nytt Event!:</h5>
        {#{ form.as_p }#}
 
-
-        <script>
-  $(document).ready(function() {
-    $('.datepicker').datepicker();
-});
-  </script>
         {% include "form.html" with form=form %}
 
 
