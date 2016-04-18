@@ -15,11 +15,12 @@ from functools import partial
 #                                                              'enddate'), extra=1, can_delete=False)
 
 class EventForm(ModelForm):
-    startdate = DateField(widget=TextInput(attrs={'class':'datepicker'}))
+    startdate = DateField(widget=TextInput(attrs={'class':'datetimepicker'}))
+    enddate = DateField(widget=TextInput(attrs={'class': 'datetimepicker'}))
 
     class Meta:
         model = Event
-        fields = ['startdate', 'enddate']
+        fields = ['name', 'description',,'startdate', 'enddate', 'host', 'location' ]
 
        # widget=forms.DateTimeInput
         #startdate = widget

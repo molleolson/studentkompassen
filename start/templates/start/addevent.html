@@ -2,6 +2,14 @@
 
 {% block title %}Lägg till event{% endblock %}
 
+{% block additional_scripts %}
+  <script type="text/javascript">
+            $(function () {
+                $('.datetimepicker').datetimepicker();
+            });
+        </script>
+{% endblock %}
+
 {% block left %}
 
 

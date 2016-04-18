@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"/>
     <link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link id="bsdp-css" href="{% static 'bootstrap-datepicker/css/datepicker3.css' %}" rel="stylesheet">
 
     {% block additional_css %}{% endblock %}
 
@@ -26,7 +27,8 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="{% static 'start/evententeringfunctions.js' %}" type="application/javascript"></script>
     <script src="{% static 'start/functions.js' %}" type="application/javascript"></script>
-
+    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>
     {% block additional_scripts %}{% endblock %}
     <!-- END SCRIPT FILES -->
 
