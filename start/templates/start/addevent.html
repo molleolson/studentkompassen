@@ -3,11 +3,7 @@
 {% block title %}Lägg till event{% endblock %}
 
 {% block additional_scripts %}
-  <script type="text/javascript">
-            $(function () {
-                $('.datetimepicker').datetimepicker();
-            });
-        </script>
+
 {% endblock %}
 
 {% block left %}
@@ -18,7 +14,7 @@
     <form action="{% url "start:addevent" %}" method="POST">
     {% csrf_token %}
         <h1>Skapa ett nytt Event!:</h1>
-       {#{ form.as_p }#}
+       {#{ form.as_table }#}
 
         {% include "form.html" with form=form %}
 
