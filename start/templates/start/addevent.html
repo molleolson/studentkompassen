@@ -45,6 +45,16 @@
     {% csrf_token %}
         <h5>Skapa ett nytt Event!:</h5>
        {#{ form.as_p }#}
+        <script>
+  $(function() {
+    $( ".datepicker" ).datepicker({
+      startdate: true,
+      enddate: true,
+      // You can put more options here.
+
+    });
+  });
+  </script>
         {% include "form.html" with form=form %}
 
 

@@ -16,8 +16,7 @@ class EventForm(ModelForm):
     class Meta:
         model = Event
         fields = '__all__'
-        startdate=forms.DateTimeInput(widget=forms.DateTimeInput),
+        widgets = {
+            'startdate': forms.DateInput(attrs={'class': 'datepicker'}),
+        }
 
-
-class EventTime(forms.Form):
-    event_time=forms.DateTimeField(widget=forms.)
