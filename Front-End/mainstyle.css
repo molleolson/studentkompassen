@@ -103,7 +103,6 @@ ul.dropdown-menu {
 #nationDesc{
     width:100%;
     border: 1px solid black;
-
     background-color: lightgoldenrodyellow;
 }
 
@@ -135,3 +134,7 @@ ul.dropdown-menu {
     float:right;
 }
 
+#monthAndDay {
+    position: relative;
+    left: 40%;
+}
