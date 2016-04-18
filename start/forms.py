@@ -18,6 +18,8 @@ class EventForm(ModelForm):
     class Meta:
         model = Event
         fields = ['startdate', 'enddate']
+        startdate=forms.DateTimeInput
+        enddate=forms.DateTimeInput
        # widget=forms.DateTimeInput
         #startdate = widget
         #enddate = widget
