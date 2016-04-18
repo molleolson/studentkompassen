@@ -9,15 +9,15 @@
     <title>Studentkompassen - {% block title %}{% endblock %}</title>
 
     <!-- START CSS FILES -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css"/>
-    <link rel="stylesheet" href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"/>
-    <link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />
+    <!--<link rel="stylesheet" href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"/>
+    <link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <!--<link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />-->
 
     {% block additional_css %}{% endblock %}
 
@@ -26,9 +26,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="{% static 'start/evententeringfunctions.js' %}" type="application/javascript"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="{% static 'start/functions.js' %}" type="application/javascript"></script>
-    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>
+    <script src="{% static 'start/dateAndTime.js' %}" type="application/javascript"></script>
+    <script src="{% static 'start/calendar.js' %}" type="application/javascript"></script>
+    <!--<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>-->
+    <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}"/>
     {% block additional_scripts %}{% endblock %}
     <!-- END SCRIPT FILES -->
 
@@ -107,7 +112,7 @@
 
     <div class="row col-md-4">
         {% block right %}
-        {% endblock%}
+        {% endblock %}
     </div>
 
 </div>

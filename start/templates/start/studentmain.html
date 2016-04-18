@@ -5,3 +5,33 @@
 {% block extra_menu_item %}
 <li id="myEventL"><a id="myEventsClick" href="#"> Mina sparade event</a></li>
 {% endblock %}
+
+
+{% block left%}
+<div class="container" id="monthAndDay">
+    <div class="sizeMonth">
+        <a href="#">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                    <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+                <a href="#">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+    </div>
+</div>
+<div class="jumbotron">
+    <div class="well well-lg">Large Well</div>
+    <div class="well well-lg">Large Well</div>
+    <div class="well well-lg">Large Well</div>
+    <div class="well well-lg">Large Well</div>
+</div>
+
+
+{% endblock %}
+
+
+{% block right%}
+ <div id="datepicker">
+
+ </div>
+{% endblock %}
