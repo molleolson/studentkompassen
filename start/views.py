@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, render_to_response, RequestContext
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Host, Event, Location
 from start.forms import HostForm
 from django.template import loader
@@ -47,7 +47,6 @@ def skapa(request, id):
     return HttpResponse("Nu ska vi skapa ett event for %s" % h)
 
 def addevent(request):
-    context=RequestContext(request)
 #   form = LocationForm()
 #    event_formset = EventFormset(instance=Location())
 
@@ -55,21 +54,21 @@ def addevent(request):
         form = HostForm(request.POST)                     # create a form instance and populate with data
 
         if form.is_valid():
-            instance = form.save(commit=True)
+            instance = form.save()
 
-            instance.host = Host.objects.all()
-            instance.save()
+
+
 
             #event_formset = EventFormset(request.POST, instance=location)
             #if event_formset.is_valid():
             #   event_formset.save()
 
-            return render('/start/addevent')
-        else:
-            print form.errors
+            #return render(request, '/start/addevent.html', {'form': form})
+            return HttpResponseRedirect('/start')
+
     else:
         form = HostForm()
 
-    return render_to_response('start/addevent.html', {'form': form}, context)
+    return render(request, 'start/addevent.html', {'form': form})
 
 
