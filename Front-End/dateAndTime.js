@@ -1,8 +1,22 @@
 /**
  * Created by ebbaholmstrom on 16-04-15.
  */
+var eventDate = new Date();
+
 $ (function() {
-    var d = new Date();
+    writeDate();
+    $(".glyphicon-chevron-right").click(function() {switchDate(1)});
+    $(".glyphicon-chevron-left").click(function() {switchDate(-1)});
+})
+
+function switchDate(day){
+    eventDate.setDate(eventDate.getDate() + day);
+    writeDate();
+    $('#datepicker').datepicker('setDate', eventDate);
+}
+
+function writeDate() {
+
     var weekday = new Array(7);
     weekday[0] = "Sunday";
     weekday[1] = "Monday";
@@ -12,19 +26,12 @@ $ (function() {
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
-
-    var n = weekday[d.getDay()];
+    var n = weekday[eventDate.getDay()];
     document.getElementById("getDay").innerHTML = n;
-})
 
-$ (function(){
-    var p = new Date();
-    var q = p.getDate();
+    var q = eventDate.getDate();
     document.getElementById("getDate").innerHTML = q;
-})
 
-$ (function() {
-    var a = new Date();
     var month = new Array(12);
 
     month[0] = "January";
@@ -40,6 +47,6 @@ $ (function() {
     month[10] = "November";
     month[11] = "December";
 
-    var b = month[a.getMonth()];
+    var b = month[eventDate.getMonth()];
     document.getElementById("getMonth").innerHTML = b;
-})
+}

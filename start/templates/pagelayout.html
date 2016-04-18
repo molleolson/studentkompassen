@@ -8,31 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Studentkompassen - {% block title %}{% endblock %}</title>
 
-    <!-- Latest compiled and minified CSS -->
+    <!-- START CSS FILES -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-    <!-- Optional theme -->
     <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css"/>
     <link rel="stylesheet" href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"/>
     <link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link id="bsdp-css" href="{% static 'bootstrap-datepicker/css/datepicker3.css' %}" rel="stylesheet">
 
     {% block additional_css %}{% endblock %}
 
+    <!-- END CSS FILES -->
+    <!-- START SCRIPT FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="{% static 'start/evententeringfunctions.js' %}" type="application/javascript"></script>
     <script src="{% static 'start/functions.js' %}" type="application/javascript"></script>
-
+    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>
     {% block additional_scripts %}{% endblock %}
+    <!-- END SCRIPT FILES -->
 
   </head>
 <body>
 
-<!--BIG CONTAINTER-->
+<!--START HEADER-->
 
 <div class="container"> <!--gör om tillrow-->
     <div id= "BannerRow" class="row col-md-12">
@@ -42,7 +45,10 @@
 </div>
 <button><a id="tonation" href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
 <button><a id="tostudent" href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
+<button><a id="tologout" href="{% url 'start:index' %}">Till oinloggad</a> </button>
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
+
+<!--END HEADER-->
 
 {% block navigation %}
 <nav class="navbar navbar-default navbar-inverse ">
@@ -91,6 +97,7 @@
 {% endblock %}
 
 {% block main %}
+
 <div class="container">
 
     <div class="row col-md-8">
@@ -104,7 +111,6 @@
     </div>
 
 </div>
-
 {% endblock %}
 
 

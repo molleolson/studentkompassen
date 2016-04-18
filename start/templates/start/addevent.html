@@ -2,25 +2,24 @@
 
 {% block title %}Lägg till event{% endblock %}
 
-{% block main %}
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+{% block additional_scripts %}
+  <script type="text/javascript">
+            $(function () {
+                $('.datetimepicker').datetimepicker();
+            });
+        </script>
+{% endblock %}
+
+{% block left %}
+
 
     <div class="form-group">
     <tr>
     <form action="{% url "start:addevent" %}" method="POST">
     {% csrf_token %}
-        <h5>Skapa ett nytt Event!:</h5>
+        <h1>Skapa ett nytt Event!:</h1>
        {#{ form.as_p }#}
 
-
-        <script>
-  $(document).ready(function() {
-    $('.datepicker').datepicker();
-});
-  </script>
         {% include "form.html" with form=form %}
 
 

@@ -1,7 +1,9 @@
 from django import forms
-from django.forms import inlineformset_factory, ModelForm
+from django.forms import inlineformset_factory, ModelForm, DateField, TextInput
 from start.models import Event, Location, Host
 from functools import partial
+
+
 
 #class LocationForm(ModelForm):
 #    class Meta:
@@ -12,12 +14,20 @@ from functools import partial
 #EventFormset = inlineformset_factory(Location, Event, fields=('name', 'description', 'startdate',
 #                                                              'enddate'), extra=1, can_delete=False)
 
-DateInput= partial(forms.DateTimeInput, {'class':'datepicker'})
 class EventForm(ModelForm):
+    #startdate = DateField(widget=TextInput(attrs={'class':'datetimepicker'}))
+    #enddate = DateField(widget=TextInput(attrs={'class': 'datetimepicker'}))
+
     class Meta:
         model = Event
-        fields = '__all__'
+        fields = ['name', 'description','startdate', 'enddate', 'host', 'location']
+        widgets = {
+            'startdate': forms.DateTimeInput(attrs={'class':'datetimepicker'}),
+            'enddate': forms.DateTimeInput(attrs={'class': 'datetimepicker'}),
 
-        startdate = forms.DateTimeInput(widgets=forms.DateTimeInput())
-        enddate = forms.DateTimeInput(widgets=forms.DateTimeInput())
+        }
+
+       # widget=forms.DateTimeInput
+        #startdate = widget
+        #enddate = widget
 

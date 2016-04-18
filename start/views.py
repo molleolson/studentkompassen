@@ -56,7 +56,7 @@ def addevent(request):
         if form.is_valid():
             instance = form.save()
 
-            return HttpResponseRedirect('/start/nationmain.html', locals())
+            return HttpResponseRedirect('/start/nationmain/', locals())
 
     else:
         form = EventForm()
