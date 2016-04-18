@@ -54,6 +54,7 @@ $(document).ready(function(){
     });
     $("#eventClick").click(function(){
         $("#event").collapse('show');
+        
         $("#breakfast,#lunch, #brunch,#fika,#pub, #club, #rightNow, #ourEvent,#profile, #map, #getToKnowNations").collapse('hide');
         $("#eventL").attr('class','active');
         $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#rnL,#ourEventL,#profileL,#getToKnowNationL").attr('class',null);
