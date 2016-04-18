@@ -12,8 +12,8 @@ from start.models import Event, Location, Host
 #                                                              'enddate'), extra=1, can_delete=False)
 
 
-class HostForm(ModelForm):
+class EventForm(ModelForm):
     class Meta:
-        model = Host
+        model = Event
         fields = '__all__'
 

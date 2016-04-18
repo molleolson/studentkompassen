@@ -38,13 +38,12 @@
 {% endcomment %}
 
 {% block main %}
-<p> Hej funkar detta</p>
 
     <div class="form-group">
     <tr>
     <form action="{% url "start:addevent" %}" method="POST">
     {% csrf_token %}
-        <h5>Host:</h5>
+        <h5>Skapa ett nytt Event!:</h5>
        {#{ form.as_p }#}
         {% include "form.html" with form=form %}
 
