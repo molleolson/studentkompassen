@@ -39,7 +39,7 @@
 {% block content %}
 <p> Hej funkar detta</p>
 
-    <div align = "center">
+    <div class="form-group" align = "center">
     <tr>
     <form action="/start/" method="POST">
     {% csrf_token %}
@@ -52,7 +52,7 @@
     <h5>Event:</h5>
     {{ formset.as_p }}
 -->
-        <input type ="submit" value="Add">
+        <input class="form-control" type ="submit" value="Add">
 
     </form>
     </tr>
