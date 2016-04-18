@@ -43,7 +43,7 @@
 
     <div class="form-group" align = "center">
     <tr>
-    <form action="/start/addevent" method="POST">
+    <form action="/start/addevent/" method="POST">
     {% csrf_token %}
         <h5>Host:</h5>
        {{ form.as_p }}
