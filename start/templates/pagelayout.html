@@ -56,14 +56,14 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav" >
-                    <li id="rnL"class="active"><a id="rnClick" href='#'>Just nu</a></li>
+                    <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a id="rnClick" href='#'>Just nu</a></li>
                     <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
                     <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
                     <li id="brunchL"><a id="brunchClick" href='#' >Brunch</a></li>
                     <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
                     <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
                     <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                    <li id="eventL"><a id="eventClick" href="{% url 'addevent' %}">Event</a></li>
+                    <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a id="eventClick" href="{% url 'start:addevent' %}">Event</a></li>
                 </ul>
                 {% block navigation_myaccount %}
                 <ul class="nav navbar-nav navbar-right">
@@ -101,6 +101,10 @@
 <!--END BIG CONTAINTER-->
 
 <!-- Latest compiled and minified JavaScript -->
+
+{% block footer %}
+&copy; 2016 Studenter at UU
+{% endblock %}
 
 </body>
 </html>

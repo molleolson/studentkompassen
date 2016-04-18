@@ -2,8 +2,7 @@
 
 {% block title %}addevent{% endblock %}
 
-
-
+{% comment %}
 <div class = "container">
     <div class = "row col-md-9">Vänstersida
 
@@ -36,17 +35,18 @@
         <div id="event" class="collapse in"></div>
 
         </div>
+{% endcomment %}
 
-
-{% block content %}
+{% block main %}
 <p> Hej funkar detta</p>
 
-    <div class="form-group" align = "center">
+    <div class="form-group">
     <tr>
-    <form action="/start/addevent/" method="POST">
+    <form action="{% url "start:addevent" %}" method="POST">
     {% csrf_token %}
         <h5>Host:</h5>
-       {{ form.as_p }}
+       {#{ form.as_p }#}
+        {% include "form.html" with form=form %}
 
 
 <!--    <h5>Location:</h5>

@@ -50,6 +50,8 @@ def addevent(request):
 #   form = LocationForm()
 #    event_formset = EventFormset(instance=Location())
 
+    menu_active_item = 'event'
+
     if request.method == 'POST':
         form = HostForm(request.POST)                     # create a form instance and populate with data
 
@@ -69,6 +71,6 @@ def addevent(request):
     else:
         form = HostForm()
 
-    return render(request, 'start/addevent.html', {'form': form})
+    return render(request, 'start/addevent.html', locals())
 
 
