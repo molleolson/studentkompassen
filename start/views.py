@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect, render_to_response, RequestContext
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Host, Event, Location
-from start.forms import LocationForm, EventFormset
+from start.forms import EventForm
 from django.template import loader
+from django.contrib.auth import authenticate, login
+
 
 def index(request):
-
+    menu_active_item = 'now'
     hosts = Host.objects.all()
+
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
     return render(request, 'start/main.html', locals())
@@ -16,31 +19,48 @@ def index(request):
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
 
+
 def hostid(request, id):
     h = Host.objects.get(pk = id)
     return HttpResponse("You're looking at host %s." % h)
+
 
 def skapa(request, id):
     h = Host.objects.get(pk=id)
     #response = "Nu ska vi skapa ett event for host %h"
     return HttpResponse("Nu ska vi skapa ett event for %s" % h)
 
-def addevent(request, id):
 
-    form = LocationForm()
-    event_formset = EventFormset(instance=Location())
+def nationmain(request):
+    menu_active_item = 'now'
+    return render(request, 'start/nationmain.html', locals())
 
-    if request.POST:
-        form = LocationForm(request.POST)
+
+def studentmain(request):
+    menu_active_item = 'now'
+    return render(request, 'start/studentmain.html', locals())
+
+
+def presentation(request):
+    menu_active_item = 'presentation'
+    return render(request, 'start/presentation.html', locals())
+
+
+def addevent(request):
+
+    menu_active_item = 'event'
+
+    if request.method == 'POST':
+        form = EventForm(request.POST)                     # create a form instance and populate with data
+
         if form.is_valid():
-            location = form.save()
-            event_formset = EventFormset(request.POST, instance=location)
-            if event_formset.is_valid():
-                event_formset.save()
-            return redirect('/start/')
+            instance = form.save()
 
-    return render_to_response('main.html',{
-        'form': form, 'formset': event_formset
-    },context_instance=RequestContext(request))
+            return HttpResponseRedirect('/start/nationmain.html', locals())
+
+    else:
+        form = EventForm()
+
+    return render(request, 'start/addevent.html', locals())
 
 

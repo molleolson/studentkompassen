@@ -15,15 +15,13 @@
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet" />
     <link href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" rel="stylesheet" />
     <link href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" rel="stylesheet" />
-
-
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="evententeringfunctions.js" type="application/javascript"></script>
-
     <script src="functions.js" type="application/javascript"></script>
-    <script src="datefunctions.js" type="application/javascript"></script>
+    <script src="dateAndTime.js" type="application/javascript"></script>
 
 </head>
 <body>
@@ -84,6 +82,19 @@
 </nav>
 <div class = "container">
     <div class = "row col-md-8">Vänstersida
+        <div class="container">
+            <center>
+                <a href="#">
+
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+                <a href="#">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </center>
+
+        </div>
 
         <div id="rightNow" class="collapse fade">
             Right now!

@@ -31,7 +31,7 @@ class Event(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
-    enddate = models.DateTimeField('end date')
+    enddate = models.DateTimeField('end date', )
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
     # event_start_day = models.CharField(max_length=200, blank=True, null=True)
     # Kanske ska va datum och ej string?
@@ -74,3 +74,6 @@ class Pub(Event):
 #class Administrator(models.Model):
 #    username = models.CharField(max_length=200)
 #class Event(models.Model):
+
+# class EventTime(models.Model):
+#    Event_Time=models.DateTimeField()
