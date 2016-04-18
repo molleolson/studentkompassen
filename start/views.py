@@ -5,6 +5,7 @@ from start.forms import EventForm
 from django.template import loader
 from django.contrib.auth import authenticate, login
 
+
 def index(request):
     menu_active_item = 'now'
     hosts = Host.objects.all()
@@ -32,11 +33,12 @@ def skapa(request, id):
 
 def nationmain(request):
     menu_active_item = 'now'
-    #hosts = Host.objects.all()
-
-    #template = loader.get_template('start/main.html')
-    #return HttpResponse(template.render(request))
     return render(request, 'start/nationmain.html', locals())
+
+
+def presentation(request):
+    menu_active_item = 'presentation'
+    return render(request, 'start/presentation.html', locals())
 
 
 def addevent(request):
@@ -49,7 +51,7 @@ def addevent(request):
         if form.is_valid():
             instance = form.save()
 
-            return HttpResponseRedirect('/start')
+            return HttpResponseRedirect('/start/nationmain.html', locals())
 
     else:
         form = EventForm()
