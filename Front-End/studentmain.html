@@ -16,14 +16,17 @@
     <link href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" rel="stylesheet" />
     <link href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" rel="stylesheet" />
 
-
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="evententeringfunctions.js" type="application/javascript"></script>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
     <script src="functions.js" type="application/javascript"></script>
     <script src="dateAndTime.js"></script>
+    <script src="calender.js"></script>
 
 </head>
 <body>
@@ -60,8 +63,8 @@
                 <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
                 <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
                 <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                <li id="getToKnowNationL"><a id="knowClick"> Lär känna nationern!</a></li>
-                <li id="myEventL"><a id="myEventsClick"> Mina sparade event</a></li>
+                <li id="getToKnowNationL"><a id="knowClick" href='#'> Lär känna nationern!</a></li>
+                <li id="myEventL"><a id="myEventsClick" href='#'> Mina sparade event</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -85,9 +88,10 @@
 
 <div class = "container">
 
-    <div class = "row col-md-8">Vänstersida
 
-        <div class="container">
+   <div class = "row col-md-8">Vänstersida
+
+      <!--  <div class="container">
             <center>
                 <a href="#">
 
@@ -99,7 +103,23 @@
                 </a>
             </center>
 
-        </div>
+        </div> -->
+
+
+    <div class="container" id="monthAndDay">
+        <a href="#">
+
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+        <a href="#">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+    </div>
+
+
+
 
 
         <div id="rightNow" class="collapse fade in">
@@ -144,10 +164,10 @@
 
 
     <div class = "row col-md-4">Andra vänster
-
+        <div id="datepicker"></div>
         <div id="youMap" class="collapse fade in">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11336.068136011607!2d17.65118450582873!3d59.84992631484983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1460726997314" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+        </div>
     </div>
 
 
