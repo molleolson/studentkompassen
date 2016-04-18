@@ -20,7 +20,7 @@ class EventForm(ModelForm):
 
     class Meta:
         model = Event
-        fields = ['name', 'description',,'startdate', 'enddate', 'host', 'location' ]
+        fields = ['name', 'description','startdate', 'enddate', 'host', 'location']
         widgets = {
             'startdate': forms.DateTimeInput(attrs={'class':'datetimepicker'}),
             'enddate': forms.DateTimeInput(attrs={'class': 'datetimepicker'}),
