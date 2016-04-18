@@ -1,50 +1,26 @@
+{% extends "start/nationmain.html" %}
 
+{% block title %}Lägg till event{% endblock %}
 
+{% block main %}
 
-
-<div class = "container">
-    <div class = "row col-md-9">Vänstersida
-
-        <div id="rightNow" class="collapse">
-            Right now!
-        </div>
-
-        <div id="breakfast" class="collapse">
-            Breakfast!
-        </div>
-        <div id="lunch" class="collapse">
-            lunch
-        </div>
-
-        <div id="brunch" class="collapse">
-            brunch
-        </div>
-
-        <div id="fika" class="collapse">
-            fika
-        </div>
-
-        <div id="pub" class="collapse">
-            pub
-        </div>
-
-        <div id="club" class="collapse">
-            club
-        </div>
-        <div id="event" class="collapse in"></div>
-
-        </div>
-
-
-{% block content %}
-<p> Hej funkar detta</p>
-
-    <div align = "center">
+    <div class="form-group">
     <tr>
-    <form action="/start/" method="POST">
+    <form action="{% url "start:addevent" %}" method="POST">
     {% csrf_token %}
-        <h5>Host:</h5>
-       {{ form.as_p }}
+        <h5>Skapa ett nytt Event!:</h5>
+       {#{ form.as_p }#}
+        <script>
+  $(function() {
+    $( ".datepicker" ).datepicker({
+      startdate: true,
+      enddate: true,
+      // You can put more options here.
+
+    });
+  });
+  </script>
+        {% include "form.html" with form=form %}
 
 
 <!--    <h5>Location:</h5>
@@ -52,7 +28,7 @@
     <h5>Event:</h5>
     {{ formset.as_p }}
 -->
-        <input type ="submit" value="Add">
+        <input class="form-control" type ="submit" value="Add">
 
     </form>
     </tr>
