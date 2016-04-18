@@ -2,7 +2,8 @@
 
 {% block title %}Lägg till event{% endblock %}
 
-{% block main %}
+{% block left %}
+
 
     <div class="form-group">
     <tr>
@@ -10,16 +11,7 @@
     {% csrf_token %}
         <h5>Skapa ett nytt Event!:</h5>
        {#{ form.as_p }#}
-        <script>
-  $(function() {
-    $( ".datepicker" ).datepicker({
-      startdate: true,
-      enddate: true,
-      // You can put more options here.
 
-    });
-  });
-  </script>
         {% include "form.html" with form=form %}
 
 
@@ -37,3 +29,5 @@
 
 </div>
 {% endblock %}
+
+

@@ -20,10 +20,10 @@ def index(request):
 #     return HttpResponse(output)
 
 
-
 def hostid(request, id):
     h = Host.objects.get(pk = id)
     return HttpResponse("You're looking at host %s." % h)
+
 
 def skapa(request, id):
     h = Host.objects.get(pk=id)
@@ -34,6 +34,11 @@ def skapa(request, id):
 def nationmain(request):
     menu_active_item = 'now'
     return render(request, 'start/nationmain.html', locals())
+
+
+def studentmain(request):
+    menu_active_item = 'now'
+    return render(request, 'start/studentmain.html', locals())
 
 
 def presentation(request):
@@ -51,7 +56,7 @@ def addevent(request):
         if form.is_valid():
             instance = form.save()
 
-            return HttpResponseRedirect('/start/nationmain.html', locals())
+            return HttpResponseRedirect('/start/nationmain/', locals())
 
     else:
         form = EventForm()
