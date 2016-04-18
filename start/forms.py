@@ -16,4 +16,8 @@ class EventForm(ModelForm):
     class Meta:
         model = Event
         fields = '__all__'
+        startdate=forms.DateTimeInput(widget=forms.DateTimeInput),
 
+
+class EventTime(forms.Form):
+    event_time=forms.DateTimeField(widget=forms.)

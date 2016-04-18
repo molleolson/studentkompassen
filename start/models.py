@@ -74,3 +74,6 @@ class Pub(Event):
 #class Administrator(models.Model):
 #    username = models.CharField(max_length=200)
 #class Event(models.Model):
+
+# class EventTime(models.Model):
+#    Event_Time=models.DateTimeField()
