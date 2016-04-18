@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- länkar för att köra bootstrap start -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- länkar för att köra bootstrap - Slut -->
+
+    <title>Calender i listform</title>
+    <div class="container">
+        <h1>Grid</h1>
+        <p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>
+        <p>Resize the browser window to see the effect.</p>
+            <div class="row">
+                <ul class="calendar small-block-grid-1 medium-block-grid-7">
+                    <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
+                        <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
+                        <thead>
+                        <tr>            <th scope="col">Tid</th>
+                            <th scope="col">Evenemang</th>
+                            <th scope="col">Plats</th>
+
+                            <th scope="col">Typ</th>
+                            <th scope="col"> Något mer</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class=" inactive">
+                            <th scope="row">06:45 - 07:45</th>
+                            <td data-title="Aktivitet">TEST</td>
+                            <td data-title="Plats">
+                                <span class="name">TEST</span>
+                            </td>
+
+                            <td data-title="Status" data-status="slotsleft">TEST </td>
+                            <td class="text-right" data-title="Boka" data-status="last"></td>
+                        </tr>
+                        <tr class="">            <th scope="row">10:15 - 11:15</th>            <td data-title="Aktivitet">Majs i Majs Café</td>            <td data-title="Plats">                <span class="name">Norrlands Nation</span>            </td>                       <td data-title="Status" data-status="slotsleft">Fika</td>            <td class="text-right" data-title="Boka"><a class="ajax-popup-link button tiny" data-effect="mfp-zoom-in" href="/umbraco/Surface/Booking/AddBooking?activityId=161&amp;bookingId=1217635&amp;startDate=04%2F23%2F2016%2010%3A15%3A00&amp;stopDate=04%2F23%2F2016%2011%3A15%3A00&amp;locale=sv-SE">Boka</a></td>        </tr>
+                        <tr class="">            <th scope="row">13:15 - 14:10</th>            <td data-title="Aktivitet">Stockholm Nations Café</td>            <td data-title="Plats">                <span class="name">Stockholms Nation</span>            </td>                       <td data-title="Status" data-status="slotsleft">Fika </td>            <td class="text-right" data-title="Boka"><a class="ajax-popup-link button tiny" data-effect="mfp-zoom-in" href="/umbraco/Surface/Booking/AddBooking?activityId=332&amp;bookingId=1218044&amp;startDate=04%2F24%2F2016%2013%3A15%3A00&amp;stopDate=04%2F24%2F2016%2014%3A10%3A00&amp;locale=sv-SE">Boka</a></td>        </tr>
+                        <tr class="">            <th scope="row">13:15 - 14:10</th>            <td data-title="Aktivitet">Orvars Krog</td>            <td data-title="Plats">                <span class="name">Norrlands Nation</span>            </td>               <td data-title="Status" data-status="slotsleft">Bärs </td>            <td class="text-right" data-title="Boka"><a class="ajax-popup-link button tiny" data-effect="mfp-zoom-in" href="/umbraco/Surface/Booking/AddBooking?activityId=333&amp;bookingId=1218086&amp;startDate=04%2F24%2F2016%2013%3A15%3A00&amp;stopDate=04%2F24%2F2016%2014%3A10%3A00&amp;locale=sv-SE">Boka</a></td>        </tr>
+                        <tr class="">            <th scope="row">14:10 - 15:05</th>            <td data-title="Aktivitet">LittleLand Klubb på Snärkan</td>            <td data-title="Plats">                <span class="name">Snärkan</span>            </td>                       <td data-title="Status" data-status="slotsleft">Fest</td>            <td class="text-right" data-title="Boka"><a class="ajax-popup-link button tiny" data-effect="mfp-zoom-in" href="/umbraco/Surface/Booking/AddBooking?activityId=332&amp;bookingId=1218127&amp;startDate=04%2F24%2F2016%2014%3A10%3A00&amp;stopDate=04%2F24%2F2016%2015%3A05%3A00&amp;locale=sv-SE">Boka</a></td>        </tr>
+                        </tbody></table></ul>
+                <div class="col-sm-6" style="background-color:pink;">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+            </div>
+        </div>
+    </div>
+
+</head>
+<body>
+
+</body>
+</html>
