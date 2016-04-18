@@ -147,5 +147,8 @@ ul.dropdown-menu {
 a.ui-state-highlight {
     border-color: black;
     background: #e6e6e6;
+}
 
+.sizeMonth{
+    width: 15%;
 }
