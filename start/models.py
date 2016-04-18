@@ -6,12 +6,7 @@ from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
 
-class Host(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
 
-    def __unicode__(self):
-        return self.name
 
 
 class Location(models.Model):
@@ -26,24 +21,24 @@ class Location(models.Model):
     def __unicode__(self):
         return self.name
 
+class Host(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    phonenumber = models.IntegerField(blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
+
+
+    def __unicode__(self):
+        return self.name
 
 class Event(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
     enddate = models.DateTimeField('end date', )
+    host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
-    # event_start_day = models.CharField(max_length=200, blank=True, null=True)
-    # Kanske ska va datum och ej string?
-    # event_start_month = models.CharField(max_length=200, blank=True, null=True)
-    # event_start_year = models.CharField(max_length=200, blank=True, null=True)
-    # event_start_time = models.CharField(max_length=200, blank=True, null=True)
-    # event_end_day = models.CharField(max_length=200, blank=True, null=True)
-    # event_end_month = models.CharField(max_length=200, blank=True, null=True)
-    # event_end_year = models.CharField(max_length=200, blank=True, null=True)
-    # event_end_time = models.CharField(max_length=200, blank=True, null=True)
-
-    #   event_participants = BooleanField(required = False)
 
     def __unicode__(self):
         return self.name
