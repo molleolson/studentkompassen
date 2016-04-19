@@ -13,8 +13,8 @@ class EventForm(ModelForm):
         widgets = {
             # Use localization and bootstrap 3
             'startdate': DateTimeWidget(attrs={'class': "datetimepicker"}, usel10n=True, bootstrap_version=3),
-            'enddate': DateTimeWidget(attrs={'class': "datetimepicker"}, usel10n=True, bootstrap_version=3),
-            'multipledates': DateTimeWidget(attrs={'class': "multidatespicker"}, usel10n=True, bootstrap_version=3),
+            'enddate': DateTimeWidget(attrs={'class': "datetimepicker"}, usel10n=True, bootstrap_version=3)
+            #'multipledates': DateTimeWidget(attrs={'class': "multidatespicker"}, usel10n=True, bootstrap_version=3),
 
         }
 
