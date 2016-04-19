@@ -1,14 +1,17 @@
 
 body{
-    background-color: rgba(51,153,255,0.15); /*#3399FF*/
+    background-color: rgb(232,244,255);
 
 }
-
+/*#A8D6FF =R:168 G:214 B:255
+#E8F4FF = R:232 G:244 B:255
+rgb(51,153,255); #3399FF*/
 /***********************************************************************
 *  Calendarlist SECTION
 ***********************************************************************/
 #abbesruta{
     background-color:red;
+
 }
 /***********************************************************************
 *  Banner SECTION
@@ -38,22 +41,39 @@ body{
 *  NAVBAR SECTION
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
+
 .navbar-collapse{
-    color:rgba(51,153,255,0.15);
-    border-color:rgba(51,153,255,1);
+    color:rgb(232,244,255);
+
+    border-radius: 0;
+    border-bottom: 5px solid rgb(51,153,255);
+    min-height: 0;
 
 }
-.navbar-default .navbar-nav > li >a:hover,
-.navbar-default .navbar-nav > li >a:focus{
-    background-color: rgba(51,153,255,1);
+
+.navbar-collapse .navbar-nav .navbar-brand{
+    min-height: 0;
+    height: 20px
+}
+
+
+.navbar-collapse .navbar-nav > li >a:hover,
+.navbar-collapse .navbar-nav > li >a:focus{
+    background-color: rgb(51,153,255);
     color: white;
+    border-bottom: 0;
+    ;
 }
 
-.navbar-nav > .active >a:hover,
-.navbar-nav > .active >a:focus {
-
-    border-color:rgba(51,153,255,1);
+.navbar-collapse .navbar-nav > li.active >a,
+.navbar-collapse .navbar-nav > li.active >a:hover,
+.navbar-collapse .navbar-nav > li.active >a:focus{
+    background-color: rgb(51,153,255);
+    color: white;
+    border-bottom: 0;
 }
+
+
 
 /***********************************************************************
 *  Container SECTION
@@ -71,7 +91,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 */
 .jumbotron{
-    background-color: rgba(51,153,255,0.4);
+
+    background-color: rgb(168,214,255);
     height: 450px;
     width: 100%;
     margin: 0 auto;
