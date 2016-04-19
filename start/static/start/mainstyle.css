@@ -111,13 +111,17 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background-color: rgba(51,195,255,1);
 
 }
-tr.calendar td {
-  border-bottom:1pt solid black;
+.calendar th{
+    border-bottom: none;
+}
+.calendar tr {
+    border-bottom: solid 1px;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
 .image-preview-input {
     position: relative;
+
     overflow: hidden;
     margin: 0px;
     color: #333;

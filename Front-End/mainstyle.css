@@ -102,9 +102,14 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 /***********************************************************************
 *  Calendar SECTION
 ***********************************************************************/
-#calendar {
+.calendar {
     width: 100%;
     margin: 0 auto;
+
+}
+
+.calendar tr {
+    border-bottom: solid 1px;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
