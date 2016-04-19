@@ -57,15 +57,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 
 
-@media (max-width: 992px) {
-    body
-    {
-    }
-    .opaque-navbar {
-        background-color: black;
-        height: 60px;
-        transition: background-color .5s ease 0s;
-    }
+
+
 .navbar-collapse .navbar-nav > li >a:hover,
 .navbar-collapse .navbar-nav > li >a:focus{
     background-color: rgb(51,153,255);
@@ -129,6 +122,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     color: #333;
     background-color: #fff;
     border-color: #ccc;
+
 }
 .image-preview-input input[type=file] {
     position: absolute;

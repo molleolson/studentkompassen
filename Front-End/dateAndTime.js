@@ -78,6 +78,7 @@ $(function() {
             var date = $(this).datepicker('getDate');
             eventDate = date;
             writeDate();
+
         }
     });
 });
