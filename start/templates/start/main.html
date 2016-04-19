@@ -14,4 +14,10 @@ Alle hosts:
 {% endfor %}
 </ul>
 
+<ul>
+{% for event in events %}
+<li>{{ event.name }}, {{ event.location }}</li>
+{% endfor %}
+</ul>
+
 {% endblock %}
