@@ -42,8 +42,8 @@ rgb(51,153,255); #3399FF*/
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .container-fluid{
-    height: 20px;
-
+    height: auto;
+    border-bottom: 5px solid rgb(51,153,255);
 }
 .navbar-collapse{
     color:rgb(232,244,255);
