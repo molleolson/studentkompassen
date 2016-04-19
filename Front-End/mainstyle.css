@@ -38,7 +38,7 @@ body{
 *  NAVBAR SECTION
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
-.navbar-default{
+.navbar-collapse{
     color:rgba(51,153,255,0.15);
     border-color:rgba(51,153,255,1);
 
