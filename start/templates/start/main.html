@@ -2,14 +2,103 @@
 
 {% block title %}Startsida{% endblock %}
 
+{% block additional_scripts %}
+<script>
+    $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+</script>
+{% endblock %}
 
-{% block main %}
+{% block left%}
+<div class="container" id="monthAndDay">
+    <div class="sizeMonth">
+        <a href="#">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                    <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+                <a href="#">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+    </div>
+</div>
+
+<title>Calender i listform</title>
+    <div class="container col-sm-12" style="background-color: rgba(51,195,255,1);">
+            <div class="row" >
+                <ul class="calendar">
+                    <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
+                        <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Evenemangeeee</th>
+                            <th scope="col">Plats</th>
+
+                            <th scope="col">Typ</th>
+                            <th scope="col"> Något mer</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <ul>
+                        {% for event in events %}
 
 
-<ul>
-{% for event in events %}
-<li>{{ event.name }}, {{ event.location }}, {{event.startdate}}</li>
-{% endfor %}
-</ul>
+
+                        <tr class="">
+
+                             <td data-title="Aktivitet">{{ event.name }}</td>
+                            <td data-title="Plats">
+                                <span class="name">{{ event.location }}</span>
+                            </td>
+                            <td scope="row">{{event.startdate}}</td>
+                        </tr>
+                        {% endfor %}
+
+                        </ul>
+
+                   <!--     <tr class=" inactive">
+                            <td data-title="Aktivitet">Stockholms Nations Caf1111é</td>
+                            <td data-title="Plats">
+                                <span class="name">Stockholms Nation</span></td>
+                            <td scope="row">06:45 - 07:45</td>
+                        </tr>
+                        <tr class="">
+                             <td data-title="Aktivitet">Stockholms Nations Café</td>
+                            <td data-title="Plats">
+                                <span class="name">Stockholms Nation</span>
+                            </td>
+                            <td scope="row">06:45 - 07:45</td>
+                        </tr>
+                         <tr class="">
+                             <td data-title="Aktivitet">Stockholms Nations Café</td>
+                            <td data-title="Plats">
+                                <span class="name">Stockholms Nation</span>
+                            </td>
+
+                            <td scope="row">06:45 - 07:45</td>
+                        </tr>
+                         <tr class="">
+                             <td data-title="Aktivitet">Stockholms Nations Café</td>
+                            <td data-title="Plats">
+                                <span class="name">Stockholms Nation</span>
+                            </td>
+
+                            <th scope="row">06:45 - 07:45</th>
+                        </tr>
+-->
+                        </tbody></table></ul>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block right %}
+ <div class= "datetimepicker" id="datepicker">
+
+ </div>
+
 
 {% endblock %}
