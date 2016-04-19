@@ -9,8 +9,8 @@ from operator import attrgetter
 
 def index(request):
     menu_active_item = 'now'
-    temp = Event.objects.all()
-    events = sorted(temp, key=attrgetter('startdate'))
+    events = Event.objects.all().order_by('startdate')
+    #events = sorted(temp, key=attrgetter('startdate'))
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
     return render(request, 'start/main.html', locals())
@@ -34,15 +34,13 @@ def skapa(request, id):
 
 def nationmain(request):
     menu_active_item = 'now'
-    temp = Event.objects.all()
-    events = sorted(temp, key=attrgetter('startdate'))
+    events = Event.objects.all().order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
 
 
 def studentmain(request):
     menu_active_item = 'now'
-    temp = Event.objects.all()
-    events = sorted(temp, key=attrgetter('startdate'))
+    events = Event.objects.all().order_by('startdate')
     return render(request, 'start/studentmain.html', locals())
 
 
