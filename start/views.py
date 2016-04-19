@@ -4,6 +4,7 @@ from .models import Host, Event, Location
 from start.forms import EventForm
 from django.template import loader
 from django.contrib.auth import authenticate, login
+from operator import attrgetter
 
 
 def index(request):
@@ -34,6 +35,7 @@ def skapa(request, id):
 def nationmain(request):
     menu_active_item = 'now'
     events = Event.objects.all()
+    test = sorted(events, key=attrgetter('startdate'))
     return render(request, 'start/nationmain.html', locals())
 
 
