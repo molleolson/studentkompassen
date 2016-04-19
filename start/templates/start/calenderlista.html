@@ -1,6 +1,9 @@
 {% extends "pagelayout.html" %}
 
-{% block title %}Startsida{% endblock %}
+{% block title %}Nationsstartsida{% endblock %}
+
+{% block additional_css %}
+{% endblock %}
 
 {% block additional_scripts %}
 <script>
@@ -9,6 +12,11 @@
   });
 </script>
 {% endblock %}
+
+{% block extra_menu_item %}
+<li id="myEventL"><a id="myEventsClick" href="#"> Mina sparade event</a></li>
+{% endblock %}
+
 
 {% block left%}
 <div class="container" id="monthAndDay">
@@ -24,7 +32,7 @@
 </div>
 
 <title>Calender i listform</title>
-    <div class="container col-sm-12" >
+    <div class="container col-sm-12" style="background-color: rgba(51,195,255,1);">
             <div class="row" >
                 <ul class="calendar">
                     <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
@@ -42,7 +50,6 @@
 
                         <ul>
                         {% for event in events %}
-
 
 
                         <tr class="">

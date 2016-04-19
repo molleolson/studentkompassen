@@ -21,6 +21,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login', 'django.contrib.auth.views.login', ),
+    url(r'^accounts/hostlogin', 'django.contrib.auth.views.login', ),
     url(r'^start/', include('start.urls', namespace="start")),
 
 

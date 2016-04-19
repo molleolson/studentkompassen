@@ -9,16 +9,15 @@
     <title>Studentkompassen - {% block title %}{% endblock %}</title>
 
     <!-- START CSS FILES -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css"/>
-    <link rel="stylesheet" href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"/>
-    <link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />
+    <!--<link rel="stylesheet" href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"/>
+    <link rel="stylesheet" href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link id="bsdp-css" href="{% static 'bootstrap-datepicker/css/datepicker3.css' %}" rel="stylesheet">
-
+    <!--<link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />-->
     {% block additional_css %}{% endblock %}
 
     <!-- END CSS FILES -->
@@ -26,9 +25,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="{% static 'start/evententeringfunctions.js' %}" type="application/javascript"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="{% static 'start/functions.js' %}" type="application/javascript"></script>
-    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>
+    <!--<script src="{% static 'start/calendar.js' %}" type="application/javascript"></script>-->
+    <script src="{% static 'start/dateAndTime.js' %}" type="application/javascript"></script>
+    <!--<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>-->
+    <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}"/>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/multidatespicker.js' %}"></script>
+    {{ form.media }}
     {% block additional_scripts %}{% endblock %}
     <!-- END SCRIPT FILES -->
 
@@ -37,11 +45,10 @@
 
 <!--START HEADER-->
 
-<div class="container"> <!--gör om tillrow-->
-    <div id= "BannerRow" class="row col-md-12">
-            <h1>STUDENTKOMPASSEN
-            </h1>
-    </div>
+<div class="main-header" role="banner"> <!--gör om tillrow-->
+        <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic">
+        <img src="{% static 'start/headertest.png' %}" alt="Fel i bild" id="headerPic">
+
 </div>
 <button><a id="tonation" href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
 <button><a id="tostudent" href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
@@ -51,21 +58,27 @@
 <!--END HEADER-->
 
 {% block navigation %}
-<nav class="navbar navbar-default navbar-inverse ">
-    <div class="container">
-        <div class="navbar-header">
 
-            <a class="navbar-brand" href="#">Studentkompassen</a>
+<nav class="navbar navbar-collapse ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-            <div id="navbar" class="navbar-collapse collapse" >
-                <ul class="nav navbar-nav" >
+            <ul class="nav navbar-nav" >
                     <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a id="rnClick" href="{% url 'start:index' %}">Just nu</a></li>
                     <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
                     <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
                     <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
                     <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
                     <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                    <li id="getToKnowNationL"><a id="knowClick"> Lär känna nationer</a></li>
+                    <li id="elseL"><a id="elselick" href='#'>Övrigt</a></li>
+                    <li id="closeL"><a id="closeClick" href='#'>Nära dig</a></li>
+                    <li id="getToKnowNationL"><a id="knowClick" href='#'> Nationer/Kårer</a></li>
                     {% block extra_menu_item %}
                     {% endblock %}
                 </ul>
@@ -97,17 +110,17 @@
 {% endblock %}
 
 {% block main %}
-
 <div class="container">
 
     <div class="row col-md-8">
         {% block left %}
+
         {% endblock %}
     </div>
 
     <div class="row col-md-4">
         {% block right %}
-        {% endblock%}
+        {% endblock %}
     </div>
 
 </div>

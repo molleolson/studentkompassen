@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   # 'django.datetimewidget',
+    'datetimewidget.widgets',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'studentkompassen',
         'USER': 'molle',
         'PASSWORD': 'llconsulting',
-        'HOST': '130.238.15.214',
+        'HOST': '130.238.15.216',
         'PORT': '3306',
     }
 }
@@ -126,4 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/start'
+LOGIN_REDIRECT_URL = '/start/nationmain'

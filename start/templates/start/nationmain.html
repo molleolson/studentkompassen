@@ -1,11 +1,11 @@
-{% extends "pagelayout.html" %}
+{% extends "start/main.html" %}
 
 {% block title %}Nationsstartsida{% endblock %}
 
 
 {% block navigation %}
-<nav class="navbar navbar-default navbar-inverse ">
-    <div class="container">
+<nav class="navbar navbar-collapse ">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -13,10 +13,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Studentkompassen</a>
         </div>
-            <div id="navbar" class="navbar-collapse collapse" >
-                <ul class="nav navbar-nav" >
+            <ul class="nav navbar-nav" >
                     <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a id="rnClick" href="{% url 'start:nationmain' %}">Just nu</a></li>
                     <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a id="eventClick" href="{% url 'start:addevent' %}">Skapa Event</a></li>
                     <li id="ourEventL"><a id="oeClick" href='#'>Våra event</a></li>
@@ -50,10 +48,3 @@
 {% endblock %}
 
 
-{% block left %}
-
-{% endblock %}
-
-{% block right %}
-
-{% endblock %}
