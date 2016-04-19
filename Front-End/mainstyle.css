@@ -107,9 +107,16 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .calendar {
     width: 100%;
     margin: 0 auto;
-
+    background-color: #2aabd2;
+    border-radius: 10px;
 }
 
+.calendar th{
+    border-bottom: none;
+}
+.calendar thead{
+    border-bottom: solid 3px;
+}
 .calendar tr {
     border-bottom: solid 1px;
 }
