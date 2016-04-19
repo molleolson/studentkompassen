@@ -34,6 +34,9 @@ def skapa(request, id):
 def nationmain(request):
     menu_active_item = 'now'
     events = Event.objects.all()
+    for i in range(len(events)-1):
+        if events[i].startdate > events[i+1].startdate:
+            print "hej"
     return render(request, 'start/nationmain.html', locals())
 
 
