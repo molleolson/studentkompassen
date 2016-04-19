@@ -1,48 +1,80 @@
 
+body{
+    background-color: rgb(232,244,255);
 
+}
+/*#A8D6FF =R:168 G:214 B:255
+#E8F4FF = R:232 G:244 B:255
+rgb(51,153,255); #3399FF*/
+/***********************************************************************
+*  Calendarlist SECTION
+***********************************************************************/
+#abbesruta{
+    background-color:red;
+
+}
 /***********************************************************************
 *  Banner SECTION
 ***********************************************************************/
-#BannerRow{
-    background-color: green;
-    height: 85px;
-    border-bottom: 5px;
+
+#loggPic{
+    position: absolute;
+    z-index:1;
+    width:20%;
+    left:2.5%;
+    top:1%;
 }
+
+#headerPic{
+
+    width: 100%;
+    height:200px;
+    opacity: 0.5;
+}
+
+.main-header{
+    text-align: center;
+}
+
 
 /***********************************************************************
-*  OPAQUE NAVBAR SECTION
+*  NAVBAR SECTION
+http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
-.opaque-navbar {
-    background-color: rgba(0,0,0,0.5);
-    /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 60px;
-    border-bottom: 0px;
-    transition: banavbar-headerckground-color .5s ease 0s;
+
+.navbar-collapse{
+    color:rgb(232,244,255);
+
+    border-radius: 0;
+    border-bottom: 5px solid rgb(51,153,255);
+    min-height: 0;
+
 }
 
-.opaque-navbar.opaque {
-    background-color: black;
-    height: 60px;
-    transition: background-color .5s ease 0s;
-}
-
-ul.dropdown-menu {
-    background-color: black;
+.navbar-collapse .navbar-nav .navbar-brand{
+    min-height: 0;
+    height: 20px
 }
 
 
-@media (max-width: 992px) {
-    body
-    {
-        background:red;
-    }
-    .opaque-navbar {
-        background-color: black;
-        height: 60px;
-        transition: background-color .5s ease 0s;
-    }
-
+.navbar-collapse .navbar-nav > li >a:hover,
+.navbar-collapse .navbar-nav > li >a:focus{
+    background-color: rgb(51,153,255);
+    color: white;
+    border-bottom: 0;
+    ;
 }
+
+.navbar-collapse .navbar-nav > li.active >a,
+.navbar-collapse .navbar-nav > li.active >a:hover,
+.navbar-collapse .navbar-nav > li.active >a:focus{
+    background-color: rgb(51,153,255);
+    color: white;
+    border-bottom: 0;
+}
+
+
+
 /***********************************************************************
 *  Container SECTION
 ***********************************************************************/
@@ -59,7 +91,8 @@ ul.dropdown-menu {
 }
 */
 .jumbotron{
-    color: red;
+
+    background-color: rgb(168,214,255);
     height: 450px;
     width: 100%;
     margin: 0 auto;
