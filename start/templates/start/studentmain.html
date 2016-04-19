@@ -23,8 +23,8 @@
 
     <ul>
         {% for event in events %}
-        <div class="well well-sm">Large Well</div>
-        <li>{{ event.name }}, {{ event.location }}, {{event.startdate}}</li>
+        <li><div class="well well-sm">{{ event.name }}, {{ event.location }}, {{event.startdate}}</div>
+        </li>
         {% endfor %}
         </ul>
 </div>
