@@ -1,5 +1,4 @@
 
-
 /***********************************************************************
 *  Banner SECTION
 ***********************************************************************/
@@ -34,7 +33,6 @@ ul.dropdown-menu {
 @media (max-width: 992px) {
     body
     {
-        background:red;
     }
     .opaque-navbar {
         background-color: black;
@@ -59,7 +57,7 @@ ul.dropdown-menu {
 }
 */
 .jumbotron{
-    color: red;
+
     height: 450px;
     width: 100%;
     margin: 0 auto;
@@ -148,7 +146,15 @@ a.ui-state-highlight {
     border-color: black;
     background: #e6e6e6;
 }
+/*
+.glyphicon-chevron-left{
+    position: absolute;
+} */
 
-.sizeMonth{
-    width: 15%;
+.glyphicon-chevron-right{
+    position: absolute;
+    left: 17%;
+}
+.modal-content{
+    x-float: right;
 }
