@@ -108,7 +108,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .calendar {
     width: 100%;
     margin: 0 auto;
-    background-color: red;
+    background-color: rgba(51,195,255,1);
+
+}
+tr.calendar td {
+  border-bottom:1pt solid black;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
