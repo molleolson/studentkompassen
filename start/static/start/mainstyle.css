@@ -105,9 +105,10 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 /***********************************************************************
 *  Calendar SECTION
 ***********************************************************************/
-#calendar {
+.calendar {
     width: 100%;
     margin: 0 auto;
+    background-color: red;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
