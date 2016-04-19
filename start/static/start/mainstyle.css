@@ -20,7 +20,7 @@ rgb(51,153,255); #3399FF*/
 #loggPic{
     position: absolute;
     z-index:1;
-    width:20%;
+    width: 20%;
     left:2.5%;
     top:1%;
 }
@@ -41,7 +41,10 @@ rgb(51,153,255); #3399FF*/
 *  NAVBAR SECTION
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
+.container-fluid{
+    height: 20px;
 
+}
 .navbar-collapse{
     color:rgb(232,244,255);
 
