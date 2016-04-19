@@ -37,7 +37,7 @@ class Event(models.Model):
     description = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
     enddate = models.DateTimeField('end date', )
-    multipledates = models.DateTimeField('multiple dates')
+    #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 

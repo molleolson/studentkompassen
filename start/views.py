@@ -38,7 +38,8 @@ def nationmain(request):
 
 def studentmain(request):
     menu_active_item = 'now'
-    return render(request, 'start/studentmain.html', locals())
+    events = Event.objects.all()
+    return render(request, 'start/calenderlista.html', locals())
 
 
 def presentation(request):
