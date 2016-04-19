@@ -1,8 +1,9 @@
-Dette er login-siden.
+HOSTLOGIN
+
 {% extends "pagelayout.html" %}
 
 {% block main %}
-<form class = "form-inline" action="/accounts/login" method="post">
+<form class = "form-inline" action="/accounts/hostlogin" method="post">
     {% csrf_token %}
     {% include "form.html" with form=form %}
     <input type="submit" value="Login"/>

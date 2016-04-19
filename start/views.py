@@ -12,7 +12,7 @@ def index(request):
 
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
-    return render(request, 'start/main.html', locals())
+    return render(request, 'start/studentmain.html', locals())
 
 
 #    
