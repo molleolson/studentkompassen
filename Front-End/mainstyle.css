@@ -8,7 +8,16 @@ body{
 *  Banner SECTION
 ***********************************************************************/
 
+#loggPic{
+    position: absolute;
+    z-index:1;
+    width:20%;
+    left:2.5%;
+    top:1%;
+}
+
 #headerPic{
+
     width: 100%;
     height:200px;
     opacity: 0.5;
@@ -34,10 +43,10 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     color: white;
 }
 
-.navbar-default .navbar-nav > .active >a:hover,
-.navbar-default .navbar-nav > .active >a:focus {
+.navbar-nav > .active >a:hover,
+.navbar-nav > .active >a:focus {
 
-
+    border-color:rgba(51,153,255,1);
 }
 
 /***********************************************************************
