@@ -20,7 +20,7 @@ rgb(51,153,255); #3399FF*/
 #loggPic{
     position: absolute;
     z-index:1;
-    width: 50%;
+    width: 20%;
     left:2.5%;
     top:1%;
 }
