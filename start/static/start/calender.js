@@ -3,4 +3,4 @@
  */
 $(function() {
     $( "#datepicker" ).datepicker();
-});
+  });

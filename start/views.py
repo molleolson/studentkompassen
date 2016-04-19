@@ -12,7 +12,7 @@ def index(request):
 
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
-    return render(request, 'start/studentmain.html', locals())
+    return render(request, 'start/main.html', locals())
 
 
 #    
@@ -33,6 +33,7 @@ def skapa(request, id):
 
 def nationmain(request):
     menu_active_item = 'now'
+    events = Event.objects.all()
     return render(request, 'start/nationmain.html', locals())
 
 
