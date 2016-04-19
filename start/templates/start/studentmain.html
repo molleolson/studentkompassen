@@ -19,12 +19,14 @@
                 </a>
     </div>
 </div>
-<div class="jumbotron">
+<div class="jumbotron" style="background-color: rgba(51,153,255,1);">
 
-     <div class="well well-lg">Large Well</div>
-    <div class="well well-lg">Large Well</div>
-    <div class="well well-lg">Large Well</div>
-    <div class="well well-lg">Large Well</div>
+    <ul>
+        {% for event in events %}
+        <div class="well well-sm">Large Well</div>
+        <li>{{ event.name }}, {{ event.location }}, {{event.startdate}}</li>
+        {% endfor %}
+        </ul>
 </div>
 
 
