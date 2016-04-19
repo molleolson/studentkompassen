@@ -8,7 +8,6 @@ from django.contrib.auth import authenticate, login
 
 def index(request):
     menu_active_item = 'now'
-    hosts = Host.objects.all()
     events = Event.objects.all()
 
     #template = loader.get_template('start/main.html')
