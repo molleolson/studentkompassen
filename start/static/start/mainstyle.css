@@ -39,7 +39,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-bottom: 5px solid rgb(51,153,255);
 }
 .navbar-collapse{
-    color:rgb(232,244,255);
+    color:red;
 
     border-radius: 0;
     border-bottom: 5px solid rgb(51,153,255);
@@ -71,23 +71,13 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-bottom: 0;
 }
 
-
+.nav>li>a{
+    color: black;
+}
 
 /***********************************************************************
 *  Container SECTION
 ***********************************************************************/
-
-/*#rightNow{
-    background-color: red;
-}
-
-#breakfast{
-    background-color: yellow;
-}
-#lunch{
-    background-color:blue;
-}
-*/
 .jumbotron{
     background-color: rgb(168,214,255);
     height: 450px;
@@ -103,7 +93,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     margin: 0 auto;
     padding: 10px;
     border-radius: 15px;
-    background-color:  #A8D6FF;
+    background-color:   #A8D6FF;
 
 }
 .calendar th{
@@ -127,11 +117,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 
  .table-striped  > tbody > tr:nth-of-type(even) {
-    background-color:  #A8D6FF;
+    background-color:   #A8D6FF;
 
 }
  .table-striped  > tbody > tr:nth-of-type(odd) {
-    background-color: white;
+    background-color:  #A8D6FF;
 
 }
 
@@ -223,4 +213,11 @@ a.ui-state-highlight {
 }
 .modal-body{
     font-family: Georgia;
+}
+.flag{
+    float: right;
+    height: 26px;
+    width: 38px;
+    padding: 2px;
+    cursor: pointer;
 }
