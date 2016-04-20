@@ -4,55 +4,51 @@
 
 {% block additional_scripts %}
 <script>
-    $(function() {
-    $( "#datepicker" ).datepicker();
-  });
+    $(function () {
+        $("#datepicker").datepicker();
+    });
 </script>
 {% endblock %}
 
 {% block left%}
-<div class="container" id="monthAndDay">
-    <div class="sizeMonth">
-        <a href="#">
-            <span class="glyphicon glyphicon-chevron-left"></span>
+
+
+<title>Calender i listform</title>
+
+<ul class="calender">
+    <table class="responsive-table calendar-list active centered" data-day="1" cellspacing="0">
+
+        <div class="container" id="monthAndDay">
+            <div class="sizeMonth">
+                <a href="#">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-                    <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+                <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
                 <a href="#">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
-    </div>
-</div>
+            </div>
+        </div>
+        <thead>
+        <tr>
+            <th scope="col">Evenemang</th>
+            <th scope="col">Plats</th>
+            <th scope="col">Typ</th>
+        </tr>
+        </thead>
+        <tbody>
+            <ul>
+                {% for event in events %}
+                <tr data-toggle="modal" data-target="#{{event.id}}">
 
-<title>Calender i listform</title>
-    <div class="container col-sm-12" >
-
-                <ul class="calendar">
-                    <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
-                        <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
-                        <thead>
-                        <tr>
-                            <th scope="col">Evenemang</th>
-                            <th scope="col">Plats</th>
-                            <th scope="col">Typ</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        <ul>
-                        {% for event in events %}
-                        <tr  data-toggle="modal" data-target="#{{event.id}}" >
-
-                             <td data-title="Aktivitet">{{ event.name }}</td>
-                            <td data-title="Plats">
-                                <span class="name">{{ event.location }}</span>
-                            </td>
-                            <td>{{event.startdate}}</td
-                                <!-- POP UP SKITEN -->
+                    <td data-title="Aktivitet">{{ event.name }}</td>
+                    <td data-title="Plats"><span class="name">{{ event.location }}</span></td>
+                    <td>{{event.startdate}}</td>
+                            <!-- POP UP SKITEN -->
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-                                <!-- Modal -->
-                        <div class="modal fade" id="{{event.id}}" role="dialog">
-                            <div class="modal-dialog">
-
+                            <!-- Modal -->
+                    <div class="modal fade" id="{{event.id}}" role="dialog">
+                        <div class="modal-dialog">
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -60,32 +56,25 @@
                                     <h4 class="modal-title">Event description</h4>
                                 </div>
                                 <div class="modal-body">
-                                <p> {{event.description}} </p>
+                                    <p> {{event.description}} </p>
                                 </div>
                                 <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                            <!-- POP UP SKITEN -->
-                        </tr>
-                        </ul>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                </ul>
-
-
-    </div>
-
-
+                    </div>
+                    <!-- POP UP SKITEN -->
+                </tr>
+            </ul>
+            {% endfor %}
+            </tbody>
+        </table>
+    </ul>
 {% endblock %}
 
 {% block right %}
- <div class= "datetimepicker" id="datepicker">
-
- </div>
+<div class="datetimepicker" id="datepicker"></div>
 
 
 {% endblock %}

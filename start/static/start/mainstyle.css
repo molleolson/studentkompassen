@@ -49,7 +49,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-radius: 0;
     border-bottom: 5px solid rgb(51,153,255);
     min-height: 0;
-        font-family: 'Raleway', serif;
+    font-family: Raleway;
+
 }
 
 .navbar-collapse .navbar-nav .navbar-brand{
@@ -111,7 +112,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 .calendar th{
     border-bottom: none;
-    font-family: 'Raleway', serif;
+
+
 }
 .calendar thead{
     border-bottom: solid 3px;
@@ -119,7 +121,12 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 .calendar tr {
     border-bottom: solid 1px;
-    font-family: 'Georgia', serif;
+
+}
+.responsive-table th{
+    font-family: Raleway;
+}.responsive-table tr{
+    font-family: Georgia;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
@@ -199,4 +206,12 @@ a.ui-state-highlight {
 
 .sizeMonth{
     width: 15%;
+}
+
+.modal-header{
+    font-family: Raleway;
+
+}
+.modal-body{
+    font-family: Georgia;
 }
