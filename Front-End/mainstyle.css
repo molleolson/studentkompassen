@@ -95,14 +95,6 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background-color:blue;
 }
 */
-.jumbotron{
-
-    background-color: rgb(168,214,255);
-    height: 450px;
-    width: 100%;
-    margin: 0 auto;
-    border-bottom: 5px;
-}
 
 
 /***********************************************************************
@@ -209,9 +201,12 @@ a.ui-state-highlight {
     position: absolute;
     left: 17%;
 }
-.modal-content{
-    x-float: right;
-}
 .sizeMonth{
     width: 15%;
+}
+
+.scroll{
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
 }

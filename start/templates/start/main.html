@@ -30,6 +30,31 @@
                     <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
                         <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
                         <thead>
+                        <div>
+                                            <!-- POP UP SKITEN -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Some text in the modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- POP UP SKITEN -->
+
                         <tr>
                             <th scope="col">Evenemangeeee</th>
                             <th scope="col">Plats</th>
@@ -55,38 +80,7 @@
                         {% endfor %}
 
                         </ul>
-
-                   <!--     <tr class=" inactive">
-                            <td data-title="Aktivitet">Stockholms Nations Caf1111é</td>
-                            <td data-title="Plats">
-                                <span class="name">Stockholms Nation</span></td>
-                            <td scope="row">06:45 - 07:45</td>
-                        </tr>
-                        <tr class="">
-                             <td data-title="Aktivitet">Stockholms Nations Café</td>
-                            <td data-title="Plats">
-                                <span class="name">Stockholms Nation</span>
-                            </td>
-                            <td scope="row">06:45 - 07:45</td>
-                        </tr>
-                         <tr class="">
-                             <td data-title="Aktivitet">Stockholms Nations Café</td>
-                            <td data-title="Plats">
-                                <span class="name">Stockholms Nation</span>
-                            </td>
-
-                            <td scope="row">06:45 - 07:45</td>
-                        </tr>
-                         <tr class="">
-                             <td data-title="Aktivitet">Stockholms Nations Café</td>
-                            <td data-title="Plats">
-                                <span class="name">Stockholms Nation</span>
-                            </td>
-
-                            <th scope="row">06:45 - 07:45</th>
-                        </tr>
--->
-                        </tbody></table></ul>
+                        </tbody></table></div></ul>
 
         </div>
     </div>
