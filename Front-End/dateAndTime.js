@@ -3,7 +3,6 @@
  */
 var eventDate = new Date();
 
-/* START TEXT KOPPLAD TILL KALENDER */
 $ (function() {
     writeDate();
     $(".glyphicon-chevron-right").click(function() {switchDate(1)});
@@ -15,22 +14,6 @@ function switchDate(day){
     writeDate();
     $('#datepicker').datepicker('setDate', eventDate);
 }
-/* SLUT TEXT KOPPLAD TILL KALENDER */
-
-
-/* START KALENDER KOPPLAD TILL TEXTEN */
-/*
-$("#dt").datepicker({
-    onSelect: function(dateText, inst) {
-        var date = $(this).val();
-        var time = $('#time').val();
-        alert('on select triggered');
-        $("#start").val(date + time.toString(' HH:mm').toString());
-
-    }
-});
-*/
-/* SLUT KALENDER KOPPLAD TILL TEXTEN */
 
 function writeDate() {
 

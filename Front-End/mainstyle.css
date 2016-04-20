@@ -3,6 +3,9 @@ body{
     background-color: rgb(232,244,255);
 
 }
+.container{
+    width:100%;
+}
 /*#A8D6FF =R:168 G:214 B:255
 #E8F4FF = R:232 G:244 B:255
 rgb(51,153,255); #3399FF*/
@@ -92,14 +95,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background-color:blue;
 }
 */
-.jumbotron{
 
-    background-color: rgb(168,214,255);
-    height: 450px;
-    width: 100%;
-    margin: 0 auto;
-    border-bottom: 5px;
-}
 
 /***********************************************************************
 *  Calendar SECTION
@@ -205,9 +201,12 @@ a.ui-state-highlight {
     position: absolute;
     left: 17%;
 }
-.modal-content{
-    x-float: right;
-}
 .sizeMonth{
     width: 15%;
+}
+
+.scroll{
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
 }

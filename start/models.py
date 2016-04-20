@@ -32,6 +32,15 @@ class Host(models.Model):
     def __unicode__(self):
         return self.name
 
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=200, blank=True, null=True)  # Hr kanske vi sen kan testa lada in pdf?
+
+    def __unicode__(self):
+        return self.name
+
+
 class Event(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=400, blank=True, null=True)
@@ -40,36 +49,10 @@ class Event(models.Model):
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
+    #category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 
     def __unicode__(self):
         return self.name
 
 
-class Lunch(Event):
-    menu = models.CharField(max_length=200) # Hr kanske vi sen kan testa lada in pdf?
 
-
-class Other(Event):
-    pass
-
-class Cafe(Event):
-    pass
-
-class Breakfast(Event):
-    pass
-
-class Gasque(Event):
-    dresscode = models.CharField(max_length=200)
-
-class Club(Event):
-    pass
-
-class Pub(Event):
-    pass
-
-#class Administrator(models.Model):
-#    username = models.CharField(max_length=200)
-#class Event(models.Model):
-
-# class EventTime(models.Model):
-#    Event_Time=models.DateTimeField()
