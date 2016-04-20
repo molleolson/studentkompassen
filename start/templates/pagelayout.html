@@ -80,7 +80,9 @@
                     <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
                     <li id="elseL"><a id="elselick" href='#'>Övrigt</a></li>
                     <li id="closeL"><a id="closeClick" href='#'>Nära dig</a></li>
-                    <li id="getToKnowNationL"><a id="knowClick" href='#'> Nationer/Kårer</a></li>
+                    <li id="getToKnowNationL" {% if menu_active_item == 'about' %} class="active"{% endif %} ><a id="knowClick" href="{% url 'start:about' %}">Nationer/Kårer</a></li>
+
+
                     {% block extra_menu_item %}
                     {% endblock %}
                 </ul>
@@ -127,6 +129,8 @@
     </div>
 
 </div>
+<div class="col-md-1">
+    </div>
 {% endblock %}
 
 
