@@ -30,30 +30,6 @@
                     <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
                         <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
                         <thead>
-                        <div>
-                                            <!-- POP UP SKITEN -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Modal Header</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Some text in the modal.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- POP UP SKITEN -->
 
                         <tr>
                             <th scope="col">Evenemangeeee</th>
@@ -68,19 +44,40 @@
                         {% for event in events %}
 
 
-
-                        <tr class="">
-
+                        <tr  data-toggle="modal" data-target="#{{event.name}}" >
+                        {{event.description}}
                              <td data-title="Aktivitet">{{ event.name }}</td>
                             <td data-title="Plats">
                                 <span class="name">{{ event.location }}</span>
                             </td>
-                            <td scope="row">{{event.startdate}}</td>
+                            <td>{{event.startdate}}</td
+                                <!-- POP UP SKITEN -->
+                            <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+                                <!-- Modal -->
+                        <div class="modal fade" id="{{event.name}}" role="dialog">
+                            <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Event description</h4>
+                                </div>
+                                <div class="modal-body">
+                                <p> {{event.description}} </p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                            <!-- POP UP SKITEN -->
                         </tr>
                         {% endfor %}
 
                         </ul>
-                        </tbody></table></div></ul>
+                        </tbody></table></ul>
 
         </div>
     </div>
