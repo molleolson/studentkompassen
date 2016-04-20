@@ -16,6 +16,7 @@ def index(request):
     return render(request, 'start/main.html', locals())
 
 
+
 #    
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
