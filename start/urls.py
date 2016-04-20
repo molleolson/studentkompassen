@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^studentmain/$', views.studentmain, name='studentmain'),
     url(r'^nationmain/addevent/$', views.addevent, name='addevent'),
     url(r'^nationmain/presentation/$', views.presentation, name='presentation'),
+    url(r'^nationmain/ourevents/$', views.ourevents, name='ourevents'),
 
 
 ]
