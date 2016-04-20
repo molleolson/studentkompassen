@@ -57,6 +57,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 
 
+
+
 .navbar-collapse .navbar-nav > li >a:hover,
 .navbar-collapse .navbar-nav > li >a:focus{
     background-color: rgb(51,153,255);
@@ -105,9 +107,16 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .calendar {
     width: 100%;
     margin: 0 auto;
-
+    background-color: #2aabd2;
+    border-radius: 10px;
 }
 
+.calendar th{
+    border-bottom: none;
+}
+.calendar thead{
+    border-bottom: solid 3px;
+}
 .calendar tr {
     border-bottom: solid 1px;
 }
@@ -120,6 +129,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     color: #333;
     background-color: #fff;
     border-color: #ccc;
+
 }
 .image-preview-input input[type=file] {
     position: absolute;
@@ -186,7 +196,18 @@ a.ui-state-highlight {
     border-color: black;
     background: #e6e6e6;
 }
+/*
+.glyphicon-chevron-left{
+    position: absolute;
+} */
 
+.glyphicon-chevron-right{
+    position: absolute;
+    left: 17%;
+}
+.modal-content{
+    x-float: right;
+}
 .sizeMonth{
     width: 15%;
 }
