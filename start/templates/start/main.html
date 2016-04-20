@@ -25,16 +25,14 @@
 
 <title>Calender i listform</title>
     <div class="container col-sm-12" >
-            <div class="row" >
+
                 <ul class="calendar">
                     <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
                         <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
                         <thead>
-
                         <tr>
-                            <th scope="col">Evenemangeeee</th>
+                            <th scope="col">Evenemang</th>
                             <th scope="col">Plats</th>
-
                             <th scope="col">Typ</th>
                         </tr>
                         </thead>
@@ -42,10 +40,8 @@
 
                         <ul>
                         {% for event in events %}
+                        <tr  data-toggle="modal" data-target="#{{event.id}}" >
 
-
-                        <tr  data-toggle="modal" data-target="#{{event.name}}" >
-                        {{event.description}}
                              <td data-title="Aktivitet">{{ event.name }}</td>
                             <td data-title="Plats">
                                 <span class="name">{{ event.location }}</span>
@@ -54,7 +50,7 @@
                                 <!-- POP UP SKITEN -->
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                                 <!-- Modal -->
-                        <div class="modal fade" id="{{event.name}}" role="dialog">
+                        <div class="modal fade" id="{{event.id}}" role="dialog">
                             <div class="modal-dialog">
 
                             <!-- Modal content-->
@@ -74,12 +70,13 @@
                         </div>
                             <!-- POP UP SKITEN -->
                         </tr>
-                        {% endfor %}
-
                         </ul>
-                        </tbody></table></ul>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </ul>
 
-        </div>
+
     </div>
 
 
