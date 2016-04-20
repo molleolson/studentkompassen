@@ -15,29 +15,29 @@
 
 <title>Calender i listform</title>
 
-<ul class="calender">
-    <table class="responsive-table calendar-list active centered" data-day="1" cellspacing="0">
+<div class="calendar">
+    <table class="responsive-table calendar-list active table table-striped" data-day="1" cellspacing="0">
 
         <div class="container" id="monthAndDay">
-            <div class="sizeMonth">
+            <div class="sizeMonth text-center">
                 <a href="#">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="glyphicon glyphicon-chevron-left pull-left"></span>
                 </a>
-                <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
-                <a href="#">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
+               <strong><span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span></strong>
+
+                    <a href="#">
+                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </a>
             </div>
         </div>
         <thead>
         <tr>
-            <th scope="col">Evenemang</th>
-            <th scope="col">Plats</th>
-            <th scope="col">Typ</th>
+            <th class="col-md-4" scope="col">Evenemang</th>
+            <th class="col-md-2" scope="col">Plats</th>
+            <th class="col-md-2" scope="col">Typ</th>
         </tr>
         </thead>
         <tbody>
-            <ul>
                 {% for event in events %}
                 <tr data-toggle="modal" data-target="#{{event.id}}">
 
@@ -66,11 +66,10 @@
                     </div>
                     <!-- POP UP SKITEN -->
                 </tr>
-            </ul>
             {% endfor %}
             </tbody>
         </table>
-    </ul>
+    </div>
 {% endblock %}
 
 {% block right %}
