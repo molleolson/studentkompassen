@@ -26,6 +26,10 @@ def hostid(request, id):
     h = Host.objects.get(pk = id)
     return HttpResponse("You're looking at host %s." % h)
 
+def about(request):
+    menu_active_item = 'about'
+    return render(request, 'start/about.html', locals())
+
 
 def skapa(request, id):
     h = Host.objects.get(pk=id)
