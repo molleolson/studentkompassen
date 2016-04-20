@@ -56,7 +56,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 .navbar-collapse .navbar-nav .navbar-brand{
     min-height: 0;
-    height: 20px
+    height: 20px;
     font-family: 'Raleway', serif;
 }
 
@@ -66,7 +66,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background-color: rgb(51,153,255);
     color: white;
     border-bottom: 0;
-    ;
+
 }
 
 .navbar-collapse .navbar-nav > li.active >a,
