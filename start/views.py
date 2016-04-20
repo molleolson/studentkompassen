@@ -26,6 +26,10 @@ def hostid(request, id):
     h = Host.objects.get(pk = id)
     return HttpResponse("You're looking at host %s." % h)
 
+def about(request):
+    menu_active_item = 'about'
+    return render(request, 'start/about.html', locals())
+
 
 def skapa(request, id):
     h = Host.objects.get(pk=id)
@@ -44,6 +48,10 @@ def studentmain(request):
     events = Event.objects.all().order_by('startdate')
     return render(request, 'start/studentmain.html', locals())
 
+def ourevents(request):
+    menu_active_item = 'ourevents'
+    events = Event.objects.all().filter(host=1).order_by('startdate')
+    return render(request, 'start/ourevents.html', locals())
 
 def presentation(request):
     menu_active_item = 'presentation'

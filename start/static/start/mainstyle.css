@@ -1,7 +1,6 @@
 
 body{
     background-color: rgb(232,244,255);
-
 }
 /*#A8D6FF =R:168 G:214 B:255
 #E8F4FF = R:232 G:244 B:255
@@ -11,7 +10,6 @@ rgb(51,153,255); #3399FF*/
 ***********************************************************************/
 #abbesruta{
     background-color:red;
-
 }
 /***********************************************************************
 *  Banner SECTION
@@ -51,12 +49,13 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-radius: 0;
     border-bottom: 5px solid rgb(51,153,255);
     min-height: 0;
-
+        font-family: 'Raleway', serif;
 }
 
 .navbar-collapse .navbar-nav .navbar-brand{
     min-height: 0;
-    height: 20px
+    height: 20px;
+
 }
 
 
@@ -65,7 +64,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background-color: rgb(51,153,255);
     color: white;
     border-bottom: 0;
-    ;
+
 }
 
 .navbar-collapse .navbar-nav > li.active >a,
@@ -94,7 +93,6 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 */
 .jumbotron{
-
     background-color: rgb(168,214,255);
     height: 450px;
     width: 100%;
@@ -106,7 +104,6 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 *  Calendar SECTION
 ***********************************************************************/
 .calendar {
-    width: 100%;
     margin: 0 auto;
     background-color: rgba(51,195,255,1);
     border-radius: 15px;
@@ -114,18 +111,20 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 .calendar th{
     border-bottom: none;
+    font-family: 'Raleway', serif;
 }
 .calendar thead{
     border-bottom: solid 3px;
+
 }
 .calendar tr {
     border-bottom: solid 1px;
+    font-family: 'Georgia', serif;
 }
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
 .image-preview-input {
     position: relative;
-
     overflow: hidden;
     margin: 0px;
     color: #333;
