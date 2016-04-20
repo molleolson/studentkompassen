@@ -25,7 +25,6 @@
 
     <script src="functions.js" type="application/javascript"></script>
     <script src="dateAndTime.js"></script>
-    <script src="calender.js"></script>
 
     <link rel="stylesheet" href="mainstyle.css" />
 
@@ -39,8 +38,9 @@
 <!--BIG CONTAINTER-->
 
 <div class="main-header" role="banner"> <!--gör om tillrow-->
-        <img src="logga.png" alt="Logga" id="loggPic">
+    <img src="logga.png" alt="Logga" id="loggPic">
         <img src="headertest.png" alt="Fel i bild" id="headerPic">
+
 
 </div>
 
@@ -57,15 +57,15 @@
             </button>
         </div>
             <ul class="nav navbar-nav" >
-                <li id="rnL"class="active"><a id="rnClick" href='#'>Just nu</a></li>
-                <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
+                <li id="rnL"class="active"><a id="rnClick" href='#'>Just Nu</a></li>
+                <li id="bfL"><a id="bfClick" href='#'>Frukost</a></li>
                 <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
                 <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
                 <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
-                <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                <li id="elseL"><a id="elselick" href='#'>Övrigt</a></li>
+                <li id="clubL"><a id="clubClick" href='#'>Klubb</a></li>
+                <li id="elseL"><a id="elselick" href='#'>Övriga event</a></li>
                 <li id="closeL"><a id="closeClick" href='#'>Nära dig</a></li>
-                <li id="getToKnowNationL"><a id="knowClick" href='#'> Nationer/Kårer</a></li>
+                <li id="getToKnowNationL"><a id="knowClick" href='#'>Lär känna nationerna</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -84,9 +84,14 @@
             </ul>
     </div>
 </nav>
+
+
+
 <div class = "container">
 
+        <img src="storbritanniens-flagga.png" class = "flag" lang="en">
 
+        <img src="sveriges-flagga.png" class = "flag" lang="sv">
 
 
     <div class = "row col-md-8">
@@ -95,7 +100,9 @@
             <a href="#">
                 <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-                <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+
+            <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+
             <a href="#">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
@@ -186,6 +193,7 @@
 
     <div class = "row col-md-4">
         <div id="datepicker"></div>
+
     </div>
 
 </div>

@@ -175,8 +175,9 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 
 #monthAndDay {
+    width: 250px;
     position: relative;
-    left: 40%;
+    left: 6%;
 }
 
 #datepicker{
@@ -188,21 +189,48 @@ a.ui-state-highlight {
     border-color: black;
     background: #e6e6e6;
 }
-/*
-.glyphicon-chevron-left{
-    position: absolute;
-} */
 
 .glyphicon-chevron-right{
     position: absolute;
-    left: 17%;
+    left: 80%;
 }
 .sizeMonth{
     width: 15%;
 }
 
 .scroll{
-    width: 200px;
+    width: 700px;
     height: 200px;
     overflow: scroll;
+}
+
+.button {
+    border-radius: 10px;
+    border-spacing: 3px;
+    color: #2e4660;
+    margin: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#svenska{
+    float: right;
+}
+
+#engelska{
+    float: right;
+}
+
+.flag{
+    float: right;
+    height: 26px;
+    width: 38px;
+    padding: 2px;
+    cursor: pointer;
+}
+.testhej{
+
+}
+.testhej1{
+    width: 150px;
 }
