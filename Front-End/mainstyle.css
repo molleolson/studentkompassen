@@ -201,7 +201,7 @@ a.ui-state-highlight {
     width: 15%;
 }
 
-.testscroll{
+.scroll{
     width: 200px;
     height: 200px;
     overflow: scroll;
