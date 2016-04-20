@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Studentkompassen</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!--
+    <link href="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <link href="http://arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" rel="stylesheet" /> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="evententeringfunctions.js" type="application/javascript"></script>
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script src="functions.js" type="application/javascript"></script>
+    <script src="dateAndTime.js"></script>
+    <script src="calender.js"></script>
+
+    <link rel="stylesheet" href="mainstyle.css" />
+
+
+    <!-- HUR KAN DET SPELA ROLL VILKEN ORDNING MAN LÄGGER FILERNA HÄR!??  Den css fil du lägger sist override övriga :)-->
+
+</head>
+<body>
+
+
+<!--BIG CONTAINTER-->
+
+<div class="main-header" role="banner"> <!--gör om tillrow-->
+    <img src="logga.png" alt="Logga" id="loggPic">
+    <img src="headertest.png" alt="Fel i bild" id="headerPic">
+
+</div>
+
+<!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
+
+<nav class="navbar navbar-collapse ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <ul class="nav navbar-nav" >
+            <li id="rnL"><a id="rnClick" href='#'>Just nu</a></li>
+
+            <li id="eventL" ><a id="eventClick" href='#'>Skapa event</a></li>
+
+            <li id="ourEventL" class="active"><a id="oeClick" href='#'>Våra event</a></li>
+
+            <li id="profileL"><a id="profileClick" href='#'>Profil</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">My Account <span class="glyphicon glyphicon-user"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class = "col-md-1">
+    </div>
+<div class = "col-md-10">
+
+
+
+
+    <div class = "row col-md-8">
+
+        <div class="container" id="monthAndDay">
+            <a href="#">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span>
+            <a href="#">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+        <!-- HTML-SPECIFIK FÖR VÅRA EVENT-SIDA  -->
+
+        <title>Calender i listform</title>
+        <div class="container col-sm-10" style="background-color: rgba(51,195,255,1);">
+            <div class="row" >
+                <ul class="calendar">
+                    <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
+
+                        <thead>
+                        <tr>
+                            <th scope="col">Evenemangeeee</th>
+                            <th scope="col">Plats</th>
+
+                            <th scope="col">Typ</th>
+                            <th scope="col"> När</th>
+                            <th scope="col"> Redigera</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <ul>
+
+
+                            <tr class="">
+
+                                <td data-title="Aktivitet">{{ event.name }}</td>
+                                <td data-title="Plats">
+                                    <span class="name">{{ event.location }}</span>
+                                </td>
+                                <td>Vilken typ</td>
+                                <td scope="row">{{event.startdate}}</td>
+
+                                <td><button id="editEvent"type="button" class="btn btn-default">Redigera</button></td>
+                            </tr>
+
+
+                        </ul>
+
+
+
+                        </tbody></table></ul>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class = "row col-md-4">
+
+        <div class="row" >
+            <ul class="calendar">
+                <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
+                    <caption class="brand-font active"><span>Återkommande</span></caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Evenemangeeee</th>
+                        <th scope="col">Plats</th>
+
+                        <th scope="col">Typ</th>
+                        <th scope="col"> Dagar</th>
+                        <th scope="col"> Redigera</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <ul>
+
+
+                        <tr class="">
+
+                            <td data-title="Aktivitet">{{ event.name }}</td>
+                            <td data-title="Plats">
+                                <span class="name">{{ event.location }}</span>
+                            </td>
+                            <td>Vilken typ</td>
+                            <td scope="row">{{event.startdate}}</td>
+
+                            <td><button id="editNationDesc"type="button" class="btn btn-default">Redigera</button></td>
+                        </tr>
+
+
+                    </ul>
+
+
+
+                    </tbody></table></ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--  </div> -->
+
+
+<!--END BIG CONTAINTER-->
+
+<!-- Latest compiled and minified JavaScript -->
+
+</body>
+</html>
