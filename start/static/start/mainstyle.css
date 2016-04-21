@@ -32,24 +32,8 @@ div{
     clear: both;
     padding: 0;
 }
-#block-locale-language {
-    color: rgb(255,255,255);
-    clear: both;
-    margin-top: 0;
-    padding: 0.5em 1em;
-    font-size: 0.85em;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    margin-right: 1em;
-}
-.region-header .block {
-    float: right;
-    padding: 0 1em;
-}
-
-@media screen and (max-width: 559px)
-#block-locale-language {
-    margin-bottom: 1em;
+.block{
+    padding: 10px;
 }
 .hidden{
     display: none;
@@ -61,12 +45,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .container-fluid{
     height: auto;
-    border-bottom: 5px solid rgb(51,153,255);
 }
 .navbar-collapse{
     color:red;
-
     border-radius: 0;
+    border: 0px;
     border-bottom: 5px solid rgb(51,153,255);
     min-height: 0;
     font-family: Raleway;
