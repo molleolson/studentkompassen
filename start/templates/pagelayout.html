@@ -51,11 +51,10 @@
         <img src="{% static 'start/headertest.png' %}" alt="Fel i bild" id="headerPic">
 
 </div>
-<button><a id="tonation" href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
-<button><a id="tostudent" href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
+<button><a href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
+<button><a href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
 <button><a id="tologout" href="{% url 'start:index' %}">Till oinloggad</a> </button>
-<button><a id="toeng" href="{% url 'start:englishchange' %}">Engelska</a> </button>
-<button><a id="toswe" href="{% url 'start:swedishchange' %}">Svenska</a> </button>
+
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
 <!--END HEADER-->

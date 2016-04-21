@@ -10,8 +10,7 @@ urlpatterns = [
     url(r'^nationmain/presentation/$', views.presentation, name='presentation'),
     url(r'^nationmain/ourevents/$', views.ourevents, name='ourevents'),
     url(r'^studentmain/about/$', views.about, name='about'),
-    url(r'^englishchange/$', views.englishchange, name='englishchange'),
-    url(r'^swedishchange/$', views.swedishchange, name='swedishchange')
+
 
 
 ]

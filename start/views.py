@@ -8,16 +8,6 @@ from django.contrib.auth import authenticate, login
 from operator import attrgetter
 
 
-english = False
-
-def englishchange(request):
-    english = True
-
-    return HttpResponseRedirect('/start/english/nationmain/', locals())
-
-def swedishchange(request):
-    english = False
-    return index(request)
 
 def index(request):
     menu_active_item = 'now'
@@ -26,10 +16,9 @@ def index(request):
     #events = sorted(temp, key=attrgetter('startdate'))
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
-    if(english!=True):
-        return render(request, 'start/main.html', locals())
-    else:
-        return HttpResponseRedirect('/start/nationmain/', locals())
+
+    return render(request, 'start/main.html', locals())
+
 
 
 
@@ -44,10 +33,9 @@ def hostid(request, id):
 
 def about(request):
     menu_active_item = 'about'
-    if (english != True):
-        return render(request, 'start/about.html', locals())
-    else:
-        return render(request, 'start/english/about.html', locals())
+
+    return render(request, 'start/about.html', locals())
+
 
 
 def skapa(request, id):
@@ -59,10 +47,7 @@ def skapa(request, id):
 def nationmain(request):
     menu_active_item = 'now'
     events = Event.objects.all().order_by('startdate')
-    if(english!=True):
-        return render(request, 'start/nationmain.html', locals())
-    else:
-        return render(request, 'start/english/nationmain.html', locals())
+    return render(request, 'start/nationmain.html', locals())
 
 
 def studentmain(request):
@@ -70,25 +55,19 @@ def studentmain(request):
     #todaysevents = []
     #for event in Event.objects.filter()
     events = Event.objects.all().order_by('startdate')
-    if(english!=True):
-        return render(request, 'start/studentmain.html', locals())
-    else:
-        return render(request, 'start/english/studentmain.html', locals())
+    return render(request, 'start/studentmain.html', locals())
+
 
 def ourevents(request):
     menu_active_item = 'ourevents'
     events = Event.objects.all().filter(host=1).order_by('startdate')
-    if(english!=True):
-        return render(request, 'start/ourevents.html', locals())
-    else:
-        return render(request, 'start/english/ourevents.html', locals())
+    return render(request, 'start/ourevents.html', locals())
+
 
 def presentation(request):
     menu_active_item = 'presentation'
-    if(english!=True):
-        return render(request, 'start/presentation.html', locals())
-    else:
-        return render(request, 'start/english/presentation.html', locals())
+    return render(request, 'start/presentation.html', locals())
+
 
 
 def addevent(request):
@@ -100,14 +79,8 @@ def addevent(request):
 
         if form.is_valid():
             instance = form.save()
-            if (english!=True):
-                return HttpResponseRedirect('/start/nationmain/', locals())
-            else:
-                return HttpResponseRedirect('/start/english/nationmain/', locals())
-
+            return HttpResponseRedirect('/start/nationmain/', locals())
     else:
         form = EventForm()
-    if(english!=True):
-        return render(request, 'start/addevent.html', locals())
-    else:
-        return render(request, 'start/english/addevent.html', locals())
+
+    return render(request, 'start/addevent.html', locals())
