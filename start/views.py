@@ -8,13 +8,17 @@ from django.contrib.auth import authenticate, login
 from operator import attrgetter
 
 
+
 def index(request):
     menu_active_item = 'now'
+
     events = Event.objects.all().order_by('startdate')
     #events = sorted(temp, key=attrgetter('startdate'))
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
+
     return render(request, 'start/main.html', locals())
+
 
 
 
@@ -29,7 +33,9 @@ def hostid(request, id):
 
 def about(request):
     menu_active_item = 'about'
+
     return render(request, 'start/about.html', locals())
+
 
 
 def skapa(request, id):
@@ -49,19 +55,19 @@ def studentmain(request):
     #todaysevents = []
     #for event in Event.objects.filter()
     events = Event.objects.all().order_by('startdate')
-
-
-
     return render(request, 'start/studentmain.html', locals())
+
 
 def ourevents(request):
     menu_active_item = 'ourevents'
     events = Event.objects.all().filter(host=1).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
+
 def presentation(request):
     menu_active_item = 'presentation'
     return render(request, 'start/presentation.html', locals())
+
 
 
 def addevent(request):
@@ -73,9 +79,7 @@ def addevent(request):
 
         if form.is_valid():
             instance = form.save()
-
             return HttpResponseRedirect('/start/nationmain/', locals())
-
     else:
         form = EventForm()
 

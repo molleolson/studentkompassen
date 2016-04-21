@@ -225,16 +225,10 @@ a.ui-state-highlight {
     float: right;
 }
 
-.flag{
+.flag {
     float: right;
     height: 26px;
     width: 38px;
     padding: 2px;
     cursor: pointer;
-}
-.testhej{
-
-}
-.testhej1{
-    width: 150px;
 }

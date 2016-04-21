@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^studentmain/about/$', views.about, name='about'),
 
 
+
 ]
