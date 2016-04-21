@@ -94,5 +94,10 @@ $(document).ready(function(){
         $("#eventL").attr('class','active');
         $("#bfL,#lunchL,#brunchL, #fikaL, #pubL,#clubL,#rnL").attr('class',null);
     });
-
+/* bytaspråk knappen*/
+    $(".block").click(function(){
+        $(".language-link .hidden").removeClass(".hidden")
+        $(this).addClass("hidden")
+        alert("Put a message here.")    })
 });
+

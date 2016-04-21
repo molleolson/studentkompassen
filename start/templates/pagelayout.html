@@ -46,9 +46,14 @@
 
 <!--START HEADER-->
 
-<div class="main-header" role="banner"> <!--gör om tillrow-->
+<div class="main-header" role="banner"> <!--gör om till row-->
+        <div id="block-locale-language" class="block block-locale do-not-print first odd" role="complementary">
+            <h2 class="block__title block-title">Switch language</h2><ul class="language-switcher-locale-url">
+            <li class="sv first"><a href="/sv" class="language-link" xml:lang="sv">Svenska</a></li>
+            <li class="en last active"><a href="/en" class="language-link active" xml:lang="en">English</a></li></ul></div>
         <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic">
         <img src="{% static 'start/headertest.png' %}" alt="Fel i bild" id="headerPic">
+
 
 </div>
 <button><a id="tonation" href="{% url 'start:nationmain' %}";
