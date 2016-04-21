@@ -49,7 +49,7 @@ class Event(models.Model):
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
-    #category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 
     def __unicode__(self):
         return self.name

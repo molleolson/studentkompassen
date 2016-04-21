@@ -5,12 +5,7 @@ body{
 /*#A8D6FF =R:168 G:214 B:255
 #E8F4FF = R:232 G:244 B:255
 rgb(51,153,255); #3399FF*/
-/***********************************************************************
-*  Calendarlist SECTION
-***********************************************************************/
-#abbesruta{
-    background-color:red;
-}
+
 /***********************************************************************
 *  Banner SECTION
 ***********************************************************************/
@@ -44,12 +39,13 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-bottom: 5px solid rgb(51,153,255);
 }
 .navbar-collapse{
-    color:rgb(232,244,255);
+    color:red;
 
     border-radius: 0;
     border-bottom: 5px solid rgb(51,153,255);
     min-height: 0;
-        font-family: 'Raleway', serif;
+    font-family: Raleway;
+
 }
 
 .navbar-collapse .navbar-nav .navbar-brand{
@@ -75,23 +71,13 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-bottom: 0;
 }
 
-
+.nav>li>a{
+    color: black;
+}
 
 /***********************************************************************
 *  Container SECTION
 ***********************************************************************/
-
-/*#rightNow{
-    background-color: red;
-}
-
-#breakfast{
-    background-color: yellow;
-}
-#lunch{
-    background-color:blue;
-}
-*/
 .jumbotron{
     background-color: rgb(168,214,255);
     height: 450px;
@@ -105,13 +91,15 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .calendar {
     margin: 0 auto;
-    background-color: rgba(51,195,255,1);
+    padding: 10px;
     border-radius: 15px;
+    background-color:   #A8D6FF;
 
 }
 .calendar th{
     border-bottom: none;
-    font-family: 'Raleway', serif;
+
+
 }
 .calendar thead{
     border-bottom: solid 3px;
@@ -119,8 +107,24 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 .calendar tr {
     border-bottom: solid 1px;
-    font-family: 'Georgia', serif;
+
 }
+
+.responsive-table th{
+    font-family: Raleway;
+}.responsive-table tr{
+    font-family: Georgia;
+}
+
+ .table-striped  > tbody > tr:nth-of-type(even) {
+    background-color:   #A8D6FF;
+
+}
+ .table-striped  > tbody > tr:nth-of-type(odd) {
+    background-color:  #A8D6FF;
+
+}
+
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
 .image-preview-input {
@@ -184,7 +188,9 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 #monthAndDay {
     position: relative;
-    left: 40%;
+    left: 35%;
+    font-family: Raleway;
+    font-style: oblique;
 }
 
 #datepicker{
@@ -198,5 +204,20 @@ a.ui-state-highlight {
 }
 
 .sizeMonth{
-    width: 15%;
+    width: 25%;
+}
+
+.modal-header{
+    font-family: Raleway;
+
+}
+.modal-body{
+    font-family: Georgia;
+}
+.flag{
+    float: right;
+    height: 26px;
+    width: 38px;
+    padding: 2px;
+    cursor: pointer;
 }

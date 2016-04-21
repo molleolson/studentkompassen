@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, render_to_response, RequestContex
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Host, Event, Location
 from start.forms import EventForm
+from datetime import datetime, date
 from django.template import loader
 from django.contrib.auth import authenticate, login
 from operator import attrgetter
@@ -45,7 +46,12 @@ def nationmain(request):
 
 def studentmain(request):
     menu_active_item = 'now'
+    #todaysevents = []
+    #for event in Event.objects.filter()
     events = Event.objects.all().order_by('startdate')
+
+
+
     return render(request, 'start/studentmain.html', locals())
 
 def ourevents(request):
