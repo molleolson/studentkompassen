@@ -9,15 +9,15 @@
             <div class="row" >
             <ul class="calendar">
                 <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
-                    <caption class="brand-font active"><span>Återkommande</span></caption>
+                    <caption class="brand-font active"><span>Recurrent</span></caption>
                     <thead>
                     <tr>
-                        <th scope="col">Evenemangeeee</th>
-                        <th scope="col">Plats</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Place</th>
 
-                        <th scope="col">Typ</th>
-                        <th scope="col"> Dagar</th>
-                        <th scope="col"> Redigera</th>
+                        <th scope="col">Type</th>
+                        <th scope="col"> Days</th>
+                        <th scope="col"> Edit</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -31,10 +31,10 @@
                             <td data-title="Plats">
                                 <span class="name">{{ event.location }}</span>
                             </td>
-                            <td>Vilken typ</td>
+                            <td>What Type</td>
                             <td scope="row">{{event.startdate}}</td>
 
-                            <td><button id="editNationDesc"type="button" class="btn btn-default">Redigera</button></td>
+                            <td><button id="editNationDesc"type="button" class="btn btn-default">Edit</button></td>
                         </tr>
 
 

@@ -8,11 +8,9 @@
 
 {% block left %}
 
-
-
     <tr>
     <form class = "form-inline" action="{% url "start:addevent" %}" method="POST">
-        <h1>Skapa ett nytt evenemang:</h1>
+        <h1>Create a new event:</h1>
         <div class="form-group">
     {% csrf_token %}
 
@@ -23,8 +21,6 @@
         </div>
     </form>
     </tr>
-
-
 
 {% endblock %}
 
