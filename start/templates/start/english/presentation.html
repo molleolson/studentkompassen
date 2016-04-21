@@ -1,0 +1,38 @@
+{% extends "start/nationmain.html" %}
+
+{% block title %}Presentation{% endblock %}
+
+
+    {% block left %}
+            Vår profil och saker
+            <div class="row">
+                <div class="col-sm-6" >
+                    <div class="well" id="nationDesc">
+
+                    <p>Nations beskr</p>
+                    <button id="editNationDesc"type="button" class="btn btn-default">Redigera</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="well" id="dontMiss">
+                    <p>Missa inte!</p>
+                    <button id="editDontMiss"type="button" class="btn btn-default">Redigera</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="well" id="contact">
+                    <p>Kontaktinfo, adresser och andra rel permanenta grejor</p>
+                    <button id="editContactInfo"type="button" class="btn btn-default">Redigera</button>
+                    </div>
+                </div>
+            </div>
+    {% endblock %}
+
+    {% block right %}
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.505867435092!2d17.63593295175902!3d59.857346075526756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbf0b72963e1%3A0x7f0b0b4db60b7c6b!2sV%C3%A4stra+%C3%85gatan+14%2C+753+09+Uppsala!5e0!3m2!1ssv!2sse!4v1460720726017" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+    {% endblock %}
+
+

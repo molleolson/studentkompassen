@@ -1,0 +1,50 @@
+{% extends "start/main.html" %}
+
+{% block title %}Nationsstartsida{% endblock %}
+
+
+{% block navigation %}
+<nav class="navbar navbar-collapse ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+            <ul class="nav navbar-nav" >
+                    <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a id="rnClick" href="{% url 'start:nationmain' %}">Just nu</a></li>
+                    <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a id="eventClick" href="{% url 'start:addevent' %}">Skapa Event</a></li>
+                    <li id="ourEventL"{% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a id="oeClick" href="{% url 'start:ourevents' %}">Våra event</a></li>
+                    <li id="profileL" {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a id="profileClick" href="{% url 'start:presentation' %}">Presentation</a></li>
+                </ul>
+                {% block navigation_myaccount %}
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">My Account <span class="glyphicon glyphicon-user"</span></a>
+                        <ul class="dropdown-menu">
+                            {% if request.user.is_anonymous %}
+                            <li><a href="#">Log in</a></li>
+                            {% else %}
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+
+                </ul>
+                {% endblock %}
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+
