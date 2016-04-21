@@ -16,7 +16,6 @@ class EventForm(ModelForm):
             'startdate': DateTimeWidget(attrs={'class': "datetimepicker"}, usel10n=True, bootstrap_version=3),
             'enddate': DateTimeWidget(attrs={'class': "datetimepicker"}, usel10n=True, bootstrap_version=3)
             #'multipledates': DateTimeWidget(attrs={'class': "multidatespicker"}, usel10n=True, bootstrap_version=3),
-
         }
 
 
