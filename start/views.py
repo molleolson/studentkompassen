@@ -43,6 +43,7 @@ def hostid(request, id):
     h = Host.objects.get(pk = id)
     return HttpResponse("You're looking at host %s." % h)
 
+
 def about(request, language='se'):
     menu_active_item = 'about'
 
