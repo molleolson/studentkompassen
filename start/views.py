@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, render_to_response, RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth import logout as auth_logout
+from django.contrib.auth.decorators import login_required
 from .models import Host, Event, Location
 from start.forms import EventForm
 from datetime import datetime, date
@@ -84,3 +86,4 @@ def addevent(request):
         form = EventForm()
 
     return render(request, 'start/addevent.html', locals())
+
