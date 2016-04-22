@@ -20,8 +20,3 @@ urlpatterns = [
     url(r'^studentmain/about/$', views.about, name='about'),
     url(r'^language/$', views.language, name='language'),
 ]
-
-
-
-
-]
