@@ -21,10 +21,6 @@ def index(request):
 
     return render(request, 'start/main.html', locals())
 
-
-
-
-#    
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
 
@@ -39,19 +35,20 @@ def about(request):
     return render(request, 'start/about.html', locals())
 
 
-
+@login_required(login_url='/accounts/login')
 def skapa(request, id):
     h = Host.objects.get(pk=id)
     #response = "Nu ska vi skapa ett event for host %h"
     return HttpResponse("Nu ska vi skapa ett event for %s" % h)
 
 
+@login_required(login_url='/accounts/login')
 def nationmain(request):
     menu_active_item = 'now'
     events = Event.objects.all().order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
 
-
+@login_required(login_url='/')
 def studentmain(request):
     menu_active_item = 'now'
     #todaysevents = []
@@ -60,18 +57,20 @@ def studentmain(request):
     return render(request, 'start/studentmain.html', locals())
 
 
+@login_required(login_url='/accounts/login')
 def ourevents(request):
     menu_active_item = 'ourevents'
     events = Event.objects.all().filter(host=1).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
 
+@login_required(login_url='/accounts/login')
 def presentation(request):
     menu_active_item = 'presentation'
     return render(request, 'start/presentation.html', locals())
 
 
-
+@login_required(login_url='/accounts/login')
 def addevent(request):
 
     menu_active_item = 'event'
@@ -86,4 +85,3 @@ def addevent(request):
         form = EventForm()
 
     return render(request, 'start/addevent.html', locals())
-

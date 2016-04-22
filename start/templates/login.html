@@ -27,6 +27,7 @@
 
 {% if user and not user.is_anonymous %}
 <a>Hello, {{user.get_full_name}} !</a>
+ <meta http-equiv="REFRESH" content="0;url=http://130.238.15.208:8000/start/studentmain">
 <br>
 <a href="/logout">Logout</a>
 {% else %}
