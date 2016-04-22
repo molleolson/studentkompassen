@@ -1,8 +1,10 @@
 {% load staticfiles %}
+ {% load i18n %}
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,6 +58,7 @@
 <button><a href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
 <button><a href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
 <button><a id="tologout" href="{% url 'start:index' %}">Till oinloggad</a> </button>
+<a id="lan" href="{% url 'start:language' %}">{% trans "Swedish"%}</a>
 
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
@@ -74,15 +77,15 @@
             </button>
         </div>
             <ul class="nav navbar-nav">
-                    <li id="rnL"  {% if menu_active_item == 'now' %} class="active"{% endif %} ><a id="rnClick" href="{% url 'start:index' %}">Just nu</a></li>
-                    <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
-                    <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
-                    <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
-                    <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
-                    <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                    <li id="elseL"><a id="elselick" href='#'>Övrigt</a></li>
-                    <li id="closeL"><a id="closeClick" href='#'>Nära dig</a></li>
-                    <li id="getToKnowNationL" {% if menu_active_item == 'about' %} class="active"{% endif %} ><a id="knowClick" href="{% url 'start:about' %}">Nationer/Kårer</a></li>
+                    <li id="rnL"  {% if menu_active_item == 'now' %} class="active"{% endif %} ><a id="rnClick" href="{% url 'start:index' %}">{% trans "Right now"%}</a></li>
+                    <li id="bfL"><a id="bfClick" href='#'>{% trans "Breakfast"%}</a></li>
+                    <li id="lunchL"><a id="lunchClick" href='#'>{% trans "Lunch"%}</a></li>
+                    <li id="fikaL"><a id="fikaClick" href='#'>{% trans "Fika"%}</a></li>
+                    <li id="pubL"><a id="pubClick" href='#'>{% trans "Pub"%}</a></li>
+                    <li id="clubL"><a id="clubClick" href='#'>{% trans "Clubs"%}</a></li>
+                    <li id="elseL"><a id="elselick" href='#'>{% trans "Other"%}</a></li>
+                    <li id="closeL"><a id="closeClick" href='#'>{% trans "Close to you"%}</a></li>
+                    <li id="getToKnowNationL" {% if menu_active_item == 'about' %} class="active"{% endif %} ><a id="knowClick" href="{% url 'start:about' %}">{% trans "Nations and unions"%}</a></li>
 
 
                     {% block extra_menu_item %}
@@ -94,7 +97,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">My Account <span class="glyphicon glyphicon-user"</span></a>
                         <ul class="dropdown-menu">
                             {% if request.user.is_anonymous %}
-                            <li><a href="#">Log in</a></li>
+                            <li><a href="#">{% trans "Log in"%}</a></li>
                             {% else %}
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
@@ -109,6 +112,7 @@
                     </li>
 
                 </ul>
+
                 {% endblock %}
             </div>
         </div>
@@ -123,11 +127,13 @@
         {% block left %}
 
         {% endblock %}
+
     </div>
 
     <div class="row col-md-1"   >
         {% block right %}
         {% endblock %}
+
     </div>
 
 </div>

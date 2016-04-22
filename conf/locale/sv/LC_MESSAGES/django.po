@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-22 12:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: start/templates/pagelayout.html:79 start/templates/start/nationmain.html:18
+msgid "Right now"
+msgstr "Just nu"
+
+#: start/templates/pagelayout.html:80
+msgid "Breakfast"
+msgstr "Frukost"
+
+#: start/templates/pagelayout.html:81
+msgid "Lunch"
+msgstr "Lunch"
+
+#: start/templates/pagelayout.html:82
+msgid "Fika"
+msgstr "Fika"
+
+#: start/templates/pagelayout.html:83
+msgid "Pub"
+msgstr "Pub"
+
+#: start/templates/pagelayout.html:84
+msgid "Clubs"
+msgstr "Klubbar/Släpp"
+
+#: start/templates/pagelayout.html:85
+msgid "Other"
+msgstr "Övrigt"
+
+#: start/templates/pagelayout.html:86
+msgid "Close to you"
+msgstr "Nära dig"
+
+#: start/templates/pagelayout.html:87
+msgid "Nations and unions"
+msgstr "Nationer och kårer"
+
+#: start/templates/pagelayout.html:99 start/templates/start/nationmain.html:29
+msgid "Log in"
+msgstr "Logga in"
+
+#: start/templates/pagelayout.html:119 studentkompassen/settings.py:118
+msgid "Swedish"
+msgstr "English"
+
+#: start/templates/start/about.html:8
+#: start/templates/start/calenderlista.html:17
+#: start/templates/start/studentmain.html:7
+msgid "My saved events"
+msgstr "Mina sparade event"
+
+#: start/templates/start/addevent.html:15
+msgid "Create a new event"
+msgstr "Skapa ett nytt event"
+
+#: start/templates/start/addevent.html:22
+msgid "Add event"
+msgstr "Lägg till event"
+
+#: start/templates/start/calenderlista.html:42
+#: start/templates/start/ourevents.html:15
+msgid "Event"
+msgstr "Evanemang"
+
+#: start/templates/start/calenderlista.html:43
+#: start/templates/start/ourevents.html:16
+msgid "Place"
+msgstr "Plats"
+
+#: start/templates/start/calenderlista.html:45
+#: start/templates/start/ourevents.html:18
+msgid "Type"
+msgstr "Typ"
+
+#: start/templates/start/calenderlista.html:46
+msgid "Time"
+msgstr "Tid"
+
+#: start/templates/start/nationmain.html:19
+msgid "Create event"
+msgstr "Skapa event"
+
+#: start/templates/start/nationmain.html:20
+msgid "Our events"
+msgstr "Våra event"
+
+#: start/templates/start/nationmain.html:21
+msgid "Presentation"
+msgstr "Presentation"
+
+#: start/templates/start/ourevents.html:12
+msgid "Reappearing events"
+msgstr "Återkommande event"
+
+#: start/templates/start/ourevents.html:19
+msgid "Days"
+msgstr "Dagar"
+
+#: start/templates/start/ourevents.html:20
+#: start/templates/start/presentation.html:13
+#: start/templates/start/presentation.html:19
+#: start/templates/start/presentation.html:26
+msgid "Edit"
+msgstr "Redigera"
+
+#: studentkompassen/settings.py:117
+msgid "English"
+msgstr "eng"
+
+#~ msgid "Hello !"
+#~ msgstr "hi"
+
+#~ msgid "Hej och nått"
+#~ msgstr "gd"
+
+#~ msgid "Hello2!"
+#~ msgstr "hi3"
+
+#~ msgid "Hello26!"
+#~ msgstr "hif"
+
+#~ msgid "Hej5 och nått"
+#~ msgstr "54"

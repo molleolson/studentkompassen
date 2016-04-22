@@ -6,6 +6,10 @@ body{
 #E8F4FF = R:232 G:244 B:255
 rgb(51,153,255); #3399FF*/
 
+#lan{
+    float: right;
+}
+
 /***********************************************************************
 *  Banner SECTION
 ***********************************************************************/
@@ -32,8 +36,24 @@ div{
     clear: both;
     padding: 0;
 }
-.block{
-    padding: 10px;
+#block-locale-language {
+    color: rgb(255,255,255);
+    clear: both;
+    margin-top: 0;
+    padding: 0.5em 1em;
+    font-size: 0.85em;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-right: 1em;
+}
+.region-header .block {
+    float: right;
+    padding: 0 1em;
+}
+
+@media screen and (max-width: 559px){}
+#block-locale-language {
+    margin-bottom: 1em;
 }
 .hidden{
     display: none;
@@ -45,12 +65,15 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .container-fluid{
     height: auto;
+
 }
 .navbar-collapse{
     color:red;
+
     border-radius: 0;
-    border: 0px;
+    border: 0;
     border-bottom: 5px solid rgb(51,153,255);
+
     min-height: 0;
     font-family: Raleway;
 
@@ -233,3 +256,25 @@ a.ui-state-highlight {
     font-family: Georgia;
 }
 
+
+/*Rullbar*/
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #F0C172;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-button {
+    background-color: goldenrod;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+}

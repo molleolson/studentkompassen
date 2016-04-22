@@ -1,5 +1,5 @@
 {% extends "start/nationmain.html" %}
-
+{% load i18n %}
 {% block title %}ourEvents{% endblock %}
 
 
@@ -9,15 +9,15 @@
             <div class="row" >
             <ul class="calendar">
                 <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
-                    <caption class="brand-font active"><span>Återkommande</span></caption>
+                    <caption class="brand-font active"><span>{% trans "Reappearing events"%}</span></caption>
                     <thead>
                     <tr>
-                        <th scope="col">Evenemangeeee</th>
-                        <th scope="col">Plats</th>
+                        <th scope="col">{% trans "Event"%}</th>
+                        <th scope="col">{% trans "Place"%}</th>
 
-                        <th scope="col">Typ</th>
-                        <th scope="col"> Dagar</th>
-                        <th scope="col"> Redigera</th>
+                        <th scope="col">{% trans "Type"%}</th>
+                        <th scope="col">{% trans "Days"%}</th>
+                        <th scope="col">{% trans "Edit"%}</th>
                     </tr>
                     </thead>
                     <tbody>

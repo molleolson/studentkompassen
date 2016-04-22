@@ -1,5 +1,5 @@
 {% extends "pagelayout.html" %}
-
+{% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
 
 {% block additional_css %}
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block extra_menu_item %}
-<li id="myEventL"><a id="myEventsClick" href="#"> Mina sparade event</a></li>
+<li id="myEventL"><a id="myEventsClick" href="#"> {% trans "My saved events"%}</a></li>
 {% endblock %}
 
 
@@ -39,11 +39,11 @@
                         <caption class="brand-font active">måndag 18/4<span>(Idag)</span></caption>
                         <thead>
                         <tr>
-                            <th scope="col">Evenemangeeee</th>
-                            <th scope="col">Plats</th>
+                            <th scope="col">{% trans "Event"%}</th>
+                            <th scope="col">{% trans "Place"%}</th>
 
-                            <th scope="col">Typ</th>
-                            <th scope="col"> Något mer</th>
+                            <th scope="col">{% trans "Type"%}</th>
+                            <th scope="col">{% trans "Time"%}</th>
                         </tr>
                         </thead>
                         <tbody>

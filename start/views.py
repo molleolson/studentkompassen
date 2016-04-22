@@ -2,12 +2,24 @@ from django.shortcuts import render, redirect, render_to_response, RequestContex
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Host, Event, Location
 from start.forms import EventForm
+from django.utils import translation
 from datetime import datetime, date
 from django.template import loader
 from django.contrib.auth import authenticate, login
 from operator import attrgetter
+from django.utils.translation import activate
+from django.core.urlresolvers import reverse
 
 
+def language(request):
+    cur_language = translation.get_language()
+
+    if cur_language=='en':
+        translation.activate('sv')
+    elif cur_language=='sv':
+        translation.activate('en')
+
+    return render(request, 'start/main.html', locals())
 
 def index(request):
     menu_active_item = 'now'
@@ -20,8 +32,6 @@ def index(request):
     return render(request, 'start/main.html', locals())
 
 
-
-
 #    
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
@@ -31,9 +41,13 @@ def hostid(request, id):
     h = Host.objects.get(pk = id)
     return HttpResponse("You're looking at host %s." % h)
 
-def about(request):
+def about(request, language='se'):
     menu_active_item = 'about'
 
+    if language=='se':
+        translation.activate('sv')
+    elif language=='en':
+        translation.activate('en')
     return render(request, 'start/about.html', locals())
 
 

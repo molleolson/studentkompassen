@@ -1,5 +1,5 @@
 {% extends "start/main.html" %}
-
+{% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
 
 
@@ -15,10 +15,10 @@
             </button>
         </div>
             <ul class="nav navbar-nav" >
-                    <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a id="rnClick" href="{% url 'start:nationmain' %}">Just nu</a></li>
-                    <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a id="eventClick" href="{% url 'start:addevent' %}">Skapa Event</a></li>
-                    <li id="ourEventL"{% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a id="oeClick" href="{% url 'start:ourevents' %}">Våra event</a></li>
-                    <li id="profileL" {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a id="profileClick" href="{% url 'start:presentation' %}">Presentation</a></li>
+                    <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a id="rnClick" href="{% url 'start:nationmain' %}">{% trans "Right now"%}</a></li>
+                    <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a id="eventClick" href="{% url 'start:addevent' %}">{% trans "Create event"%}</a></li>
+                    <li id="ourEventL"{% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a id="oeClick" href="{% url 'start:ourevents' %}">{% trans "Our events"%}</a></li>
+                    <li id="profileL" {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a id="profileClick" href="{% url 'start:presentation' %}">{% trans "Presentation"%}</a></li>
                 </ul>
                 {% block navigation_myaccount %}
                 <ul class="nav navbar-nav navbar-right">
@@ -26,7 +26,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">My Account <span class="glyphicon glyphicon-user"</span></a>
                         <ul class="dropdown-menu">
                             {% if request.user.is_anonymous %}
-                            <li><a href="#">Log in</a></li>
+                            <li><a href="#">{% trans "Log in"%}</a></li>
                             {% else %}
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
