@@ -18,9 +18,9 @@
 
 <div class="calendar">
 
-<img src="\storbritanniens-flagga.png" class = "flag " lang="en">
+<img src="storbritanniens-flagga.png" class = "flag " lang="en">
 
-        <img src="\sveriges-flagga.png" class = "flag" lang="sv">
+        <img src="sveriges-flagga.png" class = "flag" lang="sv">
 
     <table class="responsive-table calendar-list active table table-striped" data-day="1" cellspacing="0">
 
@@ -35,12 +35,19 @@
                     <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </a>
             </div>
+
+            <div id="block-locale-language" class="block block-locale do-not-print first odd" role="complementary">
+            <h2 class="block__title block-title">Switch language</h2><ul class="language-switcher-locale-url">
+            <li class="sv first"><a href="/sv" class="language-link" xml:lang="sv">Svenska</a></li>
+            <li class="en last active"><a href="/en" class="language-link active" xml:lang="en">English</a></li></ul></div>
+
         </div>
         <thead>
         <tr>
             <th class="col-md-4" scope="col">Evenemang</th>
             <th class="col-md-2" scope="col">Plats</th>
-            <th class="col-md-2" scope="col">Typ</th>
+            <th class="col-md-1" scope="col">Typ</th>
+            <th class="col-md-1" scope="col">Tid</th>
         </tr>
         </thead>
         <tbody>
@@ -53,6 +60,7 @@
                             <!-- POP UP SKITEN -->
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->
+                    <td>{{event.startdate}}</td>
                     <div class="modal fade" id="{{event.id}}" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->

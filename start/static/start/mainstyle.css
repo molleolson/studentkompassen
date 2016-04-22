@@ -17,7 +17,9 @@ rgb(51,153,255); #3399FF*/
     left:2.5%;
     top:1%;
 }
-
+div{
+    display: block;
+}
 #headerPic{
 
     width: 100%;
@@ -27,8 +29,15 @@ rgb(51,153,255); #3399FF*/
 
 .main-header{
     text-align: center;
+    clear: both;
+    padding: 0;
 }
-
+.block{
+    padding: 10px;
+}
+.hidden{
+    display: none;
+}
 
 /***********************************************************************
 *  NAVBAR SECTION
@@ -36,12 +45,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .container-fluid{
     height: auto;
-    border-bottom: 5px solid rgb(51,153,255);
 }
 .navbar-collapse{
     color:red;
-
     border-radius: 0;
+    border: 0px;
     border-bottom: 5px solid rgb(51,153,255);
     min-height: 0;
     font-family: Raleway;
@@ -74,18 +82,22 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .nav>li>a{
     color: black;
 }
-
 /***********************************************************************
-*  Container SECTION
+*  Navbar slut
 ***********************************************************************/
-.jumbotron{
-    background-color: rgb(168,214,255);
-    height: 450px;
-    width: 100%;
-    margin: 0 auto;
-    border-bottom: 5px;
+/***********************************************************************
+*  Flaggorna SECTION
+***********************************************************************/
+.flag{
+    float: right;
+    height: 26px;
+    width: 38px;
+    padding: 2px;
+    cursor: pointer;
 }
-
+/***********************************************************************
+*  Flaggorna slut
+***********************************************************************/
 /***********************************************************************
 *  Calendar SECTION
 ***********************************************************************/
@@ -110,11 +122,13 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 }
 
+
 .responsive-table th{
     font-family: Raleway;
 }.responsive-table tr{
     font-family: Georgia;
 }
+
 
  .table-striped  > tbody > tr:nth-of-type(even) {
     background-color:   #A8D6FF;
@@ -124,6 +138,20 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background-color:  #A8D6FF;
 
 }
+ #monthAndDay {
+    position: relative;
+    left: 35%;
+    font-family: Raleway;
+    font-style: oblique;
+}
+
+#datepicker{
+    position: absolute;
+
+}
+/***********************************************************************
+*  Calendar Slut
+***********************************************************************/
 
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
 
@@ -186,17 +214,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     float:right;
 }
 
-#monthAndDay {
-    position: relative;
-    left: 35%;
-    font-family: Raleway;
-    font-style: oblique;
-}
 
-#datepicker{
-    position: absolute;
-
-}
 
 a.ui-state-highlight {
     border-color: black;
@@ -214,10 +232,4 @@ a.ui-state-highlight {
 .modal-body{
     font-family: Georgia;
 }
-.flag{
-    float: right;
-    height: 26px;
-    width: 38px;
-    padding: 2px;
-    cursor: pointer;
-}
+
