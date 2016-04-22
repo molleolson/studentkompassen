@@ -83,6 +83,9 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .nav>li>a{
     color: black;
 }
+.button{
+    width: 100px;
+}
 /***********************************************************************
 *  Navbar slut
 ***********************************************************************/
