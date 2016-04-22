@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'studentkompassen',
         'USER': 'molle',
         'PASSWORD': 'llconsulting',
-        'HOST': '130.238.15.216',
+        'HOST': '130.238.15.208',
         'PORT': '3306',
     }
 }
