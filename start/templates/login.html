@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '464984813707743',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+{% if user and not user.is_anonymous %}
+<a>Hello, {{user.get_full_name}} !</a>
+ <meta http-equiv="REFRESH" content="0;url=http://130.238.15.208:8000/start/studentmain">
+<br>
+<a href="/logout">Logout</a>
+{% else %}
+<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
+
+{% endif %}
+
+</body>
+</html>

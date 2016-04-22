@@ -22,7 +22,7 @@
     <table class="responsive-table calendar-list active table table-striped" data-day="1" cellspacing="0">
 
         <div class="container" id="monthAndDay">
-            <div class="sizeMonth text-center">
+            <div class="sizeMonth col-sm-2">
                 <a href="#">
                     <span class="glyphicon glyphicon-chevron-left pull-left"></span>
                 </a>
@@ -34,13 +34,12 @@
             </div>
 
 
-        </div>
         <thead>
         <tr>
-            <th class="col-md-4" scope="col">Evenemang</th>
-            <th class="col-md-2" scope="col">Plats</th>
-            <th class="col-md-1" scope="col">Typ</th>
-            <th class="col-md-1" scope="col">Tid</th>
+            <th class="col-md-4 col-sm-4" scope="col">Evenemang</th>
+            <th class="col-md-2 col-sm-2" scope="col">Plats</th>
+            <th class="col-md-1 hidden-xs" scope="col">Typ</th>
+            <th class="col-md-1 col-sm-1" scope="col">Tid</th>
         </tr>
         </thead>
         <tbody>
@@ -53,7 +52,7 @@
                             <!-- POP UP SKITEN -->
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->
-                    <td>{{event.startdate}}</td>
+                    <td class="hidden-xs">{{event.startdate}}</td>
                     <div class="modal fade" id="{{event.id}}" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
