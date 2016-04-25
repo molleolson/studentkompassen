@@ -14,21 +14,6 @@ from django.core.urlresolvers import reverse
 from datetime import timedelta, datetime
 
 
-def language(request):
-
-
-    print 'path_info=', request.path_info
-    print 'resolvert mathc=', request.resolver_match
-
-    cur_language = translation.get_language()
-
-    """
-    if cur_language == 'en':
-        translation.activate('sv')
-    elif cur_language == 'sv':
-        translation.activate('en')
-    """
-    return render(request, 'start/main.html', locals())
 
 def index(request):
     menu_active_item = 'now'

@@ -20,15 +20,15 @@ msgstr ""
 #: start/templates/pagelayout.html:90 start/templates/pagelayout.html:137
 #: start/templates/start/nationmain.html:18
 msgid "Right now"
-msgstr "Just nu"
+msgstr "Akkurat nå"
 
 #: start/templates/pagelayout.html:91 start/templates/pagelayout.html:138
 msgid "Breakfast"
-msgstr "Frukost"
+msgstr "Frokost"
 
 #: start/templates/pagelayout.html:92 start/templates/pagelayout.html:139
 msgid "Lunch"
-msgstr "Lunch"
+msgstr "Lunsj"
 
 #: start/templates/pagelayout.html:93 start/templates/pagelayout.html:140
 msgid "Fika"
@@ -40,65 +40,65 @@ msgstr "Pub"
 
 #: start/templates/pagelayout.html:95
 msgid "Restaurant"
-msgstr "Restaurang"
+msgstr "Restaurant"
 
 #: start/templates/pagelayout.html:96 start/templates/pagelayout.html:142
 msgid "Clubs"
-msgstr "Klubbar/Släpp"
+msgstr "Klubb"
 
 #: start/templates/pagelayout.html:97 start/templates/pagelayout.html:145
 msgid "Nations and unions"
-msgstr "Nationer och kårer"
+msgstr "Nasjoner og fagforeningar"
 
 #: start/templates/pagelayout.html:98 start/templates/pagelayout.html:144
 msgid "Close to you"
-msgstr "Nära dig"
+msgstr "Nær deg"
 
 #: start/templates/pagelayout.html:110
 msgid "Sign Up"
-msgstr "Registrera dig"
+msgstr "Registrer"
 
 #: start/templates/pagelayout.html:111
 msgid "Login"
-msgstr "Logga in"
+msgstr "Logg inn"
 
 #: start/templates/pagelayout.html:143
 msgid "Other"
-msgstr "Övrigt"
+msgstr "Andre"
 
 #: start/templates/pagelayout.html:178
 #: start/templates/start/nationmain.html:29
 msgid "Log in"
-msgstr "Logga in"
+msgstr "Logg inn"
 
 #: start/templates/start/about.html:8
 #: start/templates/start/calenderlista.html:17
 #: start/templates/start/studentmain.html:9
 msgid "My saved events"
-msgstr "Mina sparade event"
+msgstr "Mine lagrede hendelser"
 
 #: start/templates/start/addevent.html:15
 msgid "Create a new event"
-msgstr "Skapa ett nytt event"
+msgstr "Opprett en ny hendelse"
 
 #: start/templates/start/addevent.html:22
 msgid "Add event"
-msgstr "Lägg till event"
+msgstr "Opprett hendelse"
 
 #: start/templates/start/calenderlista.html:42
 #: start/templates/start/ourevents.html:15
 msgid "Event"
-msgstr "Evanemang"
+msgstr "Hendelse"
 
 #: start/templates/start/calenderlista.html:43
 #: start/templates/start/main.html:50 start/templates/start/ourevents.html:16
 msgid "Place"
-msgstr "Plats"
+msgstr "Sted"
 
 #: start/templates/start/calenderlista.html:45
 #: start/templates/start/main.html:51 start/templates/start/ourevents.html:18
 msgid "Type"
-msgstr "Typ"
+msgstr "Typen"
 
 #: start/templates/start/calenderlista.html:46
 #: start/templates/start/main.html:52
@@ -106,61 +106,44 @@ msgid "Time"
 msgstr "Tid"
 
 #: start/templates/start/main.html:49
-#, fuzzy
-#| msgid "Event"
 msgid "Events"
-msgstr "Evanemang"
+msgstr "Hendelser"
 
 #: start/templates/start/nationmain.html:19
 msgid "Create event"
-msgstr "Skapa event"
+msgstr "Opprett hendelse"
 
 #: start/templates/start/nationmain.html:20
 msgid "Our events"
-msgstr "Våra event"
+msgstr "Våre hendelser"
 
 #: start/templates/start/nationmain.html:21
 msgid "Presentation"
-msgstr "Presentation"
+msgstr "Presentasjon"
 
 #: start/templates/start/ourevents.html:12
 msgid "Reappearing events"
-msgstr "Återkommande event"
+msgstr "Vanlig hendelser"
 
 #: start/templates/start/ourevents.html:19
 msgid "Days"
-msgstr "Dagar"
+msgstr "Dager"
 
 #: start/templates/start/ourevents.html:20
 #: start/templates/start/presentation.html:13
 #: start/templates/start/presentation.html:19
 #: start/templates/start/presentation.html:26
 msgid "Edit"
-msgstr "Redigera"
+msgstr "Edit"
 
 #: studentkompassen/settings.py:152
 msgid "English"
-msgstr "Engelska"
+msgstr "Engelsk"
 
 #: studentkompassen/settings.py:153
 msgid "Swedish"
-msgstr "Svenska"
+msgstr "Swedish"
 
 #: studentkompassen/settings.py:154
 msgid "Norwegian "
-msgstr "Norska"
-
-#~ msgid "Hello !"
-#~ msgstr "hi"
-
-#~ msgid "Hej och nått"
-#~ msgstr "gd"
-
-#~ msgid "Hello2!"
-#~ msgstr "hi3"
-
-#~ msgid "Hello26!"
-#~ msgstr "hif"
-
-#~ msgid "Hej5 och nått"
-#~ msgstr "54"
+msgstr "Norsk"
