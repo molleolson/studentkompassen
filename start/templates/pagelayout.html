@@ -57,10 +57,10 @@
 
 </div>
 
-{% get_available_languages as languages %}
+<!--{% get_available_languages as languages %}
 {% for lang_code, lang_name in languages %}
-    <a href="{% change_lang lang_code %}">{{ lang_name }}</a>
-{% endfor %}
+    <a type="button" class="btn btn-info" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+{% endfor %} -->
 
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
@@ -69,6 +69,7 @@
 {% block navigation %}
 
 <nav class = "navbar navbar-default " data-toggle = "collapse" role = "navigation">
+
 
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
       <button type = "button" class = "navbar-toggle"
@@ -105,9 +106,11 @@
          </li>
 
       </ul>
+
    </div>
 
 </nav>
+
 
 {% endblock %}
 
@@ -119,21 +122,32 @@
 
     <div class="row col-md-9">
         {% block left %}
-
         {% endblock %}
     </div>
 
-    <div class="row col-md-1"   >
+    <div class="row col-md-1">
+
+        <!--{% block upperright %}
+
+        {% get_available_languages as languages %}
+        {% for lang_code, lang_name in languages %}
+            <a type="button" class="btn btn-info" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+        {% endfor %}</div>
+        {% endblock %} -->
+
         {% block right %}
+
         {% endblock %}
     </div>
-
+    <div class="row col-md-1">
+    {% get_available_languages as languages %}
+        {% for lang_code, lang_name in languages %}
+            <a type="button" class="btn btn-info" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+        {% endfor %}</div>
 </div>
 <div class="col-md-1">
     </div>
 {% endblock %}
-
-
 {% block footer %}
 <br>
 <br>
