@@ -1,28 +1,48 @@
 {% load staticfiles %}
 {% load i18n %}
 <body>
-<script src="{% static 'start/fb-sdk.js' %}" type="application/javascript"></script>
+<script>   window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '464984813707743',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
 
-    <table id="event-table" class="responsive-table calendar-list active table table-striped" data-day="1" cellspacing="0">
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/sv_SE/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
-        <div class="container" id="monthAndDay">
-            <div class="sizeMonth col-sm-2">
-                <a href="#">
-                    <span class="glyphicon glyphicon-chevron-left pull-left"></span>
+    <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
+
+        <div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
+
+
+            <div class="week col-xs-7 col-xs-offset-3 col-sm-offset-4 col-sm-6 col-md-7 col-md-offset-4 col-lg-4 col-lg-offset-4" >
+                <a class="previous col-xs-2 col-sm-2 col-md-2 col-lg-2" href="#" >
+
+                    <i class="glyphicon glyphicon-chevron-left"></i>
                 </a>
-               <strong><span id="getDay"></span> <span id="getDate"></span> <span id="getMonth"></span></strong>
-                    <a href="#">
-                    <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-                </a>
+
+               <strong class = "text-center col-xs-6 col-sm-6 col-md-6 col-lg-6"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong>
+
+                 <a class="next col-xs-3 col-md-1 col-sm-1 col-lg-1" style="display: inline;">
+                        <i class="glyphicon glyphicon-chevron-right "></i>
+                    </a>
             </div>
-        </div>
 
+        </div>
         <thead>
         <tr>
             <th class="col-md-4 col-sm-4" scope="col">{%trans "Events"%}</th>
             <th class="col-md-2 col-sm-2" scope="col">{%trans "Place"%}</th>
-            <th class="col-md-1 hidden-xs" scope="col">{%trans "Type"%}Start</th>
-            <th class="col-md-1 col-sm-1" scope="col">{%trans "Time"%}Slut</th>
+            <th class="col-md-1 hidden-xs" scope="col">{%trans "Type"%}</th>
+            <th class="col-md-1 col-sm-1" scope="col">{%trans "Time"%}</th>
         </tr>
         </thead>
         <tbody>
@@ -33,6 +53,9 @@
                     <td data-title="Plats"><span class="name">{{ event.location }}</span></td>
                     <td>{{event.startdate}}</td>
                             <!-- POP UP SKITEN -->
+
+                             <!-- Modal -->
+                    <td class="hidden-xs">{{event.startdate}}</td>
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->
                     <td class="hidden-xs">{{event.enddate}}</td>
@@ -60,6 +83,6 @@
                     <!-- POP UP SKITEN -->
                 </tr>
             {% endfor %}
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </body>
