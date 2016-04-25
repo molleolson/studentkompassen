@@ -1,15 +1,16 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load studentkompassen_tags %}
 <body>
-<script>   window.fbAsyncInit = function() {
+<script>
+    window.fbAsyncInit = function() {
     FB.init({
       appId      : '464984813707743',
       xfbml      : true,
       version    : 'v2.6'
     });
   };
-
-  (function(d, s, id){
+    (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
