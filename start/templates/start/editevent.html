@@ -1,0 +1,31 @@
+{% extends "start/nationmain.html" %}
+{% load i18n %}
+{% block title %}Lägg till event{% endblock %}
+
+{% block additional_scripts %}
+
+{% endblock %}
+
+{% block left %}
+
+
+
+    <tr>
+    <form class = "form-inline" action="{% url "start:editevent" %}" method="POST">
+        <h1>{% trans "Edit an event"%}</h1>
+        <div class="form-group">
+    {% csrf_token %}
+
+
+        {% include "form.html" with form=form %}
+
+        <button class="btn btn-default" type ="submit">{% trans "Confirm edited event"%}</button>
+        </div>
+    </form>
+    </tr>
+
+
+
+{% endblock %}
+
+

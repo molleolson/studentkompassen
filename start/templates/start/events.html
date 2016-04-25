@@ -1,50 +1,23 @@
-{% extends "pagelayout.html" %}
+{% load staticfiles %}
 {% load i18n %}
-{% block title %}Startsida{% endblock %}
-
-{% block additional_scripts %}
+{% load studentkompassen_tags %}
+<body>
 <script>
-    /*
-    $(function () {
-        $("#datepicker").datepicker();
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '464984813707743',
+      xfbml      : true,
+      version    : 'v2.6'
     });
-    */
-
-$(function() {
-    $( "#datepicker" ).datepicker({
-        onSelect: function()
-        {
-            var date = $(this).datepicker('getDate');
-            var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-            datum = new Date(date-tzoffset)
-            eventDate = date;
-            writeDate();
-            $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10));
-        }
-    });
-});
-
+  };
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/sv_SE/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
-{% endblock %}
-
-
-
-{% block left%}
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-<br>
-<br>
-
-<title>Calender i listform</title>
-
-<div class="calendar"> <!--style = "background-color:pink;"-->
-
 
     <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
 
@@ -111,14 +84,6 @@ $(function() {
                     <!-- POP UP SKITEN -->
                 </tr>
             {% endfor %}
-            </tbody>
-        </table>
-    </div>
-{% endblock %}
-
-{% block right %}
-
-<div class="datetimepicker" id="datepicker"></div>
-
-
-{% endblock %}
+        </tbody>
+    </table>
+</body>
