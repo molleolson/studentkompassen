@@ -60,8 +60,7 @@ ROOT_URLCONF = 'studentkompassen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'studentkompassens-templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'studentkompassens-templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,18 +80,19 @@ TEMPLATES = [
     },
 ]
 
-#TEMPLATES_CONTEXT_PROCESSORS = [
-#    'django.contrib.auth.context_processors.auth',
-#    'django.template.context_processors.debug',
-#    'django.template.context_processors.request',
-#    'django.core.context_processors.i18n',
-#    'django.core.context_processors.media',
-#    'django.core.context_processors.static',
-#    'django.core.context_processors.tz',
-#    'django.contrib.messages.context_processors.messages',
-#    'social.apps.django_app.context_processors.backends',
-#    'social.apps.django_app.context_processors.login_redirect',
-#]
+TEMPLATES_CONTEXT_PROCESSORS = [
+   'django.contrib.auth.context_processors.auth',
+   'django.template.context_processors.debug',
+   'django.template.context_processors.request',
+   'django.core.context_processors.i18n',
+   'django.core.context_processors.media',
+   'django.core.context_processors.static',
+   'django.core.context_processors.tz',
+   'django.contrib.messages.context_processors.messages',
+   'social.apps.django_app.context_processors.backends',
+   'social.apps.django_app.context_processors.login_redirect',
+]
+
 
 
 
@@ -151,11 +151,12 @@ from django.utils.translation import ugettext_lazy as _
 LANGUAGES =(
     ('en', _("English")),
     ('sv', _('Swedish')),
+    ('nb', _('Norwegian ')),
 )
 
 LANGUAGE_CODE = 'en'
 
-LANGUAGE_SESSION_KEY ='en'
+#LANGUAGE_SESSION_KEY = 'en'
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'conf/locale'),

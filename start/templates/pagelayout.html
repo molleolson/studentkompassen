@@ -1,5 +1,6 @@
 {% load staticfiles %}
- {% load i18n %}
+{% load i18n %}
+{% load studentkompassen_tags %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -44,20 +45,22 @@
 
   </head>
 <body>
+<script src="{% static 'start/fb-sdk.js' %}" type="application/javascript"></script>
 
 <!--START HEADER-->
 
 <div class="main-header" role="banner"> <!--gör om till row-->
 
         <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic">
-        <img src="{% static 'start/headertest.png' %}" alt="Fel i bild" id="headerPic">
+        <img src="{% static 'start/stulenheader.png' %}" alt="Fel i bild" id="headerPic">
 
 
 </div>
-<button><a href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
-<button><a href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
-<button><a id="tologout" href="{% url 'start:index' %}">Till oinloggad</a> </button>
-<a id="lan" href="{% url 'start:language' %}">{% trans "Swedish"%}</a>
+
+{% get_available_languages as languages %}
+{% for lang_code, lang_name in languages %}
+    <a href="{% change_lang lang_code %}">{{ lang_name }}</a>
+{% endfor %}
 
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
@@ -82,28 +85,22 @@
    <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
 
       <ul class = "nav navbar-nav">
-                <li><a href ="#">Just nu</a></li>
-                <li><a href = "#">Frukost</a></li>
-                <li><a href = "#">Lunch</a></li>
-                <li><a href = "#">Fika</a></li>
-                <li><a href = "#">Pub</a></li>
-                <li><a href = "#">Restaurang</a></li>
-                <li><a href = "#">Klubb/Släpp</a></li>
-                <li><a href = "#">Nationer & Kårer</a></li>
-                <li><a href = "#">Nära dig</a></li>
+         <li><a href ="#">{%trans "Right now"%}</a></li>
+               <li><a href = "#">{%trans "Breakfast"%}</a></li>
+               <li><a href = "#">{%trans "Lunch"%}</a></li>
+                <li><a href = "#">{%trans "Fika"%}</a></li>
+                <li><a href = "#">{%trans "Pub"%}</a></li>
+                <li><a href = "#">{%trans "Restaurant"%}</a></li>
+                <li><a href = "#">{%trans "Clubs"%}</a></li>
+                <li><a href = "#">{%trans "Nations and unions"%}</a></li>
+                <li><a href = "#">{%trans "Close to you"%}</a></li>
 
 
-<!--
-         <li class = "dropdown pull-right">
-            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
-               Mitt konto
-               <b class = "caret"></b>
-            </a>
-                <li><a href = "#">Nära dig</a></li> -->
+
 
        <ul class="nav navbar-nav navbar-right pull right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
     </ul>
 
          </li>
@@ -114,83 +111,7 @@
 </nav>
 
 {% endblock %}
-<!--
-<nav class="navbar navbar-default">
 
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-
-        <div class="collapse navbar-collapse" >
-            <ul class="nav navbar-nav">
-                    <li id="rnL"  {% if menu_active_item == 'now' %} class="active"{% endif %} ><a id="rnClick" href="{% url 'start:index' %}">{% trans "Right now"%}</a></li>
-                    <li id="bfL"><a id="bfClick" href='#'>{% trans "Breakfast"%}</a></li>
-                    <li id="lunchL"><a id="lunchClick" href='#'>{% trans "Lunch"%}</a></li>
-                    <li id="fikaL"><a id="fikaClick" href='#'>{% trans "Fika"%}</a></li>
-                    <li id="pubL"><a id="pubClick" href='#'>{% trans "Pub"%}</a></li>
-                    <li id="clubL"><a id="clubClick" href='#'>{% trans "Clubs"%}</a></li>
-                    <li id="elseL"><a id="elselick" href='#'>{% trans "Other"%}</a></li>
-                    <li id="closeL"><a id="closeClick" href='#'>{% trans "Close to you"%}</a></li>
-                    <li id="getToKnowNationL" {% if menu_active_item == 'about' %} class="active"{% endif %} ><a id="knowClick" href="{% url 'start:about' %}">{% trans "Nations and unions"%}</a></li>
-
-                    <li id="rnL"  {% if menu_active_item == 'now' %} class="active"{% endif %} ><a id="rnClick" href="{% url 'start:index' %}">Just nu</a></li>
-                    <li id="bfL"><a id="bfClick" href='#'>Frukost </a></li>
-                    <li id="lunchL"><a id="lunchClick" href='#'>Lunch</a></li>
-                    <li id="fikaL"><a id="fikaClick" href='#'>Fika</a></li>
-                    <li id="pubL"><a id="pubClick" href='#'>Pub</a></li>
-                    <li id="clubL"><a id="clubClick" href='#'>Klubb/Släpp</a></li>
-                    <li id="elseL"><a id="elselick" href='#'>Övrigt</a></li>
-                    <li id="closeL"><a id="closeClick" href='#'>Nära dig</a></li>
-                    <li id="getToKnowNationL" {% if menu_active_item == 'about' %} class="active"{% endif %} ><a id="knowClick" href="{% url 'start:about' %}">Nationer/Kårer</a></li>
-<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-<ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-
-
-                    {% block extra_menu_item %}
-                    {% endblock %}
-                </ul>
-                {% block navigation_myaccount %}
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">My Account <span class="glyphicon glyphicon-user"</span></a>
-                        <ul class="dropdown-menu">
-                            {% if request.user.is_anonymous %}
-                            <li><a href="#">{% trans "Log in"%}</a></li>
-                            {% else %}
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                            {% endif %}
-                        </ul>
-                    </li>
-
-                </ul>
-
-                {% endblock %}
-            </div>
-        </div>
-    </nav>
--->
 
 
 {% block main %}
@@ -215,6 +136,8 @@
 
 
 {% block footer %}
+<br>
+<br>
 &copy; 2016 Studentkompassen
 {% endblock %}
 

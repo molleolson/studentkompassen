@@ -17,9 +17,10 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 import start.views, django_social_app.views, django.contrib.auth.views
+from django.conf.urls.i18n import i18n_patterns
 
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login', django.contrib.auth.views.login, ),
     url(r'^start/', include('start.urls', namespace="start")),
@@ -27,4 +28,4 @@ urlpatterns = [
     url(r'^$', django_social_app.views.login),
     url(r'^logout/$', django_social_app.views.logout),
 
-]
+)

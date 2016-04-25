@@ -3,7 +3,7 @@
 
 
 
-<script>
+<!--<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '464984813707743',
@@ -19,7 +19,7 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script>
+</script>-->
 {% block left%}
 {% if user and not user.is_anonymous %}
 <a>Hello, {{user.get_full_name}} !</a>
@@ -33,5 +33,6 @@
 <br>
 <br>
 <br>
+
 {% endif %}
 {% endblock %}

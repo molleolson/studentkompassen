@@ -11,8 +11,18 @@
 {% endblock %}
 
 
+
 {% block left%}
 
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<br>
+<br>
 
 <title>Calender i listform</title>
 
@@ -40,10 +50,10 @@
 
         <thead>
         <tr>
-            <th class="col-md-4 col-sm-4" scope="col">Evenemang</th>
-            <th class="col-md-2 col-sm-2" scope="col">Plats</th>
-            <th class="col-md-1 hidden-xs" scope="col">Typ</th>
-            <th class="col-md-1 col-sm-1" scope="col">Tid</th>
+            <th class="col-md-4 col-sm-4" scope="col">{%trans "Events"%}</th>
+            <th class="col-md-2 col-sm-2" scope="col">{%trans "Place"%}</th>
+            <th class="col-md-1 hidden-xs" scope="col">{%trans "Type"%}</th>
+            <th class="col-md-1 col-sm-1" scope="col">{%trans "Time"%}</th>
         </tr>
         </thead>
         <tbody>
@@ -54,8 +64,8 @@
                     <td data-title="Plats"><span class="name">{{ event.location }}</span></td>
                     <td>{{event.startdate}}</td>
                             <!-- POP UP SKITEN -->
-                            <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-                            <!-- Modal -->
+
+                             <!-- Modal -->
                     <td class="hidden-xs">{{event.startdate}}</td>
                     <div class="modal fade" id="{{event.id}}" role="dialog">
                         <div class="modal-dialog">
@@ -68,9 +78,13 @@
                                 <div class="modal-body">
                                     <p> {{event.description}} </p>
                                 </div>
+
                                 <div class="modal-footer">
+                                    <div class="fb-share-button" data-layout="button_count"></div>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -85,7 +99,6 @@
 {% block right %}
 
 <div class="datetimepicker" id="datepicker"></div>
-
 
 
 {% endblock %}
