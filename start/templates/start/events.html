@@ -1,52 +1,9 @@
-{% extends "pagelayout.html" %}
+{% load staticfiles %}
 {% load i18n %}
-{% block title %}Startsida{% endblock %}
+<body>
+<script src="{% static 'start/fb-sdk.js' %}" type="application/javascript"></script>
 
-{% block additional_scripts %}
-<script>
-    /*
-    $(function () {
-        $("#datepicker").datepicker();
-    });
-    */
-
-$(function() {
-    $( "#datepicker" ).datepicker({
-        onSelect: function()
-        {
-            var date = $(this).datepicker('getDate');
-            var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-            datum = new Date(date-tzoffset)
-            eventDate = date;
-            writeDate();
-            $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10));
-        }
-    });
-});
-
-</script>
-{% endblock %}
-
-
-
-{% block left%}
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-<br>
-<br>
-
-<title>Calender i listform</title>
-
-<div class="calendar">
-
-
-    <table class="responsive-table calendar-list active table table-striped" data-day="1" cellspacing="0">
+    <table id="event-table" class="responsive-table calendar-list active table table-striped" data-day="1" cellspacing="0">
 
         <div class="container" id="monthAndDay">
             <div class="sizeMonth col-sm-2">
@@ -59,8 +16,8 @@ $(function() {
                     <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </a>
             </div>
-
         </div>
+
         <thead>
         <tr>
             <th class="col-md-4 col-sm-4" scope="col">{%trans "Events"%}</th>
@@ -106,12 +63,4 @@ $(function() {
             {% endfor %}
             </tbody>
         </table>
-    </div>
-{% endblock %}
-
-{% block right %}
-
-<div class="datetimepicker" id="datepicker"></div>
-
-
-{% endblock %}
+</body>

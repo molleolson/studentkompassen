@@ -2,7 +2,7 @@ Dette er login-siden.
 {% extends "pagelayout.html" %}
 
 {% block main %}
-<form class = "form-inline" action="/accounts/login" method="post">
+<form class = "form-inline" action="/sv/accounts/login" method="post">
     {% csrf_token %}
     {% include "form.html" with form=form %}
     <input type="submit" value="Login"/>

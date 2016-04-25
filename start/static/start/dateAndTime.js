@@ -67,18 +67,3 @@ function writeDate() {
     var month = monthList[eventDate.getMonth()];
     document.getElementById("getMonth").innerHTML = month;
 }
-
-/**
- * Created by ebbaholmstrom on 16-04-18.
- */
-$(function() {
-    $( "#datepicker" ).datepicker({
-        onSelect: function()
-        {
-            var date = $(this).datepicker('getDate');
-            eventDate = date;
-            writeDate();
-
-        }
-    });
-});

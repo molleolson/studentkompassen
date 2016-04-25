@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, render_to_response, RequestContext
+from django.shortcuts import render, redirect, render_to_response, RequestContext, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
@@ -11,6 +11,7 @@ from django.contrib.auth import authenticate, login
 from operator import attrgetter
 from django.utils.translation import activate
 from django.core.urlresolvers import reverse
+from datetime import timedelta, datetime
 
 
 def language(request):
@@ -31,7 +32,7 @@ def language(request):
 
 def index(request):
     menu_active_item = 'now'
-
+    tiden_nu = datetime.now()
     events = Event.objects.all().order_by('startdate')
     #events = sorted(temp, key=attrgetter('startdate'))
     #template = loader.get_template('start/main.html')
@@ -43,6 +44,15 @@ def index(request):
 #
 #    output = ', '.join([h.host_name for h in list_of_hosts])
 #     return HttpResponse(output)
+
+
+def events(request):
+    selected_date = datetime.strptime(request.GET.get('date'), "%Y-%m-%d")
+
+    #print "Selected date", selected_date
+
+    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date).order_by('startdate')
+    return render(request, 'start/events.html', locals())
 
 
 def hostid(request, id):
@@ -110,3 +120,22 @@ def addevent(request):
         form = EventForm()
 
     return render(request, 'start/addevent.html', locals())
+
+
+@login_required(login_url='/accounts/login')
+def editevent(request, eid):
+
+    if request.POST:
+        event_form = EventForm(request.POST)
+
+    if EventForm.is_valid():
+        event = get_object_or_404(Event, pk=eid)
+        event_form = EventForm(request.POST, instance=event)
+        event_form.save()
+        return redirect('/start/nationmain')
+
+    else:
+        event = Event.objects.get(pk=eid)
+        event_form = EventForm(instance=event)
+
+        return render_to_response('editevent.html', {'form': event_form}, context_instance=RequestContext(request))
