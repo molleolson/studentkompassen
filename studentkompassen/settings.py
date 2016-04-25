@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'datetimewidget.widgets',
     'studentkompassen',
+    'django_social_app',
+    'start',
     'social.apps.django_app.default',
 ]
 
@@ -160,7 +162,7 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'conf/locale'),
 )
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
