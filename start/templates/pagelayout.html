@@ -52,13 +52,11 @@
 <div class="main-header" role="banner"> <!--gör om till row-->
 
         <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic">
-        <img src="{% static 'start/headertest.png' %}" alt="Fel i bild" id="headerPic">
+        <img src="{% static 'start/stulenheader.png' %}" alt="Fel i bild" id="headerPic">
 
 
 </div>
-<button><a href="{% url 'start:nationmain' %}">Till Nationssida</a> </button>
-<button><a href="{% url 'start:studentmain' %}">Till Studentsida</a> </button>
-<button><a id="tologout" href="{% url 'start:index' %}">Till oinloggad</a> </button>
+
 {% get_available_languages as languages %}
 {% for lang_code, lang_name in languages %}
     <a href="{% change_lang lang_code %}">{{ lang_name }}</a>
