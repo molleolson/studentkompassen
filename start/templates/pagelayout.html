@@ -34,7 +34,7 @@
     <script src="{% static 'start/functions.js' %}" type="application/javascript"></script>
     <script src="{% static 'start/dateAndTime.js' %}" type="application/javascript"></script>
 
-
+    <link href="{% static 'css/bootstrap-social.css' %}" rel="stylesheet" type="text/css"/>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
     <!--<script src="{% static 'js/bootstrap.js' %}"></script>-->
     <script src="{% static 'js/multidatespicker.js' %}"></script>
@@ -45,6 +45,7 @@
 
   </head>
 <body>
+<script src="{% static 'start/fb-sdk.js' %}" type="application/javascript"></script>
 
 <!--START HEADER-->
 
@@ -219,6 +220,8 @@
 
 
 {% block footer %}
+<br>
+<br>
 &copy; 2016 Studentkompassen
 {% endblock %}
 
