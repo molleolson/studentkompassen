@@ -80,22 +80,27 @@
 
       <ul class = "nav navbar-nav">
          <li><a href ="{% url 'start:index' %}">{%trans "Right now"%}</a></li>
-               <li><a href = "#">{%trans "Breakfast"%}</a></li>
-               <li><a href = "#">{%trans "Lunch"%}</a></li>
-                <li><a href = "#">{%trans "Fika"%}</a></li>
-                <li><a href = "#">{%trans "Pub"%}</a></li>
-                <li><a href = "#">{%trans "Restaurant"%}</a></li>
-                <li><a href = "#">{%trans "Clubs"%}</a></li>
-                <li><a href = "#">{%trans "Nations and unions"%}</a></li>
-                <li><a href = "#">{%trans "Close to you"%}</a></li>
+         <li><a href = "#">{%trans "Breakfast"%}</a></li>
+         <li><a href = "#">{%trans "Lunch"%}</a></li>
+         <li><a href = "#">{%trans "Fika"%}</a></li>
+         <li><a href = "#">{%trans "Pub"%}</a></li>
+         <li><a href = "#">{%trans "Restaurant"%}</a></li>
+         <li><a href = "#">{%trans "Clubs"%}</a></li>
+         <li><a href = "#">{%trans "Nations and unions"%}</a></li>
+         <li><a href = "#">{%trans "Close to you"%}</a></li>
+         {% block extra_menu_item %}
+         {% endblock %}
 
 
        <ul class="nav navbar-nav navbar-right pull right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>
-      <li><a href="{% url 'start:studentmain' %}"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
-    </ul>
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
+            {% if user.is_authenticated %}
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
+            {% else %}
+                <li><a href="{% url 'start:studentmain' %}"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
+            {% endif %}
+        </ul>
 
-         </li>
 
       </ul>
 {% get_available_languages as languages %}
