@@ -14,7 +14,7 @@
     <form class = "form-inline" action="{% url "start:addevent" %}" method="POST">
         <h1>{% trans "Create a new event"%}</h1>
         <div class="form-group">
-    {% csrf_token %}
+        {% csrf_token %}
 
 
         {% include "form.html" with form=form %}

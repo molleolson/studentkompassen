@@ -19,7 +19,10 @@ $(function() {
             datum = new Date(date-tzoffset)
             eventDate = date;
             writeDate();
-            $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10));
+            $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10), function()
+            {
+                FB.XFBML.parse();
+            });
         }
     });
 });
@@ -43,12 +46,7 @@ $(function() {
 
 <title>Calender i listform</title>
 
-<div class="calendar"> <!--style = "background-color:pink;"-->
-
-
-    <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
-
-        <div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
+<div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
 
 
             <div class="week col-xs-7 col-xs-offset-3 col-sm-offset-4 col-sm-6 col-md-7 col-md-offset-4 col-lg-4 col-lg-offset-4" >
@@ -65,6 +63,15 @@ $(function() {
             </div>
 
         </div>
+
+<div class="calendar"> <!--style = "background-color:pink;"-->
+
+    {% include "start/events.html" %}
+
+    {% comment %}
+    <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
+
+
         <thead>
         <tr>
             <th class="col-md-4 col-sm-4" scope="col">{%trans "Events"%}</th>
@@ -113,6 +120,7 @@ $(function() {
             {% endfor %}
             </tbody>
         </table>
+    {% endcomment %}
     </div>
 {% endblock %}
 

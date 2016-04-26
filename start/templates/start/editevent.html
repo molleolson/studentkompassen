@@ -11,12 +11,10 @@
 
 
     <tr>
-    <form class = "form-inline" action="{% url "start:editevent" %}" method="POST">
+    <form class = "form-inline" action="{% url "start:editevent" event.id %}" method="POST">
         <h1>{% trans "Edit an event"%}</h1>
         <div class="form-group">
-    {% csrf_token %}
-
-
+        {% csrf_token %}
         {% include "form.html" with form=form %}
 
         <button class="btn btn-default" type ="submit">{% trans "Confirm edited event"%}</button>

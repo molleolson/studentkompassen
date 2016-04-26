@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect, render_to_response, RequestContext, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from .models import Host, Event, Location
 from start.forms import EventForm
 from django.utils import translation
-from datetime import datetime, date
 from django.template import loader
 from django.contrib.auth import authenticate, login
 from operator import attrgetter
@@ -108,19 +107,14 @@ def addevent(request):
 
 
 @login_required(login_url='/accounts/login')
-def editevent(request, id):
-
+def editevent(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
     if request.POST:
-        event_form = EventForm(request.POST)
-
-        if event_form.is_valid():
-            event = get_object_or_404(Event, pk=id)
-            event_form = EventForm(request.POST, instance=event)
-            event_form.save()
-            return redirect('/start/nationmain')
-
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            form.save()
+            return redirect('/start/nationmain/ourevents')
     else:
-        event = Event.objects.get(pk=id)
-        event_form = EventForm(instance=event)
+        form = EventForm(instance=event)
 
-        return render_to_response('start/editevent.html', {'form': event_form}, context_instance=RequestContext(request))
+    return render(request, 'start/editevent.html', locals())
