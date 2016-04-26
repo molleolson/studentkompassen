@@ -1,14 +1,11 @@
 {% extends "pagelayout.html" %}
 {% load i18n %}
-{% block title %}Startsida{% endblock %}
+{% block title %}{%trans "Start page"%}{% endblock %}
 
 {% block additional_scripts %}
 <script>
-    /*
-    $(function () {
-        $("#datepicker").datepicker();
-    });
-    */
+
+
 
 $(function() {
     $( "#datepicker" ).datepicker({
@@ -16,7 +13,7 @@ $(function() {
         {
             var date = $(this).datepicker('getDate');
             var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-            datum = new Date(date-tzoffset)
+            datum = new Date(date-tzoffset);
             eventDate = date;
             writeDate();
             $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10), function()
@@ -24,8 +21,22 @@ $(function() {
                 FB.XFBML.parse();
             });
         }
+        /*eventDate = date;*/
     });
 });
+
+
+function switchDateCalender(eventDate){
+    $('#datepicker').datepicker('setDate', eventDate);
+    var date=eventDate;
+    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
+    datum = new Date(date-tzoffset);
+    $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10), function()
+            {
+                FB.XFBML.parse();
+            });
+}
+
 
 </script>
 {% endblock %}
@@ -46,7 +57,7 @@ $(function() {
 
 <title>Calender i listform</title>
 
-<div class="calendar" style ="overflow-y: scroll; height: 500px"> <!--style = "background-color:pink;"-->
+<div class="calendar2" style ="overflow-y: scroll; height: 500px"> <!--style = "background-color:pink;"-->
 
 
     <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
