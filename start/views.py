@@ -16,8 +16,8 @@ from datetime import timedelta, datetime
 
 def index(request):
     menu_active_item = 'now'
-    tiden_nu = datetime.now()
-    events = Event.objects.all().order_by('startdate')
+    events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now())\
+        .order_by('startdate')
     #events = sorted(temp, key=attrgetter('startdate'))
     #template = loader.get_template('start/main.html')
     #return HttpResponse(template.render(request))
@@ -35,7 +35,8 @@ def events(request):
 
     #print "Selected date", selected_date
 
-    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date).order_by('startdate')
+    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date)\
+        .order_by('startdate')
     return render(request, 'start/events.html', locals())
 
 
@@ -64,15 +65,15 @@ def skapa(request, id):
 @login_required(login_url='/accounts/login')
 def nationmain(request):
     menu_active_item = 'now'
-    events = Event.objects.all().order_by('startdate')
+    events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now()) \
+        .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
 
 @login_required(login_url='/')
 def studentmain(request):
     menu_active_item = 'now'
-    #todaysevents = []
-    #for event in Event.objects.filter()
-    events = Event.objects.all().order_by('startdate')
+    events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now()) \
+        .order_by('startdate')
     return render(request, 'start/studentmain.html', locals())
 
 
