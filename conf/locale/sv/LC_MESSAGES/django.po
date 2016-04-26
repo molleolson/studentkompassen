@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 11:42+0200\n"
+"POT-Creation-Date: 2016-04-26 14:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/templates/pagelayout.html:89 start/templates/start/nationmain.html:18
+#: start/templates/pagelayout.html:82 start/templates/start/nationmain.html:22
 msgid "Right now"
 msgstr "Just nu"
 
-#: start/templates/pagelayout.html:90
+#: start/templates/pagelayout.html:83
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: start/templates/pagelayout.html:91
+#: start/templates/pagelayout.html:84
 msgid "Lunch"
 msgstr "Lunch"
 
-#: start/templates/pagelayout.html:92
+#: start/templates/pagelayout.html:85
 msgid "Fika"
 msgstr "Fika"
 
-#: start/templates/pagelayout.html:93
+#: start/templates/pagelayout.html:86
 msgid "Pub"
 msgstr "Pub"
 
-#: start/templates/pagelayout.html:94
+#: start/templates/pagelayout.html:87
 msgid "Restaurant"
 msgstr "Restaurang"
 
-#: start/templates/pagelayout.html:95
+#: start/templates/pagelayout.html:88
 msgid "Clubs"
 msgstr "Klubbar/Släpp"
 
-#: start/templates/pagelayout.html:96
+#: start/templates/pagelayout.html:89
 msgid "Nations and unions"
 msgstr "Nationer och kårer"
 
-#: start/templates/pagelayout.html:97
+#: start/templates/pagelayout.html:90
 msgid "Close to you"
 msgstr "Nära dig"
 
-#: start/templates/pagelayout.html:103
+#: start/templates/pagelayout.html:94
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:104
+#: start/templates/pagelayout.html:95
 msgid "Login"
 msgstr "Logga in"
 
@@ -81,18 +81,19 @@ msgid "Event"
 msgstr "Evanemang"
 
 #: start/templates/start/calenderlista.html:43
-#: start/templates/start/events.html:9 start/templates/start/ourevents.html:16
+#: start/templates/start/events.html:10
+#: start/templates/start/ourevents.html:16
 msgid "Place"
 msgstr "Plats"
 
 #: start/templates/start/calenderlista.html:45
-#: start/templates/start/events.html:10
+#: start/templates/start/events.html:11
 #: start/templates/start/ourevents.html:18
 msgid "Type"
 msgstr "Typ"
 
 #: start/templates/start/calenderlista.html:46
-#: start/templates/start/events.html:11
+#: start/templates/start/events.html:12
 msgid "Time"
 msgstr "Tid"
 
@@ -108,7 +109,7 @@ msgstr "Skapa ett nytt event"
 msgid "Confirm edited event"
 msgstr "Skapa event"
 
-#: start/templates/start/events.html:8
+#: start/templates/start/events.html:9
 #, fuzzy
 #| msgid "Event"
 msgid "Events"
@@ -118,21 +119,17 @@ msgstr "Evanemang"
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/nationmain.html:19
+#: start/templates/start/nationmain.html:23
 msgid "Create event"
 msgstr "Skapa event"
 
-#: start/templates/start/nationmain.html:20
+#: start/templates/start/nationmain.html:24
 msgid "Our events"
 msgstr "Våra event"
 
-#: start/templates/start/nationmain.html:21
+#: start/templates/start/nationmain.html:25
 msgid "Presentation"
 msgstr "Presentation"
-
-#: start/templates/start/nationmain.html:29
-msgid "Log in"
-msgstr "Logga in"
 
 #: start/templates/start/ourevents.html:12
 msgid "Reappearing events"
@@ -143,9 +140,9 @@ msgid "Days"
 msgstr "Dagar"
 
 #: start/templates/start/ourevents.html:20
-#: start/templates/start/presentation.html:13
-#: start/templates/start/presentation.html:19
-#: start/templates/start/presentation.html:26
+#: start/templates/start/presentation.html:11
+#: start/templates/start/presentation.html:18
+#: start/templates/start/presentation.html:25
 msgid "Edit"
 msgstr "Redigera"
 
@@ -160,6 +157,9 @@ msgstr "Svenska"
 #: studentkompassen/settings.py:154
 msgid "Norwegian "
 msgstr "Norska"
+
+#~ msgid "Log in"
+#~ msgstr "Logga in"
 
 #~ msgid "Other"
 #~ msgstr "Övrigt"
