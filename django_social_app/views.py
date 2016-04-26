@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'fb_login.html')
 
 #@login_required(login_url='/')
 #def home(request):
