@@ -57,10 +57,10 @@
 
 </div>
 
-<!--{% get_available_languages as languages %}
+{% get_available_languages as languages %}
 {% for lang_code, lang_name in languages %}
     <a type="button" class="btn btn-info" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-{% endfor %} -->
+{% endfor %}
 
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
@@ -97,8 +97,6 @@
                 <li><a href = "#">{%trans "Close to you"%}</a></li>
 
 
-
-
        <ul class="nav navbar-nav navbar-right pull right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
@@ -107,6 +105,7 @@
          </li>
 
       </ul>
+
 
    </div>
 
@@ -141,10 +140,10 @@
         {% endblock %}
     </div>
     <div class="row col-md-1">
-    {% get_available_languages as languages %}
-        {% for lang_code, lang_name in languages %}
-            <a type="button" class="btn btn-info" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-        {% endfor %}</div>
+
+
+
+    </div>
 </div>
 <div class="col-md-1">
     </div>

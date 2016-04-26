@@ -1,10 +1,11 @@
 {% load i18n %}
-
+ <!-- /ourevents-->
     <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
 
 
         <thead>
         <tr>
+
             <th class="col-md-4 col-sm-4" scope="col">{%trans "Events"%}</th>
             <th class="col-md-2 col-sm-2" scope="col">{%trans "Place"%}</th>
             <th class="col-md-1 hidden-xs" scope="col">{%trans "Type"%}</th>
@@ -34,6 +35,7 @@
                                     <h4 class="modal-title">Event description</h4>
                                 </div>
                                 <div class="modal-body">
+
                                     <p> {{event.description}} </p>
                                 </div>
 

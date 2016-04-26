@@ -59,9 +59,6 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     height: 20px
 }
 
-
-
-
 .navbar-collapse .navbar-nav > li >a:hover,
 .navbar-collapse .navbar-nav > li >a:focus{
     background-color: rgb(51,153,255);
@@ -186,7 +183,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 #datepicker{
     position: absolute;
-
+    float: right;
 }
 
 a.ui-state-highlight {
@@ -232,3 +229,4 @@ a.ui-state-highlight {
     padding: 2px;
     cursor: pointer;
 }
+

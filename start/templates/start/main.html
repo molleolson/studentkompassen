@@ -57,18 +57,23 @@ function switchDateCalender(eventDate){
 
 <title>Calender i listform</title>
 
-<div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
+<div class="calendar" style ="overflow-y: scroll; height: 500px"> <!--style = "background-color:pink;"-->
+
+
+    <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
+
+        <div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
+
 
 
             <div class="week col-xs-7 col-xs-offset-3 col-sm-offset-4 col-sm-6 col-md-7 col-md-offset-4 col-lg-4 col-lg-offset-4" >
                 <a class="previous col-xs-2 col-sm-2 col-md-2 col-lg-2" href="#" >
-
                     <i class="glyphicon glyphicon-chevron-left"></i>
                 </a>
 
                <strong class = "text-center col-xs-6 col-sm-6 col-md-6 col-lg-6"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong>
 
-                 <a class="next col-xs-3 col-md-1 col-sm-1 col-lg-1" style="display: inline;">
+                 <a class="next col-xs-3 col-md-1 col-sm-1 col-lg-1" style="display: inline;" href="#" >
                         <i class="glyphicon glyphicon-chevron-right "></i>
                     </a>
             </div>
