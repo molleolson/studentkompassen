@@ -1,14 +1,11 @@
 {% extends "pagelayout.html" %}
 {% load i18n %}
-{% block title %}Startsida{% endblock %}
+{% block title %}{%trans "Start page"%}{% endblock %}
 
 {% block additional_scripts %}
 <script>
-    /*
-    $(function () {
-        $("#datepicker").datepicker();
-    });
-    */
+
+
 
 $(function() {
     $( "#datepicker" ).datepicker({
@@ -16,7 +13,7 @@ $(function() {
         {
             var date = $(this).datepicker('getDate');
             var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-            datum = new Date(date-tzoffset)
+            datum = new Date(date-tzoffset);
             eventDate = date;
             writeDate();
             $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10), function()
@@ -24,8 +21,22 @@ $(function() {
                 FB.XFBML.parse();
             });
         }
+        /*eventDate = date;*/
     });
 });
+
+
+function switchDateCalender(eventDate){
+    $('#datepicker').datepicker('setDate', eventDate);
+    var date=eventDate;
+    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
+    datum = new Date(date-tzoffset);
+    $("div.calendar").load("{% url "start:events" %}?date=" + datum.toISOString().slice(0, 10), function()
+            {
+                FB.XFBML.parse();
+            });
+}
+
 
 </script>
 {% endblock %}

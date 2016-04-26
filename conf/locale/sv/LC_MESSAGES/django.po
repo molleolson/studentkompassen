@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-25 13:38+0200\n"
+"POT-Creation-Date: 2016-04-26 11:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,58 +17,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/templates/pagelayout.html:90 start/templates/pagelayout.html:137
-#: start/templates/start/nationmain.html:18
+#: start/templates/pagelayout.html:89 start/templates/start/nationmain.html:18
 msgid "Right now"
 msgstr "Just nu"
 
-#: start/templates/pagelayout.html:91 start/templates/pagelayout.html:138
+#: start/templates/pagelayout.html:90
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: start/templates/pagelayout.html:92 start/templates/pagelayout.html:139
+#: start/templates/pagelayout.html:91
 msgid "Lunch"
 msgstr "Lunch"
 
-#: start/templates/pagelayout.html:93 start/templates/pagelayout.html:140
+#: start/templates/pagelayout.html:92
 msgid "Fika"
 msgstr "Fika"
 
-#: start/templates/pagelayout.html:94 start/templates/pagelayout.html:141
+#: start/templates/pagelayout.html:93
 msgid "Pub"
 msgstr "Pub"
 
-#: start/templates/pagelayout.html:95
+#: start/templates/pagelayout.html:94
 msgid "Restaurant"
 msgstr "Restaurang"
 
-#: start/templates/pagelayout.html:96 start/templates/pagelayout.html:142
+#: start/templates/pagelayout.html:95
 msgid "Clubs"
 msgstr "Klubbar/Släpp"
 
-#: start/templates/pagelayout.html:97 start/templates/pagelayout.html:145
+#: start/templates/pagelayout.html:96
 msgid "Nations and unions"
 msgstr "Nationer och kårer"
 
-#: start/templates/pagelayout.html:98 start/templates/pagelayout.html:144
+#: start/templates/pagelayout.html:97
 msgid "Close to you"
 msgstr "Nära dig"
 
-#: start/templates/pagelayout.html:110
+#: start/templates/pagelayout.html:103
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:111
+#: start/templates/pagelayout.html:104
 msgid "Login"
-msgstr "Logga in"
-
-#: start/templates/pagelayout.html:143
-msgid "Other"
-msgstr "Övrigt"
-
-#: start/templates/pagelayout.html:178
-#: start/templates/start/nationmain.html:29
-msgid "Log in"
 msgstr "Logga in"
 
 #: start/templates/start/about.html:8
@@ -91,25 +81,42 @@ msgid "Event"
 msgstr "Evanemang"
 
 #: start/templates/start/calenderlista.html:43
-#: start/templates/start/main.html:50 start/templates/start/ourevents.html:16
+#: start/templates/start/events.html:9 start/templates/start/ourevents.html:16
 msgid "Place"
 msgstr "Plats"
 
 #: start/templates/start/calenderlista.html:45
-#: start/templates/start/main.html:51 start/templates/start/ourevents.html:18
+#: start/templates/start/events.html:10
+#: start/templates/start/ourevents.html:18
 msgid "Type"
 msgstr "Typ"
 
 #: start/templates/start/calenderlista.html:46
-#: start/templates/start/main.html:52
+#: start/templates/start/events.html:11
 msgid "Time"
 msgstr "Tid"
 
-#: start/templates/start/main.html:49
+#: start/templates/start/editevent.html:15
+#, fuzzy
+#| msgid "Create a new event"
+msgid "Edit an event"
+msgstr "Skapa ett nytt event"
+
+#: start/templates/start/editevent.html:20
+#, fuzzy
+#| msgid "Create event"
+msgid "Confirm edited event"
+msgstr "Skapa event"
+
+#: start/templates/start/events.html:8
 #, fuzzy
 #| msgid "Event"
 msgid "Events"
 msgstr "Evanemang"
+
+#: start/templates/start/main.html:3
+msgid "Start page"
+msgstr "Startsida"
 
 #: start/templates/start/nationmain.html:19
 msgid "Create event"
@@ -122,6 +129,10 @@ msgstr "Våra event"
 #: start/templates/start/nationmain.html:21
 msgid "Presentation"
 msgstr "Presentation"
+
+#: start/templates/start/nationmain.html:29
+msgid "Log in"
+msgstr "Logga in"
 
 #: start/templates/start/ourevents.html:12
 msgid "Reappearing events"
@@ -149,6 +160,9 @@ msgstr "Svenska"
 #: studentkompassen/settings.py:154
 msgid "Norwegian "
 msgstr "Norska"
+
+#~ msgid "Other"
+#~ msgstr "Övrigt"
 
 #~ msgid "Hello !"
 #~ msgstr "hi"

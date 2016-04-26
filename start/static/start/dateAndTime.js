@@ -8,13 +8,17 @@ $ (function() {
     writeDate();
     $(".glyphicon-chevron-right").click(function() {switchDate(1)});
     $(".glyphicon-chevron-left").click(function() {switchDate(-1)});
+
 })
 
 function switchDate(day){
     eventDate.setDate(eventDate.getDate() + day);
     writeDate();
-    $('#datepicker').datepicker('setDate', eventDate);
+    switchDateCalender(eventDate);
+    /*$('#datepicker').datepicker('setDate', eventDate);*/
 }
+
+ 
 /* SLUT TEXT KOPPLAD TILL KALENDER */
 
 
