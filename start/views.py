@@ -108,19 +108,19 @@ def addevent(request):
 
 
 @login_required(login_url='/accounts/login')
-def editevent(request, eid):
+def editevent(request, id):
 
     if request.POST:
         event_form = EventForm(request.POST)
 
-    if EventForm.is_valid():
-        event = get_object_or_404(Event, pk=eid)
-        event_form = EventForm(request.POST, instance=event)
-        event_form.save()
-        return redirect('/start/nationmain')
+        if event_form.is_valid():
+            event = get_object_or_404(Event, pk=id)
+            event_form = EventForm(request.POST, instance=event)
+            event_form.save()
+            return redirect('/start/nationmain')
 
     else:
-        event = Event.objects.get(pk=eid)
+        event = Event.objects.get(pk=id)
         event_form = EventForm(instance=event)
 
-        return render_to_response('editevent.html', {'form': event_form}, context_instance=RequestContext(request))
+        return render_to_response('start/editevent.html', {'form': event_form}, context_instance=RequestContext(request))
