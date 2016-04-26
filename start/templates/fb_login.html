@@ -3,12 +3,15 @@
 {% block left%}
 {% if user and not user.is_anonymous %}
 <a>Hello, {{user.get_full_name}} !</a>
- <meta http-equiv="REFRESH" content="0;url=http://130.238.15.208:8001/sv/start/studentmain">
+<!--<meta http-equiv="REFRESH" content="0;url=start:studentmain">-->
 <br>
-<a href="/logout">Logout</a>
+<!--<a href="/logout">Logout</a>-->
 {% else %}
-<a class="btn btn-block btn-social btn-facebook" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+<a class="btn btn-block btn-social btn-facebook" href="{% url 'social:begin' 'facebook' %}?next={{ redirect_url }}">
     <span class="fa fa-facebook"></span> Login with Facebook</a>
+
+<a class="btn btn-block btn-social" href="accounts/login">
+    <span class="f"></span> Login as a nation</a>
 <br>
 <br>
 <br>

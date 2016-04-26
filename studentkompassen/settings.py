@@ -66,12 +66,12 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.i18n',
+                'django.contrib.auth.context_processors.auth',
                 'social.apps.django_app.context_processors.backends',
                 'social.apps.django_app.context_processors.login_redirect',
 
@@ -79,21 +79,6 @@ TEMPLATES = [
         },
     },
 ]
-
-TEMPLATES_CONTEXT_PROCESSORS = [
-   'django.contrib.auth.context_processors.auth',
-   'django.template.context_processors.debug',
-   'django.template.context_processors.request',
-   'django.core.context_processors.i18n',
-   'django.core.context_processors.media',
-   'django.core.context_processors.static',
-   'django.core.context_processors.tz',
-   'django.contrib.messages.context_processors.messages',
-   'social.apps.django_app.context_processors.backends',
-   'social.apps.django_app.context_processors.login_redirect',
-]
-
-
 
 
 AUTHENTICATION_BACKENDS = [
@@ -176,4 +161,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/start/nationmain'
+LOGIN_REDIRECT_URL = '/start/nationmain/'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/start/studentmain'
