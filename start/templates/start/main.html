@@ -46,7 +46,13 @@ $(function() {
 
 <title>Calender i listform</title>
 
-<div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
+<div class="calendar" style ="overflow-y: scroll; height: 500px"> <!--style = "background-color:pink;"-->
+
+
+    <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
+
+        <div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
+
 
 
             <div class="week col-xs-7 col-xs-offset-3 col-sm-offset-4 col-sm-6 col-md-7 col-md-offset-4 col-lg-4 col-lg-offset-4" >
@@ -65,63 +71,9 @@ $(function() {
         </div>
 
 <div class="calendar"> <!--style = "background-color:pink;"-->
-
     {% include "start/events.html" %}
 
-    {% comment %}
-    <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0"> <!--style = "background-color:hotpink;-->
-
-
-        <thead>
-        <tr>
-            <th class="col-md-4 col-sm-4" scope="col">{%trans "Events"%}</th>
-            <th class="col-md-2 col-sm-2" scope="col">{%trans "Place"%}</th>
-            <th class="col-md-1 hidden-xs" scope="col">{%trans "Type"%}</th>
-            <th class="col-md-1 col-sm-1" scope="col">{%trans "Time"%}</th>
-        </tr>
-        </thead>
-        <tbody>
-                {% for event in events %}
-                <tr data-toggle="modal" data-target="#{{event.id}}">
-
-                    <td data-title="Aktivitet">{{ event.name }}</td>
-                    <td data-title="Plats"><span class="name">{{ event.location }}</span></td>
-                    <td>{{event.startdate}}</td>
-                            <!-- POP UP SKITEN -->
-
-                             <!-- Modal -->
-                    <td class="hidden-xs">{{event.starttime}}</td>
-                            <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-                            <!-- Modal -->
-                    <td class="hidden-xs">{{event.enddate}}</td>
-                    <div class="modal fade" id="{{event.id}}" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Event description</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p> {{event.description}} </p>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <div class="fb-share-button" data-layout="button_count"></div>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- POP UP SKITEN -->
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    {% endcomment %}
-    </div>
+</div>
 {% endblock %}
 
 {% block right %}
