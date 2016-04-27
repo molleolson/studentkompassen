@@ -96,6 +96,7 @@
             <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
             {% if user.is_authenticated %}
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
+                <li>Hello, {{user.get_full_name}}!</li>
             {% else %}
                 <li><a href="{% url 'start:studentmain' %}"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
             {% endif %}
