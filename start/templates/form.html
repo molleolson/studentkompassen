@@ -12,10 +12,11 @@
 <div class="control-label">
     {{ field.label_tag }}
 </div>
-<div class="controls">
+<span class="controls">
     {{ field }}
+    <!--{% if field.name = "name" %}  <span type="text"></span> {% endif%}-->
     {% if field.errors %}<span class="help-inline">{{ field.errors|join:", " }}</span>{% endif %}
     {% if field.help_text %}<p class="help-block">{{ field.help_text }}</p>{% endif %}
-</div>
+    </span>
 </div>
 {% endfor %}
