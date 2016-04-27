@@ -14,8 +14,24 @@
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/sv_SE/sdk.js";
+          if(window.location.href.indexOf("en") > -1) {
+       var sprak = 'en_US';
+    }
+      else if(window.location.href.indexOf("sv") > -1) {
+       var sprak = 'sv_SE';
+    }
+      else if(window.location.href.indexOf("nb") > -1) {
+       var sprak = 'nb_NO';
+    }
+      else{
+         var sprak = 'sv_SE';
+     } 
+     js.src = "//connect.facebook.net/"+sprak+"/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
 
+/* en_US för engelska */
+/* sv_SE för svenska */
+/* nb_NO för norska bokmål */
+/* https://www.facebook.com/translations/FacebookLocales.xml - fullständig lista */
