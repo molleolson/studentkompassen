@@ -14,14 +14,14 @@
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-          if(window.location.href.indexOf("en") > -1) {
-       var sprak = 'en_US';
-    }
-      else if(window.location.href.indexOf("sv") > -1) {
+          if(window.location.href.indexOf("/sv/") > -1) {
        var sprak = 'sv_SE';
     }
-      else if(window.location.href.indexOf("nb") > -1) {
+      else if(window.location.href.indexOf("/nb/") > -1) {
        var sprak = 'nb_NO';
+    }
+      else if(window.location.href.indexOf("/en/") > -1) {
+       var sprak = 'en_US';
     }
       else{
          var sprak = 'sv_SE';

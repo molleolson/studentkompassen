@@ -35,7 +35,7 @@ class Host(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=200, blank=True, null=True)  # Hr kanske vi sen kan testa lada in pdf?
+    name = models.CharField(max_length=200, blank=True, null=True)  # Hr kanske vi sen kan testa ladda in pdf?
 
     def __unicode__(self):
         return self.name
@@ -45,9 +45,8 @@ class Event(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
-
     enddate = models.DateTimeField('end date', )
-
+    categories = models.ManyToManyField(Category)
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
@@ -55,11 +54,6 @@ class Event(models.Model):
 
     def __unicode__(self):
         return self.name
-
-
-class event_category(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE, null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 
 
 
