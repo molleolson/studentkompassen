@@ -9,7 +9,7 @@ from datetimewidget.widgets import DateTimeWidget
 class EventForm(ModelForm):
     class Meta:
         model = Event
-        fields = ['name', 'description', 'startdate', 'enddate', 'host', 'location']
+        fields = ['name', 'description', 'startdate', 'enddate', 'categories', 'host', 'location']
 
         widgets = {
             # Use localization and bootstrap 3
