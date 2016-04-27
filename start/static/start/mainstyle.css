@@ -68,13 +68,18 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .navbar-collapse .navbar-nav > .active > a:hover{
     color:black;
     background: #3399FF; /*why you no work? jo, det är about background!*/
-
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .navbar-collapse .navbar-nav >li > a:hover{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
     background-color: #A8D6FF;
-
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
 }
 .navbar-collapse {
     background-color:   #E8F4FF;
