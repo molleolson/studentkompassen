@@ -13,7 +13,6 @@ from django.core.urlresolvers import reverse
 from datetime import timedelta, datetime
 
 
-
 def index(request):
     menu_active_item = 'now'
     events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now())\
@@ -25,24 +24,19 @@ def index(request):
     return render(request, 'start/main.html', locals())
 
 
-#
-#    output = ', '.join([h.host_name for h in list_of_hosts])
-#     return HttpResponse(output)
+def event_pub(request):
+    menu_active_item = 'pub'
+    events = Event.objects.filter(categories__name__startswith='Pub', startdate__lt=datetime.now() + timedelta(days=1),
+                                                                  enddate__gte=datetime.now()).order_by('startdate')
+    return render(request, 'start/pub.html', locals())
 
 
 def events(request):
     selected_date = datetime.strptime(request.GET.get('date'), "%Y-%m-%d")
-
     #print "Selected date", selected_date
-
     events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date)\
         .order_by('startdate')
     return render(request, 'start/events.html', locals())
-
-
-def hostid(request, id):
-    h = Host.objects.get(pk = id)
-    return HttpResponse("You're looking at host %s." % h)
 
 
 def about(request):
@@ -68,6 +62,7 @@ def nationmain(request):
     events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now()) \
         .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
+
 
 @login_required(login_url='/')
 def studentmain(request):
