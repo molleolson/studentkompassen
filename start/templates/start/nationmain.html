@@ -17,7 +17,7 @@
       <a class = "navbar-brand visible-xs " href = "#">Meny</a>
    </div>
 
-   <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
+   <div class = "collapse navbar-collapse" id = "navbarID">
             <ul class="nav navbar-nav" id = "navbaren" >
                     <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a href="{% url 'start:nationmain' %}">{% trans "Right now"%}</a></li>
                     <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a href="{% url 'start:addevent' %}">{% trans "Create event"%}</a></li>

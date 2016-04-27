@@ -47,7 +47,6 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     height: auto;
 }
 .navbar-collapse{
-    color:red;
     border-radius: 0;
     border: 0px;
     border-bottom: 5px solid rgb(51,153,255);
@@ -61,29 +60,26 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     height: 20px;
 
 }
-
-
-/*
-
-.navbar-collapse .navbar-nav > li >a:hover,
-.navbar-collapse .navbar-nav > li >a:focus{
-    background-color: rgb(51,153,255);
-    color: white;
-    border-bottom: 0;
+.navbar-collapse .navbar-nav >li > a{
+    color:black;
+}
+.navbar-collapse .navbar-nav > .active > a,
+.navbar-collapse .navbar-nav > .active > a:hover{
+    color:black;
+    background: #3399FF; /*why you no work? jo, det är about background!*/
 
 }
 
-.navbar-collapse .navbar-nav > li.active >a,
-.navbar-collapse .navbar-nav > li.active >a:hover,
-.navbar-collapse .navbar-nav > li.active >a:focus{
-    background-color: rgb(51,153,255);
-    color: white;
-    border-bottom: 0;
-}*/
+.navbar-collapse .navbar-nav >li > a:hover{
 
-.nav>li>a{
-    color: black;
+    background-color: #A8D6FF;
+
 }
+.navbar-collapse {
+    background-color:   #E8F4FF;
+}
+
+
 /***********************************************************************
 *  Navbar slut
 ***********************************************************************/
