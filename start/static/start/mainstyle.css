@@ -70,6 +70,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background: #3399FF; /*why you no work? jo, det är about background!*/
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+
+    border: solid 1px  #A8D6FF;
 }
 
 .navbar-collapse .navbar-nav >li > a:hover{
@@ -80,6 +85,10 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     -webkit-transition-duration: 0.6s;
     -moz-transition-duration: 0.6s;
     transition-duration: 0.6s;
+
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 .navbar-collapse {
     background-color:   #E8F4FF;
