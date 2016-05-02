@@ -5,6 +5,7 @@
 {% block extra_menu_item %}
 
 <li id="myEventL"><a id="myEventsClick" href="#"> {% trans "My saved events"%}</a></li>
+<li id="nationinfo" {% if menu_active_item == 'nationinfo' %} class="active"{% endif %}><a href="{% url 'start:nationinfo' %}">{% trans "Nationinfo"%}</a></li>
 {% endblock %}
 
 

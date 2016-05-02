@@ -4,7 +4,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from .models import Host, Event, Location
 from start.forms import EventForm
-from django.utils import translation
+from django.utils import translation, timezone
 from django.template import loader
 from django.contrib.auth import authenticate, login
 from operator import attrgetter
@@ -15,7 +15,8 @@ from datetime import timedelta, datetime
 
 def index(request):
     menu_active_item = 'now'
-    events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now())\
+    selected_date = timezone.make_aware(datetime.now(), timezone.get_default_timezone())
+    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date)\
         .order_by('startdate')
     #events = sorted(temp, key=attrgetter('startdate'))
     #template = loader.get_template('start/main.html')
@@ -26,16 +27,17 @@ def index(request):
 
 def event_pub(request):
     menu_active_item = 'pub'
-    events = Event.objects.filter(categories__name__startswith='Pub', startdate__lt=datetime.now() + timedelta(days=1),
-                                                                  enddate__gte=datetime.now()).order_by('startdate')
+    events = Event.objects.filter(categories__name__startswith='Pub', startdate__lt=timezone.now(),
+                                enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/pub.html', locals())
 
 
 def events(request):
-    selected_date = datetime.strptime(request.GET.get('date'), "%Y-%m-%d")
+    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
+                                        timezone.get_default_timezone())
     #print "Selected date", selected_date
-    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date)\
-        .order_by('startdate')
+    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1),
+                                  enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
 
@@ -48,6 +50,9 @@ def about(request):
     #    translation.activate('en')
     return render(request, 'start/about.html', locals())
 
+def nationinfo(request):
+    return render(request, 'start/nationinfo.html', locals())
+
 
 @login_required(login_url='/accounts/login')
 def skapa(request, id):
@@ -59,7 +64,7 @@ def skapa(request, id):
 @login_required(login_url='/accounts/login')
 def nationmain(request):
     menu_active_item = 'now'
-    events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now()) \
+    events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
 
@@ -67,7 +72,7 @@ def nationmain(request):
 @login_required(login_url='/')
 def studentmain(request):
     menu_active_item = 'now'
-    events = Event.objects.filter(startdate__lt=datetime.now() + timedelta(days=1), enddate__gte=datetime.now()) \
+    events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
     return render(request, 'start/studentmain.html', locals())
 
