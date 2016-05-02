@@ -24,6 +24,8 @@ def index(request):
 
     return render(request, 'start/main.html', locals())
 
+#Start category-stuff
+
 
 def event_pub(request):
     menu_active_item = 'pub'
@@ -56,6 +58,7 @@ def reload_breakfast(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
+
 def event_lunch(request):
     menu_active_item = 'lunch'
     events = Event.objects.filter(categories__name__startswith='Lunch', startdate__lt=timezone.now(),
@@ -70,6 +73,7 @@ def reload_lunch(request):
     events = Event.objects.filter(categories__name__startswith='Lunch', startdate__lt=selected_date + timedelta(days=1),
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
+
 
 def event_cafe(request):
     menu_active_item = 'lunch'
@@ -86,6 +90,7 @@ def reload_cafe(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
+
 def event_restaurang(request):
     menu_active_item = 'restaurang'
     events = Event.objects.filter(categories__name__startswith='Restaurang', startdate__lt=timezone.now(),
@@ -100,6 +105,7 @@ def reload_restaurang(request):
     events = Event.objects.filter(categories__name__startswith='Restaurang', startdate__lt=selected_date + timedelta(days=1),
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
+
 
 def event_club(request):
     menu_active_item = 'club'
@@ -116,6 +122,7 @@ def reload_club(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
+
 def event_gasque(request):
     menu_active_item = 'gasque'
     events = Event.objects.filter(categories__name__startswith='Gasque', startdate__lt=timezone.now(),
@@ -131,6 +138,8 @@ def reload_gasque(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
+#End category-stuff
+
 
 def events(request):
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
@@ -141,8 +150,6 @@ def events(request):
     return render(request, 'start/events.html', locals())
 
 
-
-
 def about(request):
     menu_active_item = 'about'
 
@@ -151,6 +158,7 @@ def about(request):
    # elif language == 'en':
     #    translation.activate('en')
     return render(request, 'start/about.html', locals())
+
 
 def nationinfo(request):
     return render(request, 'start/nationinfo.html', locals())
@@ -169,14 +177,6 @@ def nationmain(request):
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
-
-
-@login_required(login_url='/')
-def studentmain(request):
-    menu_active_item = 'now'
-    events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
-        .order_by('startdate')
-    return render(request, 'start/studentmain.html', locals())
 
 
 @login_required(login_url='/accounts/login')

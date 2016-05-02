@@ -163,4 +163,4 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/start/nationmain/'
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/start/studentmain'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/start/'

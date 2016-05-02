@@ -22,9 +22,9 @@ urlpatterns = [
     url(r'^gasque/$', views.event_gasque, name='gasque'),
     url(r'^gasque/reload/$', views.reload_gasque, name='reloadgasque'),
     # End sorting for categories
+
     url(r'^events/$', views.events, name='events'),
     url(r'^nationmain/$', views.nationmain, name='nationmain'),
-    url(r'^studentmain/$', views.studentmain, name='studentmain'),
     url(r'^nationmain/addevent/$', views.addevent, name='addevent'),
     url(r'^nationmain/editevent/(?P<event_id>\d+)/$', views.editevent, name='editevent'),
     url(r'^nationmain/presentation/$', views.presentation, name='presentation'),

@@ -88,8 +88,11 @@
          <li><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
          <li><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
          <li><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
-          <li><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
+         <li><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
          <li><a href = "#">{%trans "Close to you"%}</a></li>
+         {% if user.is_authenticated %}
+         <li id="myEventL"><a id="myEventsClick" href="#"> {% trans "My saved events"%}</a></li>
+         {% endif %}
          {% block extra_menu_item %}
          {% endblock %}
 
@@ -100,7 +103,7 @@
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
                 <li>Hello, {{user.get_full_name}}!</li>
             {% else %}
-                <li><a href="{% url 'start:studentmain' %}"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
             {% endif %}
         </ul>
 
