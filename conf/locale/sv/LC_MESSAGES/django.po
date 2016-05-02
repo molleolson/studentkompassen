@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 14:25+0200\n"
+"POT-Creation-Date: 2016-04-27 13:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,17 +53,22 @@ msgstr "Nationer och kårer"
 msgid "Close to you"
 msgstr "Nära dig"
 
-#: start/templates/pagelayout.html:94
+#: start/templates/pagelayout.html:96 start/templates/start/nationmain.html:28
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:95
+#: start/templates/pagelayout.html:98 start/templates/start/nationmain.html:30
+msgid "Logout"
+msgstr "Logga ut"
+
+#: start/templates/pagelayout.html:101
+#: start/templates/start/nationmain.html:32
 msgid "Login"
 msgstr "Logga in"
 
 #: start/templates/start/about.html:8
 #: start/templates/start/calenderlista.html:17
-#: start/templates/start/studentmain.html:9
+#: start/templates/start/studentmain.html:7
 msgid "My saved events"
 msgstr "Mina sparade event"
 
@@ -146,15 +151,15 @@ msgstr "Dagar"
 msgid "Edit"
 msgstr "Redigera"
 
-#: studentkompassen/settings.py:152
+#: studentkompassen/settings.py:137
 msgid "English"
 msgstr "Engelska"
 
-#: studentkompassen/settings.py:153
+#: studentkompassen/settings.py:138
 msgid "Swedish"
 msgstr "Svenska"
 
-#: studentkompassen/settings.py:154
+#: studentkompassen/settings.py:139
 msgid "Norwegian "
 msgstr "Norska"
 

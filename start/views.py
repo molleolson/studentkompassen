@@ -13,6 +13,11 @@ from django.core.urlresolvers import reverse
 from datetime import timedelta, datetime
 
 
+###### I denna fil finns all kod som faktiskt gor nagot vid visning av sidor. Exempelvis har alla flikar på /start/
+###### varsin funktion. De flesta funktioner liknar varandra till stor del.
+
+
+
 def index(request):
     menu_active_item = 'now'
     selected_date = timezone.make_aware(datetime.now(), timezone.get_default_timezone())
