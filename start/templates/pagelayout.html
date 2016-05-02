@@ -81,13 +81,14 @@
 
       <ul class = "nav navbar-nav">
          <li><a href ="{% url 'start:index' %}">{%trans "Right now"%}</a></li>
-         <li><a href = "#">{%trans "Breakfast"%}</a></li>
-         <li><a href = "#">{%trans "Lunch"%}</a></li>
-         <li><a href = "#">{%trans "Fika"%}</a></li>
+         <li><a href = "{% url 'start:breakfast' %}">{%trans "Breakfast"%}</a></li>
+         <li><a href = "{% url 'start:lunch' %}">{%trans "Lunch"%}</a></li>
+         <li><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
          <li><a href = "{% url 'start:pub' %}">{%trans "Pub"%}</a></li>
-         <li><a href = "#">{%trans "Restaurant"%}</a></li>
-         <li><a href = "#">{%trans "Clubs"%}</a></li>
+         <li><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
+         <li><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
          <li><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
+          <li><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
          <li><a href = "#">{%trans "Close to you"%}</a></li>
          {% block extra_menu_item %}
          {% endblock %}
