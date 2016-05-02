@@ -54,31 +54,29 @@ function switchDateCalender(eventDate){
 
 <br>
 <br>
+<!--här ska du jobba abbe!-->
 
-<div class="container col-md-12 col-sm-12 col-xs-12 col-lg-12" id="monthAndDay"> <!--style = "background-color:darkgrey;"-->
-    <div class="week col-xs-7 col-xs-offset-3 col-sm-offset-4 col-sm-6 col-md-7 col-md-offset-4 col-lg-4 col-lg-offset-4" >
-        <a class="previous col-xs-2 col-sm-2 col-md-2 col-lg-2" href="#" >
+
+        <a class="previous" href="#" >
             <i class="glyphicon glyphicon-chevron-left"></i>
         </a>
 
-        <strong class = "text-center col-xs-6 col-sm-6 col-md-6 col-lg-6"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong>
+        <strong class = "text-center"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong>
 
-        <a class="next col-xs-3 col-md-1 col-sm-1 col-lg-1" style="display: inline;" href="#" >
+        <a class="next" style="display: inline;" href="#" >
             <i class="glyphicon glyphicon-chevron-right "></i>
         </a>
-    </div>
-</div>
 
 
-<div class="calendar" style ="overflow-y: scroll; height: 500px"> <!--style = "background-color:pink;"-->
+<div class="calendar col-md-8">
     {% include "start/events.html" %}
-
 </div>
+
+
+
+<div class="datetimepicker col-md-offset-10 col-md-2 hidden-xs hidden-sm" id="datepicker"></div>
 {% endblock %}
 
 {% block right %}
-
-<div class="datetimepicker" id="datepicker"></div>
-
 
 {% endblock %}

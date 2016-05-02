@@ -1,6 +1,48 @@
+/* XS INSTÄLLNINGAR*/
+@media screen and (max-width: 699px) and (min-width: 0px) {
+    body {
+
+    }
+
+    .calendar {
+        margin: 0 auto;
+        padding: 0px;
+        width:100%;
+        background-color: #A8D6FF;
+        height: 500px
+    }
+
+
+
+    .main-header {
+        text-align: center;
+        clear: both;
+        padding: 0;
+        width: 100%;
+    }
+
+}
+    /* större INSTÄLLNINGAR*/
+@media screen and (min-width: 700px){
+
 
 body{
-    background-color: rgb(232,244,255);
+    rgb(232,244,255); */
+}
+    .calendar {
+    margin: 1px auto;
+    padding: 10px;
+    height: 500px;
+    background-color:#A8D6FF;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+    .main-header{
+    text-align: center;
+    clear: both;
+    padding: 0;
+}
 }
 /*#A8D6FF =R:168 G:214 B:255
 #E8F4FF = R:232 G:244 B:255
@@ -27,11 +69,7 @@ div{
 
 }
 
-.main-header{
-    text-align: center;
-    clear: both;
-    padding: 0;
-}
+
 .block{
     padding: 10px;
 }
@@ -76,14 +114,46 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
 }
-
 .navbar{
     border-bottom: 5px solid  #3399FF ;
-      -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
 }
+/* *******NAVBAR MOBILE SETTINGS **********/
+@media screen and (max-width: 698px) and (min-width: 0px){
+.navbar {
+    height:60px;
+    background: #3399FF;
+    border-bottom: none;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    navbutton_background_color: red;
+}
+.navbar-default .navbar-brand{
+    color:black;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
 
+}
+.navbar-toggle {
+    background-color: lightgray;
+}
+.collapsing, .in {background-color: #A8D6FF;}
+.collapsing ul li a, .in ul li a {color: #555!important;}
+.collapsing ul li a:hover, .in ul li a:hover {
+    color: #f1f1f1!important;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #A8D6FF;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+}
 #navPic{
     height: 100px;
     width: 200px;
@@ -109,13 +179,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 /***********************************************************************
 *  Calendar SECTION
 ***********************************************************************/
-.calendar {
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 15px;
-    background-color:   #A8D6FF;
 
-}
 .calendar th{
     border-bottom: none;
 
@@ -156,6 +220,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     position: absolute;
 
 }
+
 /***********************************************************************
 *  Calendar Slut
 ***********************************************************************/
@@ -225,7 +290,7 @@ a.ui-state-highlight {
 #nationDesc{
     width:100%;
     border: 1px solid black;
-        background-color: #A8D6FF	 ;
+    background-color: #A8D6FF	 ;
 }
 
 #dontMiss{
