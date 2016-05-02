@@ -1,6 +1,6 @@
 {% extends "start/main.html" %}
 {% load i18n %}
-{% block title %}Pub{% endblock %}
+{% block title %}Breakfast{% endblock %}
 
 {% block additional_scripts %}
 <script>
@@ -16,7 +16,7 @@ $(function() {
             datum = new Date(date-tzoffset);
             eventDate = date;
             writeDate();
-            $("div.calendar").load("{% url "start:reloadpub" %}?date=" + datum.toISOString().slice(0, 10), function()
+            $("div.calendar").load("{% url "start:reloadbreakfast" %}?date=" + datum.toISOString().slice(0, 10), function()
             {
                 FB.XFBML.parse();
             });
@@ -31,7 +31,7 @@ function switchDateCalender(eventDate){
     var date=eventDate;
     var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
     datum = new Date(date-tzoffset);
-    $("div.calendar").load("{% url "start:reloadpub" %}?date=" + datum.toISOString().slice(0, 10), function()
+    $("div.calendar").load("{% url "start:reloadbreakfast" %}?date=" + datum.toISOString().slice(0, 10), function()
             {
                 FB.XFBML.parse();
             });
