@@ -13,9 +13,8 @@ from django.core.urlresolvers import reverse
 from datetime import timedelta, datetime
 
 
-###### I denna fil finns all kod som faktiskt gor nagot vid visning av sidor. Exempelvis har alla flikar på /start/
-###### varsin funktion. De flesta funktioner liknar varandra till stor del.
-
+# I denna fil finns all kod som faktiskt gor nagot vid visning av sidor. Exempelvis har alla flikar pa /start/ varsin
+# funktion. De flesta funktioner liknar varandra till stor del.
 
 
 def index(request):
@@ -23,11 +22,17 @@ def index(request):
     selected_date = timezone.make_aware(datetime.now(), timezone.get_default_timezone())
     events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date)\
         .order_by('startdate')
-    #events = sorted(temp, key=attrgetter('startdate'))
-    #template = loader.get_template('start/main.html')
-    #return HttpResponse(template.render(request))
-
     return render(request, 'start/main.html', locals())
+
+
+def events(request):
+    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
+                                        timezone.get_default_timezone())
+    #print "Selected date", selected_date
+    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1),
+                                  enddate__gte=selected_date).order_by('startdate')
+    return render(request, 'start/events.html', locals())
+
 
 #Start category-stuff
 
@@ -144,15 +149,6 @@ def reload_gasque(request):
     return render(request, 'start/events.html', locals())
 
 #End category-stuff
-
-
-def events(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
 
 
 def about(request):
