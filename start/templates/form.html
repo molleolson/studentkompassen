@@ -10,7 +10,7 @@
 {% for field in form %}
 <div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} field-required{% endif %}">
 <div class="control-label">
-    {{ field.label_tag }}
+    {%trans {{ field.label_tag }} %}
 </div>
 <span class="controls">
     {{ field }}
