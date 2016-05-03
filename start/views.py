@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from .models import Host, Event, Location
-from start.forms import EventForm
+from start.forms import EventForm, PresentationForm
 from django.utils import translation, timezone
 from django.template import loader
 from django.contrib.auth import authenticate, login
@@ -187,15 +187,15 @@ def ourevents(request):
     return render(request, 'start/ourevents.html', locals())
 
 
-@login_required(login_url='/accounts/login')
+#@login_required(login_url='/accounts/login')
 def presentation(request, host_id):
-    menu_active_item = 'presentation'
+    #menu_active_item = 'presentation'
     host = get_object_or_404(Host, pk=host_id)
     if request.POST:
         form = PresentationForm(request.POST, instance=host)
         if form.is_valid():
             form.save()
-            return redirect('/start/nationmain/presenation')
+            return redirect('/start/nationmain/')
     else:
         form = PresentationForm(instance=host)
 
