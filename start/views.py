@@ -189,13 +189,13 @@ def ourevents(request):
 
 #@login_required(login_url='/accounts/login')
 def presentation(request, host_id):
-    menu_active_item = 'presentation'
+    #menu_active_item = 'presentation'
     host = get_object_or_404(Host, pk=host_id)
     if request.POST:
         form = PresentationForm(request.POST, instance=host)
         if form.is_valid():
             form.save()
-            return redirect('/start/nationmain/presenation')
+            return redirect('/start/nationmain/')
     else:
         form = PresentationForm(instance=host)
 

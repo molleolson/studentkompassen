@@ -22,7 +22,7 @@
                     <li id="rnL"{% if menu_active_item == 'now' %} class="active"{% endif %}><a href="{% url 'start:nationmain' %}">{% trans "Right now"%}</a></li>
                     <li id="eventL"{% if menu_active_item == 'event' %} class="active"{% endif %}><a href="{% url 'start:addevent' %}">{% trans "Create event"%}</a></li>
                     <li id="ourEventL"{% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a href="{% url 'start:ourevents' %}">{% trans "Our events"%}</a></li>
-                    <li id="profileL" {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a href="{% url 'start:presentation' %}">{% trans "Presentation"%}</a></li>
+                    {#<li id="profileL" {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a href="{% url 'start:presentation' %}">{% trans "Presentation"%}</a></li>#}
 
                 <ul class="nav navbar-nav navbar-right pull right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>

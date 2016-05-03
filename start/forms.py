@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import inlineformset_factory, ModelForm, DateField, TextInput
-from start.models import Event, Location, Host
+from start.models import Event, Host
 from functools import partial
 from datetimewidget.widgets import DateTimeWidget
 
