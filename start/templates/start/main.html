@@ -45,11 +45,10 @@ function switchDateCalender(eventDate){
 
 {% block left%}
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
+
+<button class ="pull-left" data-toggle="collapse" data-target="#demo">Collapsible</button>
+<div id="demo" class="collapse"style="background-color: red;">
+<div class="datetimepicker" id="datepicker"></div>
 </div>
 
 <br>
@@ -74,7 +73,7 @@ function switchDateCalender(eventDate){
 
 
 
-<div class="datetimepicker col-md-offset-10 col-md-2 hidden-xs hidden-sm" id="datepicker"></div>
+
 {% endblock %}
 
 {% block right %}
