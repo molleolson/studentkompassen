@@ -40,32 +40,23 @@ function switchDateCalender(eventDate){
 
 </script>
 {% endblock %}
-
-
-
 {% block left%}
 
 
-<button class ="pull-left hidden-xs hidden-sm" data-toggle="collapse" data-target="#demo">Collapsible</button>
-<div id="demo" class="collapse"style="background-color: red;">
-<div class="datetimepicker" id="datepicker"></div>
-</div>
+       <div class ="row">  <button class ="hidden-xs hidden-sm pull-right" style="display: inline;" data-toggle = "collapse" data-target="#datepicker">Collapsible <div class="datetimepicker collapse hidden-xs hidden-sm"  id="datepicker"></div></button>
+            </div>
+            <button class="previous" id="dayPickerBtnLeft" href="#" ">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </button>
+
+            <button id="dayPickerBtn"><strong><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong></button>
+
+            <button class="next pull-right" id="dayPickerBtnRight" style="display: inline;" href="#" >
+                <i class="glyphicon glyphicon-chevron-right "></i>
+            </button>
+
 
 <br>
-<br>
-<!--här ska du jobba abbe!-->
-
-
-        <a class="previous" href="#" >
-            <i class="glyphicon glyphicon-chevron-left"></i>
-        </a>
-
-        <strong class = "text-center"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong>
-
-        <a class="next" style="display: inline;" href="#" >
-            <i class="glyphicon glyphicon-chevron-right "></i>
-        </a>
-
 
 <div class="calendar">
     {% include "start/events.html" %}
