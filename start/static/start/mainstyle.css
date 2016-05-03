@@ -77,6 +77,13 @@ div{
     display: none;
 }
 
+#nationDesc{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
+
+
 /***********************************************************************
 *  NAVBAR SECTION
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products

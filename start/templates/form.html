@@ -7,15 +7,17 @@
 </ul>
 </div>
 {% endif %}
+<div>
 {% for field in form %}
 <div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} field-required{% endif %}">
-<div class="control-label">
-    {#{%trans {{ field.label_tag }} %}#}
-</div>
+    <div class="control-label">
+        {{field.label_tag}}
+    </div>
 <span class="controls">
-    {{ field }}
+    {{field}}
     {% if field.errors %}<span class="help-inline">{{ field.errors|join:", " }}</span>{% endif %}
     {% if field.help_text %}<p class="help-block">{{ field.help_text }}</p>{% endif %}
     </span>
 </div>
 {% endfor %}
+    </div>
