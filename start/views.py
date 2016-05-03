@@ -187,9 +187,10 @@ def ourevents(request):
     return render(request, 'start/ourevents.html', locals())
 
 
-#@login_required(login_url='/accounts/login')
-def presentation(request, host_id):
-    #menu_active_item = 'presentation'
+@login_required(login_url='/accounts/login')
+def presentation(request):
+    host_id = 1
+    menu_active_item = 'presentation'
     host = get_object_or_404(Host, pk=host_id)
     if request.POST:
         form = PresentationForm(request.POST, instance=host)
@@ -223,6 +224,7 @@ def addevent(request):
 
 @login_required(login_url='/accounts/login')
 def editevent(request, event_id):
+
     event = get_object_or_404(Event, pk=event_id)
     if request.POST:
         form = EventForm(request.POST, instance=event)

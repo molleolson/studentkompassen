@@ -135,7 +135,9 @@ div{
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 
-
+.day{
+    position: relative;
+}
 @media screen and (min-width: 768px) {
     .navbar-collapse .navbar-nav > li > a {
         color: black;
@@ -177,12 +179,13 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 .navbar {
     background: #3399FF;
+    padding: 5px;
     border-bottom: 0px solid white;
     border-radius: 0px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-
+    margin-bottom:5px;
 }
 .navbar-default .navbar-brand{
     color:black;
@@ -233,6 +236,9 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 /***********************************************************************
 *  Calendar SECTION
 ***********************************************************************/
+.calendar{
+    margin-bottom: 0px;
+}
 
 .calendar th{
     border-bottom: none;
@@ -366,3 +372,34 @@ a.ui-state-highlight {
 /***********************************************************************
 *  Boxarna i presentation slut
 ***********************************************************************/
+
+#dayPickerBtn{
+    width:70%;
+    height: 100%;
+}
+.dayPicker{
+    width:20%;
+}
+@media screen and (max-width: 798px) and (min-width: 0px) {
+#dayPickerBtn {
+    width:58%;
+
+}
+#dayPickerBtnRight, #dayPickerBtnLeft{
+    width:20%;
+}
+
+.dayPicker{
+    width:100%;
+    height: 100%;
+    padding: 0%;
+}
+#dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
+    height:100%;
+    padding:20px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+}

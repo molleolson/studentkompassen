@@ -3,16 +3,16 @@
 {% block title %}Presentation{% endblock %}
 
     {% block left %}
-            Vår profil
+
             <div class="row">
                 <div class="col-sm-6" >
 
-                    {#<div class="well" id="nationDesc">
-                        <button id="editNationDesc"type="button" class="btn btn-default">{% trans "Edit"%}</button>#}
-                    <p>Nations beskrivning</p>
+                    <div class="well" id="nationDesc">
+                        <button id="editNationDesc"type="button" class="btn btn-default">{% trans "Edit"%}</button>
+                    <h3>Nationsbeskrivning</h3>
                         <tr>
-                            <form action="{% url "start:presentation" host.id %}" method="POST">
-                            <h1>{% trans "Edit a description"%}</h1>
+                            <form action="{% url "start:presentation" %}" method="POST">
+                            <h4>{% trans "Edit a description"%}</h4>
                                 {% csrf_token %}
                                 {% include "form.html" with form=form %}
                             <button class="btn btn-default btn-block" type ="submit">{% trans "Confirm edited description"%}</button>
@@ -22,7 +22,7 @@
 
                     </div>
                 </div>
-                {#<div class="col-sm-5">
+                <div class="col-sm-5">
                     <div class="well" id="dontMiss">
                     <p>Missa inte!</p>
                     <button id="editDontMiss"type="button" class="btn btn-default">{% trans "Edit"%}</button>
@@ -34,7 +34,7 @@
                     <p>Kontaktinfo, adresser och andra rel permanenta grejor</p>
                     <button id="editContactInfo"type="button" class="btn btn-default">{% trans "Edit"%}</button>
                     </div>
-                </div>#}
+                </div>
             </div>
     {% endblock %}
 
