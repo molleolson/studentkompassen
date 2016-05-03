@@ -7,9 +7,9 @@
 </ul>
 </div>
 {% endif %}
-<div>
+
 {% for field in form %}
-<div class="control-group{% if field.errors %} error{% endif %}{% if field.field.required %} field-required{% endif %}">
+<div class="field-{{ field.auto_id }}  control-group{% if field.errors %} error{% endif %}{% if field.field.required %} field-required{% endif %}">
     <div class="control-label">
         {{field.label_tag}}
     </div>
@@ -20,4 +20,4 @@
     </span>
 </div>
 {% endfor %}
-    </div>
+

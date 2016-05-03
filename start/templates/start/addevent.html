@@ -7,16 +7,17 @@
 {% endblock %}
 
 {% block left %}
+<div class="divforforms">
 
 
-<div class ="col-md-offset-1 col-md-3">
+
     <tr>
     <form action="{% url "start:addevent" %}" method="POST">
         <h2>{% trans "Create a new event"%}</h2>
         {% csrf_token %}
         {% include "form.html" with form=form %}
         <br>
-        <button class="btn btn-default btn-block" type ="submit">{% trans "Add event"%}</button>
+        <button class="btn btn-default btn-block" id="addingevent" type ="submit">{% trans "Add event"%}</button>
     </form>
     </tr>
 
