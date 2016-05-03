@@ -19,9 +19,7 @@ from datetime import timedelta, datetime
 
 def index(request):
     menu_active_item = 'now'
-    selected_date = timezone.make_aware(datetime.now(), timezone.get_default_timezone())
-    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1), enddate__gte=selected_date)\
-        .order_by('startdate')
+    events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/main.html', locals())
 
 
