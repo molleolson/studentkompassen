@@ -178,6 +178,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
         .container-fluid{
     height: auto;
 }
+
+
 .navbar {
     background: #3399FF;
     padding: 5px;
@@ -204,7 +206,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     overflow-x: hidden;
 }
 
-.collapsing ul li a, .in ul li a {color: #555!important;}
+.collapsing ul li a, .in ul li a {color: black!important;}
 .collapsing ul li a:hover, .in ul li a:hover {
     color: #f1f1f1!important;
     border-top-left-radius: 0px;
