@@ -23,12 +23,56 @@
 
 
 }
+
+/*Create event css*/
+.divforforms{
+    widht: 80%;
+
+}
+.nameofevent{
+    width:50%;
+}
+.field-id_name{
+    width: 96%;
+}
+
+.field-id_categories{
+
+    width: 15%;
+    float:left;
+
+}
+.field-id_host{
+    width:48%;
+
+}
+.field-id_location{
+    width:48%;
+
+}
+.field-id_startdate{
+    width:48%;
+
+}
+.field-id_enddate {
+    width: 48%;
+}
+.field-id_description{
+
+    width:48%;
+
+}
+#addingevent{
+    float:left;
+    width:20%;
+
+}
     /* större INSTÄLLNINGAR*/
 @media screen and (min-width: 768px){
 
 
 body{
-    rgb(232,244,255); */
+    rgb(232,244,255);
 }
     .calendar {
     margin: 1px auto;
@@ -78,6 +122,13 @@ div{
 .hidden{
     display: none;
 }
+
+#nationDesc{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
+
 
 /***********************************************************************
 *  NAVBAR SECTION

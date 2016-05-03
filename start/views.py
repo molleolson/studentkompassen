@@ -204,7 +204,6 @@ def presentation(request):
 
 
 
-
 @login_required(login_url='/accounts/login')
 def addevent(request):
 
@@ -215,7 +214,7 @@ def addevent(request):
 
         if form.is_valid():
             instance = form.save()
-            return HttpResponseRedirect('/start/nationmain/', locals())
+            return redirect('/start/', locals())
     else:
         form = EventForm()
 
