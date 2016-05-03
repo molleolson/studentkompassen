@@ -43,8 +43,7 @@ function switchDateCalender(eventDate){
 {% block left%}
 
 
-       <div class ="row">  <button class ="hidden-xs hidden-sm pull-right" style="display: inline;" data-toggle = "collapse" data-target="#datepicker">Collapsible <div class="datetimepicker collapse hidden-xs hidden-sm"  id="datepicker"></div></button>
-            </div>
+
             <button class="previous" id="dayPickerBtnLeft" href="#" ">
                 <i class="glyphicon glyphicon-chevron-left"></i>
             </button>
@@ -57,6 +56,8 @@ function switchDateCalender(eventDate){
 
 
 <br>
+
+<div class="datetimepicker hidden-xs hidden-sm pull-right"  id="datepicker"></div>
 
 <div class="calendar">
     {% include "start/events.html" %}
