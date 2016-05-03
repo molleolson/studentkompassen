@@ -10,6 +10,18 @@
                     <div class="well" id="nationDesc">
                         <button id="editNationDesc"type="button" class="btn btn-default">{% trans "Edit"%}</button>
                     <p>Nations beskrivning</p>
+                        <tr>
+                        <form class = "form-inline" action="{% url "start:presentation" host.id %}" method="POST">
+                        <h1>{% trans "Edit an description"%}</h1>
+                        <div class="form-group">
+        {% csrf_token %}
+        {% include "form.html" with form=form %}
+
+        <button class="btn btn-default" type ="submit">{% trans "Confirm edited event"%}</button>
+        </div>
+    </form>
+    </tr>
+
                     </div>
                 </div>
                 <div class="col-sm-5">
