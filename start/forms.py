@@ -19,3 +19,7 @@ class EventForm(ModelForm):
         }
 
 
+class PresentationForm(ModelForm):
+    class Meta:
+        model = Host
+        fields = ['description']
