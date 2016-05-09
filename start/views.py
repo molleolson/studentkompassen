@@ -159,6 +159,7 @@ def about(request):
 
 
 def nationinfo(request):
+    menu_active_item = 'info'
 
     hosts = Host.objects.order_by('name')
     return render(request, 'start/nationinfo.html', locals())
