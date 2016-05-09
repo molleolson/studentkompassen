@@ -40,7 +40,7 @@ function switchDateCalender(eventDate){
 
 </script>
 {% endblock %}
-{% block left%}
+{% block main%}
 
 
 
@@ -59,7 +59,9 @@ function switchDateCalender(eventDate){
 <div class="datetimepicker hidden-xs hidden-sm pull-right"  id="datepicker"></div>
 <div class = "container">
 <div class="calendar">
+    {% block calendercontent %}
     {% include "start/events.html" %}
+    {% endblock %}
 </div>
 </div>
 

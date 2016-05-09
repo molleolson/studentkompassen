@@ -164,6 +164,11 @@ def nationinfo(request):
     hosts = Host.objects.order_by('name')
     return render(request, 'start/nationinfo.html', locals())
 
+def myprofile(request):
+
+
+    return render(request, 'start/myprofile.html', locals())
+
 
 @login_required(login_url='/accounts/login')
 def skapa(request, id):

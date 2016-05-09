@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^nationmain/ourevents/$', views.ourevents, name='ourevents'),
     url(r'^studentmain/about/$', views.about, name='about'),
     url(r'^nationinfo/$', views.nationinfo, name='nationinfo'),
+    url(r'^myprofile/$', views.myprofile, name='myprofile'),
 
 
 ]
