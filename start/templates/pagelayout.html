@@ -51,11 +51,12 @@
 <!--START HEADER-->
 
 <div class="main-header" role="banner"> <!--gör om till row-->
-        <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic">
-        <img src="{% static 'start/Uppsala-Pic.png' %}" alt="Fel i bild" id="headerPic">
+       <!--! <img class ="hidden-sm" src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic"> -->
 
 
-</div>
+    <!--<img src="{% static 'start/UppsalaUniversitet.jpg' %}" alt="Fel i bild" id="headerPic">-->
+
+
 
         <!-- HEADER --> <!-- kommer från http://codepen.io/Webspicer/pen/QwvRzM -->
 
@@ -63,18 +64,22 @@
 
 {% block navigation %}
 
-
-<nav class = "navbar navbar-default "  role = "navigation">
+<div class="container-fluid" id="navbarbackgrounded">
+                <a type="button" id="lngBtn" class="btn btn-info pull-right" href= "#"> English </a>
+             <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
+<nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
 
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
+
       <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#example-navbar-collapse">
          <span class = "sr-only">Toggle navigation</span>
          <span class = "icon-bar"></span>
          <span class = "icon-bar"></span>
          <span class = "icon-bar"></span>
       </button>
+         <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic2" class="hidden-sm hidden-md hidden-lg">
 
-      <a class = "navbar-brand visible-xs " href = "#">Studentkompassen</a>
+      <a class = "navbar-brand hidden-xs hidden-md hidden-sm hidden-lg " href = "#">Studentkompassen</a>
    </div>
 
    <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
@@ -109,6 +114,8 @@
       </ul>
    </div>
 </nav>
+</div>
+    </div>
 {% endblock %}
 {% block main %}
 

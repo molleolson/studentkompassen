@@ -1,4 +1,4 @@
-/* XS INSTÄLLNINGAR*/
+/* XS INSTÃ„LLNINGAR*/
 @media screen and (max-width: 798px) and (min-width: 0px) {
     body {
 
@@ -6,19 +6,26 @@
 
     .calendar {
         margin: 0 auto;
-        padding: 0px;
+        padding: 0;
         width:100%;
         background-color: #A8D6FF;
         height: auto;
+        border-radius: 10px;
     }
-
-
+/*
+#navbarbackgrounded{
+    background-color:red;
+    padding:300px;
+    height:500px;
+   /* */
+}*/
 
     .main-header {
         text-align: center;
         clear: both;
-        padding: 0;
+
         width: 100%;
+
     }
 
 
@@ -26,7 +33,7 @@
 
 /*Create event css*/
 .divforforms{
-    widht: 80%;
+    width: 80%;
 
 }
 .nameofevent{
@@ -67,12 +74,12 @@
     width:20%;
 
 }
-    /* större INSTÄLLNINGAR*/
+    /* stÃ¶rre INSTÃ„LLNINGAR*/
 @media screen and (min-width: 768px){
 
 
 body{
-    rgb(232,244,255);
+    background-color: rgb(232,244,255);
 }
     .calendar {
     margin: 1px auto;
@@ -100,18 +107,27 @@ rgb(51,153,255); #3399FF*/
 
 #loggPic{
     position: absolute;
-    z-index:1;
-    width: 20%;
-    left:2.5%;
-    top:1%;
+    z-index: 1;
+    width: 30%;
+    left: 0;
+    top: 20px;
+    /*background: rgba(232,244,255,0.25);*/
+
+}
+#loggPic2{
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    left: 0;
+    top: 0;
 }
 div{
     display: block;
 }
-#headerPic{
 
+#headerPic{
     width: 100%;
-    height:200px;
+    height:100%;
 
 }
 
@@ -134,11 +150,35 @@ div{
 *  NAVBAR SECTION
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
-
+.ui-widget-content{
+    background: rgb(232,244,255);
+}
 .day{
     position: relative;
 }
 @media screen and (min-width: 768px) {
+#navbarbackgrounded{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    height: 250px;
+    background: red;
+    position:relative;
+    background-image: url("http://www.norracypernmagasinet.se/wp-content/uploads/2014/11/north-cyprus-gau-university-sea-mountains-pool-1024x250.jpg");
+}
+      .navbar {
+          border-radius: 0;
+          width:100%;
+          height:50px;
+        margin-bottom:5px;
+        border-bottom: 5px solid #3399FF;
+
+        background: rgba(232, 244, 255, 0.7);
+        position: absolute;
+          bottom:0;
+          top:200px;
+    }
     .navbar-collapse .navbar-nav > li > a {
         color: black;
     }
@@ -146,32 +186,27 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     .navbar-collapse .navbar-nav > .active > a,
     .navbar-collapse .navbar-nav > .active > a:hover {
         color: black;
-        background: #3399FF; /*why you no work? jo, det är about background!*/
+        background: #3399FF; /*why you no work? jo, det Ã¤r about background!*/
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        -webkit-box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.6);
-        -moz-box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.6);
-        box-shadow: inset 0 0px 4px rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
 
         border: solid 1px #A8D6FF;
     }
 
     .navbar-collapse .navbar-nav > li > a:hover {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        background-color: #A8D6FF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: rgba(168, 214, 255, 0.7);;
         -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
         -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
         box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
     }
 
-    .navbar {
-        margin-bottom:5px;
-        border-bottom: 5px solid #3399FF;
-        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
-        -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
-        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
-    }
+
+
 }
 /* *******NAVBAR MOBILE SETTINGS **********/
 @media screen and (max-width: 767px) and (min-width: 0px){
@@ -181,17 +216,26 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 
 .navbar {
-    background: #3399FF;
+    opacity: 0.9;
     padding: 5px;
-    border-bottom: 0px solid white;
-    border-radius: 0px;
+    border-bottom: 0 solid white;
+    border-radius: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     margin-bottom:5px;
+    min-height: 100px;
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #3399FF , black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #3399FF, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #3399FF, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #E8F4FF, #A8D6FF , #3399FF); /* Standard syntax */
 }
+
+nav.navbar.navbar-default {}
 .navbar-default .navbar-brand{
-    color:black;
+    color: black;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: black;
@@ -209,8 +253,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .collapsing ul li a, .in ul li a {color: black!important;}
 .collapsing ul li a:hover, .in ul li a:hover {
     color: #f1f1f1!important;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     background-color: #A8D6FF;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -240,7 +284,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 *  Calendar SECTION
 ***********************************************************************/
 .calendar{
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .calendar th{
@@ -292,7 +336,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .image-preview-input {
     position: relative;
     overflow: hidden;
-    margin: 0px;
+    margin: 0;
     color: #333;
     background-color: #fff;
     border-color: #ccc;
@@ -346,7 +390,7 @@ a.ui-state-highlight {
 *  Boxarn i presentation
 ***********************************************************************/
 .well{
-    background: white; /*måste vara med för att kunna ge backgroundcolors i #nationDesc #dontMiss osv*/
+    background: white; /*mÃ¥ste vara med fÃ¶r att kunna ge backgroundcolors i #nationDesc #dontMiss osv*/
 }
 
 #nationDesc{
@@ -376,15 +420,32 @@ a.ui-state-highlight {
 ***********************************************************************/
 
 /***********************************************************************
-*  dagknapparna  i presentation början
+*  dagknapparna  i presentation bÃ¶rjan
 ***********************************************************************/
-@media screen and (min-width: 798px){
+@media screen and (min-width: 798px) {
+#lngBtn{
+    margin-right: 60px;
+    background-color: black;
+    color:white;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+    #lngBtn:hover{
+        background-color:#A8D6FF;
+    }
+
 #dayPickerBtn {
     width:59%;
-
+font-family: Raleway;
+    font-size: x-large;
 }
 #dayPickerBtnRight, #dayPickerBtnLeft{
     width:20%;
+    font-size:  x-large;
+    color: darkgray;
 }
 
 .dayPicker{
@@ -394,11 +455,10 @@ a.ui-state-highlight {
 }
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
     height:100%;
-    padding:20px;
-    color: black;
-    background-color: white;
-    border: 1px solid black;
     margin-bottom: 5px;
+    background: rgb(232,244,255);
+    border: rgb(232,244,255);
+
 }
 
 #calendarCollapse{
@@ -411,26 +471,29 @@ a.ui-state-highlight {
     float: left;
 }
 }
+/******** SMALSCREEN**** ändra senare till @screen(xs max)*/
 @media screen and (max-width: 798px) and (min-width: 0px) {
 #dayPickerBtn {
-    width:58%;
-
+    width:48%;
+    font-family: Raleway;
+    font-size: x-large;
 }
 #dayPickerBtnRight, #dayPickerBtnLeft{
-    width:20%;
+    width:10%;
+    font-size:  x-large;
+    color: darkgray;
 }
+
 
 .dayPicker{
     width:100%;
     height: 100%;
-    padding: 0%;
+    padding: 0;
 }
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
     height:100%;
-    padding:20px;
-    color: black;
-    background-color: white;
-    border: 1px solid black;
     margin-bottom: 5px;
+    background: white;
+    border: white;
 }
 }
