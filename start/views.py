@@ -84,7 +84,7 @@ def reload_lunch(request):
 
 
 def event_cafe(request):
-    menu_active_item = 'lunch'
+    menu_active_item = 'cafe'
     events = Event.objects.filter(categories__name__startswith='Fika', startdate__lt=timezone.now(),
                                 enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/cafe.html', locals())
