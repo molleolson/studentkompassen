@@ -137,7 +137,7 @@ body{
     padding: 10px;
     height: 500px;
     background-color:#A8D6FF;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 
 }
@@ -519,3 +519,16 @@ font-family: Raleway;
     border: white;
 }
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #3399FF;
+
+
+}
+
