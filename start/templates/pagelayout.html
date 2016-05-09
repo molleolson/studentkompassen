@@ -54,9 +54,12 @@
 
 {% block navigation %}
 
-<div class="container-fluid" id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 89%; background-position: 0 -20px; ">
-                <a type="button" id="lngBtn" class="btn btn-info pull-right hidden-xs hidden-sm" href= "#"> English </a>
-             <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
+<div class="container-fluid" id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 89%; background-position: 0 -20px; ">                <a type="button" id="lngBtn" class="btn btn-info pull-right" href= "#"> English </a>
+                    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+                    {% endfor %}
+    <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
 <nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
 
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
@@ -133,10 +136,7 @@
 </div>
 <br>
 
-{% get_available_languages as languages %}
-{% for lang_code, lang_name in languages %}
-    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-{% endfor %}
+
 &copy; 2016 Studentkompassen
 {% endblock %}
 <div>

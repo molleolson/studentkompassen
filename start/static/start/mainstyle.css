@@ -420,20 +420,45 @@ a.ui-state-highlight {
 *  dagknapparna  i presentation bÃ¶rjan
 ***********************************************************************/
 @media screen and (min-width: 798px) {
-#lngBtn{
-    margin-right: 60px;
+    #btnlang_nb{
+    margin-right: 0px;
     background-color: black;
     color:white;
     border-color: black;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 0px;
 }
-    #lngBtn:hover{
+    #btnlang_nb:hover{
         background-color:#A8D6FF;
     }
-
+    #btnlang_en{
+    margin-right: 60px;
+    background-color: black;
+    color:white;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+}
+    #btnlang_en:hover{
+        background-color:#A8D6FF;
+    }
+    #btnlang_sv{
+    margin-right: 0px;
+    background-color: black;
+    color:white;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+    #btnlang_sv:hover{
+        background-color:#A8D6FF;
+    }
 #dayPickerBtn {
     width:59%;
 font-family: Raleway;
