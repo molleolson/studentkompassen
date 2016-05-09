@@ -66,7 +66,7 @@
     color: #f1f1f1!important;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    background-color: red;
+
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -130,7 +130,7 @@
 
 
 body{
-    background-color: rgb(232,244,255);
+    background-color: white;
 }
     .calendar {
     margin: 1px auto;
@@ -158,11 +158,9 @@ rgb(51,153,255); #3399FF*/
 
 #loggPic{
     position: relative;
-max-width:100%;
-max-height:100%;
-    width: 18%;
 
-    left: 25px;
+    width: 18%;
+    max-width: 18%;left: 25px;
     top: 0px;
     /*background: rgba(232,244,255,0.25);*/
 
@@ -209,7 +207,8 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .day{.co
     position: relative;
 }
-@media screen and (min-width: 768px) {
+
+@media (min-width: 768px)and (max-width: 1199px) {
 #navbarbackgrounded{
     padding-right: 0;
     padding-left: 0;
@@ -224,7 +223,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
           height:50px;
         margin-bottom:5px;
         border-bottom: 5px solid #3399FF;
-
+        min-width:
         background: rgba(232, 244, 255, 0.7);
         position: absolute;
           bottom:0;
@@ -495,8 +494,20 @@ font-family: Raleway;
     float: left;
 }
 }
+/******** LARGESCREEN**** ändra senare till @screen(xs max)*/
+@media screen and (min-width:1200px){
+#topContainer{
+    width:1200px;
+}
+    .navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    margin-left: 0;
+    width: 1200px;
+    left: -15px;
+}
 /******** SMALSCREEN**** ändra senare till @screen(xs max)*/
-@media screen and (max-width: 798px) and (min-width: 0px) {
+@media screen and (max-width:991px) and (min-width: 0px) {
 #dayPickerBtn {
     width:48%;
     font-family: Raleway;
