@@ -8,6 +8,10 @@
 
 {% block calendercontent %}
 
+            {% if user.is_authenticated %}
+                <li>Hello, {{user.get_full_name}}!</li>
+
+            {% endif %}
 THIS IS MY PROFILETHIS IS MY PROFILE
 
 <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
