@@ -54,7 +54,7 @@
 
 {% block navigation %}
 
-<div class="container-fluid" id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 89%; background-position: 0 -20px; ">                <a type="button" id="lngBtn" class="btn btn-info pull-right" href= "#"> English </a>
+<div class="container-fluid" id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 89%; background-position: 0 -20px; ">
                     {% get_available_languages as languages %}
                     {% for lang_code, lang_name in languages %}
                     <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
