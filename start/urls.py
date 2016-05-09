@@ -21,6 +21,9 @@ urlpatterns = [
     url(r'^club/reload/$', views.reload_club, name='reloadclub'),
     url(r'^gasque/$', views.event_gasque, name='gasque'),
     url(r'^gasque/reload/$', views.reload_gasque, name='reloadgasque'),
+    url(r'^myprofile/$', views.myprofile, name='myprofile'),
+
+
     # End sorting for categories
 
     url(r'^events/$', views.events, name='events'),
@@ -31,6 +34,7 @@ urlpatterns = [
     url(r'^nationmain/ourevents/$', views.ourevents, name='ourevents'),
     url(r'^studentmain/about/$', views.about, name='about'),
     url(r'^nationinfo/$', views.nationinfo, name='nationinfo'),
+    url(r'^myprofile/$', views.myprofile, name='myprofile'),
 
 
 ]

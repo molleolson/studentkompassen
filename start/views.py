@@ -32,7 +32,7 @@ def events(request):
     return render(request, 'start/events.html', locals())
 
 
-#Start category-stuff
+#Start category-stuff for student user
 
 
 def event_pub(request):
@@ -146,8 +146,7 @@ def reload_gasque(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
-#End category-stuff
-
+#End category-stuff for student user
 
 def about(request):
     menu_active_item = 'about'
@@ -163,6 +162,15 @@ def nationinfo(request):
 
     hosts = Host.objects.order_by('name')
     return render(request, 'start/nationinfo.html', locals())
+
+
+@login_required(login_url='/accounts/login')
+def myprofile(request):
+    menu_active_item = 'myprofile'
+    events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
+        .order_by('startdate')
+
+    return render(request, 'start/myprofile.html', locals())
 
 
 @login_required(login_url='/accounts/login')
