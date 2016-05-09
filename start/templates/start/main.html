@@ -61,17 +61,16 @@ function switchDateCalender(eventDate){
 {% block left%}
 
 
-
-            <button class=" glyphicon glyphicon-chevron-left previous" id="dayPickerBtnLeft" href="#">
+<div class = "container-fluid" id="calendarBox">            <button class=" glyphicon glyphicon-chevron-left previous" id="dayPickerBtnLeft" href="#">
 
             </button>
 
             <button id="dayPickerBtn" class = "glyphicon"><strong><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong></button>
             <button class="next glyphicon glyphicon-chevron-right" id="dayPickerBtnRight" style="display: inline;" href="#" ></button>
-<br>
+    <br>
 
 <div class="datetimepicker hidden-xs hidden-sm pull-right"  id="datepicker"></div>
-<div class = "container-fluid">
+
 <div class="calendar">
     {% block calendercontent %}
     {% include "start/events.html" %}
