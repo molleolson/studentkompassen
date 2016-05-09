@@ -163,6 +163,7 @@ def nationinfo(request):
     hosts = Host.objects.order_by('name')
     return render(request, 'start/nationinfo.html', locals())
 
+
 @login_required(login_url='/accounts/login')
 def myprofile(request):
     menu_active_item = 'myprofile'
