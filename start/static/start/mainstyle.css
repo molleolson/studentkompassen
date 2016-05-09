@@ -1,8 +1,9 @@
 /* XS INSTÃ„LLNINGAR*/
-@media screen and (max-width: 798px) and (min-width: 0px) {
+@media screen and (max-width: 767px) and (min-width: 0px) {
     body {
 
     }
+
 
     .calendar {
         margin: 0 auto;
@@ -12,13 +13,8 @@
         height: auto;
         border-radius: 10px;
     }
-/*
-#navbarbackgrounded{
-    background-color:red;
-    padding:300px;
-    height:500px;
-   /* */
-}*/
+
+
 
     .main-header {
         text-align: center;
@@ -28,7 +24,58 @@
 
     }
 
+/* *******NAVBAR MOBILE SETTINGS **********/
 
+.navbar {
+    opacity: 0.9;
+    padding: 5px;
+    border-bottom: 0 solid white;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-bottom:5px;
+    min-height: 100px;
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #3399FF , black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #3399FF, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #3399FF, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #E8F4FF, #A8D6FF , #3399FF); /* Standard syntax */
+}
+
+
+.navbar-default .navbar-brand{
+    color: black;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+
+}
+.navbar-toggle {
+    background-color: lightgray;
+
+}
+.collapsing, .in {
+    background-color: #A8D6FF;
+    overflow-x: hidden;
+}
+
+.collapsing ul li a, .in ul li a {color: black!important;}
+.collapsing ul li a:hover, .in ul li a:hover {
+    color: #f1f1f1!important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #A8D6FF;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0 ;
+}
 }
 
 /*Create event css*/
@@ -52,6 +99,10 @@
 .field-id_host{
     width:48%;
 
+}
+#topContainer{
+    padding-left:0;
+    padding-right:0;
 }
 .field-id_location{
     width:48%;
@@ -108,9 +159,9 @@ rgb(51,153,255); #3399FF*/
 #loggPic{
     position: absolute;
     z-index: 1;
-    width: 30%;
-    left: 0;
-    top: 20px;
+    width: 18%;
+    left: 25px;
+    top: 0px;
     /*background: rgba(232,244,255,0.25);*/
 
 }
@@ -153,7 +204,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 .ui-widget-content{
     background: rgb(232,244,255);
 }
-.day{
+.day{.co
     position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -163,9 +214,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     margin-right: auto;
     margin-left: auto;
     height: 250px;
-    background: red;
     position:relative;
-    background-image: url("http://www.norracypernmagasinet.se/wp-content/uploads/2014/11/north-cyprus-gau-university-sea-mountains-pool-1024x250.jpg");
 }
       .navbar {
           border-radius: 0;
@@ -208,59 +257,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 
 }
-/* *******NAVBAR MOBILE SETTINGS **********/
-@media screen and (max-width: 767px) and (min-width: 0px){
-        .container-fluid{
-    height: auto;
-}
 
-
-.navbar {
-    opacity: 0.9;
-    padding: 5px;
-    border-bottom: 0 solid white;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    margin-bottom:5px;
-    min-height: 100px;
-
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #3399FF , black); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #3399FF, black); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #3399FF, black); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #E8F4FF, #A8D6FF , #3399FF); /* Standard syntax */
-}
-
-nav.navbar.navbar-default {}
-.navbar-default .navbar-brand{
-    color: black;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
-
-}
-.navbar-toggle {
-    background-color: lightgray;
-
-}
-.collapsing, .in {
-    background-color: #A8D6FF;
-    overflow-x: hidden;
-}
-
-.collapsing ul li a, .in ul li a {color: black!important;}
-.collapsing ul li a:hover, .in ul li a:hover {
-    color: #f1f1f1!important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    background-color: #A8D6FF;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-}
 
 
 /***********************************************************************
