@@ -65,8 +65,11 @@
 {% block navigation %}
 
 <div class="container-fluid" id="navbarbackgrounded">
-                <a type="button" id="lngBtn" class="btn btn-info pull-right" href= "#"> English </a>
-             <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
+                    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                        <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+                    {% endfor %}
+                <img src="{% static 'start/logga.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
 <nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
 
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
@@ -142,12 +145,13 @@
   data-show-faces="true">
 </div>
 <br>
+<!--
 {% get_available_languages as languages %}
 {% for lang_code, lang_name in languages %}
     <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
 {% endfor %}
 &copy; 2016 Studentkompassen
-{% endblock %}
+{% endblock %}-->
 
 </body>
 </html>
