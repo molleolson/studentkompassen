@@ -164,7 +164,7 @@ def nationinfo(request):
     return render(request, 'start/nationinfo.html', locals())
 
 
-@login_required(login_url='/accounts/login')
+#@login_required(login_url='/accounts/login')
 def myprofile(request):
     menu_active_item = 'myprofile'
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
