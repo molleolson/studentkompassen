@@ -39,6 +39,25 @@ function switchDateCalender(eventDate){
 
 </script>
 {% endblock %}
+
+{% block menu_item %}
+
+
+         <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Right now"%}</a></li>
+         <li {% if menu_active_item == 'breakfast' %} class="active"{% endif %}><a href = "{% url 'start:breakfast' %}">{%trans "Breakfast"%}</a></li>
+         <li {% if menu_active_item == 'lunch' %} class="active"{% endif %} ><a href = "{% url 'start:lunch' %}">{%trans "Lunch"%}</a></li>
+         <li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
+         <li {% if menu_active_item == 'pub' %} class="active"{% endif %} ><a href = "{% url 'start:pub' %}">{%trans "Pub"%}</a></li>
+         <li {% if menu_active_item == 'restaurang' %} class="active"{% endif %} ><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
+         <li {% if menu_active_item == 'club' %} class="active"{% endif %} ><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
+         <li {% if menu_active_item == 'nationinfo' %} class="active"{% endif %} ><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
+         <li {% if menu_active_item == 'gasque' %} class="active"{% endif %} ><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
+         <li {% if menu_active_item == 'close' %} class="active"{% endif %} ><a href = "#">{%trans "Close to you"%}</a></li>
+         {% if user.is_authenticated %}
+         <li {% if menu_active_item == 'myprofile' %} class="active"{% endif %} ><a href="{% url 'start:myprofile' %}"> {% trans "My saved events"%}</a></li>
+         {% endif %}
+         {% endblock %}
+
 {% block left%}
             <button class=" glyphicon glyphicon-chevron-left previous" id="dayPickerBtnLeft" href="#"></button>
 {% block main%}

@@ -78,20 +78,8 @@
    <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
 
       <ul class = "nav navbar-nav">
-         <li><a href = "{% url 'start:index' %}">{%trans "Right now"%}</a></li>
-         <li><a href = "{% url 'start:breakfast' %}">{%trans "Breakfast"%}</a></li>
-         <li><a href = "{% url 'start:lunch' %}">{%trans "Lunch"%}</a></li>
-         <li><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
-         <li><a href = "{% url 'start:pub' %}">{%trans "Pub"%}</a></li>
-         <li><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
-         <li><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
-         <li><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
-         <li><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
-         <li><a href = "#">{%trans "Close to you"%}</a></li>
-         {% if user.is_authenticated %}
-         <li id="myEventL"><a id="myEventsClick" href="{% url 'start:myprofile' %}"> {% trans "My saved events"%}</a></li>
-         {% endif %}
-         {% block extra_menu_item %}
+          {% block menu_item %}
+
          {% endblock %}
 
 
