@@ -144,7 +144,7 @@
 <br>
 {% get_available_languages as languages %}
 {% for lang_code, lang_name in languages %}
-    <a type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
 {% endfor %}
 &copy; 2016 Studentkompassen
 {% endblock %}
