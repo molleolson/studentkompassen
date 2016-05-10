@@ -58,10 +58,10 @@
 
 {% block navigation %}
 
-<div class="container-fluid" id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 89%; background-position: 0 -20px; ">
+<div class="container-fluid " id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 89%; background-position: 0 -20px; ">
                     {% get_available_languages as languages %}
                     {% for lang_code, lang_name in languages %}
-                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
                     {% endfor %}
     <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
 <nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
@@ -120,7 +120,7 @@
 
 {% endblock %}
 {% block footer %}
-<div class ="container-fluid" id = "bottomDiv">
+
 <div
   class="fb-like row"
   data-share="true"
@@ -131,7 +131,7 @@
 
 
 &copy; 2016 Studentkompassen
-    </div>
+
 {% endblock %}
   </div>
 
