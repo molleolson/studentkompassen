@@ -41,7 +41,7 @@ body {
         margin-top: 10px;
         padding: 10px;
         height: 500px;
-        background-color: #A8D6FF;
+        background-color: white;
 
         border-radius: 10px;
          overflow-y: auto;
@@ -130,7 +130,7 @@ border: white;
 margin: 0 auto;
 padding: 0;
 width:100%;
-background-color: #A8D6FF;
+background-color: white;
 height: auto;
 border-radius: 10px;
 }
@@ -243,7 +243,7 @@ margin:5px;
             margin-top: 10px;
             padding: 10px;
             height: 500px;
-            background-color: #A8D6FF;
+            background-color: white;
             overflow-y: auto;
             overflow-x: hidden;
             margin-bottom: 10px;
@@ -264,8 +264,7 @@ margin:5px;
             .navbar-collapse .navbar-nav > .active > a:hover {
                 color: black;
                 background: #3399FF; /*why you no work? jo, det Ã¤r about background!*/
-
-
+                bottom:4px;
                 font-family: Raleway;
             }
              .navbar-collapse .navbar-nav > li > a:hover {
@@ -400,7 +399,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     .navbar-collapse .navbar-nav > .active > a:hover {
         background-color: rgb(51,153,255) ; /*why you no work? jo, det Ã¤r about background!*/
 
-        bottom:1px;
+        bottom:2px;
 
     }
 /*hover här*/
@@ -408,7 +407,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
         color:black;
 
         background-color: rgb(51,153,255) ;
-        bottom:1px;
+        bottom:2px;
     }
 
 
@@ -464,11 +463,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 
  .table-striped  > tbody > tr:nth-of-type(even) {
-    background-color:   #A8D6FF;
+    background-color:   white;
 
 }
  .table-striped  > tbody > tr:nth-of-type(odd) {
-    background-color:  #A8D6FF;
+    background-color:  white;
 
 }
  #monthAndDay {
@@ -617,7 +616,7 @@ a.ui-state-highlight {
     border-bottom-right-radius: 0px;
 }
     #btnlang_nb:hover{
-        background-color:#A8D6FF;
+        background-color:darkgray;
     }
     #btnlang_en{
     margin-right: 60px;
@@ -630,7 +629,7 @@ a.ui-state-highlight {
     border-bottom-right-radius: 5px;
 }
     #btnlang_en:hover{
-        background-color:#A8D6FF;
+        background-color:darkgray;
     }
     #btnlang_sv{
     margin-right: 0px;
@@ -643,7 +642,7 @@ a.ui-state-highlight {
     border-bottom-right-radius: 0px;
 }
     #btnlang_sv:hover{
-        background-color:#A8D6FF;
+        background-color:darkgray;
     }
 
 
