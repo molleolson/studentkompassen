@@ -1,0 +1,237 @@
+
+@media (min-width: 768px)and (max-width: 1199px) {
+ body{
+    background-color: white;
+}
+
+#dayPickerBtn {
+    width:48%;
+    font-family: Raleway;
+    font-size: x-large;
+}
+#dayPickerBtnRight, #dayPickerBtnLeft{
+    width:10%;
+    font-size:  x-large;
+    color: darkgray;
+}
+.dayPicker{
+    width:100%;
+    height: 100%;
+    padding: 0;
+}
+#dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
+    height:100%;
+    margin-bottom: 5px;
+    background: white;
+    border: white;
+}
+    .calendar {
+    margin: 1px auto;
+    padding: 10px;
+    height: 500px;
+    background-color:#A8D6FF;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+
+    .main-header {
+        text-align: center;
+        clear: both;
+
+        width: 100%;
+
+    }
+
+/* *******NAVBAR MOBILE SETTINGS **********/
+
+.navbar {
+    opacity: 0.9;
+    padding: 5px;
+    border-bottom: 0 solid white;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-bottom:5px;
+    min-height: 100px;
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #3399FF , black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #3399FF, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #3399FF, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #E8F4FF, #A8D6FF , #3399FF); /* Standard syntax */
+}
+
+
+.navbar-default .navbar-brand{
+    color: black;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+
+}
+.navbar-toggle {
+    background-color: lightgray;
+
+}
+
+ .navbar-collapse .navbar-nav > li > a {
+        color: black;
+    }
+.collapsing ul li a, .in ul li a {color: black!important;}
+.collapsing ul li a:hover, .in ul li a:hover {
+    color: #f1f1f1!important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+
+    .navbar-collapse .navbar-nav > .active > a,
+    .navbar-collapse .navbar-nav > .active > a:hover {
+        color: black;
+        background: #3399FF; /*why you no work? jo, det Ã¤r about background!*/
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+
+        border: solid 1px #A8D6FF;
+    }
+
+
+    .navbar-collapse .navbar-nav > li > a:hover {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: rgba(168, 214, 255, 0.7);;
+        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0 ;
+}
+
+#dayPickerBtn {
+    width:48%;
+    font-family: Raleway;
+    font-size: x-large;
+}
+#dayPickerBtnRight, #dayPickerBtnLeft{
+    width:10%;
+    font-size:  x-large;
+    color: darkgray;
+}
+.dayPicker{
+    width:100%;
+    height: 100%;
+    padding: 0;
+}
+#dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
+    height:100%;
+    margin-bottom: 5px;
+    background: white;
+    border: white;
+}
+    .calendar {
+        margin: 0 auto;
+        padding: 0;
+        width:100%;
+        background-color: #A8D6FF;
+        height: auto;
+        border-radius: 10px;
+    }
+
+
+
+    .main-header {
+        text-align: center;
+        clear: both;
+
+        width: 100%;
+
+    }
+
+    #btnlang_nb{
+    margin-right: 0px;
+    background-color: black;
+    color:white;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+}
+
+    #btnlang_en{
+    margin-right: 60px;
+    background-color: black;
+    color:white;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+}
+
+    #btnlang_sv{
+    margin-right: 0px;
+    background-color: black;
+    color:white;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#dayPickerBtn {
+    width:59%;
+font-family: Raleway;
+    font-size: x-large;
+}
+#dayPickerBtnRight, #dayPickerBtnLeft{
+    width:20%;
+    font-size:  x-large;
+    color: darkgray;
+}
+
+.dayPicker{
+    width:100%;
+    height: 100%;
+    padding: 0%;
+}
+#dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
+    height:100%;
+    margin-bottom: 5px;
+    background: rgb(232,244,255);
+    border: rgb(232,244,255);
+
+}
+
+#calendarCollapse{
+    padding: 10px;
+    right: 30px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    float: left;
+}
+#navbarbackgrounded{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    height: 250px;
+    position:relative;
+}
+}

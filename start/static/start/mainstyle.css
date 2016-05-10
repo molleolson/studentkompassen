@@ -1,26 +1,80 @@
-/*******************************************/
-/*******************************************/
-/************* LG INSTÃ„LLNINGAR************/
-/*******************************************/
-/*******************************************/
-@media screen and (min-width: 768px){
+
 body{
+    color: black;
     background-color: white;
 }
-    .calendar {
-    margin: 1px auto;
-    padding: 10px;
-    height: 500px;
-    background-color:#A8D6FF;
-    overflow-y: auto;
-    overflow-x: hidden;
 
-}
-    .main-header{
-    text-align: center;
-    clear: both;
-    padding: 0;
-}
+/*******************************************/
+/*******************************************/
+/************* MD INSTÃ„LLNINGAR************/
+/*******************************************/
+/*******************************************/
+@media screen and (min-width: 768px)and (max-width: 1199px) {
+body {
+            background-color: white;
+        }
+        #dayPickerBtn {
+        width:85%;
+        font-family: Raleway;
+        font-size: x-large;
+        }
+        .navbar {
+        border-radius: 0;
+        width:100%;
+        height:50px;
+        border-bottom: 5px solid #3399FF;
+        background: rgba(232, 244, 255, 0.7);
+        position: absolute;
+        bottom:0;
+        top:200px;
+        }
+        #navbarbackgrounded{
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        height: 250px;
+        position:relative;
+        }
+        .calendar {
+        margin-top: 10px;
+        padding: 10px;
+        height: 500px;
+        background-color: #A8D6FF;
+
+        border-radius: 10px;
+         overflow-y: auto;
+        overflow-x: hidden;
+
+
+        -webkit-box-shadow: 0px 0px 7px 5px #C2C2C2;
+        -moz-box-shadow: 0px 0px 7px 5px #C2C2C2;
+        box-shadow: 0px 0px 7px 5px #C2C2C2;
+
+
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -moz-transform:scale(1);
+        -webkit-transform:scale(1);
+        -o-transform:scale(1);
+
+        }
+
+        #calendarBox{
+
+        margin-top:10px;
+        margin-bottom:10px;
+        }
+
+
+
+        .main-header {
+        text-align: center;
+        clear: both;
+        padding: 0;
+        }
+
+
 }
 /*******************************************/
 /*******************************************/
@@ -28,123 +82,179 @@ body{
 /*******************************************/
 /*******************************************/
 @media screen and (max-width: 767px) and (min-width: 0px) {
-    body {
-    }
+body {
+}
 
 #dayPickerBtn {
-    width:48%;
-    font-family: Raleway;
-    font-size: x-large;
+font-family: Raleway;
+font-size: x-large;
+width:58%;
 }
 #dayPickerBtnRight, #dayPickerBtnLeft{
-    width:10%;
-    font-size:  x-large;
-    color: darkgray;
+width:20%;
+font-size:  x-large;
+color: darkgray;
 }
-.dayPicker{
-    width:100%;
-    height: 100%;
-    padding: 0;
-}
+
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
-    height:100%;
-    margin-bottom: 5px;
-    background: white;
-    border: white;
+height:100%;
+margin-bottom: 5px;
+background: white;
+border: white;
 }
-    .calendar {
-        margin: 0 auto;
-        padding: 0;
-        width:100%;
-        background-color: #A8D6FF;
-        height: auto;
-        border-radius: 10px;
-    }
+.calendar {
+margin: 0 auto;
+padding: 0;
+width:100%;
+background-color: #A8D6FF;
+height: auto;
+border-radius: 10px;
+}
 
 
 
-    .main-header {
-        text-align: center;
-        clear: both;
+.main-header {
+text-align: center;
+clear: both;
 
-        width: 100%;
+width: 100%;
 
-    }
+}
 
 /* *******NAVBAR MOBILE SETTINGS **********/
 
 .navbar {
-    opacity: 0.9;
-    padding: 5px;
-    border-bottom: 0 solid white;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    margin-bottom:5px;
-    min-height: 100px;
-
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #3399FF , black); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #3399FF, black); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #3399FF, black); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #E8F4FF, #A8D6FF , #3399FF); /* Standard syntax */
+opacity: 0.9;
+padding: 5px;
+border-bottom: 0 solid white;
+border-radius: 0;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+margin-bottom:5px;
+height:200px;
+background: red; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left, #3399FF , black); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, #3399FF, black); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right, #3399FF, black); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, #E8F4FF, #A8D6FF , #3399FF); /* Standard syntax */
 }
 
 
 .navbar-default .navbar-brand{
-    color: black;
+color: black;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
+background-color: black;
 
 }
 .navbar-toggle {
-    background-color: lightgray;
+background-color: lightgray;
 
 }
 .collapsing, .in {
-    background-color: #A8D6FF;
-    overflow-x: hidden;
+background-color: #A8D6FF;
+overflow-x: hidden;
 }
 
 .collapsing ul li a, .in ul li a {color: black!important;}
 .collapsing ul li a:hover, .in ul li a:hover {
-    color: #f1f1f1!important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+color: #f1f1f1!important;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
 
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
 }
 
 .container-fluid{
-    padding-left: 0;
-    padding-right: 0 ;
+padding-left: 0;
+padding-right: 0 ;
+}
+#calendarBox{
+
+margin-top:10px;
+margin-bottom:10px;
 }
 }
+/*******************************************/
+/*******************************************/
+/************* LG INSTÃ„LLNINGAR************/
+/*******************************************/
+/*******************************************/
 @media screen and (min-width:1200px) {
-    #topContainer {
-        width: 1200px;
+            #dayPickerBtn {
+                width:88%;
+            font-family: Raleway;
+                font-size: x-large;
+            }
+            .navbar-default{
+                color:black;
+               border-bottom: 5px solid #3399FF;
+                background-color: #f8f8f8;
+                margin-left: -15px;
+                width: 1200px;
+
+                height: 50px;
+               border-radius: 0;
+                font-family: Raleway;
+
+
+            }
+            .navbar-collapse .navbar-nav > .active > a,
+            .navbar-collapse .navbar-nav > .active > a:hover {
+                color: black;
+                background: #3399FF; /*why you no work? jo, det Ã¤r about background!*/
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+                box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+                font-family: Raleway;
+            }
+             .navbar-collapse .navbar-nav > li > a:hover {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background:#3399FF;
+                -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+                -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+                box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
+            }
+
+            #topContainer {
+                width: 1200px;
+            }
+            #calendarBox{
+                width:1200px;
+
+
+                margin-top:10px;
+            }
+            .calendar{
+            margin-top: 10px;
+            padding: 10px;
+            height: 500px;
+            background-color: #A8D6FF;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-bottom: 10px;
+            border-radius: 10px;
+
+            -webkit-box-shadow: 0px 0px 7px 5px #C2C2C2;
+            -moz-box-shadow: 0px 0px 7px 5px #C2C2C2;
+            box-shadow: 0px 0px 7px 5px #C2C2C2;
+
+
+            transform:scale(1);
+            -ms-transform:scale(1);
+            -moz-transform:scale(1);
+            -webkit-transform:scale(1);
+            -o-transform:scale(1);
+            }
     }
 
-    .navbar-default {
-        background-color: #f8f8f8;
-        border-color: #e7e7e7;
-        margin-left: 0;
-        width: 1200px;
-        left: -15px;
-    }
-    #btnBox{
-        width:1200px;
-        background:red;
-    }
-    #calendarBox{
-        width:1200px;
-    }
 
-}
 /*Create event css*/
 .divforforms{
     width: 80%;
@@ -154,7 +264,7 @@ body{
     width:50%;
 }
 .field-id_name{
-    width: 96%;
+    width: 100%;
 }
 
 .field-id_categories{
@@ -185,8 +295,8 @@ body{
 .field-id_description{
 
     width:48%;
-
 }
+
 #addingevent{
     float:left;
     width:15%;
@@ -248,33 +358,17 @@ div{
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .ui-widget-content{
-    background: rgb(232,244,255);
-}
-.day{.co
-    position: relative;
+    margin-top:42px;
+    background: white;
+   	-webkit-box-shadow: 0px 0px 7px 5px #C2C2C2;
+	   -moz-box-shadow: 0px 0px 7px 5px #C2C2C2;
+	        box-shadow: 0px 0px 7px 5px #C2C2C2;
 }
 
-@media (min-width: 768px)and (max-width: 1199px) {
-#navbarbackgrounded{
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    height: 250px;
-    position:relative;
-}
-      .navbar {
-          border-radius: 0;
-          width:100%;
-          height:50px;
-        margin-bottom:5px;
-        border-bottom: 5px solid #3399FF;
-        min-width:
-        background: rgba(232, 244, 255, 0.7);
-        position: absolute;
-          bottom:0;
-          top:200px;
-    }
+
+
+
+
     .navbar-collapse .navbar-nav > li > a {
         color: black;
     }
@@ -282,7 +376,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     .navbar-collapse .navbar-nav > .active > a,
     .navbar-collapse .navbar-nav > .active > a:hover {
         color: black;
-        background: #A8D6FF; /*why you no work? jo, det Ã¤r about background!*/
+        background-color: rgb(51,153,255) ; /*why you no work? jo, det Ã¤r about background!*/
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
@@ -291,11 +385,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
         border: solid 1px #A8D6FF;
     }
-
+/*hover här*/
     .navbar-collapse .navbar-nav > li > a:hover {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        background-color: rgba(168, 214, 255, 0.7);;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: rgb(51,153,255) ;
         -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
         -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
         box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.8);
@@ -303,7 +397,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 
 
-}
+
 
 
 
@@ -328,7 +422,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 *  Calendar SECTION
 ***********************************************************************/
 .calendar{
-    margin-bottom: 0;
+    margin-top: 30px;
 }
 
 .calendar th{
@@ -367,9 +461,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     font-style: oblique;
 }
 
-#datepicker {
 
-}
 
 /***********************************************************************
 *  Calendar Slut
@@ -506,29 +598,7 @@ a.ui-state-highlight {
     #btnlang_sv:hover{
         background-color:#A8D6FF;
     }
-#dayPickerBtn {
-    width:59%;
-font-family: Raleway;
-    font-size: x-large;
-}
-#dayPickerBtnRight, #dayPickerBtnLeft{
-    width:20%;
-    font-size:  x-large;
-    color: darkgray;
-}
 
-.dayPicker{
-    width:100%;
-    height: 100%;
-    padding: 0%;
-}
-#dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
-    height:100%;
-    margin-bottom: 5px;
-    background: rgb(232,244,255);
-    border: rgb(232,244,255);
-
-}
 
 #calendarCollapse{
     padding: 10px;
@@ -540,9 +610,7 @@ font-family: Raleway;
     float: left;
 }
 }
-/******** LARGESCREEN**** ändra senare till @screen(xs max)*/
 
-/******** SMALSCREEN**** ändra senare till @screen(xs max)*/
 
 
 /* Scrollbar */
@@ -555,3 +623,22 @@ font-family: Raleway;
     background-color: #3399FF;
 }
 
+#dayPickerBtnRight, #dayPickerBtnLeft{
+    font-size:  x-large;
+    color: darkgray;
+}
+
+
+#dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft {
+    margin-bottom: 5px;
+    background: white;
+    border: rgb(232, 244, 255);
+}
+
+
+    #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft:focus{
+outline:0;
+    }
+    #btnBox{
+        margin-bottom: 10px;
+    }
