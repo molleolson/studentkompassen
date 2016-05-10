@@ -13,26 +13,45 @@ from django.core.urlresolvers import reverse
 from datetime import timedelta, datetime
 
 
+
 # I denna fil finns all kod som faktiskt gor nagot vid visning av sidor. Exempelvis har alla flikar pa /start/ varsin
 # funktion. De flesta funktioner liknar varandra till stor del.
 
 
 def index(request):
     menu_active_item = 'now'
+
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()).order_by('startdate')
+
+
+    # events = Event.objects.get(pk=130)
+    # events.extend(Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()).order_by('startdate'))
+    # events.reccurrences.between(
+    #    datetime(2016, 1, 1, 0, 0, 0),
+     #   datetime(2016, 12, 31, 0, 0, 0)
+    #)
+
     return render(request, 'start/main.html', locals())
 
 
 def events(request):
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
                                         timezone.get_default_timezone())
-    #print "Selected date", selected_date
+
+    # FUSKKOD ########
+    # events = Getallwithrecurrance
+    # events.sortout.correctdate
+    #
+    # events = Event.object.filter((startdate__lt.osv....) + Getallwithrecurrance.sortout.correctdate)
+
+    # print "Selected date", selected_date
+
     events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
+                                 enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
 
-#Start category-stuff for student user
+# Start category-stuff for student user #################################
 
 
 def event_pub(request):
@@ -40,6 +59,7 @@ def event_pub(request):
     events = Event.objects.filter(categories__name__startswith='Pub', startdate__lt=timezone.now(),
                                 enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/pub.html', locals())
+
 
 
 def reload_pub(request):
@@ -162,7 +182,7 @@ def reload_other(request):
 
 
 
-####### End category-stuff for student user #######
+# End category-stuff for student user ########################
 
 def about(request):
     menu_active_item = 'about'
