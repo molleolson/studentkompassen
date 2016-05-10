@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'datetimewidget.widgets',
+    'recurrence',
     'studentkompassen',
     'django_social_app',
     'social.apps.django_app.default',
