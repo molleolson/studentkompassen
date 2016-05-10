@@ -87,7 +87,14 @@ body {
             background:#3399FF;
 
         }
-
+.ui-widget-content{
+    margin-top:65px;
+    margin-right:55px;
+    background: red;
+   	-webkit-box-shadow: 0px 0px 7px 5px #C2C2C2;
+	   -moz-box-shadow: 0px 0px 7px 5px #C2C2C2;
+	        box-shadow: 0px 0px 7px 5px #C2C2C2;
+}
 }
 /*******************************************/
 /*******************************************/
@@ -191,7 +198,7 @@ padding-right: 0 ;
 }
 #calendarBox{
 
-margin:10px;
+margin:5px;
 
 
 }
@@ -373,6 +380,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .ui-widget-content{
     margin-top:65px;
+    margin-right:65px;
     background: white;
    	-webkit-box-shadow: 0px 0px 7px 5px #C2C2C2;
 	   -moz-box-shadow: 0px 0px 7px 5px #C2C2C2;
