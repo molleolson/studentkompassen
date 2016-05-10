@@ -3,6 +3,7 @@ import datetime
 
 from django.utils import timezone
 from django.db import models
+from recurrence.fields import RecurrenceField
 from django.utils.encoding import python_2_unicode_compatible
 
 
@@ -46,6 +47,7 @@ class Event(models.Model):
     description = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
     enddate = models.DateTimeField('end date', )
+    reccurrences = RecurrenceField(null=True)
     categories = models.ManyToManyField(Category)
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
@@ -54,6 +56,5 @@ class Event(models.Model):
 
     def __unicode__(self):
         return self.name
-
 
 

@@ -7,7 +7,8 @@
 </ul>
 </div>
 {% endif %}
-
+<div class="row">
+    <div class="col-sm-12">
 {% for field in form %}
 <div class="field-{{ field.auto_id }}  control-group{% if field.errors %} error{% endif %}{% if field.field.required %} field-required{% endif %}">
     <div class="control-label">
@@ -19,5 +20,24 @@
     {% if field.help_text %}<p class="help-block">{{ field.help_text }}</p>{% endif %}
     </span>
 </div>
-{% endfor %}
+    {% if field.name == "name" %}
+</div>
+    </div>
+<div class="row">
+    <div class="col-sm-4">
+    {% endif %}
+    {% if field.name == "categories" %}
+</div>
 
+    <div class="col-sm-8">
+    {% endif %}
+        {% if field.name == "reccurrences" %}
+</div>
+    </div>
+<div class="row">
+
+    <div class="col-sm-12">
+    {% endif %}
+{% endfor %}
+</div>
+    </div>
