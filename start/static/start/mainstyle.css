@@ -336,8 +336,9 @@ rgb(51,153,255); #3399FF*/
 #loggPic{
     position: relative;
 
-    width: 18%;
-    max-width: 18%;left: 25px;
+    width: 200px;
+
+    left: 25px;
     top: 0px;
     /*background: rgba(232,244,255,0.25);*/
 
