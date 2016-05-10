@@ -346,7 +346,7 @@ rgb(51,153,255); #3399FF*/
 #loggPic2{
     position: relative;
     z-index: 1;
-    width: 15%;
+    width: 60px;
     left: 15px;
     bottom:6px;
 }
@@ -479,6 +479,37 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 
 
+.calendar-list {
+    width: 100%
+}
+
+.calendar-list > thead,
+.calendar-list > tbody,
+.calendar-list > thead > tr,
+.calendar-list > tbody > tr,
+.calendar-list > thead > tr > th,
+.calendar-list > tbody > tr > td {
+    display: block;
+}
+
+.calendar-list > tbody > tr:after,
+.calendar-list > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.calendar-list > tbody {
+    overflow-y: auto;
+    height: 400px;
+}
+
+.calendar-list > tbody > tr > td,
+.calendar-list > thead > tr > th {
+    width: 20%;
+    float: left;
+}
 /***********************************************************************
 *  Calendar Slut
 ***********************************************************************/
