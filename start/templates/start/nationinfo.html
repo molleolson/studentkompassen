@@ -1,51 +1,36 @@
 {% extends "start/main.html" %}
-
-
 {% load i18n %}
 {% block title %}Nationer och kårer{% endblock %}
 
-
     {% block left %}
-
-  <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
+<table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
         <thead>
         Nationer och kårer
-
-
+        <tr>
+            <th class="col-md-4 col-sm-4" scope="col">{%trans "Nation"%}</th>
+        </tr>
         </thead>
-        <tbody>
 
-        <ol>
-        {% for host in hosts %}
+            {% for host in hosts %}
 
-
-                    <!--<button data-toggle="collapse" data-target="#{{host.id}}">{{ host.name }}</button>-->
-
-                    <td data-title="Nation" >
-                        <button data-toggle="collapse" data-target="#{{host.id}}">{{ host.name }}</button>
-
+                    <td data-title="Aktivitet"><h4>{{host.name}}</h4>
+                    <div style="width: 300px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;"><p>{{host.description}}</p></div>
                     </td>
-                    <!--<td data-title="Plats"><span class="name">{{ host.description }}</span></td> -->
-
-
-
-
-                    <div id="host.id" class="collapse">
-                        Lorem ipsum dolor text....
-                             <!-- Modal -->
-                    <td class="hidden-xs">{{host.description}}</td>
-                            <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-                            <!-- Modal -->
-                    <td class="hidden-xs">{{Host.email}}</td>
+                    <td> <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{host.id}}">+</button>
+                    <div id="{{host.id}}" class="collapse">
+                        <p> {{host.description}} <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.505867435092!2d17.63593295175902!3d59.857346075526756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbf0b72963e1%3A0x7f0b0b4db60b7c6b!2sV%C3%A4stra+%C3%85gatan+14%2C+753+09+Uppsala!5e0!3m2!1ssv!2sse!4v1460720726017" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div></p>
                     </div>
+                    </td>
 
-
+                        </div>
+                    </div>
+                </tr>
 
             {% endfor %}
-            </ol>
-        </tbody>
 
-    </table>
+            </table>
+
     {% endblock %}
-
 
