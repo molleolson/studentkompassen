@@ -146,6 +146,21 @@ def reload_gasque(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
+def event_other(request):
+    menu_active_item = 'other'
+    events = Event.objects.filter(categories__name__startswith='Other', startdate__lt=timezone.now(),
+                                enddate__gte=timezone.now()).order_by('startdate')
+    return render(request, 'start/other.html', locals())
+
+def reload_other(request):
+    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
+                                        timezone.get_default_timezone())
+    #print "Selected date", selected_date
+    events = Event.objects.filter(categories__name__startswith='Other', startdate__lt=selected_date + timedelta(days=1),
+                                  enddate__gte=selected_date).order_by('startdate')
+    return render(request, 'start/events.html', locals())
+
+
 
 ####### End category-stuff for student user #######
 

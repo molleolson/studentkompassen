@@ -17,14 +17,14 @@
         {% csrf_token %}
         {% include "form.html" with form=form %}
         <br>
-        <button class="btn btn-default btn-block" id="addingevent" type ="submit">{% trans "Add event"%}</button>
+
     </form>
-    </tr>
+         </tr>
+<button class="btn btn-default btn-block" id="addingevent" type ="submit">{% trans "Add event"%}</button>
 
     </div>
 
-
-   {% endblock %}
+{% endblock %}
 
 
 
