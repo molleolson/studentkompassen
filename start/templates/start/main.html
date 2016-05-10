@@ -50,9 +50,11 @@ function switchDateCalender(eventDate){
          <li {% if menu_active_item == 'pub' %} class="active"{% endif %} ><a href = "{% url 'start:pub' %}">{%trans "Pub"%}</a></li>
          <li {% if menu_active_item == 'restaurang' %} class="active"{% endif %} ><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
          <li {% if menu_active_item == 'club' %} class="active"{% endif %} ><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
-         <li {% if menu_active_item == 'info' %} class="active"{% endif %} ><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
          <li {% if menu_active_item == 'gasque' %} class="active"{% endif %} ><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
+         <li {% if menu_active_item == 'other' %} class="active"{% endif %} ><a href = "{% url 'start:other' %}">{%trans "Other"%}</a></li>
          <li {% if menu_active_item == 'close' %} class="active"{% endif %} ><a href = "#">{%trans "Close to you"%}</a></li>
+         <li {% if menu_active_item == 'info' %} class="active"{% endif %} ><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
+
          {% if user.is_authenticated %}
          <li {% if menu_active_item == 'myprofile' %} class="active"{% endif %} ><a href="{% url 'start:myprofile' %}"> {% trans "My saved events"%}</a></li>
          {% endif %}
@@ -68,7 +70,7 @@ function switchDateCalender(eventDate){
     <button id="dayPickerBtn" class = "glyphicon"><strong><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></strong></button>
     <button class="next glyphicon glyphicon-chevron-right" id="dayPickerBtnRight" style="display: inline;" href="#" ></button>
 
-<div class="calendar" >
+<div class="calendar">
     {% block calendercontent %}
     {% include "start/events.html" %}
     {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-27 13:27+0200\n"
+"POT-Creation-Date: 2016-05-10 14:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,88 +17,49 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/templates/pagelayout.html:82 start/templates/start/nationmain.html:22
-msgid "Right now"
-msgstr "Just nu"
-
-#: start/templates/pagelayout.html:83
-msgid "Breakfast"
-msgstr "Frukost"
-
-#: start/templates/pagelayout.html:84
-msgid "Lunch"
-msgstr "Lunch"
-
-#: start/templates/pagelayout.html:85
-msgid "Fika"
-msgstr "Fika"
-
-#: start/templates/pagelayout.html:86
-msgid "Pub"
-msgstr "Pub"
-
-#: start/templates/pagelayout.html:87
-msgid "Restaurant"
-msgstr "Restaurang"
-
-#: start/templates/pagelayout.html:88
-msgid "Clubs"
-msgstr "Klubbar/Släpp"
-
-#: start/templates/pagelayout.html:89
-msgid "Nations and unions"
-msgstr "Nationer och kårer"
-
-#: start/templates/pagelayout.html:90
-msgid "Close to you"
-msgstr "Nära dig"
-
-#: start/templates/pagelayout.html:96 start/templates/start/nationmain.html:28
+#: start/templates/pagelayout.html:91
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:98 start/templates/start/nationmain.html:30
+#: start/templates/pagelayout.html:93
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:101
-#: start/templates/start/nationmain.html:32
+#: start/templates/pagelayout.html:96
 msgid "Login"
 msgstr "Logga in"
 
-#: start/templates/start/about.html:8
+#: start/templates/start/about.html:10
 #: start/templates/start/calenderlista.html:17
-#: start/templates/start/studentmain.html:7
+#: start/templates/start/main.html:59
 msgid "My saved events"
 msgstr "Mina sparade event"
 
-#: start/templates/start/addevent.html:15
+#: start/templates/start/addevent.html:16
 msgid "Create a new event"
 msgstr "Skapa ett nytt event"
 
-#: start/templates/start/addevent.html:22
+#: start/templates/start/addevent.html:23
 msgid "Add event"
 msgstr "Lägg till event"
 
-#: start/templates/start/calenderlista.html:42
-#: start/templates/start/ourevents.html:15
+#: start/templates/start/calenderlista.html:41
+#: start/templates/start/ourevents.html:16
 msgid "Event"
 msgstr "Evanemang"
 
-#: start/templates/start/calenderlista.html:43
-#: start/templates/start/events.html:10
-#: start/templates/start/ourevents.html:16
+#: start/templates/start/calenderlista.html:42
+#: start/templates/start/events.html:7 start/templates/start/ourevents.html:17
 msgid "Place"
 msgstr "Plats"
 
-#: start/templates/start/calenderlista.html:45
-#: start/templates/start/events.html:11
-#: start/templates/start/ourevents.html:18
+#: start/templates/start/calenderlista.html:44
+#: start/templates/start/events.html:8 start/templates/start/ourevents.html:19
 msgid "Type"
 msgstr "Typ"
 
-#: start/templates/start/calenderlista.html:46
-#: start/templates/start/events.html:12
+#: start/templates/start/calenderlista.html:45
+#: start/templates/start/events.html:9
 msgid "Time"
 msgstr "Tid"
 
@@ -114,7 +75,7 @@ msgstr "Skapa ett nytt event"
 msgid "Confirm edited event"
 msgstr "Skapa event"
 
-#: start/templates/start/events.html:9
+#: start/templates/start/events.html:6
 #, fuzzy
 #| msgid "Event"
 msgid "Events"
@@ -124,50 +85,105 @@ msgstr "Evanemang"
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/nationmain.html:23
+#: start/templates/start/main.html:46 start/templates/start/nationmain.html:9
+msgid "Right now"
+msgstr "Just nu"
+
+#: start/templates/start/main.html:47
+msgid "Breakfast"
+msgstr "Frukost"
+
+#: start/templates/start/main.html:48
+msgid "Fika"
+msgstr "Fika"
+
+#: start/templates/start/main.html:49
+msgid "Lunch"
+msgstr "Lunch"
+
+#: start/templates/start/main.html:50
+msgid "Pub"
+msgstr "Pub"
+
+#: start/templates/start/main.html:51
+msgid "Restaurant"
+msgstr "Restaurang"
+
+#: start/templates/start/main.html:52
+msgid "Clubs"
+msgstr "Klubbar/Släpp"
+
+#: start/templates/start/main.html:53
+msgid "Gasque"
+msgstr "Gask"
+
+#: start/templates/start/main.html:54
+msgid "Other"
+msgstr "Övrigt"
+
+#: start/templates/start/main.html:55
+msgid "Close to you"
+msgstr "Nära dig"
+
+#: start/templates/start/main.html:56
+msgid "Nations and unions"
+msgstr "Nationer och kårer"
+
+#: start/templates/start/myprofile.html:4
+msgid "My profile"
+msgstr "Min profil"
+
+#: start/templates/start/nationmain.html:10
 msgid "Create event"
 msgstr "Skapa event"
 
-#: start/templates/start/nationmain.html:24
+#: start/templates/start/nationmain.html:11
 msgid "Our events"
 msgstr "Våra event"
 
-#: start/templates/start/nationmain.html:25
+#: start/templates/start/nationmain.html:12
 msgid "Presentation"
 msgstr "Presentation"
 
-#: start/templates/start/ourevents.html:12
+#: start/templates/start/ourevents.html:13
 msgid "Reappearing events"
 msgstr "Återkommande event"
 
-#: start/templates/start/ourevents.html:19
+#: start/templates/start/ourevents.html:20
 msgid "Days"
 msgstr "Dagar"
 
-#: start/templates/start/ourevents.html:20
+#: start/templates/start/ourevents.html:21
 #: start/templates/start/presentation.html:11
-#: start/templates/start/presentation.html:18
-#: start/templates/start/presentation.html:25
+#: start/templates/start/presentation.html:28
+#: start/templates/start/presentation.html:35
 msgid "Edit"
 msgstr "Redigera"
 
-#: studentkompassen/settings.py:137
+#: start/templates/start/presentation.html:15
+msgid "Edit a description"
+msgstr "Redigera beskrivning"
+
+#: start/templates/start/presentation.html:18
+#, fuzzy
+#| msgid "Create event"
+msgid "Confirm edited description"
+msgstr "Skapa event"
+
+#: studentkompassen/settings.py:138
 msgid "English"
 msgstr "Engelska"
 
-#: studentkompassen/settings.py:138
+#: studentkompassen/settings.py:139
 msgid "Swedish"
 msgstr "Svenska"
 
-#: studentkompassen/settings.py:139
+#: studentkompassen/settings.py:140
 msgid "Norwegian "
 msgstr "Norska"
 
 #~ msgid "Log in"
 #~ msgstr "Logga in"
-
-#~ msgid "Other"
-#~ msgstr "Övrigt"
 
 #~ msgid "Hello !"
 #~ msgstr "hi"
