@@ -146,7 +146,8 @@ def reload_gasque(request):
                                   enddate__gte=selected_date).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
-#End category-stuff for student user
+
+####### End category-stuff for student user #######
 
 def about(request):
     menu_active_item = 'about'
