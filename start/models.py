@@ -53,6 +53,11 @@ class Event(models.Model):
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
+    def names(self):
+        return ', '.join([c.name for c in self.categories.all()])
+
+    names.short_description = "Categories"
+
 
     def __unicode__(self):
         return self.name
