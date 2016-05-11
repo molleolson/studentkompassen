@@ -2,14 +2,15 @@
  <!-- /ourevents-->
     <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
         <thead>
+        <!--
         <tr >
             <th class="hidden-xs" scope="col">{%trans "Events"%}</th>
             <th class="hidden-xs" scope="col">{%trans "Place"%}</th>
             <th class="hidden-xs" scope="col">{%trans "Type"%}</th>
             <th class="hidden-xs" scope="col">{%trans "Time"%} </th>
              <!--  <th> <button id = "calendarCollapse" class ="pull-right glyphicon glyphicon-calendar hidden-xs hidden-sm " style="display: inline;" data-toggle = "collapse" data-target="#datepicker"> Calendar </button>
-                </th> -->
-        </tr>
+                </th>
+        </tr> -->
         </thead>
         <tbody>
                 {% for event in events %}
@@ -22,10 +23,10 @@
                              <!-- Modal -->
                     <td id="platsTD" data-title="Plats"><span class="name">{{ event.location }}</span></td>
 
-                    <td id="startTD">{{event.startdate.time}}</td>
+                    <td id="startTD">{{event.startdate.time}}<span>-</span>{{event.enddate.time}}</td>
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->
-                    <td id="endTD">{{event.enddate.time}}</td>
+
                     <div class="modal fade" id="{{event.id}}" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->

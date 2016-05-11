@@ -122,7 +122,7 @@ color: darkgray;
 
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
 height:100%;
-margin-bottom: px;
+
 background: white;
 border: white;
 }
@@ -149,35 +149,42 @@ width: 100%;
 
 .navbar {
 opacity: 0.9;
-padding: 5px;
+padding: 0;
 border-bottom: 1px solid rgb(225,227,230);
 border-radius: 0;
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
 margin-bottom:5px;
-height:100px;
+height:auto;
 background: transparent; /* For browsers that do not support gradients */
 
 }
-
-
+.navbar .navbar-nav{
+    float:none;
+    vertical-align:top;
+    display: inline-block;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
 .navbar-default .navbar-brand{
 color: black;
 }
-.navbar-default .navbar-toggle .icon-bar {
+.navbar-default  .navbar-toggle .icon-bar {
 background-color: black;
 
 }
+
 .navbar-toggle {
 background-color: white;
+top:20px;
 
 
 }
 .collapsing, .in {
 background-color: white;
 overflow-x: hidden;
-    padding:65px;
 }
 
 .collapsing ul li a, .in ul li a {color: black!important;}
@@ -211,6 +218,7 @@ margin:5px;
 /*******************************************/
 /*******************************************/
 @media screen and (min-width:1200px) {
+
             #dayPickerBtn {
                 width:88%;
             font-family: Raleway;
@@ -341,18 +349,20 @@ rgb(51,153,255); #3399FF*/
     width: 200px;
 
     /*background: rgba(232,244,255,0.25);*/
+    /*backgrou#nd: rgba(232,244,255,0.25);*/
 
 }
 #loggPic2{
     position:relative;
     display: block;
     max-width: 150px;
-    margin-top: -5px;
+    margin-top: 0px;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: 85px;
     width:100px;
     right:10px;
+    bottom:0px;
 }
 div{
     display: block;
@@ -443,6 +453,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .calendar{
     margin-top: 30px;
+
 }
 
 .calendar th {
@@ -451,7 +462,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     font-family: Raleway;
 }
 .calendar thead{
-    border-bottom: solid 2px grey;
+    border-bottom: solid 1px #cccccc;
 
 }
 .calendar > tbody> tr {
@@ -464,33 +475,36 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 
 }
 #radBOD{
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #cccccc;
 }
 #aktivitetTD{
-    width:75%;
+    width:60%;
 
 border-top: 0px;
 }
 #platsTD{
-    width:50%;
+    width:60%;
 border-top: 0px;
 
 }
 #kategoriTD{
-    width:25%;
+    width:40%;
     border-top: 0px;
+    font-size: small;
+    font-weight: bold;
+    text-align: right;
+}
+#startTD {
+    width: 40%;
+    border-top: 0px;
+    font-size: small;
+    font-weight: bold;
+        text-align: right;
 
 }
-#startTD{
-    width:25%;
-border-top: 0px;
 
-}
-#endTD{
-    width:25%;
-border-top: 0px;
 
-}
+
 
 .responsive-table th{
     font-family: Raleway;
@@ -696,26 +710,20 @@ a.ui-state-highlight {
 
 
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #3399FF;
-}
 
 #dayPickerBtnRight, #dayPickerBtnLeft{
     font-size:  x-large;
     color: #3399FF;
+
+
 }
 
 
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft {
-    margin-bottom: 5px;
+    margin-bottom: -20px;
     background: white;
     border: rgb(232, 244, 255);
+
 }
 
 
