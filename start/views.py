@@ -12,8 +12,6 @@ from django.utils.translation import activate
 from django.core.urlresolvers import reverse
 from datetime import timedelta, datetime
 
-
-
 # I denna fil finns all kod som faktiskt gor nagot vid visning av sidor. Exempelvis har alla flikar pa /start/ varsin
 # funktion. De flesta funktioner liknar varandra till stor del.
 
