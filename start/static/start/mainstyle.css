@@ -156,7 +156,7 @@ border-radius: 0;
 -moz-box-shadow: none;
 box-shadow: none;
 margin-bottom:5px;
-height:70px;
+height:100px;
 background: transparent; /* For browsers that do not support gradients */
 
 }
@@ -172,10 +172,12 @@ background-color: black;
 .navbar-toggle {
 background-color: white;
 
+
 }
 .collapsing, .in {
-background-color: #A8D6FF;
+background-color: white;
 overflow-x: hidden;
+    padding:65px;
 }
 
 .collapsing ul li a, .in ul li a {color: black!important;}
@@ -187,6 +189,8 @@ border-top-right-radius: 0;
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
+
+     position:relative;
 }
 
 .container-fluid{
@@ -336,19 +340,19 @@ rgb(51,153,255); #3399FF*/
 
     width: 200px;
 
-    left: 25px;
-    top: 0px;
     /*background: rgba(232,244,255,0.25);*/
 
 }
 #loggPic2{
+    position:relative;
     display: block;
-    max-width: 70px;
+    max-width: 150px;
     margin-top: -5px;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: 85px;
-    width:95%;
+    width:100px;
+    right:10px;
 }
 div{
     display: block;
@@ -704,7 +708,7 @@ a.ui-state-highlight {
 
 #dayPickerBtnRight, #dayPickerBtnLeft{
     font-size:  x-large;
-    color: darkgray;
+    color: #3399FF;
 }
 
 
