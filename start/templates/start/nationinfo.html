@@ -1,7 +1,7 @@
 {% extends "start/main.html" %}
 {% load i18n %}
 {% load static %}
-{% block title %}Nationer och kårer{% endblock %}
+
 
 {% block additional_scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -10,11 +10,12 @@
         {% endblock %}
 
     {% block left %}
+<div class="container-fluid" id="calendarBox" >
 <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
         <thead>
-        Nationer och kårer
+
         <tr>
-            <th class="col-md-4 col-sm-4" scope="col">{%trans "Nation"%}</th>
+            <!--<th class="col-md-4 col-sm-4" scope="col">{%trans "Nationer & kårer"%}</th> -->
         </tr>
 
 
@@ -23,8 +24,13 @@
             {% for host in hosts %}
 
                     <td data-title="Aktivitet"><h4>{{host.name}}</h4>
+                        <!-- <img src="url" alt="some_text"> lägg till i databasen-->
                         <!-- hides part of big text -->
-                        <div class="comment more">{{host.description}} <iframe src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe> </div>
+                        <div class="comment more">{{host.description}}  </div>
+                        <!-- gör karta som bild istället, ladda karta genom länk -->
+                        <td id="karta" data-title="karta"><div id="map"><iframe class="pull-right" src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div></td>
+
+
 
                         <!--<div id="map"><iframe src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div>-->
 
@@ -45,13 +51,13 @@
                     <!--</div>
                     </td>-->
 
-                        </div>
-                    </div>
+
                 </tr>
 
             {% endfor %}
 
 </table>
+</div>
 
     {% endblock %}
 

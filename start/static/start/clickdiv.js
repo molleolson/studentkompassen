@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function() {
-    var showChar = 100;
+    var showChar = 200;
     var ellipsestext = "...";
     var moretext = "more";
     var lesstext = "less";

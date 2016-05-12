@@ -559,7 +559,7 @@ border-top: 0px;
 
 .calendar-list > tbody > tr > td,
 .calendar-list > thead > tr > th {
-    width: 20%;
+    width: 50%;
     float: left;
 }
 /***********************************************************************
