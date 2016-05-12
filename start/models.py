@@ -12,7 +12,7 @@ from django.utils.encoding import python_2_unicode_compatible
 
 class Location(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
-    gps = models.CharField(max_length=200, blank=True, null=True)
+    gps = models.CharField(max_length=400, blank=True, null=True)
     street = models.CharField(max_length=200, blank=True, null=True)
     streetnumber = models.IntegerField(blank=True, null=True)
     zip = models.IntegerField(blank=True, null=True)

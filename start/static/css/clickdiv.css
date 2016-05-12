@@ -16,3 +16,8 @@ a.morelink {
     background-color: #f0f0f0;
     margin: 10px;
 }
+
+#map {
+
+    float: left;
+}
