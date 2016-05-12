@@ -167,7 +167,9 @@ background: transparent; /* For browsers that do not support gradients */
 }
 .navbar .navbar-collapse {
   text-align: center;
+
 }
+
 .navbar-default .navbar-brand{
 color: black;
 }
