@@ -55,15 +55,15 @@
 <!--START HEADER-->
 
 <div class="container-fluid" id="topContainer" role="banner"> <!--gör om till row-->
+    <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs hidden-sm hidden-md hidden-lg">
 
 {% block navigation %}
-
-<div class="container-fluid " id="navbarbackgrounded" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat ;background-size: 100% 100%; background-position: 0 -20px; ">
+<!--style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png' -->
+<div class="container-fluid " id="navbarbackgrounded") no-repeat >
                     {% get_available_languages as languages %}
                     {% for lang_code, lang_name in languages %}
                     <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
                     {% endfor %}
-    <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
 <nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
 <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#example-navbar-collapse">
          <span class = "sr-only">Toggle navigation</span>
@@ -73,7 +73,7 @@
       </button>
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
 
-       <div class = "menu-main-container col-xs-offset-4 col-xs-6">
+       <div class = "menu-main-container">
            <div class="logo">
        <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic2" class="hidden-sm hidden-md hidden-lg">
     </div>
@@ -94,7 +94,7 @@
             <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
             {% if user.is_authenticated %}
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
-                <li>Hello, {{user.get_full_name}}!</li>
+                <!--<li>Hello, {{user.get_full_name}}!</li>-->
             {% else %}
                 <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
             {% endif %}
