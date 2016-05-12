@@ -149,7 +149,9 @@ background: transparent; /* For browsers that do not support gradients */
 }
 .navbar .navbar-collapse {
   text-align: center;
+
 }
+
 .navbar-default .navbar-brand{
 color: black;
 }
@@ -703,7 +705,7 @@ border-top: 0px;
 
 .calendar-list > tbody > tr > td,
 .calendar-list > thead > tr > th {
-    width: 20%;
+    width: 50%;
     float: left;
 }
 /***********************************************************************
