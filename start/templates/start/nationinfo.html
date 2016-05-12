@@ -24,9 +24,9 @@
 
                     <td data-title="Aktivitet"><h4>{{host.name}}</h4>
                         <!-- hides part of big text -->
-                        <div class="comment more">{{host.description}}</div>
+                        <div class="comment more">{{host.description}} <iframe src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe> </div>
 
-                        <div id="map"><iframe src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                        <!--<div id="map"><iframe src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div>-->
 
 
                     <!--<div style="width: 300px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;"><p>{{host.description}}</p></div> -->
