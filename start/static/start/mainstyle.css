@@ -296,6 +296,7 @@ margin:5px;
             }
 
 
+
             .navbar-collapse .navbar-nav > .active > a,
             .navbar-collapse .navbar-nav > .active > a:hover {
              /*why you no work? jo, det Ã¤r about background!*/
@@ -400,9 +401,10 @@ rgb(51,153,255); #3399FF*/
 
 #loggPic{
     position: relative;
-
-    width: 200px;
-
+    display: block;
+    width: 100px;
+    max-width: 150px;
+    bottom:25px;
     /*background: rgba(232,244,255,0.25);*/
     /*backgrou#nd: rgba(232,244,255,0.25);*/
 
