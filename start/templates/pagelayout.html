@@ -90,13 +90,21 @@
    <div class = "collapse navbar-collapse " id = "example-navbar-collapse">
 
       <ul class = "nav navbar-nav navbar-left">
-          {% block menu_item %}
+          {% block menu_item_1 %}
 
-         {% endblock %}
+          {% endblock %}
+
+HERE CAN WE WRITE STUFF
 </ul>
+
 
        <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
+
+            {% block menu_item_2 %}
+
+            {% endblock %}
+    awesome_2222
             {% if user.is_authenticated %}
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
                 <!--<li>Hello, {{user.get_full_name}}!</li>-->
