@@ -25,7 +25,7 @@ class Location(models.Model):
 class Host(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    phonenumber = models.IntegerField(blank=True, null=True)
+    logo = models.CharField(max_length=200, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
