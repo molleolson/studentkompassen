@@ -23,10 +23,14 @@
 
             {% for host in hosts %}
 
-                    <td data-title="Aktivitet"><h4>{{host.name}}</h4>
+                    <td id="nationsinforad" data-title="Aktivitet"><h4>{{host.name}}</h4>
+                        <!--<img src="{{host.logo}}" width="200" height="150" frameborder="0" style="border:0" >-->
+
                         <!-- <img src="url" alt="some_text"> lägg till i databasen-->
                         <!-- hides part of big text -->
-                        <div class="comment more">{{host.description}}  </div>
+                        <div id="loggaNat" class="row" ><img src="{{host.logo}}"  width="80" height="80" frameborder="0" style="border:0"><div id="beskrivning" class="comment more ">{{host.description}}  </div></div>
+
+
                         <!-- gör karta som bild istället, ladda karta genom länk -->
                         <td id="karta" data-title="karta"><div id="map"><iframe class="pull-right" src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div></td>
 

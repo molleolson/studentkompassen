@@ -23,3 +23,18 @@ a.morelink {
     left:95%;
 
 }
+
+#logga {
+
+    float: left;
+}
+
+#beskrivning {
+    float: left;
+
+}
+
+#nationsinforad{
+
+    display: inline;
+}
