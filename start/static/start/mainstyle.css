@@ -28,16 +28,15 @@ body {
         position:relative;
 
         }
-        .calendar {
+        .calendar{
         margin-top: 10px;
         padding: 10px;
         height: 500px;
         background-color: #fafafa;
-
-        border-radius: 10px;
-         overflow-y: auto;
+        overflow-y: auto;
         overflow-x: hidden;
-
+        margin-bottom: 10px;
+        border-radius: 10px;
 
 
 
@@ -47,7 +46,69 @@ body {
         -moz-transform:scale(1);
         -webkit-transform:scale(1);
         -o-transform:scale(1);
+        }
 
+        .navbar-default{
+        color:black;
+        border-bottom: 1px solid lightgray;
+        /*background-color: #fafafa;*/
+        background:#fafafa;
+        margin-left: -15px;
+        width: 1200px;
+        height: 100px;
+        border-radius: 0;
+        font-family: Raleway;
+        border-right: 0px;
+        border-left:0px;
+        border-top: none;
+        box-shadow:none;
+        }
+
+
+        .navbar-collapse .navbar-nav > .active > a,
+        .navbar-collapse .navbar-nav > .active > a:hover {
+         /*why you no work? jo, det Ã¤r about background!*/
+        background: #fafafa;
+        bottom:2px;
+        color:black;
+        height: 69px;
+        border-bottom: 3px solid black;
+        box-shadow: none;
+
+
+}
+
+        /*hover här*/
+        .navbar-collapse .navbar-nav > li > a {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 50px;
+
+            }
+        .navbar-collapse .navbar-nav > li > a:hover {
+        color:black;
+        bottom:0;
+        }
+
+        .navbar-collapse .navbar-nav > li > a:after{
+        content: '';
+        display: block;
+        margin-left: auto;
+        margin-bottom: auto;
+        margin-right:auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+        margin-top: 30px;
+        }
+
+        .navbar-collapse .navbar-nav > li > a:hover:after {
+        width: 100%;
+        background: black;
+        margin-top: 30px;
+        }
+        .navbar-collapse .navbar-nav > li > a:hover:before {
         }
 
         #calendarBox{
@@ -68,10 +129,6 @@ body {
 .ui-widget-content{
     margin-top:65px;
     margin-right:55px;
-    background: red;
-   	-webkit-box-shadow: 0px 0px 7px 5px #C2C2C2;
-	   -moz-box-shadow: 0px 0px 7px 5px #C2C2C2;
-	        box-shadow: 0px 0px 7px 5px #C2C2C2;
 }
 }
 /*******************************************/
@@ -116,15 +173,10 @@ background-color: #fafafa;
 height: auto;
 border-radius: 10px;
 }
-
-
-
 .main-header {
 text-align: center;
 clear: both;
-
 width: 100%;
-
 }
 
 /* *******NAVBAR MOBILE SETTINGS **********/
@@ -140,7 +192,6 @@ box-shadow: none;
 margin-bottom:5px;
 height:auto;
 background: transparent; /* For browsers that do not support gradients */
-
 }
 .navbar .navbar-nav{
     float:none;
@@ -149,23 +200,21 @@ background: transparent; /* For browsers that do not support gradients */
 }
 .navbar .navbar-collapse {
   text-align: center;
-
 }
 
 .navbar-default .navbar-brand{
 color: black;
 }
+
 .navbar-default  .navbar-toggle .icon-bar {
 background-color: black;
-
 }
 
 .navbar-toggle {
 background-color: #fafafa;
 top:20px;
-
-
 }
+
 .collapsing, .in {
 background-color: #fafafa;
 overflow-x: hidden;
@@ -176,25 +225,21 @@ overflow-x: hidden;
 color: #f1f1f1!important;
 border-top-left-radius: 0;
 border-top-right-radius: 0;
-
 -webkit-box-shadow: none;
 -moz-box-shadow: none;
 box-shadow: none;
-
-     position:relative;
+position:relative;
 }
 
 .container-fluid{
 padding-left: 0;
 padding-right: 0 ;
 }
+
 #calendarBox{
 height:600px;
 margin:5px;
-
-
 }
-
 }
 /*******************************************/
 /*******************************************/
@@ -204,21 +249,20 @@ margin:5px;
 @media screen and (min-width:1200px) {
 
             #dayPickerBtn {
-                width:88%;
+            width:88%;
             font-family: Raleway;
-                font-size: x-large;
+            font-size: x-large;
             }
 
 
 
             #topContainer {
-                width: 1200px;
+            width: 1200px;
             }
             #calendarBox{
-                width:1200px;
-                height:600px;
-
-                margin-top:10px;
+            width:1200px;
+            height:600px;
+            margin-top:10px;
             }
             .calendar{
             margin-top: 10px;
@@ -229,10 +273,6 @@ margin:5px;
             overflow-x: hidden;
             margin-bottom: 10px;
             border-radius: 10px;
-
-
-
-
             transform:scale(1);
             -ms-transform:scale(1);
             -moz-transform:scale(1);
@@ -243,7 +283,6 @@ margin:5px;
             .navbar-default{
             color:black;
             border-bottom: 1px solid lightgray;
-            /*background-color: #fafafa;*/
             background:#fafafa;
             margin-left: -15px;
             width: 1200px;
@@ -266,17 +305,14 @@ margin:5px;
             height: 69px;
             border-bottom: 3px solid black;
             box-shadow: none;
-
-
 }
-
             /*hover här*/
             .navbar-collapse .navbar-nav > li > a {
             display: inline-block;
             position: relative;
             padding-bottom: 50px;
+            }
 
-                }
             .navbar-collapse .navbar-nav > li > a:hover {
             color:black;
             bottom:0;
@@ -299,46 +335,37 @@ margin:5px;
             width: 100%;
 			background: black;
             margin-top: 30px;
-
-
-
-
             }
             .navbar-collapse .navbar-nav > li > a:hover:before {
-
-
             }
-
-
-
-    }
+}
 
 
 /*Create event css*/
 .divforforms{
     width: 80%;
-
 }
+
 .nameofevent{
     width:50%;
 }
+
 .field-id_name{
     width: 100%;
 }
 
 .field-id_categories{
-
-    width: 100%;
-    float:left;
-
+width: 100%;
+float:left;
 }
-.field-id_host{
-    width:48%;
 
+.field-id_host{
+width:48%;
 }
 #topContainer{
     padding-left:0;
     padding-right:0;
+    height:151px;
 }
 .field-id_location{
     width:48%;
@@ -425,156 +452,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background: #fafafa;
     border-radius:0px;
     font-family:Raleway;
-}/*
-.ui-widget-header {
-    height:50px;
-    padding:0;
-    background: #3399FF url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
-    color: #222222;
-    font-weight: bold;
-    border-radius:0px;
-    margin:-4px;
-
 }
-.ui-datepicker-title{
-padding-top:10px;
-}
-.ui-datepicker-prev {
-    margin-top: 10px;
-}
-.ui-datepicker-next {
-    margin-top: 10px;
-}
-.ui-datepicker thead{
-    background: #3399FF;
-    border-top:4px;
- margin:-4px;
-    vertical-align: 100%;
-    border-top:0px;
-}
-
-*/.ll-skin-cangas {
-	font-size: 90%;
-}
-
-.ll-skin-cangas .ui-widget {
-	font-family: "Helvetica Neue","Trebuchet MS",Tahoma,Verdana,Arial,sans-serif;
-	background: #f0f4f7;
-	border-radius: 0;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-}
-
-.ll-skin-cangas .ui-datepicker {
-	padding: 0;
-}
-
-.ll-skin-cangas .ui-datepicker-header {
-	border: none;
-	background-color: #3399FF;
-	border-radius: 0;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwLjI3Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjI3Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
-	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.27) 0%, rgba(255,255,255,.27) 100%);
-	background-image: -o-linear-gradient(bottom, rgba(0,0,0,.27) 0%, rgba(255,255,255,.27) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.27) 0%, rgba(255,255,255,.27) 100%);
-	background-image: linear-gradient(bottom, rgba(0,0,0,.27) 0%, rgba(255,255,255,.27) 100%);
-}
-
-.ll-skin-cangas .ui-datepicker-header .ui-state-hover {
-	background: #3399FF;
-	border-color: transparent;
-	cursor: pointer;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-}
-
-.ll-skin-cangas .ui-datepicker .ui-datepicker-next span,
-.ll-skin-cangas .ui-datepicker .ui-datepicker-prev span {
-	background-image: url(images/ui-icons_ffffff_256x240.png);
-	background-position: -32px -16px;
-}
-
-.ll-skin-cangas .ui-datepicker .ui-datepicker-prev span {
-	background-position: -96px -16px;
-}
-
-.ll-skin-cangas .ui-datepicker table {
-	margin: 0;
-}
-
-.ll-skin-cangas .ui-datepicker th {
-	font-size: 9px;
-	color: #6c7173;
-	font-size: 9px;
-	text-shadow: 0 1px 0 rgba(255,255,255,.55);
-	text-transform: uppercase;
-	font-weight: normal;
-	border: none;
-	border-top: 1px solid rgba(186,194,200,.6);
-	border-bottom: 1px solid rgba(186,194,200,.6);
-	background-color: #e6ebf0;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.38);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.38);
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.38);
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M5YzVjNSIgc3RvcC1vcGFjaXR5PSIwLjMzIi8+CjxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiNjOWM1YzUiIHN0b3Atb3BhY2l0eT0iMC4zMyIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMC4zMyIvPgogICA8L2xpbmVhckdyYWRpZW50PgoKPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==);
-	background-image: -moz-linear-gradient(bottom, rgba(201,198,198,.33) 0%, rgba(201,198,198,.33) 0.76%, rgba(255,255,255,.33) 100%);
-	background-image: -o-linear-gradient(bottom, rgba(201,198,198,.33) 0%, rgba(201,198,198,.33) 0.76%, rgba(255,255,255,.33) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgba(201,198,198,.33) 0%, rgba(201,198,198,.33) 0.76%, rgba(255,255,255,.33) 100%);
-	background-image: linear-gradient(bottom, rgba(201,198,198,.33) 0%, rgba(201,198,198,.33) 0.76%, rgba(255,255,255,.33) 100%);
-}
-
-.ll-skin-cangas .ui-datepicker td {
-	border: none;
-	border-top: 1px solid #e7e9ea;
-	border-right: 1px solid #e7e9ea;
-	padding: 0;
-	background: #eee;
-}
-
-.ll-skin-cangas .ui-datepicker tr:first-child td {
-	border-top: none;
-}
-
-.ll-skin-cangas .ui-datepicker td:last-child {
-	border-right: none;
-}
-
-.ll-skin-cangas td .ui-state-default {
-	border: 1px solid transparent;
-	text-align: center;
-	padding: .7em 0;
-	margin:0;
-	font-size: 12px;
-	font-weight: bold;
-	background: #f5f8fa;
-	color: #6c7173;
-	text-shadow: 0 1px 0 rgba(255,255,255,.55);
-
-}
-
-.ll-skin-cangas td.ui-state-disabled .ui-state-default {
-	text-shadow: none;
-	opacity: .8;
-	color: #6c7173;
-}
-
-.ll-skin-cangas td .ui-state-active,
-.ll-skin-cangas td .ui-state-hover {
-	border: 1px solid #3179d7;
-	background: #3399FF;
-	color: #fff;
-	text-shadow: 0 -1px 0 #30332a;
-}
-
-
-
-
 
 
 
@@ -800,9 +678,7 @@ a.ui-state-highlight {
 *  Boxarna i presentation slut
 ***********************************************************************/
 
-/***********************************************************************
-*  dagknapparna  i presentation bÃ¶rjan
-***********************************************************************/
+
 @media screen and (min-width: 798px) {
     #btnlang_nb{
     margin-right: 0px;
