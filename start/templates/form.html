@@ -8,14 +8,17 @@
 </div>
 {% endif %}
 <div class="row">
+
     <div class="col-sm-12">
 {% for field in form %}
+
 <div class="field-{{ field.auto_id }}  control-group{% if field.errors %} error{% endif %}{% if field.field.required %} field-required{% endif %}">
     <div class="control-label">
         {{field.label_tag}}
     </div>
-<span class="controls">
+<span class="controls-{{ field.auto_id }} ">
     {{field}}
+
     {% if field.errors %}<span class="help-inline">{{ field.errors|join:", " }}</span>{% endif %}
     {% if field.help_text %}<p class="help-block">{{ field.help_text }}</p>{% endif %}
     </span>

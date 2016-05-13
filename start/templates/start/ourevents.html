@@ -7,44 +7,6 @@
 
     {% block right %}
 
-            <div class="row" id="calendarRow">
-            <ul class="calendar" id="listCalendar">
-                <table class="responsive-table calendar-list active" data-day="1" cellspacing="0">
-                    <caption class="brand-font active"><span>{% trans "Reappearing events"%}</span></caption>
-                    <thead>
-                    <tr>
-                        <th scope="col">{% trans "Event"%}</th>
-                        <th scope="col">{% trans "Place"%}</th>
 
-                        <th scope="col">{% trans "Type"%}</th>
-                        <th scope="col">{% trans "Days"%}</th>
-                        <th scope="col">{% trans "Edit"%}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <ul>
-
-
-                        <tr class="">
-
-                            <td data-title="Aktivitet">{{ event.name }}</td>
-                            <td data-title="Plats">
-                                <span class="name">{{ event.location }}</span>
-                            </td>
-                            <td>Vilken typ</td>
-                            <td scope="row">{{event.startdate}}</td>
-
-                            <td><button id="editNationDesc"type="button" class="btn btn-default">Redigera</button></td>
-                        </tr>
-
-
-                    </ul>
-
-
-
-                    </tbody></table></ul>
-
-        </div>
 
     {% endblock %}

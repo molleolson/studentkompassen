@@ -7,7 +7,9 @@
 {% endblock %}
 
 {% block left %}
-<div class="divforforms">
+<div class="container-fluid" id="calendarBox">
+
+    <div class="container-fluid col-sm-8 col-md-8 col-lg-8" >
 
 
 
@@ -15,12 +17,15 @@
     <form action="{% url "start:addevent" %}" method="POST">
         <h2>{% trans "Create a new event"%}</h2>
         {% csrf_token %}
+
         {% include "form.html" with form=form %}
         <br>
 <button class="btn btn-default btn-block" id="addingevent" type ="submit">{% trans "Add event"%}</button>
 
     </form>
          </tr>
+
+    </div>
 
     </div>
 
