@@ -22,38 +22,13 @@
         </thead>
 
             {% for host in hosts %}
-
                     <td id="nationsinforad" data-title="Aktivitet"><h4>{{host.name}}</h4>
-                        <!--<img src="{{host.logo}}" width="200" height="150" frameborder="0" style="border:0" >-->
-
-                        <!-- <img src="url" alt="some_text"> lägg till i databasen-->
                         <!-- hides part of big text -->
                         <div id="loggaNat" class="row" ><img src="{{host.logo}}"  width="80" height="80" frameborder="0" style="border:0"><div id="beskrivning" class="comment more ">{{host.description}}  </div></div>
-
-
                         <!-- gör karta som bild istället, ladda karta genom länk -->
                         <td id="karta" data-title="karta"><div id="map"><iframe class="pull-right" src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div></td>
-
-
-
-                        <!--<div id="map"><iframe src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div>-->
-
-
-                    <!--<div style="width: 300px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;"><p>{{host.description}}</p></div> -->
-                        <!--<div id="partoftext"><p>{{host.description}}</p></div>-->
-                        <!-- skriv in kartor i databasen, hämta genom {{host.gps}} eller liknande i iframe-->
-                       <!--<div id="{{host.id}}" class="collapse"><p>{{host.description}}</p> <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.505867435092!2d17.63593295175902!3d59.857346075526756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbf0b72963e1%3A0x7f0b0b4db60b7c6b!2sV%C3%A4stra+%C3%85gatan+14%2C+753+09+Uppsala!5e0!3m2!1ssv!2sse!4v1460720726017" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div></div> -->
                     </td>
-                    <!-- button for collapse text -->
-                   <!--<td> <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{host.id}}">+</button> -->
-                    <!--<div id="{{host.id}}" class="collapse" > -->
-                       <!-- <p> {{host.description}} <div id="map"> -->
-                        <!-- how to put map for each host in database -->
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.505867435092!2d17.63593295175902!3d59.857346075526756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbf0b72963e1%3A0x7f0b0b4db60b7c6b!2sV%C3%A4stra+%C3%85gatan+14%2C+753+09+Uppsala!5e0!3m2!1ssv!2sse!4v1460720726017" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div></p> -->
-                    <!--</div>
-                    </td>-->
+
 
 
                 </tr>
