@@ -5,6 +5,8 @@ from django.utils import timezone
 from django.db import models
 from recurrence.fields import RecurrenceField
 from django.utils.encoding import python_2_unicode_compatible
+from django.utils.translation import ugettext_lazy as _
+from django.http import HttpResponse
 
 
 
@@ -43,12 +45,12 @@ class Category(models.Model):
 
 
 class Event(models.Model):
-    name = models.CharField(max_length=200, blank=True, null=True)
+    name = models.CharField(max_length=200, blank=True, null=True, verbose_name='Name of event')
     description = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
     enddate = models.DateTimeField('end date', )
     reccurrences = RecurrenceField(null=True)
-    categories = models.ManyToManyField(Category)
+    categories = models.ManyToManyField(Category, verbose_name='Tags')
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
