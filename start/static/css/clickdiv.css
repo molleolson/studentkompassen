@@ -18,23 +18,19 @@ a.morelink {
     float: left;
 }
 
-#karta {
-    float:right;
-    left:95%;
 
-}
 
 #logga {
 
     float: left;
 }
 
-#beskrivning {
-    float: left;
-
-}
-
 #nationsinforad{
 
     display: inline;
+}
+
+#map{
+    margin: 8px;
+
 }
