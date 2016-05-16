@@ -20,7 +20,6 @@ class EventForm(ModelForm):
             'todayHighlight': True,
         }
 
-
         widgets = {
             # Use localization and bootstrap 3
             'startdate': DateTimeWidget(attrs={'class': 'DateTimeField', 'input_formats': '%m/%d/%y %H:%M'}, usel10n=True, bootstrap_version=3),

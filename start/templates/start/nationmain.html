@@ -12,8 +12,10 @@
     <li {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a href="{% url 'start:presentation' %}">{% trans "Presentation"%}</a></li>
 
 {% endblock %}
+
 {% block menu_item_2 %}
-Välkommen blah till nationsinlogget
+
+Välkommen {{nationname}} till nationsinlogget
 {% endblock %}
 
 

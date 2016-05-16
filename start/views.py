@@ -220,6 +220,9 @@ def skapa(request, id):
 @login_required(login_url='/accounts/login')
 def nationmain(request):
     menu_active_item = 'now'
+    nationname = request.user.get_username()
+    nbr = nationname.find("_")
+    nationname = nationname[:(nbr-1)]
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
@@ -241,7 +244,7 @@ def reload_ourevents(request):
     nbr = username.find("_")
     username = username[:(nbr)]
     activeHost = Host.objects.filter(name__startswith=username)
-    menu_active_item = 'ourevents'
+
     events = Event.objects.all().filter(host=activeHost).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
