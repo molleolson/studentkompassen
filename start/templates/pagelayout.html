@@ -64,7 +64,10 @@
 {% block navigation %}
 <!--style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png' -->
 <div class="container-fluid " id="navbarbackgrounded") no-repeat >
-
+                    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+                    {% endfor %}
 <nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
 <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#example-navbar-collapse">
          <span class = "sr-only">Toggle navigation</span>
@@ -73,10 +76,7 @@
          <span class = "icon-bar"></span>
       </button>
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
- {% get_available_languages as languages %}
-                    {% for lang_code, lang_name in languages %}
-                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-                    {% endfor %}
+
        <div class = "menu-main-container">
            <div class="logo">
        <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic2" class="hidden-sm hidden-md hidden-lg">
@@ -95,10 +95,6 @@
 
 
 </ul>
-       {% get_available_languages as languages %}
-                    {% for lang_code, lang_name in languages %}
-                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-                    {% endfor %}
  <div id="loggoBox"> <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs hidden-sm  ">
 </div>
        <ul class="nav navbar-nav navbar-right">
@@ -111,7 +107,7 @@
  {% if user.is_authenticated %}
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
                 <!--<li>Hello, {{user.get_full_name}}!</li>-->
-           <!-- {% else %}
+           <! {% else %}
                 <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
             {% endif %} -->
 
@@ -121,6 +117,11 @@
    </div>
 
 </nav>
+    <!--
+    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+                    {% endfor %}-->
       </div>
 </div>
 
