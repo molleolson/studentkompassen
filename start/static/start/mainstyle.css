@@ -4,7 +4,14 @@ body{
     background-color: #fafafa;
 }
 .navbar-right{
-    margin-left:100px;
+    display:block;
+    width:100%;
+    float:none;
+}
+.navbar-left{
+    display:block;
+    width:100%;
+    float:none;
 }
 /*******************************************/
 /*******************************************/
@@ -177,11 +184,11 @@ body {
 @media screen and (max-width: 767px) and (min-width: 0px) {
 body {
 }
+div{display:inline;}
 #navbarbackgrounded{
     background-image: none!important;
 
 }
-
 
 .navbar-header{
     width:auto;
@@ -220,6 +227,7 @@ width: 100%;
 /* *******NAVBAR MOBILE SETTINGS **********/
 
 .navbar {
+
 opacity: 0.9;
 padding: 0;
 border-bottom: 1px solid rgb(225,227,230);
@@ -231,6 +239,7 @@ margin-bottom:5px;
 height:auto;
 background: transparent; /* For browsers that do not support gradients */
 }
+
 .navbar .navbar-nav{
     float:none;
     vertical-align:top;
@@ -238,6 +247,7 @@ background: transparent; /* For browsers that do not support gradients */
 }
 .navbar .navbar-collapse {
   text-align: center;
+
 }
 
 .navbar-default .navbar-brand{
@@ -251,11 +261,13 @@ background-color: black;
 .navbar-toggle {
 background-color: #fafafa;
 top:20px;
+
 }
 
 .collapsing, .in {
 background-color: #fafafa;
 overflow-x: hidden;
+
 }
 
 .collapsing ul li a, .in ul li a {color: black!important;}
@@ -267,6 +279,7 @@ border-top-right-radius: 0;
 -moz-box-shadow: none;
 box-shadow: none;
 position:relative;
+
 }
 
 .container-fluid{
@@ -523,9 +536,6 @@ rgb(51,153,255); #3399FF*/
     left: 50%;
     margin-left:-50px;
     bottom:0px;
-}
-div{
-    display: block;
 }
 
 #headerPic{
@@ -840,7 +850,8 @@ a.ui-state-highlight {
 #dayPickerBtnRight, #dayPickerBtnLeft{
     font-size:  x-large;
     color: #3399FF;
-
+    top:2px;
+width:
 
 }
 
