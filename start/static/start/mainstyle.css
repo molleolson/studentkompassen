@@ -3,7 +3,9 @@ body{
     color: black;
     background-color: #fafafa;
 }
-
+.navbar-right{
+    margin-left:100px;
+}
 /*******************************************/
 /*******************************************/
 /************* MD INSTÃ„LLNINGAR************/
@@ -71,7 +73,7 @@ body {
         background: #fafafa;
         bottom:2px;
         color:black;
-        height: 69px;
+        height: 68px;
         border-bottom: 3px solid black;
         box-shadow: none;
 
@@ -303,7 +305,7 @@ margin:5px;
             background: #fafafa;
             bottom:2px;
             color:black;
-            height: 69px;
+            height: 68px;
             border-bottom: 3px solid black;
             box-shadow: none;
 }
@@ -312,6 +314,7 @@ margin:5px;
             display: inline-block;
             position: relative;
             padding-bottom: 50px;
+            padding-top: 15px;
             }
 
             .navbar-collapse .navbar-nav > li > a:hover {
@@ -404,10 +407,15 @@ rgb(51,153,255); #3399FF*/
     display: block;
     width: 100px;
     max-width: 150px;
-    bottom:25px;
+    bottom:35px;
+    left:50%;
+    margin-left: 0px;
     /*background: rgba(232,244,255,0.25);*/
     /*backgrou#nd: rgba(232,244,255,0.25);*/
 
+}
+#loggoBox{
+    display: inline-block;
 }
 #loggPic2{
     position:relative;
