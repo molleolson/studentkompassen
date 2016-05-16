@@ -63,11 +63,8 @@
 
 {% block navigation %}
 <!--style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png' -->
-<div class="container-fluid " id="navbarbackgrounded") no-repeat >
-                    {% get_available_languages as languages %}
-                    {% for lang_code, lang_name in languages %}
-                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-                    {% endfor %}
+<div class="container-fluid " id="navbarbackgrounded" >
+
 <nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
 <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#example-navbar-collapse">
          <span class = "sr-only">Toggle navigation</span>
@@ -117,14 +114,16 @@
    </div>
 
 </nav>
-    <!--
-    {% get_available_languages as languages %}
-                    {% for lang_code, lang_name in languages %}
-                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-                    {% endfor %}-->
+
       </div>
 </div>
 
+<div class="container-fluid" id="btnlangBox">
+    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info pull-right hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
+                    {% endfor %}
+</div>
 
 {% endblock %}
 {% block main %}

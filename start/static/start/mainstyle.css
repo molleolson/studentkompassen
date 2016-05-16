@@ -85,7 +85,7 @@ body {
         display: inline-block;
         position: relative;
         padding-bottom: 50px;
-
+        padding-top:50px;
             }
         .navbar-collapse .navbar-nav > li > a:hover {
         color:black;
@@ -314,7 +314,7 @@ margin:5px;
             display: inline-block;
             position: relative;
             padding-bottom: 50px;
-            padding-top: 15px;
+            padding-top: 50px;
             }
 
             .navbar-collapse .navbar-nav > li > a:hover {
@@ -407,7 +407,7 @@ rgb(51,153,255); #3399FF*/
     display: block;
     width: 100px;
     max-width: 150px;
-    bottom:35px;
+    bottom:px;
     left:50%;
     margin-left: 0px;
     /*background: rgba(232,244,255,0.25);*/
@@ -729,6 +729,9 @@ a.ui-state-highlight {
     #btnlang_sv:hover{
         background-color:darkgray;
     }
+    #btnlangBox{
+    position: relative;
+    display: compact}
 
 
 #calendarCollapse{
