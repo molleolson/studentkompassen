@@ -10,33 +10,23 @@
         {% endblock %}
 
     {% block left %}
-<div class="container-fluid" id="calendarBox" >
-<table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
-        <thead>
-
-        <tr>
-            <!--<th class="col-md-4 col-sm-4" scope="col">{%trans "Nationer & kårer"%}</th> -->
-        </tr>
-
-
-        </thead>
-
-            {% for host in hosts %}
-                    <td id="nationsinforad" data-title="Aktivitet"><h4>{{host.name}}</h4>
-                        <!-- hides part of big text -->
-                        <div id="loggaNat" class="row" ><img src="{{host.logo}}"  width="80" height="80" frameborder="0" style="border:0"><div id="beskrivning" class="comment more ">{{host.description}}  </div></div>
-                        <!-- gör karta som bild istället, ladda karta genom länk -->
-                        <td id="karta" data-title="karta"><div id="map"><iframe class="pull-right" src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div></td>
-                    </td>
 
 
 
-                </tr>
+    <div class="container-fluid" id="calendarBox" >
+        {% for host in hosts %}
+        <div class="row">
+            <div id="loggaNat" class="col-md-1"><img src="{{host.logo}}"  width="80" height="80" frameborder="0" style="border:0"></div>
+            <div class="col-md-9">
+                <div id="nationsinforad" data-title="Aktivitet"><h4>{{host.name}}</h4></div>
+                <!-- hides part of big text -->
+                <div id="beskrivning" class="comment more ">{{host.description}}</div>
+            </div>
+            <div class="col-md-2 hidden-xs" data-title="karta"><div id="map"><iframe class="pull-right" src="{{host.location.gps}}" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe></div></div>
+        </div>
 
-            {% endfor %}
-
-</table>
-</div>
+        {% endfor %}
+    </div>
 
     {% endblock %}
 
