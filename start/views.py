@@ -235,6 +235,16 @@ def ourevents(request):
     events = Event.objects.all().filter(host=activeHost).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
+@login_required(login_url='/accounts/login')
+def reload_ourevents(request):
+    username = request.user.get_username()
+    nbr = username.find("_")
+    username = username[:(nbr)]
+    activeHost = Host.objects.filter(name__startswith=username)
+    menu_active_item = 'ourevents'
+    events = Event.objects.all().filter(host=activeHost).order_by('startdate')
+    return render(request, 'start/events.html', locals())
+
 
 @login_required(login_url='/accounts/login')
 def presentation(request):

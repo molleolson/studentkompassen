@@ -2,8 +2,18 @@
 {% load i18n %}
 {% block title %}ourEvents{% endblock %}
 
-
-
+{% block left%}
+<div class="container-fluid" id="calendarBox" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat; background-size: 100%;background-position: bottom;">
+<div class="datetimepicker ll-skin-cangas hidden-xs pull-right"  id="datepicker"></div>
+<div class="container-fluid col-sm-8 col-md-8 col-lg-8" id = "calendarMinibox">
+<div class="calendar">
+{% block calendercontent %}
+    {% include "start/events.html" %}
+{% endblock %}
+    </div>
+    </div>
+       </div>
+{% endblock %}
 
     {% block right %}
 
