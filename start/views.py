@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, render_to_response, RequestContex
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login
 from .models import Host, Event, Location
 from start.forms import EventForm, PresentationForm
 from django.utils import translation, timezone
@@ -226,8 +227,12 @@ def nationmain(request):
 
 @login_required(login_url='/accounts/login')
 def ourevents(request):
+    username = request.user.get_username()
+    nbr=username.find("_")
+    username=username[:(nbr)]
+    activeHost = Host.objects.filter(name__startswith=username)
     menu_active_item = 'ourevents'
-    events = Event.objects.all().filter(host=1).order_by('startdate')
+    events = Event.objects.all().filter(host=activeHost).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
 
