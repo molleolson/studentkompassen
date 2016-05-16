@@ -15,6 +15,42 @@ body{
 body {
             background-color: #fafafa;
         }
+
+    #btnlang_en{
+    margin-right: 0px;
+    background-color: black;
+    color:#fafafa;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+}
+    #btnlang_en:hover{
+        background-color:darkgray;
+    }
+    #btnlang_sv{
+    margin-right: 0px;
+    background-color: black;
+    color:#fafafa;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+    #btnlang_sv:hover{
+        background-color:darkgray;
+    }
+    #btnlangBox{
+       position: absolute;
+                display: inline-flex;
+
+    left: 65%;
+    top: 102px;
+        width:350px;
+}
+
         #dayPickerBtn {
         width:85%;
         font-family: Raleway;
@@ -249,6 +285,67 @@ margin:5px;
 /*******************************************/
 /*******************************************/
 @media screen and (min-width:1200px) {
+    #btnlogin{
+            display: inline-block;
+
+    margin-right: 0px;
+    background-color: black;
+    color:#fafafa;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    }
+    #btnlogin2{
+    margin-right: 0px;
+    display: inline-block;
+
+    background-color: black;
+    color:#fafafa;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    }
+    #btnlang_en{
+            display: inline-block;
+    margin-right: 0px;
+    background-color: black;
+    color:#fafafa;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+}
+
+    #btnlang_en:hover{
+        background-color:darkgray;
+    }
+
+    #btnlang_sv{
+    display: inline-block;
+    margin-right: 0px;
+    background-color: black;
+    color:#fafafa;
+    border-color: black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+    #btnlang_sv:hover{
+        background-color:darkgray;
+    }
+    #btnlangBox{
+       position: absolute;
+                display: inline-flex;
+
+    left: 70%;
+    top: 102px;
+}
 
             #dayPickerBtn {
             width:88%;
@@ -690,7 +787,8 @@ a.ui-state-highlight {
 
 
 @media screen and (min-width: 798px) {
-    #btnlang_nb{
+
+    #btnlang_en{
     margin-right: 0px;
     background-color: black;
     color:#fafafa;
@@ -699,19 +797,6 @@ a.ui-state-highlight {
     border-top-right-radius: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 0px;
-}
-    #btnlang_nb:hover{
-        background-color:darkgray;
-    }
-    #btnlang_en{
-    margin-right: 60px;
-    background-color: black;
-    color:#fafafa;
-    border-color: black;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 5px;
 }
     #btnlang_en:hover{
         background-color:darkgray;
@@ -730,8 +815,12 @@ a.ui-state-highlight {
         background-color:darkgray;
     }
     #btnlangBox{
-    position: relative;
-    display: compact}
+       position: absolute;
+                display: inline-flex;
+
+    left: 70%;
+    top: 102px;
+}
 
 
 #calendarCollapse{

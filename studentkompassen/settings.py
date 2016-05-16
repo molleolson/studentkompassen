@@ -137,7 +137,7 @@ from django.utils.translation import ugettext_lazy as _
 LANGUAGES =(
     ('en', _("English")),
     ('sv', _('Swedish')),
-    ('nb', _('Norwegian ')),
+
 )
 
 LANGUAGE_CODE = 'en'
