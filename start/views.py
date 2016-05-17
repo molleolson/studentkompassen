@@ -60,7 +60,6 @@ def event_pub(request):
     return render(request, 'start/pub.html', locals())
 
 
-
 def reload_pub(request):
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
                                         timezone.get_default_timezone())
@@ -231,12 +230,12 @@ def nationmain(request):
 @login_required(login_url='/accounts/login')
 def ourevents(request):
     username = request.user.get_username()
-    nbr=username.find("_")
+    nbr = username.find("_")
     nationname = username[:(nbr)]
-    username=username[:(nbr)]
+    username = username[:(nbr)]
     activeHost = Host.objects.filter(name__startswith=username)
     menu_active_item = 'ourevents'
-    events = Event.objects.all().filter(host=activeHost,enddate__gte=timezone.now()).order_by('startdate')
+    events = Event.objects.all().filter(host=activeHost, enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
 @login_required(login_url='/accounts/login')
@@ -252,19 +251,22 @@ def reload_ourevents(request):
 
 @login_required(login_url='/accounts/login')
 def presentation(request):
-    nationname = request.user.get_username()
-    nbr = nationname.find("_")
-    nationname = nationname[:(nbr)]
-    host_id = 1
     menu_active_item = 'presentation'
-    host = get_object_or_404(Host, pk=host_id)
-    if request.POST:
-        form = PresentationForm(request.POST, instance=host)
+
+    activenation = request.user.get_username()
+    nbr = activenation.find("_")
+    nationname = activenation[:(nbr)]
+
+    #activehost = Host.objects.filter(name__startswith = nationname)
+    activehost = get_object_or_404(Host.objects.filter(name__startswith = nationname))
+
+    if request.method == 'POST':
+        form = PresentationForm(request.POST, instance=[activehost.id])
         if form.is_valid():
-            form.save()
+            instance = form.save()
             return redirect('/start/nationmain/')
     else:
-        form = PresentationForm(instance=host)
+        form = PresentationForm(instance=[activehost.id])
 
     return render(request, 'start/presentation.html', locals())
 
