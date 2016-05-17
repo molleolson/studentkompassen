@@ -15,8 +15,8 @@ class EventForm(ModelForm):
 
         widgets = {
             # Use localization and bootstrap 3
-            'startdate': DateTimeWidget(attrs={'class': 'DateTimeField'}, options={'format': 'dd/mm/yyyy hh:ii'}, usel10n=False, bootstrap_version=3),
-            'enddate': DateTimeWidget(attrs={'class':'DateTimeField'},options={'format': 'dd/mm/yyyy hh:ii'}, usel10n=False, bootstrap_version=3),
+            'startdate': DateTimeWidget(attrs={'class': 'DateTimeField'}, options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
+            'enddate': DateTimeWidget(attrs={'class':'DateTimeField'},options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
             #'multipledates': DateTimeWidget(attrs={'class': "multidatespicker"}, usel10n=True, bootstrap_version=3),
             'categories': CheckboxSelectMultiple(attrs={'class': 'choice_field'}),
             'description': Textarea(attrs={'cols': 60, 'rows': 10}),
