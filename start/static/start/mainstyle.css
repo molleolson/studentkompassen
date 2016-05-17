@@ -294,72 +294,72 @@ margin:5px;
 /*******************************************/
 /*******************************************/
 @media screen and (min-width:1200px) {
-    #calendarBckg{
-            height:600px;
-            width:1150px;
-        }
+            #calendarBckg{
+                    height:600px;
+                    width:1150px;
+                }
 
-    #btnlogin{
+            #btnlogin{
+                    display: inline-block;
+
+            margin-right: 0px;
+            background-color: black;
+            color:#fafafa;
+            border-color: black;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 5px;
+            }
+            #btnlogin2{
+            margin-right: 0px;
             display: inline-block;
 
-    margin-right: 0px;
-    background-color: black;
-    color:#fafafa;
-    border-color: black;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 5px;
-    }
-    #btnlogin2{
-    margin-right: 0px;
-    display: inline-block;
+            background-color: black;
+            color:#fafafa;
+            border-color: black;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 5px;
+            }
+            #btnlang_en{
+                    display: inline-block;
+            margin-right: 0px;
+            background-color: black;
+            color:#fafafa;
+            border-color: black;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 0px;
+            }
 
-    background-color: black;
-    color:#fafafa;
-    border-color: black;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 5px;
-    }
-    #btnlang_en{
+            #btnlang_en:hover{
+                background-color:darkgray;
+            }
+
+            #btnlang_sv{
             display: inline-block;
-    margin-right: 0px;
-    background-color: black;
-    color:#fafafa;
-    border-color: black;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 0px;
-}
+            margin-right: 0px;
+            background-color: black;
+            color:#fafafa;
+            border-color: black;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            }
+            #btnlang_sv:hover{
+                background-color:darkgray;
+            }
+            #btnlangBox{
+               position: absolute;
+                        display: inline-flex;
 
-    #btnlang_en:hover{
-        background-color:darkgray;
-    }
-
-    #btnlang_sv{
-    display: inline-block;
-    margin-right: 0px;
-    background-color: black;
-    color:#fafafa;
-    border-color: black;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-    #btnlang_sv:hover{
-        background-color:darkgray;
-    }
-    #btnlangBox{
-       position: absolute;
-                display: inline-flex;
-
-    left: 70%;
-    top: 102px;
-}
+            left: 70%;
+            top: 102px;
+            }
 
             #dayPickerBtn {
             width:88%;
@@ -408,15 +408,15 @@ margin:5px;
             box-shadow:none;
             }
 
+            .navbar-collapse .navbar-nav {
+                padding-top: 50px;
+            }
 
-
-            .navbar-collapse .navbar-nav > .active > a,
-            .navbar-collapse .navbar-nav > .active > a:hover {
-             /*why you no work? jo, det Ã¤r about background!*/
-            background: #fafafa;
+            .navbar-collapse .navbar-nav > .active > a{
+                 background: #fafafa;
             bottom:2px;
             color:black;
-            height: 68px;
+            height: 53px;
             border-bottom: 3px solid black;
             box-shadow: none;
 }
@@ -424,13 +424,31 @@ margin:5px;
             .navbar-collapse .navbar-nav > li > a {
             display: inline-block;
             position: relative;
-            padding-bottom: 50px;
-            padding-top: 50px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            }
+            .navbar-collapse .navbar-nav > .active > a:hover {
+             /*why you no work? jo, det Ã¤r about background!*/
+            background: #fafafa;
+            bottom:2px;
+            color:black;
+            height: 53px;
+            border-bottom: 3px solid black;
+            box-shadow: none;
+}
+            /*hover här*/
+            .navbar-collapse .navbar-nav > li > a {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0px;
+            padding-top: 0px;
+                bottom:2px;
             }
 
             .navbar-collapse .navbar-nav > li > a:hover {
-            color:black;
-            bottom:0;
+                color:black;
+
+            bottom:2px;
             }
 
             .navbar-collapse .navbar-nav > li > a:after{
