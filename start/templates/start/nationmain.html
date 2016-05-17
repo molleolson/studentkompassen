@@ -2,8 +2,8 @@
 {% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
 
-{% with var= request.user.social_auth.count%}
-{% if var==1 %}
+{% with usertype=request.user.social_auth.count%}
+{% if usertype %}
 
 <meta http-equiv="refresh" content="0;url:http://130.238.15.202:8001/sv/start">
 
