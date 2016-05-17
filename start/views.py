@@ -258,15 +258,15 @@ def presentation(request):
     nationname = activenation[:(nbr)]
 
     #activehost = Host.objects.filter(name__startswith = nationname)
-    activehost = get_object_or_404(Host.objects.filter(name__startswith = nationname))
+    activehost = get_object_or_404(Host, name__startswith=nationname)
 
     if request.method == 'POST':
-        form = PresentationForm(request.POST, instance=[activehost.id])
+        form = PresentationForm(request.POST, instance=activehost)
         if form.is_valid():
             instance = form.save()
             return redirect('/start/nationmain/')
     else:
-        form = PresentationForm(instance=[activehost.id])
+        form = PresentationForm(instance=activehost)
 
     return render(request, 'start/presentation.html', locals())
 
