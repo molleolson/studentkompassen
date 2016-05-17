@@ -158,7 +158,7 @@ body {
         }
         #calendarBckg{
             height:600px;
-            width:100%;
+            width:80%;
         }
 
 
@@ -173,7 +173,7 @@ body {
     margin-top:65px;
     margin-right:55px;
 }
-}
+
 /*******************************************/
 /*******************************************/
 /************* XS INSTÃ„LLNINGAR************/
@@ -282,6 +282,7 @@ padding-right: 0 ;
 #calendarBox{
 height:600px;
 margin:5px;
+
 }
 }
 /*******************************************/
@@ -527,7 +528,7 @@ rgb(51,153,255); #3399FF*/
     display: block;
     width: 100px;
     max-width: 150px;
-    bottom:px;
+    bottom:1px;
     left:50%;
     margin-left: 0px;
     /*background: rgba(232,244,255,0.25);*/
@@ -632,6 +633,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 #radBOD{
     border-bottom: solid 1px #cccccc;
+    background: transparent;
 }
 #aktivitetTD{
     width:60%;
