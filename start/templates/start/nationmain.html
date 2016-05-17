@@ -2,7 +2,13 @@
 {% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
 
+{% with usertype=request.user.social_auth.count%}
+{% if usertype %}
 
+<meta http-equiv="refresh" content="0;url:http://130.238.15.202:8001/sv/start">
+
+{% endif %}
+{% endwith %}
 
 {% block menu_item_1 %}
     <li {% if menu_active_item == 'now' %} class="active"{% endif %}><a href="{% url 'start:nationmain' %}">{% trans "Right now"%}</a></li>
