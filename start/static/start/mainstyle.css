@@ -747,10 +747,48 @@ border-top: 0px;
     border-radius: 20px;
 }
 
+#mapdesc{
+    float: right;
+}
+#mapdescription{
+    float: right;
+    left: 50%;
+    top:5%;
+    position: relative;
+}
+
+#nation_name{
+    position: relative;
+    left:20%;
+    bottom: 50%;
+    font-family: Raleway;
+}
+
+
 #editNationDesc{
     float:right;
 }
 
+#editpresentation{
+
+    position: relative;
+    left:28%;
+    background-color: inherit;
+    width: 180%;
+}
+
+.textarea{
+    background-color: #0d6aad;
+    width: 180%;
+}
+
+#id_description{
+
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+    font-family: inherit;
+}
 
 
 a.ui-state-highlight {
