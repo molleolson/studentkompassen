@@ -39,6 +39,12 @@
     <!-- END SCRIPT FILES -->
   </head>
 <body>
+
+
+user=
+{{ request.user.social_auth.count }}
+
+
 <script src="{% static 'start/fb-sdk.js' %}" type="application/javascript"></script>
 <!--START HEADER-->
 <div class="container-fluid" id="topContainer" role="banner"> <!--gör om till row-->
