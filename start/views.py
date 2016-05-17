@@ -295,15 +295,18 @@ def addevent(request):
 
 @login_required(login_url='/accounts/login')
 def editevent(request, event_id):
-
+    nationname = request.user.get_username()
+    nbr = nationname.find("_")
+    nationname = nationname[:(nbr)]
+    activeHost = Host.objects.get(name__startswith=nationname)
     event = get_object_or_404(Event, pk=event_id)
     if request.POST:
-        form = EventForm(request.POST, instance=event)
+        form = EventForm(request.POST, allowed_hosts=[activeHost.id], instance=event)
         if form.is_valid():
             form.save()
             return redirect('/start/nationmain/ourevents')
     else:
-        form = EventForm(instance=event)
+        form = EventForm(allowed_hosts=[activeHost.id], instance=event)
 
     return render(request, 'start/editevent.html', locals())
 
