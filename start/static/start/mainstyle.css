@@ -452,6 +452,9 @@ margin:5px;
 }
 
 .field-id_name{
+    width: 70%;
+}
+#id_name{
     width: 100%;
 }
 
@@ -460,8 +463,16 @@ width: 100%;
 float:left;
 }
 
+#id_categories{
+    list-style-type: none;
+    padding:0;
+}
+
 .field-id_host{
 width:48%;
+}
+#id_host{
+    width: 100%;
 }
 #topContainer{
     padding-left:0;
@@ -472,6 +483,10 @@ width:48%;
     width:48%;
 
 }
+#id_location{
+    width:100%;
+
+}
 .field-id_startdate{
     width:48%;
 
@@ -480,9 +495,12 @@ width:48%;
     width: 48%;
 }
 .field-id_description{
-
-    width:48%;
+    width:70%;
 }
+#id_description{
+    width:100%;
+}
+
 
 #addingevent{
     float:left;

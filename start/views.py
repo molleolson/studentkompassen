@@ -222,7 +222,7 @@ def nationmain(request):
     menu_active_item = 'now'
     nationname = request.user.get_username()
     nbr = nationname.find("_")
-    nationname = nationname[:(nbr-1)]
+    nationname = nationname[:(nbr)]
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
@@ -232,11 +232,11 @@ def nationmain(request):
 def ourevents(request):
     username = request.user.get_username()
     nbr=username.find("_")
-    nationname = username[:(nbr - 1)]
+    nationname = username[:(nbr)]
     username=username[:(nbr)]
     activeHost = Host.objects.filter(name__startswith=username)
     menu_active_item = 'ourevents'
-    events = Event.objects.all().filter(host=activeHost).order_by('startdate')
+    events = Event.objects.all().filter(host=activeHost,enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
 @login_required(login_url='/accounts/login')
@@ -254,7 +254,7 @@ def reload_ourevents(request):
 def presentation(request):
     nationname = request.user.get_username()
     nbr = nationname.find("_")
-    nationname = nationname[:(nbr - 1)]
+    nationname = nationname[:(nbr)]
     host_id = 1
     menu_active_item = 'presentation'
     host = get_object_or_404(Host, pk=host_id)
@@ -274,18 +274,19 @@ def presentation(request):
 def addevent(request):
     nationname = request.user.get_username()
     nbr = nationname.find("_")
-    nationname = nationname[:(nbr - 1)]
+    nationname = nationname[:(nbr)]
+    activeHost = Host.objects.get(name__startswith=nationname)
 
     menu_active_item = 'event'
 
     if request.method == 'POST':
-        form = EventForm(request.POST)                     # create a form instance and populate with data
+        form = EventForm(request.POST, allowed_hosts=[activeHost.id])          # create a form instance and populate with data
 
         if form.is_valid():
             instance = form.save()
             return redirect('/start/', locals())
     else:
-        form = EventForm()
+        form = EventForm(allowed_hosts=[activeHost.id])
 
     return render(request, 'start/addevent.html', locals())
 
