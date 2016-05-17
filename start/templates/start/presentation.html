@@ -13,6 +13,7 @@
 
                     <div id="editpresentation">
 
+
                         <form action="{% url "start:presentation" %}" method="POST">
                                 {% csrf_token %}
                                 {% include "form.html" with form=form %}
