@@ -17,14 +17,14 @@
                 <tr id ="radBOD" data-toggle="modal" data-target="#{{event.id}}">
                     <td id="editeventtd"><a href = "{% url "start:editevent" event.id %}"><strong>{%trans "Edit"%}</strong></a></td>
 
-                    <td id="aktivitetTD" data-title="Aktivitet">{{ event.name }}</td>
-                    <td id="kategoriTD">{{ event.names }}</td>
+                    <td id="aktivitetTDee" data-title="Aktivitet">{{ event.name }}</td>
+                    <td id="kategoriTDee">{{ event.names }}</td>
                                                 <!-- POP UP SKITEN -->
 
                              <!-- Modal -->
-                    <td id="platsTD" data-title="Plats"><span class="name">{{ event.location }}</span></td>
+                    <td id="platsTDee" data-title="Plats"><span class="name">{{ event.location }}</span></td>
 
-                    <td id="startTD">{{event.startdate.time}}<span>-</span>{{event.enddate.time}}</td>
+                    <td id="startTDee">{{event.startdate.time}}<span>-</span>{{event.enddate.time}}</td>
 
                             <!-- Modal -->
 

@@ -636,28 +636,24 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     background: transparent;
 }
 #aktivitetTD{
-    width:55%;
+    width:60%;
 
 border-top: 0px;
 }
 #platsTD{
-    width:55%;
+    width:60%;
 border-top: 0px;
-}
-#editeventtd{
-    width:10%;
-    text-align: left;
 }
 
 #kategoriTD{
-    width:35%;
+    width:40%;
     border-top: 0px;
     font-size: small;
     font-weight: bold;
     text-align: right;
 }
 #startTD {
-    width: 35%;
+    width: 40%;
     border-top: 0px;
     font-size: small;
     font-weight: bold;
@@ -665,7 +661,36 @@ border-top: 0px;
 
 }
 
+#aktivitetTDee{
+    width:55%;
 
+border-top: 0px;
+}
+#platsTDee{
+    width:55%;
+border-top: 0px;
+}
+#editeventtd{
+    width:10%;
+    border-top: 10px;
+    text-align: left;
+}
+
+#kategoriTDee{
+    width:35%;
+    border-top: 0px;
+    font-size: small;
+    font-weight: bold;
+    text-align: right;
+}
+#startTDee {
+    width: 35%;
+    border-top: 0px;
+    font-size: small;
+    font-weight: bold;
+        text-align: right;
+
+}
 
 
 .responsive-table th{
