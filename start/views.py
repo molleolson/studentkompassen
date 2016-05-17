@@ -60,6 +60,7 @@ def event_pub(request):
     return render(request, 'start/pub.html', locals())
 
 
+
 def reload_pub(request):
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
                                         timezone.get_default_timezone())
@@ -221,7 +222,7 @@ def nationmain(request):
     menu_active_item = 'now'
     nationname = request.user.get_username()
     nbr = nationname.find("_")
-    nationname = nationname[:(nbr)]
+    nationname = nationname[:(nbr-1)]
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
     return render(request, 'start/nationmain.html', locals())
@@ -230,12 +231,12 @@ def nationmain(request):
 @login_required(login_url='/accounts/login')
 def ourevents(request):
     username = request.user.get_username()
-    nbr = username.find("_")
-    nationname = username[:(nbr)]
-    username = username[:(nbr)]
+    nbr=username.find("_")
+    nationname = username[:(nbr - 1)]
+    username=username[:(nbr)]
     activeHost = Host.objects.filter(name__startswith=username)
     menu_active_item = 'ourevents'
-    events = Event.objects.all().filter(host=activeHost, enddate__gte=timezone.now()).order_by('startdate')
+    events = Event.objects.all().filter(host=activeHost).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
 @login_required(login_url='/accounts/login')
@@ -244,69 +245,59 @@ def reload_ourevents(request):
     nbr = username.find("_")
     username = username[:(nbr)]
     activeHost = Host.objects.filter(name__startswith=username)
-
+    menu_active_item = 'ourevents'
     events = Event.objects.all().filter(host=activeHost).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
 
 @login_required(login_url='/accounts/login')
 def presentation(request):
+    username = request.user.get_username()
+    nbr = username.find("_")
+    username = username[:(nbr - 1)]
+
+    activeHost = Host.objects.filter(name__startswith=username)
     menu_active_item = 'presentation'
-
-    activenation = request.user.get_username()
-    nbr = activenation.find("_")
-    nationname = activenation[:(nbr)]
-
-    #activehost = Host.objects.filter(name__startswith = nationname)
-    activehost = get_object_or_404(Host.objects.filter(name__startswith = nationname))
-
-    if request.method == 'POST':
-        form = PresentationForm(request.POST, instance=[activehost.id])
+    host = get_object_or_404(activeHost)
+    if request.POST:
+        form = PresentationForm(request.POST, instance=host)
         if form.is_valid():
-            instance = form.save()
+            form.save()
             return redirect('/start/nationmain/')
     else:
-        form = PresentationForm(instance=[activehost.id])
+        form = PresentationForm(instance=host)
 
     return render(request, 'start/presentation.html', locals())
 
 
-
 @login_required(login_url='/accounts/login')
 def addevent(request):
-    nationname = request.user.get_username()
-    nbr = nationname.find("_")
-    nationname = nationname[:(nbr)]
-    activeHost = Host.objects.get(name__startswith=nationname)
 
     menu_active_item = 'event'
 
     if request.method == 'POST':
-        form = EventForm(request.POST, allowed_hosts=[activeHost.id])          # create a form instance and populate with data
+        form = EventForm(request.POST)                     # create a form instance and populate with data
 
         if form.is_valid():
             instance = form.save()
             return redirect('/start/', locals())
     else:
-        form = EventForm(allowed_hosts=[activeHost.id])
+        form = EventForm()
 
     return render(request, 'start/addevent.html', locals())
 
 
 @login_required(login_url='/accounts/login')
 def editevent(request, event_id):
-    nationname = request.user.get_username()
-    nbr = nationname.find("_")
-    nationname = nationname[:(nbr)]
-    activeHost = Host.objects.get(name__startswith=nationname)
+
     event = get_object_or_404(Event, pk=event_id)
     if request.POST:
-        form = EventForm(request.POST, allowed_hosts=[activeHost.id], instance=event)
+        form = EventForm(request.POST, instance=event)
         if form.is_valid():
             form.save()
             return redirect('/start/nationmain/ourevents')
     else:
-        form = EventForm(allowed_hosts=[activeHost.id], instance=event)
+        form = EventForm(instance=event)
 
     return render(request, 'start/editevent.html', locals())
 
