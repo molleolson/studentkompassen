@@ -2,70 +2,50 @@
 {% load i18n %}
 {% load studentkompassen_tags %}
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Studentkompassen - {% block title %}{% endblock %}</title>
-
     <!-- START CSS FILES -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
-
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-
     {% block additional_css %}{% endblock %}
-
     <!-- END CSS FILES -->
     <!-- START SCRIPT FILES -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
     <script src="{% static 'start/evententeringfunctions.js' %}" type="application/javascript"></script>
-
-
-
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-
     <script src="{% static 'start/functions.js' %}" type="application/javascript"></script>
     <script src="{% static 'start/dateAndTime.js' %}" type="application/javascript"></script>
-
-
     <link href="{% static 'css/bootstrap-social.css' %}" rel="stylesheet" type="text/css"/>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
     <!--<script src="{% static 'js/bootstrap.js' %}"></script>-->
     <script src="{% static 'js/multidatespicker.js' %}"></script>
-
     <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyle.css' %}"/>
      <link rel="stylesheet" type="text/css" href="{% static 'css/cangas.datepicker.css' %}"/>
-
     <!--<link rel="stylesheet" type="text/css" href="{% static 'start/mainstyleXSSM.css' %}"/>
  <link rel="stylesheet" type="text/css" href="{% static 'start/mainstyleMD.css' %}"/>
 -->
     {{ form.media }}
     {% block additional_scripts %}{% endblock %}
     <!-- END SCRIPT FILES -->
-
   </head>
 <body>
-
 <script src="{% static 'start/fb-sdk.js' %}" type="application/javascript"></script>
-
 <!--START HEADER-->
-
 <div class="container-fluid" id="topContainer" role="banner"> <!--gör om till row-->
-
 {% block navigation %}
 <!--style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png' -->
 <div class="container-fluid " id="navbarbackgrounded" >
-
-<nav class = "navbar navbar-default navbar-fixed-bottom-div "  role = "navigation" >
+<nav class = "navbar navbar-default navbar-static-top "  role = "navigation" >
 <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#example-navbar-collapse">
          <span class = "sr-only">Toggle navigation</span>
          <span class = "icon-bar"></span>
@@ -73,70 +53,46 @@
          <span class = "icon-bar"></span>
       </button>
    <div class = "navbar-header" data-toggle="collapse" data-target="#example-navbar-collapse" >
-
        <div class = "menu-main-container">
            <div class="logo">
        <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic2" class="hidden-sm hidden-md hidden-lg">
     </div>
-
-
       <a class = "navbar-brand hidden-xs hidden-md hidden-sm hidden-lg " href = "#">Studentkompassen</a>
    </div>
-
    <div class = "collapse navbar-collapse " id = "example-navbar-collapse">
-
       <ul class = "nav navbar-nav navbar-left">
           {% block menu_item_1 %}
-
           {% endblock %}
-
-
 </ul>
  <div id="loggoBox"> <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
 </div>
        <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
-
             {% block menu_item_2 %}
-
             {% endblock %}
-
-
         </ul>
-
-
    </div>
-
 </nav>
-
       </div>
 </div>
-
 <div class="container-fluid" id="btnlangBox">
     {% get_available_languages as languages %}
                     {% for lang_code, lang_name in languages %}
                     <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info   hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
                     {% endfor %}
-
-
  {% if user.is_authenticated %}
                 <a id="btnlogin" type="button" class="btn btn-info  hidden-xs" href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a>
                 <!--<li>Hello, {{user.get_full_name}}!</li>-->
            {% else %}
                 <a id="btnlogin2" type="button" class="btn btn-info  hidden-xs" href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a>
             {% endif %}
-
 </div>
-
 {% endblock %}
 {% block main %}
-
 {% block left %}
 {% endblock %}
-
 {% block right %}
 {% endblock %}
-
 {% endblock %}
 {% block footer %}
 <!--
@@ -147,12 +103,9 @@
   data-show-faces="true">
 </div>
 <br>
-
-
 &copy; 2016 Studentkompassen
 -->
 {% endblock %}
   </div>
-
 </body>
 </html>
