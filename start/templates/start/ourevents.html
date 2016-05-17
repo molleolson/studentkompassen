@@ -8,12 +8,62 @@
 <div class="container-fluid col-sm-8 col-md-8 col-lg-8" id = "calendarMinibox">
 <div class="calendar">
 {% block calendercontent %}
-    {% include "start/events.html" %}
+     <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
+        <thead>
+
+        </thead>
+        <tbody>
+                {% for event in events %}
+                <tr id ="radBOD" data-toggle="modal" data-target="#{{event.id}}">
+                    <td id="editeventtd"><a href = "{% url "start:editevent" event.id %}"><strong>{%trans "Edit"%}</strong></a></td>
+
+                    <td id="aktivitetTD" data-title="Aktivitet">{{ event.name }}</td>
+                    <td id="kategoriTD">{{ event.names }}</td>
+                                                <!-- POP UP SKITEN -->
+
+                             <!-- Modal -->
+                    <td id="platsTD" data-title="Plats"><span class="name">{{ event.location }}</span></td>
+
+                    <td id="startTD">{{event.startdate.time}}<span>-</span>{{event.enddate.time}}</td>
+
+                            <!-- Modal -->
+
+                    <div class="modal fade" id="{{event.id}}" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Event description</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p> {{event.startdate}} - {{event.enddate}}</p>
+                                    <p> {{event.description}} </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <div class="fb-share-button" data-layout="button_count"></div>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- POP UP SKITEN -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 {% endblock %}
     </div>
     </div>
        </div>
+
 {% endblock %}
+
+
 
     {% block right %}
 
