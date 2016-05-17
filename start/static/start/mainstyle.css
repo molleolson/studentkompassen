@@ -629,24 +629,28 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-bottom: solid 1px #cccccc;
 }
 #aktivitetTD{
-    width:60%;
+    width:55%;
 
 border-top: 0px;
 }
 #platsTD{
-    width:60%;
+    width:55%;
 border-top: 0px;
-
 }
+#editeventtd{
+    width:10%;
+    text-align: left;
+}
+
 #kategoriTD{
-    width:40%;
+    width:35%;
     border-top: 0px;
     font-size: small;
     font-weight: bold;
     text-align: right;
 }
 #startTD {
-    width: 40%;
+    width: 35%;
     border-top: 0px;
     font-size: small;
     font-weight: bold;
