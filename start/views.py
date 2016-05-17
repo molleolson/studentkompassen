@@ -245,16 +245,13 @@ def reload_ourevents(request):
     nbr = username.find("_")
     username = username[:(nbr)]
     activeHost = Host.objects.filter(name__startswith=username)
-
+    menu_active_item = 'ourevents'
     events = Event.objects.all().filter(host=activeHost).order_by('startdate')
     return render(request, 'start/events.html', locals())
 
 
 @login_required(login_url='/accounts/login')
 def presentation(request):
-    nationname = request.user.get_username()
-    nbr = nationname.find("_")
-    nationname = nationname[:(nbr - 1)]
     host_id = 1
     menu_active_item = 'presentation'
     host = get_object_or_404(Host, pk=host_id)
@@ -272,9 +269,6 @@ def presentation(request):
 
 @login_required(login_url='/accounts/login')
 def addevent(request):
-    nationname = request.user.get_username()
-    nbr = nationname.find("_")
-    nationname = nationname[:(nbr - 1)]
 
     menu_active_item = 'event'
 
