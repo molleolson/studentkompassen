@@ -15,6 +15,10 @@ body{
 body {
             background-color: #fafafa;
         }
+     #calendarBckg{
+            height:600px;
+            width:1130px;
+        }
     #btnlang_en{
     margin-right: 0px;
     background-color: black;
@@ -156,10 +160,6 @@ body {
 
 
         }
-        #calendarBckg{
-            height:600px;
-            width:80%;
-        }
 
 
         .main-header {
@@ -291,6 +291,11 @@ margin:5px;
 /*******************************************/
 /*******************************************/
 @media screen and (min-width:1200px) {
+    #calendarBckg{
+            height:600px;
+            width:1150px;
+        }
+
     #btnlogin{
             display: inline-block;
 
@@ -878,7 +883,8 @@ a.ui-state-highlight {
 ***********************************************************************/
 
 
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 768px)and (max-width: 1199px) {
+
 
     #btnlang_en{
     margin-right: 0px;
@@ -914,7 +920,9 @@ a.ui-state-highlight {
     top: 102px;
 }
 
-
+#dayPickerBtn{
+    width:78%;
+}
 #calendarCollapse{
     padding: 10px;
     right: 30px;
