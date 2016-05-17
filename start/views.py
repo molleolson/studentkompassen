@@ -257,10 +257,10 @@ def presentation(request):
     nbr = activenation.find("_")
     nationname = activenation[:(nbr)]
 
-    activehost = Host.objects.filter(name__startswith = nationname)
-    #activehost = get_object_or_404(Host, pk=[activehost.id])
+    #activehost = Host.objects.filter(name__startswith = nationname)
+    activehost = get_object_or_404(Host.objects.filter(name__startswith = nationname))
 
-    if request.POST:
+    if request.method == 'POST':
         form = PresentationForm(request.POST, instance=[activehost.id])
         if form.is_valid():
             instance = form.save()
