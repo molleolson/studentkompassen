@@ -1,3 +1,4 @@
+
 body{
     color: black;
     background-color: #fafafa;
@@ -43,15 +44,18 @@ body {
     #btnlangBox{
        position: absolute;
                 display: inline-flex;
+
     left: 65%;
     top: 102px;
         width:350px;
 }
+
         #dayPickerBtn {
         width:85%;
         font-family: Raleway;
         font-size: x-large;
         }
+
         #navbarbackgrounded{
         padding-right: 0;
         padding-left: 0;
@@ -59,6 +63,7 @@ body {
         margin-left: auto;
         height: 250px;
         position:relative;
+
         }
         .calendar{
         margin-top: 10px;
@@ -69,12 +74,17 @@ body {
         overflow-x: hidden;
         margin-bottom: 10px;
         border-radius: 10px;
+
+
+
+
         transform:scale(1);
         -ms-transform:scale(1);
         -moz-transform:scale(1);
         -webkit-transform:scale(1);
         -o-transform:scale(1);
         }
+
         .navbar-default{
         color:black;
         border-bottom: 1px solid lightgray;
@@ -90,6 +100,8 @@ body {
         border-top: none;
         box-shadow:none;
         }
+
+
         .navbar-collapse .navbar-nav > .active > a,
         .navbar-collapse .navbar-nav > .active > a:hover {
          /*why you no work? jo, det Ã¤r about background!*/
@@ -99,7 +111,10 @@ body {
         height: 68px;
         border-bottom: 3px solid black;
         box-shadow: none;
+
+
 }
+
         /*hover här*/
         .navbar-collapse .navbar-nav > li > a {
         display: inline-block;
@@ -111,6 +126,7 @@ body {
         color:black;
         bottom:0;
         }
+
         .navbar-collapse .navbar-nav > li > a:after{
         content: '';
         display: block;
@@ -123,6 +139,7 @@ body {
         transition: width .5s ease, background-color .5s ease;
         margin-top: 30px;
         }
+
         .navbar-collapse .navbar-nav > li > a:hover:after {
         width: 100%;
         background: black;
@@ -130,13 +147,12 @@ body {
         }
         .navbar-collapse .navbar-nav > li > a:hover:before {
         }
+
         #calendarBox{
         height:600px;
         margin-top:10px;
         margin-bottom:10px;
-        position: relative;
-        color:red;
-        background-color:red;
+        }
 
 
         }
@@ -151,6 +167,8 @@ body {
         clear: both;
         padding: 0;
         }
+
+
 .ui-widget-content{
     margin-top:65px;
     margin-right:55px;
@@ -166,11 +184,13 @@ body {
 }
 #navbarbackgrounded{
     background-image: none!important;
+
 }
+
+
 .navbar-header{
     width:auto;
 }
-
 #dayPickerBtn {
 font-family: Raleway;
 font-size: x-large;
@@ -181,8 +201,10 @@ width:20%;
 font-size:  x-large;
 color: darkgray;
 }
+
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft{
 height:100%;
+
 background: #fafafa;
 border: #fafafa;
 }
@@ -199,7 +221,9 @@ text-align: center;
 clear: both;
 width: 100%;
 }
+
 /* *******NAVBAR MOBILE SETTINGS **********/
+
 .navbar {
 opacity: 0.9;
 padding: 0;
@@ -220,20 +244,25 @@ background: transparent; /* For browsers that do not support gradients */
 .navbar .navbar-collapse {
   text-align: center;
 }
+
 .navbar-default .navbar-brand{
 color: black;
 }
+
 .navbar-default  .navbar-toggle .icon-bar {
 background-color: black;
 }
+
 .navbar-toggle {
 background-color: #fafafa;
 top:20px;
 }
+
 .collapsing, .in {
 background-color: #fafafa;
 overflow-x: hidden;
 }
+
 .collapsing ul li a, .in ul li a {color: black!important;}
 .collapsing ul li a:hover, .in ul li a:hover {
 color: #f1f1f1!important;
@@ -244,10 +273,12 @@ border-top-right-radius: 0;
 box-shadow: none;
 position:relative;
 }
+
 .container-fluid{
 padding-left: 0;
 padding-right: 0 ;
 }
+
 #calendarBox{
 height:600px;
 margin:5px;
@@ -261,6 +292,7 @@ margin:5px;
 @media screen and (min-width:1200px) {
     #btnlogin{
             display: inline-block;
+
     margin-right: 0px;
     background-color: black;
     color:#fafafa;
@@ -273,6 +305,7 @@ margin:5px;
     #btnlogin2{
     margin-right: 0px;
     display: inline-block;
+
     background-color: black;
     color:#fafafa;
     border-color: black;
@@ -292,9 +325,11 @@ margin:5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 0px;
 }
+
     #btnlang_en:hover{
         background-color:darkgray;
     }
+
     #btnlang_sv{
     display: inline-block;
     margin-right: 0px;
@@ -312,14 +347,19 @@ margin:5px;
     #btnlangBox{
        position: absolute;
                 display: inline-flex;
+
     left: 70%;
     top: 102px;
 }
+
             #dayPickerBtn {
             width:88%;
             font-family: Raleway;
             font-size: x-large;
             }
+
+
+
             #topContainer {
             width: 1200px;
             }
@@ -343,6 +383,7 @@ margin:5px;
             -webkit-transform:scale(1);
             -o-transform:scale(1);
             }
+
             .navbar-default{
             color:black;
             border-bottom: 1px solid lightgray;
@@ -357,6 +398,9 @@ margin:5px;
             border-top: none;
             box-shadow:none;
             }
+
+
+
             .navbar-collapse .navbar-nav > .active > a,
             .navbar-collapse .navbar-nav > .active > a:hover {
              /*why you no work? jo, det Ã¤r about background!*/
@@ -374,10 +418,12 @@ margin:5px;
             padding-bottom: 50px;
             padding-top: 50px;
             }
+
             .navbar-collapse .navbar-nav > li > a:hover {
             color:black;
             bottom:0;
             }
+
             .navbar-collapse .navbar-nav > li > a:after{
             content: '';
             display: block;
@@ -390,6 +436,7 @@ margin:5px;
             transition: width .5s ease, background-color .5s ease;
             margin-top: 30px;
             }
+
             .navbar-collapse .navbar-nav > li > a:hover:after {
             width: 100%;
 			background: black;
@@ -398,27 +445,34 @@ margin:5px;
             .navbar-collapse .navbar-nav > li > a:hover:before {
             }
 }
+
+
 /*Create event css*/
 .divforforms{
     width: 80%;
 }
+
 .nameofevent{
     width:50%;
 }
+
 .field-id_name{
     width: 70%;
 }
 #id_name{
     width: 100%;
 }
+
 .field-id_categories{
 width: 100%;
 float:left;
 }
+
 #id_categories{
     list-style-type: none;
     padding:0;
 }
+
 .field-id_host{
 width:48%;
 }
@@ -432,12 +486,15 @@ width:48%;
 }
 .field-id_location{
     width:48%;
+
 }
 #id_location{
     width:100%;
+
 }
 .field-id_startdate{
     width:48%;
+
 }
 .field-id_enddate {
     width: 48%;
@@ -448,17 +505,23 @@ width:48%;
 #id_description{
     width:100%;
 }
+
+
 #addingevent{
     float:left;
     width:15%;
+
 }
     /* Mellan INSTÃ„LLNINGAR*/
+
 /*#A8D6FF =R:168 G:214 B:255
 #E8F4FF = R:232 G:244 B:255
 rgb(51,153,255); #3399FF*/
+
 /***********************************************************************
 *  Banner SECTION
 ***********************************************************************/
+
 #loggPic{
     position: relative;
     display: block;
@@ -469,6 +532,7 @@ rgb(51,153,255); #3399FF*/
     margin-left: 0px;
     /*background: rgba(232,244,255,0.25);*/
     /*backgrou#nd: rgba(232,244,255,0.25);*/
+
 }
 #loggoBox{
     display: inline-block;
@@ -477,6 +541,7 @@ rgb(51,153,255); #3399FF*/
     position:relative;
     display: block;
     max-width: 150px;
+
     width:100px;
     left: 50%;
     margin-left:-50px;
@@ -485,21 +550,28 @@ rgb(51,153,255); #3399FF*/
 div{
     display: block;
 }
+
 #headerPic{
     width: 100%;
     height:100%;
+
 }
+
+
 .block{
     padding: 10px;
 }
 .hidden{
     display: none;
 }
+
 #nationDesc{
     background-color: black;
     height: 100px;
     width: 100%;
 }
+
+
 /***********************************************************************
 *  DATETIMEPICKER SECTION
 http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
@@ -511,9 +583,14 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-radius:0px;
     font-family:Raleway;
 }
+
+
+
+
 /***********************************************************************
 *  Navbar slut
 ***********************************************************************/
+
 /***********************************************************************
 *  Flaggorna SECTION
 ***********************************************************************/
@@ -532,8 +609,9 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 ***********************************************************************/
 .calendar{
     margin-top: 30px;
-    background-color:transparent;
+
 }
+
 .calendar th {
     border-bottom: none;
     font-weight: normal;
@@ -541,24 +619,29 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 .calendar thead{
     border-bottom: solid 1px #cccccc;
+
 }
 .calendar > tbody> tr {
     border-bottom: solid 0px;
+
 }
 .calendar td{
     display: block;
     border-top:0px;
+
 }
 #radBOD{
     border-bottom: solid 1px #cccccc;
 }
 #aktivitetTD{
     width:60%;
+
 border-top: 0px;
 }
 #platsTD{
     width:60%;
 border-top: 0px;
+
 }
 #kategoriTD{
     width:40%;
@@ -573,25 +656,39 @@ border-top: 0px;
     font-size: small;
     font-weight: bold;
         text-align: right;
+
 }
+
+
+
+
 .responsive-table th{
     font-family: Raleway;
 }.responsive-table tr{
     font-family: Raleway;
 }
+
+
  .table-striped  > tbody > tr:nth-of-type(even) {
     background-color:   #fafafa;
+
 }
  .table-striped  > tbody > tr:nth-of-type(odd) {
     background-color:  #fafafa;
+
 }
  #monthAndDay {
+
     font-family: Raleway;
     font-style: oblique;
 }
+
+
+
 .calendar-list {
     width: 100%
 }
+
 .calendar-list > thead,
 .calendar-list > tbody,
 .calendar-list > thead > tr,
@@ -600,6 +697,7 @@ border-top: 0px;
 .calendar-list > tbody > tr > td {
     display: block;
 }
+
 .calendar-list > tbody > tr:after,
 .calendar-list > thead > tr:after {
     content: ' ';
@@ -607,10 +705,12 @@ border-top: 0px;
     visibility: hidden;
     clear: both;
 }
+
 .calendar-list > tbody {
     overflow-y: auto;
     height: 400px;
 }
+
 .calendar-list > tbody > tr > td,
 .calendar-list > thead > tr > th {
     width: 50%;
@@ -619,7 +719,9 @@ border-top: 0px;
 /***********************************************************************
 *  Calendar Slut
 ***********************************************************************/
+
 /*http://bootsnipp.com/snippets/featured/input-file-popover-preview-image*/
+
 .image-preview-input {
     position: relative;
     overflow: hidden;
@@ -642,36 +744,88 @@ border-top: 0px;
 .image-preview-input-title {
     margin-left:2px;
 }
+
+
+
 #map{
     left:5px;
     border-radius: 20px;
 }
+
+#mapdesc{
+    float: right;
+}
+#mapdescription{
+    float: right;
+    left: 50%;
+    top:5%;
+    position: relative;
+}
+
+#nation_name{
+    position: relative;
+    left:20%;
+    bottom: 50%;
+    font-family: Raleway;
+}
+
+
 #editNationDesc{
     float:right;
 }
+
+#editpresentation{
+
+    position: relative;
+    left:28%;
+    background-color: inherit;
+    width: 180%;
+}
+
+.textarea{
+    background-color: #0d6aad;
+    width: 180%;
+}
+
+#id_description{
+
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+    font-family: inherit;
+}
+
+
 a.ui-state-highlight {
     border-color: black;
     background: #e6e6e6;
 }
+
 .sizeMonth{
+
 }
+
 .modal-header{
     font-family: Raleway;
+
 }
 .modal-body{
     font-family: Georgia;
 }
+
 /***********************************************************************
 *  Boxarn i presentation
 ***********************************************************************/
 .well{
     background: #fafafa; /*mÃ¥ste vara med fÃ¶r att kunna ge backgroundcolors i #nationDesc #dontMiss osv*/
 }
+
 #nationDesc{
     width:100%;
     border: 1px solid black;
     background-color: #A8D6FF	 ;
 }
+
 #dontMiss{
     width:100%;
     border: 1px solid black;
@@ -682,6 +836,7 @@ a.ui-state-highlight {
     border: 1px solid black;
     background-color: #A8D6FF	 ;
 }
+
 #contact{
     width:100%;
     border: 1px solid black;
@@ -690,7 +845,10 @@ a.ui-state-highlight {
 /***********************************************************************
 *  Boxarna i presentation slut
 ***********************************************************************/
+
+
 @media screen and (min-width: 798px) {
+
     #btnlang_en{
     margin-right: 0px;
     background-color: black;
@@ -720,9 +878,12 @@ a.ui-state-highlight {
     #btnlangBox{
        position: absolute;
                 display: inline-flex;
+
     left: 70%;
     top: 102px;
 }
+
+
 #calendarCollapse{
     padding: 10px;
     right: 30px;
@@ -733,15 +894,26 @@ a.ui-state-highlight {
     float: left;
 }
 }
+
+
+
+
 #dayPickerBtnRight, #dayPickerBtnLeft{
     font-size:  x-large;
     color: #3399FF;
+
+
 }
+
+
 #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft {
     margin-bottom: -20px;
     background: #fafafa;
     border: rgb(232, 244, 255);
+
 }
+
+
     #dayPickerBtn, #dayPickerBtnRight,#dayPickerBtnLeft:focus{
 outline:0;
     }
