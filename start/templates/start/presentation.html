@@ -2,17 +2,18 @@
 {% load i18n %}
 {% block title %}Presentation{% endblock %}
 
-    {% block left %}
-
+{% block left %}
 <div class="container-fluid" id="calendarBox" >
-<div class="container-fluid" id="calendarBox" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat; background-size: 100%;background-position: bottom;">
+    <div class="container-fluid" id="calendarBox" style="background: url('{{ STATIC_URL }}start/SiluettUA_blue.png') no-repeat; background-size: 100%;background-position: bottom;">
             <div class="row">
                 <div class="col-sm-6" >
 
-                    <div id="loggaNat" class="col-md-1"><img src="{{host.logo}}"  width="10" height="10" frameborder="0" style="border:0"></div>
-                    <div id="nation_name"><h1>{{host.name}}</h1></div>
+                    <div id="loggaNat" class="col-md-1"><img src="{{activehost.logo}}"  width="110" height="110" frameborder="0" style="border:0"></div>
+                    <div id="nation_name" data-title="Namn"><h1>{{ activehost.name }}</h1></div>
 
                     <div id="editpresentation">
+
+
                         <form action="{% url "start:presentation" %}" method="POST">
                                 {% csrf_token %}
                                 {% include "form.html" with form=form %}
@@ -26,7 +27,7 @@
 
             </div>
      </div>
-
-    {% endblock %}
-
 </div>
+
+{% endblock %}
+
