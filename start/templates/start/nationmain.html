@@ -16,15 +16,14 @@
  <li><a class="navbar-brand">Välkommen  {{nationname}} Nation till nationsinlogget</a></li>
 {% endblock %}
 
-{% with usertype=request.user.social_auth.count%}
-{% if usertype != 0 %}
+
+{% if request.user.social_auth.count != 0 %}
 Hello
 
 
 <meta http-equiv="refresh" content="0;url:http://130.238.15.202:8001/sv/start">
 
 {% endif %}
-{% endwith %}
 
 
 
