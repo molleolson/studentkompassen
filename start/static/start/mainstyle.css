@@ -69,7 +69,84 @@ body {
         position:relative;
 
         }
-        .calendar{
+         .navbar-default{
+            color:black;
+            border-bottom: 1px solid lightgray;
+            background:#fafafa;
+            margin-left: -15px;
+            width: 1200px;
+            height: 100px;
+            border-radius: 0;
+            font-family: Raleway;
+            border-right: 0px;
+            border-left:0px;
+            border-top: none;
+            box-shadow:none;
+            }
+
+            .navbar-collapse .navbar-nav {
+                padding-top: 50px;
+            }
+
+            .navbar-collapse .navbar-nav > .active > a{
+                 background: #fafafa;
+            bottom:2px;
+            color:black;
+            height: 53px;
+            border-bottom: 3px solid black;
+            box-shadow: none;
+}
+            /*hover här*/
+            .navbar-collapse .navbar-nav > li > a {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            }
+            .navbar-collapse .navbar-nav > .active > a:hover {
+             /*why you no work? jo, det Ã¤r about background!*/
+            background: #fafafa;
+            bottom:2px;
+            color:black;
+            height: 53px;
+            border-bottom: 3px solid black;
+            box-shadow: none;
+}
+            /*hover här*/
+            .navbar-collapse .navbar-nav > li > a {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0px;
+            padding-top: 0px;
+                bottom:2px;
+            }
+
+            .navbar-collapse .navbar-nav > li > a:hover {
+                color:black;
+
+            bottom:2px;
+            }
+
+            .navbar-collapse .navbar-nav > li > a:after{
+            content: '';
+            display: block;
+            margin-left: auto;
+            margin-bottom: auto;
+            margin-right:auto;
+            height: 3px;
+            width: 0px;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+            margin-top: 30px;
+            }
+
+            .navbar-collapse .navbar-nav > li > a:hover:after {
+            width: 100%;
+			background: black;
+            margin-top: 30px;
+            }
+            .navbar-collapse .navbar-nav > li > a:hover:before {
+            }.calendar{
         margin-top: 10px;
         padding: 10px;
         height: 500px;
@@ -89,68 +166,7 @@ body {
         -o-transform:scale(1);
         }
 
-        .navbar-default{
-        color:black;
-        border-bottom: 1px solid lightgray;
-        /*background-color: #fafafa;*/
-        background:#fafafa;
-        margin-left: -15px;
-        width: 1200px;
-        height: 100px;
-        border-radius: 0;
-        font-family: Raleway;
-        border-right: 0px;
-        border-left:0px;
-        border-top: none;
-        box-shadow:none;
-        }
 
-
-        .navbar-collapse .navbar-nav > .active > a,
-        .navbar-collapse .navbar-nav > .active > a:hover {
-         /*why you no work? jo, det Ã¤r about background!*/
-        background: #fafafa;
-        bottom:2px;
-        color:black;
-        height: 68px;
-        border-bottom: 3px solid black;
-        box-shadow: none;
-
-
-}
-
-        /*hover här*/
-        .navbar-collapse .navbar-nav > li > a {
-        display: inline-block;
-        position: relative;
-        padding-bottom: 50px;
-        padding-top:50px;
-            }
-        .navbar-collapse .navbar-nav > li > a:hover {
-        color:black;
-        bottom:0;
-        }
-
-        .navbar-collapse .navbar-nav > li > a:after{
-        content: '';
-        display: block;
-        margin-left: auto;
-        margin-bottom: auto;
-        margin-right:auto;
-        height: 3px;
-        width: 0px;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease;
-        margin-top: 30px;
-        }
-
-        .navbar-collapse .navbar-nav > li > a:hover:after {
-        width: 100%;
-        background: black;
-        margin-top: 30px;
-        }
-        .navbar-collapse .navbar-nav > li > a:hover:before {
-        }
 
         #calendarBox{
         height:600px;
@@ -173,6 +189,10 @@ body {
     margin-top:65px;
     margin-right:55px;
 }
+.modal-backdrop
+{
+    position: relative;
+}
 
 /*******************************************/
 /*******************************************/
@@ -182,6 +202,7 @@ body {
 @media screen and (max-width: 767px) and (min-width: 0px) {
 body {
 }
+
 #navbarbackgrounded{
     background-image: none!important;
 
@@ -297,6 +318,12 @@ margin:5px;
             #calendarBckg{
                     height:600px;
                     width:1150px;
+                    background: url('/static/start/SiluettUA_blue.png') no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    opacity: 1;
+                    position: absolute;
+
                 }
 
             #btnlogin{
@@ -527,12 +554,33 @@ width:48%;
     width: 48%;
 }
 .field-id_description{
-    width:70%;
-}
-#id_description{
-    width:100%;
+    width:50%;
+    float: left;
 }
 
+#id_description{
+
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+    font-family: inherit;
+    margin-right: 5px;
+
+}
+
+.field-id_description_english{
+    width:50%;
+    float: right;
+}
+
+#id_description_english{
+
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+    font-family: inherit;
+
+}
 
 #addingevent{
     float:left;
@@ -844,13 +892,7 @@ border-top: 0px;
     width: 180%;
 }
 
-#id_description{
 
-    border-radius: 10px;
-    width: 100%;
-    height: 30%;
-    font-family: inherit;
-}
 
 
 a.ui-state-highlight {
@@ -906,7 +948,36 @@ a.ui-state-highlight {
 
 @media screen and (min-width: 768px)and (max-width: 1199px) {
 
+  #btnlogin{
+                    display: inline-block;
 
+            margin-right: 0px;
+            background-color: black;
+            color:#fafafa;
+            border-color: black;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 5px;
+            }
+     #btnlogin2{
+            margin-right: 0px;
+            display: inline-block;
+
+            background-color: black;
+            color:#fafafa;
+            border-color: black;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 5px;
+            }
+     #btnlogin:hover{
+        background-color:darkgray;
+    }
+     #btnlogin2:hover{
+        background-color:darkgray;
+    }
     #btnlang_en{
     margin-right: 0px;
     background-color: black;

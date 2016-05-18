@@ -26,11 +26,12 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Event description</h4>
+                                    <h4 class="modal-title">{{ event.name }}</h4>
                                 </div>
                                 <div class="modal-body">
                                     <p> {{event.startdate}} - {{event.enddate}}</p>
-                                    <p> {{event.description}} </p>
+                                    <p>{% trans "Swedish description: " %} {{event.description}} </p>
+                                    <p>{% trans "English description: " %} {{event.description_english}} </p>
                                 </div>
 
                                 <div class="modal-footer">
