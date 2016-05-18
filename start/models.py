@@ -47,6 +47,7 @@ class Category(models.Model):
 class Event(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True, verbose_name='Name of event')
     description = models.CharField(max_length=400, blank=True, null=True)
+    description_english = models.CharField(max_length=400, blank=True, null=True)
     startdate = models.DateTimeField('start date')
     enddate = models.DateTimeField('end date', )
     reccurrences = RecurrenceField(null=True)
