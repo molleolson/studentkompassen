@@ -8,6 +8,8 @@ body{
     bottom:20px;
     color:#5e5e5e;
 }
+.name{
+}
 #brandNation:hover{
     position:relative;
     bottom:20px;
@@ -28,6 +30,12 @@ body {
      #calendarBckg{
             height:600px;
             width:1130px;
+            background: url('/static/start/SiluettUA_blue.png') no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    opacity: 1;
+                    position: absolute;
+
         }
     #btnlang_en{
     margin-right: 0px;
@@ -143,7 +151,7 @@ body {
             margin-left: auto;
             margin-bottom: auto;
             margin-right:auto;
-            height: 3px;
+            height: 2px;
             width: 0px;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
@@ -153,7 +161,7 @@ body {
             .navbar-collapse .navbar-nav > li > a:hover:after {
             width: 100%;
 			background: black;
-            margin-top: 30px;
+            margin-top: 31px;
             }
             .navbar-collapse .navbar-nav > li > a:hover:before {
             }.calendar{
@@ -220,6 +228,12 @@ body {
   #calendarBckg{
             height:500px;
             width:98%;
+         background: url('/static/start/SiluettUA_blue.png') no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    opacity: 1;
+                    position: absolute;
+
         }
 
 .navbar-header{
@@ -443,6 +457,7 @@ margin:5px;
             border-left:0px;
             border-top: none;
             box-shadow:none;
+
             }
 
             .navbar-collapse .navbar-nav {
@@ -494,7 +509,7 @@ margin:5px;
             margin-left: auto;
             margin-bottom: auto;
             margin-right:auto;
-            height: 3px;
+            height: 2px;
             width: 0px;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
@@ -504,10 +519,11 @@ margin:5px;
             .navbar-collapse .navbar-nav > li > a:hover:after {
             width: 100%;
 			background: black;
-            margin-top: 30px;
+            margin-top: 31px;
             }
             .navbar-collapse .navbar-nav > li > a:hover:before {
             }
+
 }
 
 
@@ -718,6 +734,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 #radBOD{
     border-bottom: solid 1px #cccccc;
     background: transparent;
+    cursor: pointer;
+}
+#radBOD:hover{
+    background: #efefef;
+
 }
 #aktivitetTD{
     width:60%;
@@ -732,7 +753,7 @@ border-top: 0px;
 #kategoriTD{
     width:40%;
     border-top: 0px;
-    font-size: small;
+    font-size: 11px;
     font-weight: bold;
     text-align: right;
 }
