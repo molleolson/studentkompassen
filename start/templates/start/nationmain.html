@@ -1,7 +1,7 @@
 {% extends "start/main.html" %}
 {% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
-{{ request.user.social_auth.count }}
+
 
 
 {% block menu_item_1 %}
@@ -14,6 +14,7 @@
 
 {% block menu_item_2 %}
  <a class="navbar-brand" id="brandNation">Välkommen  {{nationname}} Nation till nationsinlogget</a>
+{{ request.user.social_auth.count }}
 {% endblock %}
 
 
