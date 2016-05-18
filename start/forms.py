@@ -11,15 +11,18 @@ from datetimewidget.widgets import DateTimeWidget, DateWidget
 class EventForm(ModelForm):
     class Meta:
         model = Event
-        fields = ['name', 'categories','host', 'location', 'startdate', 'enddate', 'reccurrences', 'description']
+        fields = ['name', 'categories','host', 'location', 'startdate', 'enddate', 'reccurrences',
+                  'description', 'description_english']
 
         widgets = {
             # Use localization and bootstrap 3
-            'startdate': DateTimeWidget(attrs={'class': 'DateTimeField'}, options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
-            'enddate': DateTimeWidget(attrs={'class':'DateTimeField'},options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
-            #'multipledates': DateTimeWidget(attrs={'class': "multidatespicker"}, usel10n=True, bootstrap_version=3),
+            'startdate': DateTimeWidget(attrs={'class': 'DateTimeField'},
+                                        options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
+            'enddate': DateTimeWidget(attrs={'class':'DateTimeField'},
+                                      options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
             'categories': CheckboxSelectMultiple(attrs={'class': 'choice_field'}),
-            'description': Textarea(attrs={'cols': 60, 'rows': 10}),
+            'description': Textarea(attrs={'cols': 30, 'rows': 10}),
+            'description_english': Textarea(attrs={'cols': 30, 'rows': 10}),
             'name': TextInput(attrs={'class': "nameofevent", 'rows':1}),
 
 
@@ -36,4 +39,4 @@ class EventForm(ModelForm):
 class PresentationForm(ModelForm):
     class Meta:
         model = Host
-        fields = ['description']
+        fields = ['description', 'description_english']
