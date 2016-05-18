@@ -1,7 +1,7 @@
 {% extends "start/main.html" %}
 {% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
-{{ if request.user.social_auth.count }}
+{{ request.user.social_auth.count }}
 
 
 {% block menu_item_1 %}
