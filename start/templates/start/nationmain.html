@@ -1,7 +1,7 @@
 {% extends "start/main.html" %}
 {% load i18n %}
 {% block title %}Nationsstartsida{% endblock %}
-
+{{ if request.user.social_auth.count }}
 
 
 {% block menu_item_1 %}
@@ -17,13 +17,6 @@
 {% endblock %}
 
 
-{% if request.user.social_auth.count != 0 %}
-Hello
-
-
-<meta http-equiv="refresh" content="0;url:http://130.238.15.202:8001/sv/start">
-
-{% endif %}
 
 
 
