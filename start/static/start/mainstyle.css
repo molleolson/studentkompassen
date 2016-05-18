@@ -189,6 +189,10 @@ body {
     margin-top:65px;
     margin-right:55px;
 }
+.modal-backdrop
+{
+    position: relative;
+}
 
 /*******************************************/
 /*******************************************/
@@ -198,6 +202,7 @@ body {
 @media screen and (max-width: 767px) and (min-width: 0px) {
 body {
 }
+
 #navbarbackgrounded{
     background-image: none!important;
 
@@ -313,6 +318,12 @@ margin:5px;
             #calendarBckg{
                     height:600px;
                     width:1150px;
+                    background: url('/static/start/SiluettUA_blue.png') no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    opacity: 1;
+                    position: absolute;
+
                 }
 
             #btnlogin{

@@ -53,10 +53,11 @@ function switchDateCalender(eventDate){
 {% endblock %}
 {% block left%}
 <div class="container-fluid" id="calendarBox" style ="opacity: 1">
-   <!--
-<div class="container-fluid" id="calendarBckg" style="background: url('/static/start/SiluettUA_blue.png') no-repeat;background-size: 100%; background-position: bottom;background-opacity: 0.2;position: absolute;">
--->
+
+<div class="container-fluid" id="calendarBckg" >
+
     <div class="datetimepicker ll-skin-cangas hidden-xs pull-right"  id="datepicker"></div>
+
     <div class="container-fluid col-sm-8 col-md-8 col-lg-8" id = "calendarMinibox">
         <button class=" glyphicon glyphicon-chevron-left" id="dayPickerBtnLeft" href="#"></button>
         <button  class = "glyphicon" id="dayPickerBtn"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></></button>
@@ -68,6 +69,8 @@ function switchDateCalender(eventDate){
         </div>
     </div>
 </div>
+      </div>
+
 
 {% endblock %}
 {% block right %}
