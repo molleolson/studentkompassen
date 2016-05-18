@@ -3,7 +3,9 @@
 {% block title %}Nationsstartsida{% endblock %}
 
 {% with usertype=request.user.social_auth.count%}
-{% if usertype %}
+{% if usertype != 0 %}
+Hello
+
 
 <meta http-equiv="refresh" content="0;url:http://130.238.15.202:8001/sv/start">
 
