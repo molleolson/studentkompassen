@@ -734,6 +734,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 #radBOD{
     border-bottom: solid 1px #cccccc;
     background: transparent;
+    cursor: pointer;
+}
+#radBOD:hover{
+    background: #efefef;
+
 }
 #aktivitetTD{
     width:60%;
