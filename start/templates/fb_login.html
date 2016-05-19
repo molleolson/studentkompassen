@@ -7,11 +7,30 @@
 <br>
 <!--<a href="/logout">Logout</a>-->
 {% else %}
-<a class="btn btn-block btn-social btn-facebook" href="{% url 'social:begin' 'facebook' %}?next={{ redirect_url }}">
+<div class="container">
+
+
+    </div>
+<div class="container-fluid" id="loginBox" >
+    <div class="row">
+        <div class="col-sm-12 col-md-12 "  >
+            <h1 class="text-center login-title">Sign in</h1>
+            <div class="account-wall">
+                <form class="form-signin">
+                    <a class="btn btn-block btn-social btn-facebook" href="{% url 'social:begin' 'facebook' %}?next={{ redirect_url }}">
     <span class="fa fa-facebook"></span> Login with Facebook</a>
 
-<a class="btn btn-block btn-social" href="accounts/login">
+                    <a class="btn btn-block btn-social " id="nationinlogBTN" href="accounts/login">
     <span class=""></span> Login as a nation</a>
+
+
+                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="#" class="text-center new-account">Create an account </a>
+        </div>
+    </div>
+</div>
 <br>
 <br>
 <br>
