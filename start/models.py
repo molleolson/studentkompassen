@@ -1,4 +1,4 @@
-from __future__ import unicode_literals
+#from __future__ import unicode_literals
 import datetime
 
 from django.utils import timezone
@@ -28,8 +28,8 @@ class Host(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     logo = models.CharField(max_length=200, blank=True, null=True)
-    description = models.TextField(blank=True, null=True)
-    description_english = models.TextField(blank=True, null=True)
+    hostdescription = models.TextField(blank=True, null=True)
+    hostdescription_english = models.TextField(blank=True, null=True)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
 
@@ -58,12 +58,13 @@ class Event(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, verbose_name='Plats')
 
     def names(self):
-        return ', '.join([c.name for c in self.categories.all()])
+        return u', '.join([c.name for c in self.categories.all()])
 
     names.short_description = "Categories"
 
 
     def __unicode__(self):
-        return self.name
+        return u'%s / %s / %s' % (self.name, self.description, self.description_english)
+
 
 

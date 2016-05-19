@@ -39,4 +39,4 @@ class EventForm(ModelForm):
 class PresentationForm(ModelForm):
     class Meta:
         model = Host
-        fields = ['description', 'description_english']
+        fields = ['hostdescription', 'hostdescription_english']
