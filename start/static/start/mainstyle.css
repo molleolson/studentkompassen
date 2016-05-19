@@ -583,6 +583,16 @@ width:48%;
     float: left;
 }
 
+.field-id_hostdescription{
+    width:40%;
+    float: left;
+}
+
+#presentation_btn{
+    right:70%;
+
+}
+
 #id_description{
 
     border-radius: 10px;
@@ -607,6 +617,25 @@ width:48%;
 
 }
 
+#id_hostdescription{
+
+    border-radius: 10px;
+    height: 30%;
+    font-family: inherit;
+    margin-right: 5px;
+
+}
+
+#id_hostdescription_english{
+
+    border-radius: 10px;
+    height: 30%;
+    font-family: inherit;
+    margin-right: 5px;
+
+}
+
+#id_
 #addingevent{
     float:left;
     width:15%;
