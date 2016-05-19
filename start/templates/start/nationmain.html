@@ -7,14 +7,19 @@
 {% block menu_item_1 %}
     <li {% if menu_active_item == 'now' %} class="active"{% endif %}><a href="{% url 'start:nationmain' %}">{% trans "Right now"%}</a></li>
     <li {% if menu_active_item == 'event' %} class="active"{% endif %}><a href="{% url 'start:addevent' %}">{% trans "Create event"%}</a></li>
-<li {% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a href="{% url 'start:ourevents' %}">{% trans "Our events"%}</a></li>
+    <li {% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a href="{% url 'start:ourevents' %}">{% trans "Our events"%}</a></li>
     <li {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a href="{% url 'start:presentation' %}">{% trans "Presentation"%}</a></li>
 
 {% endblock %}
 
 {% block menu_item_2 %}
- <a class="navbar-brand" id="brandNation">Välkommen  {{nationname}} Nation till nationsinlogget</a>
-{{ request.user.social_auth.count }}
+ <a class="navbar-brand" id="brandNation">{% trans "Welcome" %}  {{nationname}} Nation {% trans "to the admin page" %}</a>
+
+
+{% if request.user.social_auth.count %}
+<meta http-equiv="refresh" content="0;url=http://130.238.15.202:8000/start">
+{% endif %}
+
 {% endblock %}
 
 

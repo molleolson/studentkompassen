@@ -81,6 +81,7 @@
 </nav>
       </div>
 </div>
+
 <div class="container-fluid" id="btnlangBox">
     {% get_available_languages as languages %}
                     {% for lang_code, lang_name in languages %}
@@ -93,6 +94,7 @@
                 <a id="btnlogin2" type="button" class="btn btn-info  hidden-xs" href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a>
             {% endif %}
 </div>
+
 {% endblock %}
 {% block main %}
 {% block left %}

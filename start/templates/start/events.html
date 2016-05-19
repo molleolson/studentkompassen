@@ -16,7 +16,19 @@
                              <!-- Modal -->
                     <td id="platsTD" data-title="Plats"><span class="name">{{ event.location }}</span></td>
 
-                    <td id="startTD">{{event.startdate.time}}<span>-</span>{{event.enddate.time}}</td>
+                    <td id="startTD">
+                        {% if event.startdate.date != event.enddate.date %}
+                            {{ event.startdate.date }}
+                        {% endif %}
+
+                        {{event.startdate.time}} <span>-</span>
+
+                        {% if event.startdate.date != event.enddate.date %}
+                            {{ event.enddate.date }}
+                        {% endif %}
+
+                        {{event.enddate.time}}</td>
+
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->
 
@@ -37,6 +49,11 @@
                                 <div class="modal-footer">
                                     <div class="fb-share-button" data-layout="button_count"></div>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <br>
+                                    <div class="fb-comments"
+                                        data-href="http://130.238.15.202:8000"
+                                         data-numposts="5">
+                                    </div>
                                 </div>
 
 
