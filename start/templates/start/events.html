@@ -14,7 +14,15 @@
                                                 <!-- POP UP SKITEN -->
 
                              <!-- Modal -->
-                    <td id="platsTD" data-title="Plats"><span class="name">{{ event.location }}</span></td>
+                    <td id="platsTD" data-title="Plats"><span class="name">
+
+                        {% if  event.location.name == event.host.name %}
+                        {{ event.host }}
+                        {% else %}
+                        {% trans " By " %} {{ event.host }} {% trans " at " %}
+                        {{ event.location }}
+                        {% endif %}
+                        </span></td>
 
                     <td id="startTD">
                         {% if event.startdate.date != event.enddate.date %}

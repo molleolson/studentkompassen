@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-19 11:40+0200\n"
+"POT-Creation-Date: 2016-05-19 13:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,17 +68,23 @@ msgstr "Redigera event"
 
 #: start/templates/start/editevent.html:24
 #, fuzzy
-#| msgid "Create a new event"
 msgid "Edit event"
 msgstr "Redigera event"
 
-#: start/templates/start/events.html:45
+#: start/templates/start/events.html:22
+msgid " By "
+msgstr "Av"
+
+#: start/templates/start/events.html:22
+msgid " at "
+msgstr " på "
+
+#: start/templates/start/events.html:53
 #, fuzzy
-#| msgid "Edit a description"
 msgid "Swedish description: "
 msgstr "Svensk beskrivning: "
 
-#: start/templates/start/events.html:46
+#: start/templates/start/events.html:54
 #, fuzzy
 #| msgid "Edit a description"
 msgid "English description: "
