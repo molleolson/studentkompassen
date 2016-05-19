@@ -14,13 +14,11 @@
 
 {% block menu_item_2 %}
  <a class="navbar-brand" id="brandNation">Välkommen  {{nationname}} Nation till nationsinlogget</a>
-{{ request.user.social_auth.count }}
 
 
-{% if request.user.userprofile.facebook_{request.user.id} %}
-Hello!
+{% if request.user.social_auth.count %}
+<meta http-equiv="refresh" content="0;url=http://130.238.15.202:8000/start">
 {% else %}
-
 Hej !
 {% endif %}
 
