@@ -608,8 +608,9 @@ width:100%;
 }
 
 #addingevent{
-    float:left;
-    width:100px;
+    float: right;
+
+    width:200px;
 
 }
     /* Mellan INSTÃ„LLNINGAR*/
