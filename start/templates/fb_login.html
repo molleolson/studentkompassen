@@ -7,14 +7,11 @@
 <br>
 <!--<a href="/logout">Logout</a>-->
 {% else %}
-<div class="container">
 
-
-    </div>
 <div class="container-fluid" id="loginBox" >
     <div class="row">
         <div class="col-sm-12 col-md-12 "  >
-            <h1 class="text-center login-title">Sign in2</h1>
+            <h1 class="text-center login-title">Sign in</h1>
             <div class="account-wall">
                 <form class="form-signin">
                     <a class="btn btn-block btn-social btn-facebook" href="{% url 'social:begin' 'facebook' %}?next={{ redirect_url }}">
