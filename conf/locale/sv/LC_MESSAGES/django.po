@@ -64,13 +64,13 @@ msgstr "Tid"
 #, fuzzy
 #| msgid "Create a new event"
 msgid "Edit an event"
-msgstr "Skapa ett nytt event"
+msgstr "Redigera event"
 
 #: start/templates/start/editevent.html:24
 #, fuzzy
 #| msgid "Create a new event"
 msgid "Edit event"
-msgstr "Skapa ett nytt event"
+msgstr "Redigera event"
 
 #: start/templates/start/events.html:45
 #, fuzzy
