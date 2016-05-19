@@ -13,6 +13,7 @@
                     <td id="kategoriTD">{{ event.names }}</td>
                                                 <!-- POP UP SKITEN -->
 
+
                              <!-- Modal -->
                     <td id="platsTD" data-title="Plats"><span class="name">
 
@@ -25,9 +26,11 @@
                         </span></td>
 
                     <td id="startTD">
+
                         {% if event.startdate.date != event.enddate.date %}
                             {{ event.startdate.date }}
                         {% endif %}
+
 
                         {{event.startdate.time}} <span>-</span>
 
