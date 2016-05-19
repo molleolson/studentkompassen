@@ -17,7 +17,7 @@
 {{ request.user.social_auth.count }}
 
 
-{% if request.user.userprofile.facebook_{{request.user.id}} %}
+{% if request.user.userprofile.facebook_{request.user.id} %}
 Hello!
 {% else %}
 
