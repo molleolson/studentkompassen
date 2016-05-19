@@ -528,7 +528,7 @@ margin:5px;
 
 /*Create event css*/
 .divforforms{
-    width: 80%;
+    width: 50%;
 }
 
 .nameofevent{
@@ -536,10 +536,10 @@ margin:5px;
 }
 
 .field-id_name{
-    width: 70%;
+    width: 50%;
 }
 #id_name{
-    width: 100%;
+    width: 50%;
 }
 
 .field-id_categories{
@@ -553,7 +553,7 @@ float:left;
 }
 
 .field-id_host{
-width:48%;
+width:100%;
 }
 #id_host{
     width: 100%;
@@ -564,7 +564,7 @@ width:48%;
     height:151px;
 }
 .field-id_location{
-    width:48%;
+    width:100%;
 
 }
 #id_location{
@@ -572,14 +572,14 @@ width:48%;
 
 }
 .field-id_startdate{
-    width:48%;
+    width:100%;
 
 }
 .field-id_enddate {
-    width: 48%;
+    width: 100%;
 }
 .field-id_description{
-    width:50%;
+    width:100%;
     float: left;
 }
 
@@ -590,26 +590,27 @@ width:48%;
     height: 30%;
     font-family: inherit;
     margin-right: 5px;
+    float: left;
 
 }
 
 .field-id_description_english{
-    width:50%;
-    float: right;
+    width: 100%;
+
 }
 
 #id_description_english{
-
     border-radius: 10px;
     width: 100%;
     height: 30%;
     font-family: inherit;
-
+    float: left;
 }
 
 #addingevent{
-    float:left;
-    width:15%;
+    float: right;
+
+    width:200px;
 
 }
     /* Mellan INSTÃ„LLNINGAR*/
