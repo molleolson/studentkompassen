@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-18 11:27+0200\n"
+"POT-Creation-Date: 2016-05-19 10:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/templates/pagelayout.html:75
+#: start/templates/pagelayout.html:76
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:89
+#: start/templates/pagelayout.html:91
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:92
+#: start/templates/pagelayout.html:94
 msgid "Login"
 msgstr "Logga in"
 
@@ -71,13 +71,13 @@ msgstr "Skapa ett nytt event"
 msgid "Confirm edited event"
 msgstr "Skapa event"
 
-#: start/templates/start/events.html:33
+#: start/templates/start/events.html:45
 #, fuzzy
 #| msgid "Edit a description"
 msgid "Swedish description: "
 msgstr "Svensk beskrivning: "
 
-#: start/templates/start/events.html:34
+#: start/templates/start/events.html:46
 #, fuzzy
 #| msgid "Edit a description"
 msgid "English description: "
@@ -87,7 +87,7 @@ msgstr "Engelsk beskrivning: "
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/main.html:36 start/templates/start/nationmain.html:14
+#: start/templates/start/main.html:36 start/templates/start/nationmain.html:8
 msgid "Right now"
 msgstr "Just nu"
 
@@ -135,19 +135,27 @@ msgstr "Nationer och kårer"
 msgid "My profile"
 msgstr "Min profil"
 
-#: start/templates/start/nationmain.html:15
+#: start/templates/start/nationmain.html:9
 msgid "Create event"
 msgstr "Skapa event"
 
-#: start/templates/start/nationmain.html:16
+#: start/templates/start/nationmain.html:10
 msgid "Our events"
 msgstr "Våra event"
 
-#: start/templates/start/nationmain.html:17
+#: start/templates/start/nationmain.html:11
 msgid "Presentation"
 msgstr "Presentation"
 
-#: start/templates/start/ourevents.html:18
+#: start/templates/start/nationmain.html:16
+msgid "Welcome"
+msgstr "Välkommen"
+
+#: start/templates/start/nationmain.html:16
+msgid "to the admin page"
+msgstr "till adminsidan"
+
+#: start/templates/start/ourevents.html:19
 msgid "Edit"
 msgstr "Redigera"
 

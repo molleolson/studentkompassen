@@ -11,8 +11,8 @@ from datetimewidget.widgets import DateTimeWidget, DateWidget
 class EventForm(ModelForm):
     class Meta:
         model = Event
-        fields = ['name', 'categories','host', 'location', 'startdate', 'enddate', 'reccurrences',
-                  'description', 'description_english']
+        fields = ['name', 'description', 'description_english','categories','host', 'location', 'startdate', 'enddate', 'reccurrences'
+                  ]
 
         widgets = {
             # Use localization and bootstrap 3

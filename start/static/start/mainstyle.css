@@ -3,6 +3,18 @@ body{
     color: black;
     background-color: #fafafa;
 }
+#brandNation{
+    position:relative;
+    bottom:20px;
+    color:#5e5e5e;
+}
+.name{
+}
+#brandNation:hover{
+    position:relative;
+    bottom:20px;
+    color: #5e5e5e;
+}
 .navbar-right{
     margin-left:100px;
 }
@@ -18,6 +30,12 @@ body {
      #calendarBckg{
             height:600px;
             width:1130px;
+            background: url('/static/start/SiluettUA_blue.png') no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    opacity: 1;
+                    position: absolute;
+
         }
     #btnlang_en{
     margin-right: 0px;
@@ -133,7 +151,7 @@ body {
             margin-left: auto;
             margin-bottom: auto;
             margin-right:auto;
-            height: 3px;
+            height: 2px;
             width: 0px;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
@@ -143,7 +161,7 @@ body {
             .navbar-collapse .navbar-nav > li > a:hover:after {
             width: 100%;
 			background: black;
-            margin-top: 30px;
+            margin-top: 31px;
             }
             .navbar-collapse .navbar-nav > li > a:hover:before {
             }.calendar{
@@ -210,6 +228,12 @@ body {
   #calendarBckg{
             height:500px;
             width:98%;
+         background: url('/static/start/SiluettUA_blue.png') no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    opacity: 1;
+                    position: absolute;
+
         }
 
 .navbar-header{
@@ -315,20 +339,20 @@ margin:5px;
 /*******************************************/
 /*******************************************/
 @media screen and (min-width:1200px) {
-            #calendarBckg{
-                    height:600px;
-                    width:1150px;
-                    background: url('/static/start/SiluettUA_blue.png') no-repeat;
-                    background-size: 100%;
-                    background-position: bottom;
-                    opacity: 1;
-                    position: absolute;
+
+    #calendarBckg{
+            height:600px;
+            width:1150px;
+            background: url('/static/start/SiluettUA_blue.png') no-repeat;
+            background-size: 100%;
+            background-position: bottom;
+            opacity: 1;
+            position: absolute;
 
                 }
 
             #btnlogin{
-                    display: inline-block;
-
+            display: inline-block;
             margin-right: 0px;
             background-color: black;
             color:#fafafa;
@@ -351,7 +375,7 @@ margin:5px;
             border-bottom-right-radius: 5px;
             }
             #btnlang_en{
-                    display: inline-block;
+            display: inline-block;
             margin-right: 0px;
             background-color: black;
             color:#fafafa;
@@ -363,7 +387,7 @@ margin:5px;
             }
 
             #btnlang_en:hover{
-                background-color:darkgray;
+            background-color:darkgray;
             }
 
             #btnlang_sv{
@@ -381,9 +405,8 @@ margin:5px;
                 background-color:darkgray;
             }
             #btnlangBox{
-               position: absolute;
-                        display: inline-flex;
-
+            position: absolute;
+            display: inline-flex;
             left: 70%;
             top: 102px;
             }
@@ -433,6 +456,7 @@ margin:5px;
             border-left:0px;
             border-top: none;
             box-shadow:none;
+
             }
 
             .navbar-collapse .navbar-nav {
@@ -484,7 +508,7 @@ margin:5px;
             margin-left: auto;
             margin-bottom: auto;
             margin-right:auto;
-            height: 3px;
+            height: 2px;
             width: 0px;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
@@ -494,16 +518,17 @@ margin:5px;
             .navbar-collapse .navbar-nav > li > a:hover:after {
             width: 100%;
 			background: black;
-            margin-top: 30px;
+            margin-top: 31px;
             }
             .navbar-collapse .navbar-nav > li > a:hover:before {
             }
+
 }
 
 
 /*Create event css*/
 .divforforms{
-    width: 80%;
+    width: 50%;
 }
 
 .nameofevent{
@@ -511,10 +536,10 @@ margin:5px;
 }
 
 .field-id_name{
-    width: 70%;
+    width: 50%;
 }
 #id_name{
-    width: 100%;
+    width: 50%;
 }
 
 .field-id_categories{
@@ -528,7 +553,7 @@ float:left;
 }
 
 .field-id_host{
-width:48%;
+width:100%;
 }
 #id_host{
     width: 100%;
@@ -539,7 +564,7 @@ width:48%;
     height:151px;
 }
 .field-id_location{
-    width:48%;
+    width:100%;
 
 }
 #id_location{
@@ -547,14 +572,14 @@ width:48%;
 
 }
 .field-id_startdate{
-    width:48%;
+    width:100%;
 
 }
 .field-id_enddate {
-    width: 48%;
+    width: 100%;
 }
 .field-id_description{
-    width:50%;
+    width:100%;
     float: left;
 }
 
@@ -565,26 +590,26 @@ width:48%;
     height: 30%;
     font-family: inherit;
     margin-right: 5px;
+    float: left;
 
 }
 
 .field-id_description_english{
-    width:50%;
-    float: right;
+    width: 100%;
+
 }
 
 #id_description_english{
-
     border-radius: 10px;
     width: 100%;
     height: 30%;
     font-family: inherit;
-
+    float: left;
 }
 
 #addingevent{
     float:left;
-    width:15%;
+    width:100px;
 
 }
     /* Mellan INSTÃ„LLNINGAR*/
@@ -708,6 +733,11 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 #radBOD{
     border-bottom: solid 1px #cccccc;
     background: transparent;
+    cursor: pointer;
+}
+#radBOD:hover{
+    background: #efefef;
+
 }
 #aktivitetTD{
     width:60%;
@@ -722,7 +752,7 @@ border-top: 0px;
 #kategoriTD{
     width:40%;
     border-top: 0px;
-    font-size: small;
+    font-size: 11px;
     font-weight: bold;
     text-align: right;
 }
@@ -1051,3 +1081,13 @@ outline:0;
     #btnBox{
         margin-bottom: 10px;
     }
+#loginBox{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+}
+#nationinlogBTN{
+    background-color: white;
+    border: 1px solid lightgray;
+}
