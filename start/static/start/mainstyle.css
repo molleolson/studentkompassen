@@ -18,7 +18,11 @@ body{
 .navbar-right{
     margin-left:100px;
 }
-
+/*******************************************/
+/*******************************************/
+/************* MD INSTÃ„LLNINGAR************/
+/*******************************************/
+/*******************************************/
 @media screen and (min-width: 768px)and (max-width: 1199px) {
 body {
             background-color: #fafafa;
@@ -606,6 +610,9 @@ width:48%;
 #addingevent{
     float:left;
     width:15%;
+    float: right;
+
+    width:200px;
 
 }
     /* Mellan INSTÃ„LLNINGAR*/
@@ -1072,3 +1079,13 @@ outline:0;
     #btnBox{
         margin-bottom: 10px;
     }
+#loginBox{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+}
+#nationinlogBTN{
+    background-color: white;
+    border: 1px solid lightgray;
+}
