@@ -21,7 +21,7 @@
         {% csrf_token %}
         {% include "form.html" with form=form %}
         </tr>
-        <button class="btn btn-default btn-block" id="addingevent" type ="submit">Lägg till ändringar</button>
+        <button class="btn btn-default btn-block" id="addingevent" type ="submit">{% trans "Edit event" %}</button>
 
     </form>
 

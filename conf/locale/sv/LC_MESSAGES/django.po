@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-19 10:10+0200\n"
+"POT-Creation-Date: 2016-05-19 11:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,8 +40,9 @@ msgid "Create a new event"
 msgstr "Skapa ett nytt event"
 
 #: start/templates/start/addevent.html:23
-msgid "Add event"
-msgstr "Lägg till event"
+#: start/templates/start/nationmain.html:9
+msgid "Create event"
+msgstr "Skapa event"
 
 #: start/templates/start/calenderlista.html:41
 msgid "Event"
@@ -67,9 +68,9 @@ msgstr "Skapa ett nytt event"
 
 #: start/templates/start/editevent.html:24
 #, fuzzy
-#| msgid "Create event"
-msgid "Confirm edited event"
-msgstr "Skapa event"
+#| msgid "Create a new event"
+msgid "Edit event"
+msgstr "Skapa ett nytt event"
 
 #: start/templates/start/events.html:45
 #, fuzzy
@@ -135,10 +136,6 @@ msgstr "Nationer och kårer"
 msgid "My profile"
 msgstr "Min profil"
 
-#: start/templates/start/nationmain.html:9
-msgid "Create event"
-msgstr "Skapa event"
-
 #: start/templates/start/nationmain.html:10
 msgid "Our events"
 msgstr "Våra event"
@@ -151,10 +148,6 @@ msgstr "Presentation"
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: start/templates/start/nationmain.html:16
-msgid "to the admin page"
-msgstr "till adminsidan"
-
 #: start/templates/start/ourevents.html:19
 msgid "Edit"
 msgstr "Redigera"
@@ -163,7 +156,7 @@ msgstr "Redigera"
 #, fuzzy
 #| msgid "Create event"
 msgid "Confirm edited description"
-msgstr "Skapa event"
+msgstr "Bekräfta ändrad beskrivning"
 
 #: studentkompassen/settings.py:138
 msgid "English"
@@ -172,6 +165,17 @@ msgstr "Engelska"
 #: studentkompassen/settings.py:139
 msgid "Swedish"
 msgstr "Svenska"
+
+#~ msgid "Add event"
+#~ msgstr "Lägg till event"
+
+#, fuzzy
+#~| msgid "Create event"
+#~ msgid "Confirm edited event"
+#~ msgstr "Skapa event"
+
+#~ msgid "to the admin page"
+#~ msgstr "till adminsidan"
 
 #, fuzzy
 #~| msgid "Event"
