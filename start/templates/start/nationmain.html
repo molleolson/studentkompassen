@@ -6,8 +6,8 @@
 
 {% block menu_item_1 %}
     <li {% if menu_active_item == 'now' %} class="active"{% endif %}><a href="{% url 'start:nationmain' %}">{% trans "Start"%}</a></li>
-    <li {% if menu_active_item == 'event' %} class="active"{% endif %}><a href="{% url 'start:addevent' %}">{% trans "Create event"%}</a></li>
-    <li {% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a href="{% url 'start:ourevents' %}">{% trans "Our events"%}</a></li>
+    <li {% if menu_active_item == 'event' %} class="active"{% endif %}><a href="{% url 'start:addevent' %}">{% trans "Skapa event"%}</a></li>
+    <li {% if menu_active_item == 'ourevents' %} class="active"{% endif %}><a href="{% url 'start:ourevents' %}">{% trans "Våra event"%}</a></li>
     <li {% if menu_active_item == 'presentation' %} class="active"{% endif %}><a href="{% url 'start:presentation' %}">{% trans "Presentation"%}</a></li>
 
 {% endblock %}
@@ -17,7 +17,7 @@ href = "{% url 'start:nationmain' %}"
 {% endblock %}
 
 {% block menu_item_2 %}
- <a class="navbar-brand" id="brandNation">{% trans "Welcome" %}  {{nationname}} Nation</a>
+ <a class="navbar-brand" id="brandNation">{% trans "Välkommen" %}  {{nationname}} Nation</a>
 
 
 {% if request.user.social_auth.count %}
