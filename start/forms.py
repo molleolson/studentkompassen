@@ -11,7 +11,7 @@ from datetimewidget.widgets import DateTimeWidget, DateWidget
 class EventForm(ModelForm):
     class Meta:
         model = Event
-        fields = ['name', 'description', 'description_english','categories','host', 'location', 'startdate', 'enddate', 'reccurrences'
+        fields = ['name', 'description', 'description_english','categories','host', 'location', 'startdate', 'enddate', 'weekdays'
                   ]
 
         widgets = {
@@ -21,6 +21,7 @@ class EventForm(ModelForm):
             'enddate': DateTimeWidget(attrs={'class':'DateTimeField'},
                                       options={'format': 'yyyy-mm-dd hh:ii'}, usel10n=False, bootstrap_version=3),
             'categories': CheckboxSelectMultiple(attrs={'class': 'choice_field'}),
+            'weekdays': CheckboxSelectMultiple(attrs={'class': 'choice_field'}),
             'description': Textarea(attrs={'cols': 30, 'rows': 10}),
             'description_english': Textarea(attrs={'cols': 30, 'rows': 10}),
             'name': TextInput(attrs={'class': "nameofevent", 'rows':1}),

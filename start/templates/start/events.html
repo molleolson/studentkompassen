@@ -27,18 +27,9 @@
 
                     <td id="startTD">
 
-                        {% if event.startdate.date != event.enddate.date %}
-                            {{ event.startdate.date }}
-                        {% endif %}
-
-
                         {{event.startdate.time}} <span>-</span>
 
-                        {% if event.startdate.date != event.enddate.date %}
-                            {{ event.enddate.date }}
-                        {% endif %}
-
-                        {{event.enddate.time}}</td>
+                        {{event.enddate.time}}</td>0
 
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->

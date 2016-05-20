@@ -44,6 +44,13 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+class Weekdays(models.Model):
+    name = models.CharField(max_length=200, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.name
+
+
 
 class Event(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True, verbose_name='Eventnamn')
@@ -51,8 +58,9 @@ class Event(models.Model):
     description_english = models.CharField(max_length=400, blank=True, null=True, verbose_name='Engelsk beskrivning')
     startdate = models.DateTimeField('Startdatum och tid')
     enddate = models.DateTimeField('Slutdatum och tid')
-    reccurrences = RecurrenceField(null=True,verbose_name='Upprepade event')
+    #reccurrences = RecurrenceField(null=True,verbose_name='Upprepade event')
     categories = models.ManyToManyField(Category, verbose_name='Taggar')
+    weekdays = models.ManyToManyField(Weekdays, verbose_name='Veckodagar')
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True, verbose_name='Nation')
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, verbose_name='Plats')
