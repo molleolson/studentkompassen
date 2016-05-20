@@ -10,21 +10,29 @@
 
 
                     <td id="aktivitetTD" data-title="Aktivitet">{{ event.name }}</td>
-                    <td id="kategoriTD">{{ event.names }}</td>
+                    <td id="kategoriTD">{{ event.e_names }}</td>
                                                 <!-- POP UP SKITEN -->
 
 
                              <!-- Modal -->
                     <td id="platsTD" data-title="Plats"><span class="name">
-
                         {{ event.host }}
+
 
                         </span></td>
 
                     <td id="startTD">
 
+                        {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                                {{ event.startdate.date }}
+                        {% endif %}
+
 
                         {{event.startdate.time}} <span>-</span>
+
+                        {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                            {{ event.enddate.date }}
+                        {% endif %}
 
                         {{event.enddate.time}}</td>
 
@@ -40,7 +48,21 @@
                                     <h4 class="modal-title">{{ event.name }}</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <p> {{event.startdate}} - {{event.enddate}}</p>
+                                    <p>
+                                    {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                                        {{ event.startdate.date }}
+                                    {% endif %}
+
+
+                                    {{event.startdate.time}} <span>-</span>
+
+                                    {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                                     {{ event.enddate.date }}
+                                    {% endif %}
+
+                                    {{event.enddate.time}}
+
+                                    </p>
                                     <p>{% trans "Beskrivning: " %} {{event.description}} </p>
                                     <p>{% trans "Description: " %} {{event.description_english}} </p>
                                 </div>

@@ -30,11 +30,23 @@
                              <!-- Modal -->
                     <td id="platsTDee" data-title="Plats"><span class="name">{{ event.location }}</span></td>
                     <!--<td id="datumTDee" data-title="Datum">{{ event.startdate.date }}</td>-->
-                    <td id="startTDee">{{ event.startdate.date }}, {{event.startdate.time}} <span>-</span>
-                        {% if event.startdate.date != event.enddate.date %}
-                        {{ event.enddate.date }}
+                    <td id="startTDee">
+
+                        {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                                {{ event.startdate.date }}
                         {% endif %}
-                        {{event.enddate.time}}</td>
+
+
+                        {{event.startdate.time}} <span>-</span>
+
+                        {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                            {{ event.enddate.date }}
+                        {% endif %}
+
+                        {{event.enddate.time}}
+
+
+                    </td>
 
                             <!-- Modal -->
 
@@ -47,7 +59,22 @@
                                     <h4 class="modal-title">Event description</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <p> {{event.startdate}} - {{event.enddate}}</p>
+                                    <p>
+                                    {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                                        {{ event.startdate.date }}
+                                    {% endif %}
+
+
+                                    {{event.startdate.time}} <span>-</span>
+
+                                    {% if event.startdate.date != event.enddate.date and event.w_names == '' %}
+                                        {{ event.enddate.date }}
+                                    {% endif %}
+
+                                    {{event.enddate.time}}
+
+
+                                    </p>
                                     <p> {{event.description}} </p>
                                 </div>
 

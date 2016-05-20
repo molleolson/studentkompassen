@@ -65,10 +65,14 @@ class Event(models.Model):
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True, verbose_name='Nation')
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, verbose_name='Plats')
 
-    def names(self):
+    def e_names(self):
         return u', '.join([c.name for c in self.categories.all()])
 
-    names.short_description = "Categories"
+    def w_names(self):
+        return u', '.join([w.name for w in self.weekdays.all()])
+
+    e_names.short_description = "Categories"
+    w_names.short_description = "Weekdays"
 
 
     def __unicode__(self):
