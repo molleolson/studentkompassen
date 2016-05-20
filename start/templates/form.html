@@ -28,25 +28,29 @@
 
     </div>
 <div class="row">
-    <div class="col-sm-5">
-        {% endif %}
-        {% if field.name == "description_english" %}
-</div>
-
     <div class="col-sm-2">
+        {% endif %}
+        {% if field.name == "categories"  %}
+</div>
+
+    <div class="col-sm-4">
 
 
     {% endif %}
 
-    {% if field.name == "categories" %}
+    {% if field.name == "weekdays" %}
 </div>
 
 
-    <div class="col-sm-3">
+    <div class="col-sm-6">
+        <div class="row">
     {% endif %}
-
+            {% if field.name == "description" %}
+            </div>
+            <div class="row">
+{% endif %}
 
 {% endfor %}
-
+</div>
    </div>
     </div>

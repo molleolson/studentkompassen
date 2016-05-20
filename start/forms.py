@@ -11,7 +11,7 @@ from datetimewidget.widgets import DateTimeWidget, DateWidget
 class EventForm(ModelForm):
     class Meta:
         model = Event
-        fields = ['name', 'description', 'description_english','categories','host', 'location', 'startdate', 'enddate', 'weekdays'
+        fields = ['name','categories','host', 'location', 'startdate', 'enddate', 'weekdays', 'description', 'description_english'
                   ]
 
         widgets = {

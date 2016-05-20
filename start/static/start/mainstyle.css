@@ -537,7 +537,7 @@ margin:5px;
 }
 
 .field-id_name{
-    width: 70%;
+    width: 72%;
 }
 #id_name{
     width: 100%;
@@ -553,8 +553,18 @@ float:left;
     padding:0;
 }
 
+.field-id_weekdays{
+width: 100%;
+float:left;
+}
+
+#id_weekdays{
+    list-style-type: none;
+    padding:0;
+}
+
 .field-id_host{
-width:48%;
+width:100%;
 }
 #id_host{
     width: 100%;
@@ -565,7 +575,7 @@ width:48%;
     height:151px;
 }
 .field-id_location{
-    width:48%;
+    width:100%;
 
 }
 #id_location{
@@ -573,15 +583,15 @@ width:48%;
 
 }
 .field-id_startdate{
-    width:48%;
+    width:100%;
 
 }
 .field-id_enddate {
-    width: 48%;
+    width: 100%;
 }
 .field-id_description{
-    width:40%;
-    float: left;
+    width:100%;
+
 }
 
 .field-id_hostdescription{
@@ -597,7 +607,7 @@ width:48%;
 #id_description{
 
     border-radius: 10px;
-
+    width: 50%;
     height: 30%;
     font-family: inherit;
     margin-right: 5px;
@@ -605,14 +615,14 @@ width:48%;
 }
 
 .field-id_description_english{
-    width:50%;
-    float: right;
+    width:100%;
+
 }
 
 #id_description_english{
 
     border-radius: 10px;
-
+    width: 50%;
     height: 30%;
     font-family: inherit;
 
