@@ -34,12 +34,13 @@ function switchDateCalender(eventDate){
 {% endblock %}
 {% block menu_item_1 %}
         <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Start" %} </a></li>
-         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{%trans "Categories"%}
+         <li {% if menu_active_item == 'breakfast' or menu_active_item == 'pub' or menu_active_item == 'lunch' or menu_active_item == 'restaurang' or menu_active_item == 'gasque' or menu_active_item == 'club' or menu_active_item == 'other' or menu_active_item == 'cafe' %} class="active"{% endif %} class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{%trans "Categories"%}
          <span class="caret"></span></a>
 
          <ul class ="dropdown-menu">
 
-         <li {% if menu_active_item == 'breakfast' %} class="active"{% endif %}><a href = "{% url 'start:breakfast' %}">{%trans "Breakfast"%}</a></li><li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
+         <li {% if menu_active_item == 'breakfast' %} class="active"{% endif %}><a href = "{% url 'start:breakfast' %}">{%trans "Breakfast"%}</a></li>
+             <li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
          <li {% if menu_active_item == 'lunch' %} class="active"{% endif %} ><a href = "{% url 'start:lunch' %}">{%trans "Lunch"%}</a></li>
          <li {% if menu_active_item == 'pub' %} class="active"{% endif %} ><a href = "{% url 'start:pub' %}">{%trans "Pub"%}</a></li>
          <li {% if menu_active_item == 'restaurang' %} class="active"{% endif %} ><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
