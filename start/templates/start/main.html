@@ -33,8 +33,8 @@ function switchDateCalender(eventDate){
 </script>
 {% endblock %}
 {% block menu_item_1 %}
-        <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Right Now" %} </a></li>
-         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{%trans "Event"%}
+        <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Start" %} </a></li>
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{%trans "Categories"%}
          <span class="caret"></span></a>
 
          <ul class ="dropdown-menu">
@@ -49,11 +49,10 @@ function switchDateCalender(eventDate){
          </ul>
          </li>
 
+         <li {% if menu_active_item == 'info' %} class="active"{% endif %} ><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
+
 {% endblock %}
 {% block menu_item_2 %}
-
-        <li {% if menu_active_item == 'close' %} class="active"{% endif %} ><a href = "#">{%trans "Close to you"%}</a></li>
-         <li {% if menu_active_item == 'info' %} class="active"{% endif %} ><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
 <!--
          {% if user.is_authenticated %}
          <li {% if menu_active_item == 'myprofile' %} class="active"{% endif %} ><a href="{% url 'start:myprofile' %}"> {% trans "My saved events"%}</a></li>
