@@ -173,10 +173,10 @@ msgstr "Bekräfta ändrad beskrivning"
 
 #: studentkompassen/settings.py:138
 msgid "English"
-msgstr "Engelska"
+msgstr "English"
 
 #: studentkompassen/settings.py:139
-msgid "Swedish"
+msgid "Svenska"
 msgstr "Svenska"
 
 #~ msgid "Add event"
