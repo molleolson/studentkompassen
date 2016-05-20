@@ -16,8 +16,9 @@ body{
     color: #5e5e5e;
 }
 .navbar-right{
-    margin-left:100px;
+    margin-right:24%;
 }
+.navbar-left{margin-left:30%;}
 /*******************************************/
 /*******************************************/
 /************* MD INSTÃ„LLNINGAR************/
@@ -655,19 +656,17 @@ rgb(51,153,255); #3399FF*/
 ***********************************************************************/
 
 #loggPic{
-    position: relative;
-    display: block;
     width: 100px;
-    max-width: 150px;
     bottom:1px;
-    left:50%;
-    margin-left: 0px;
     /*background: rgba(232,244,255,0.25);*/
     /*backgrou#nd: rgba(232,244,255,0.25);*/
 
 }
 #loggoBox{
-    display: inline-block;
+    position: absolute;
+    left:50%;
+    margin-left:-50px;
+    display:block;
 }
 #loggPic2{
     position:relative;
@@ -766,6 +765,12 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
     border-bottom: solid 1px #cccccc;
     background: transparent;
 }
+.dropdown .open:hover{
+    color:red;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: transparent;
+}
 #aktivitetTD{
     width:60%;
     color: #0a568c;
@@ -773,7 +778,7 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 border-top: 0px;
 }
 #platsTD{
-    width:60%;
+    width:50%;
 border-top: 0px;
 }
 
@@ -785,7 +790,7 @@ border-top: 0px;
     text-align: right;
 }
 #startTD {
-    width: 40%;
+    width: 50%;
     border-top: 0px;
     font-size: small;
     font-weight: bold;

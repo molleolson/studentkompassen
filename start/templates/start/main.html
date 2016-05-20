@@ -33,17 +33,26 @@ function switchDateCalender(eventDate){
 </script>
 {% endblock %}
 {% block menu_item_1 %}
-         <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Right now"%}</a></li>
+        <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Right Now"%} </a></li>
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{%trans "Event"%}
+         <span class="caret"></span></a>
+
+         <ul class ="dropdown-menu">
+
          <li {% if menu_active_item == 'breakfast' %} class="active"{% endif %}><a href = "{% url 'start:breakfast' %}">{%trans "Breakfast"%}</a></li>
-         <li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
+<li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:cafe' %}">{%trans "Fika"%}</a></li>
          <li {% if menu_active_item == 'lunch' %} class="active"{% endif %} ><a href = "{% url 'start:lunch' %}">{%trans "Lunch"%}</a></li>
          <li {% if menu_active_item == 'pub' %} class="active"{% endif %} ><a href = "{% url 'start:pub' %}">{%trans "Pub"%}</a></li>
          <li {% if menu_active_item == 'restaurang' %} class="active"{% endif %} ><a href = "{% url 'start:restaurang' %}">{%trans "Restaurant"%}</a></li>
-{% endblock %}
-{% block menu_item_2 %}
-<li {% if menu_active_item == 'club' %} class="active"{% endif %} ><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
+         <li {% if menu_active_item == 'club' %} class="active"{% endif %} ><a href = "{% url 'start:club' %}">{%trans "Clubs"%}</a></li>
          <li {% if menu_active_item == 'gasque' %} class="active"{% endif %} ><a href = "{% url 'start:gasque' %}">{%trans "Gasque"%}</a></li>
          <li {% if menu_active_item == 'other' %} class="active"{% endif %} ><a href = "{% url 'start:other' %}">{%trans "Other"%}</a></li>
+         </ul>
+         </li>
+
+{% endblock %}
+{% block menu_item_2 %}
+
         <li {% if menu_active_item == 'close' %} class="active"{% endif %} ><a href = "#">{%trans "Close to you"%}</a></li>
          <li {% if menu_active_item == 'info' %} class="active"{% endif %} ><a href = "{% url 'start:nationinfo' %}">{%trans "Nations and unions"%}</a></li>
 <!--
