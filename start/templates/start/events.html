@@ -17,12 +17,8 @@
                              <!-- Modal -->
                     <td id="platsTD" data-title="Plats"><span class="name">
 
-                        {% if  event.location.name == event.host.name %}
                         {{ event.host }}
-                        {% else %}
-                        {% trans " By " %} {{ event.host }} {% trans " at " %}
-                        {{ event.location }}
-                        {% endif %}
+
                         </span></td>
 
                     <td id="startTD">
