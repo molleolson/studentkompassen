@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-19 13:20+0200\n"
+"POT-Creation-Date: 2016-05-20 13:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr "Logga in"
 
 #: start/templates/start/about.html:10
 #: start/templates/start/calenderlista.html:17
-#: start/templates/start/main.html:51
+#: start/templates/start/main.html:60
 msgid "My saved events"
 msgstr "Mina sparade event"
 
@@ -45,6 +45,7 @@ msgid "Create event"
 msgstr "Skapa event"
 
 #: start/templates/start/calenderlista.html:41
+#: start/templates/start/main.html:37
 msgid "Event"
 msgstr "Evanemang"
 
@@ -71,20 +72,20 @@ msgstr "Redigera event"
 msgid "Edit event"
 msgstr "Redigera event"
 
-#: start/templates/start/events.html:22
+#: start/templates/start/events.html:23
 msgid " By "
 msgstr "Av"
 
-#: start/templates/start/events.html:22
+#: start/templates/start/events.html:23
 msgid " at "
 msgstr " på "
 
-#: start/templates/start/events.html:53
+#: start/templates/start/events.html:48
 #, fuzzy
 msgid "Swedish description: "
 msgstr "Svensk beskrivning: "
 
-#: start/templates/start/events.html:54
+#: start/templates/start/events.html:49
 #, fuzzy
 #| msgid "Edit a description"
 msgid "English description: "
@@ -94,53 +95,59 @@ msgstr "Engelsk beskrivning: "
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/main.html:36 start/templates/start/nationmain.html:8
-msgid "Right now"
+#: start/templates/start/main.html:36
+msgid "Right Now"
 msgstr "Just nu"
 
-#: start/templates/start/main.html:37
+#: start/templates/start/main.html:42
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: start/templates/start/main.html:38
+#: start/templates/start/main.html:43
 msgid "Fika"
 msgstr "Fika"
 
-#: start/templates/start/main.html:39
+#: start/templates/start/main.html:44
 msgid "Lunch"
 msgstr "Lunch"
 
-#: start/templates/start/main.html:40
+#: start/templates/start/main.html:45
 msgid "Pub"
 msgstr "Pub"
 
-#: start/templates/start/main.html:41
+#: start/templates/start/main.html:46
 msgid "Restaurant"
 msgstr "Restaurang"
 
-#: start/templates/start/main.html:44
+#: start/templates/start/main.html:47
 msgid "Clubs"
 msgstr "Klubbar/Släpp"
 
-#: start/templates/start/main.html:45
+#: start/templates/start/main.html:48
 msgid "Gasque"
 msgstr "Gask"
 
-#: start/templates/start/main.html:46
+#: start/templates/start/main.html:49
 msgid "Other"
 msgstr "Övrigt"
 
-#: start/templates/start/main.html:47
+#: start/templates/start/main.html:56
 msgid "Close to you"
 msgstr "Nära dig"
 
-#: start/templates/start/main.html:48
+#: start/templates/start/main.html:57
 msgid "Nations and unions"
 msgstr "Nationer och kårer"
 
 #: start/templates/start/myprofile.html:4
 msgid "My profile"
 msgstr "Min profil"
+
+#: start/templates/start/nationmain.html:8
+#, fuzzy
+#| msgid "Right Now"
+msgid "Right now"
+msgstr "Just nu"
 
 #: start/templates/start/nationmain.html:10
 msgid "Our events"
