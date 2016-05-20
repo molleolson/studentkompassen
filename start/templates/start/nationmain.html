@@ -12,6 +12,10 @@
 
 {% endblock %}
 
+{% block logolink %}
+href = "{% url 'start:nationmain' %}"
+{% endblock %}
+
 {% block menu_item_2 %}
  <a class="navbar-brand" id="brandNation">{% trans "Welcome" %}  {{nationname}} Nation</a>
 

@@ -70,7 +70,8 @@
           {% block menu_item_1 %}
           {% endblock %}
 </ul>
- <div id="loggoBox"> <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs">
+ <div id="loggoBox" href = "{% url 'start:index' %}"> <a {% block logolink %} href = "{% url 'start:index' %}" {% endblock %}>
+     <img src="{% static 'start/LogoNobackground.png' %}" alt="Logga" id="loggPic" class="hidden-xs"></a>
 </div>
        <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
