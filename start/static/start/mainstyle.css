@@ -16,9 +16,11 @@ body{
     color: #5e5e5e;
 }
 .navbar-right{
-    margin-right:24%;
+margin-right:15px;
 }
-.navbar-left{margin-left:30%;}
+.navbar-left{
+
+}
 /*******************************************/
 /*******************************************/
 /************* MD INSTÃ„LLNINGAR************/
@@ -351,7 +353,7 @@ margin:5px;
             position: absolute;
 
                 }
-
+/*
             #btnlogin{
             display: inline-block;
             margin-right: 0px;
@@ -410,7 +412,7 @@ margin:5px;
             display: inline-flex;
             left: 70%;
             top: 102px;
-            }
+            }*/
 
             #dayPickerBtn {
             width:88%;

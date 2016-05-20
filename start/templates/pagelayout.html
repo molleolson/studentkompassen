@@ -77,6 +77,20 @@
             <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> {%trans "Sign Up"%}</a></li>-->
             {% block menu_item_2 %}
             {% endblock %}
+            {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+
+
+           <li><a id="btnlang_{{ lang_code }}" href= "{% change_lang lang_code %}"> {{ lang_name }} </a></li>
+
+                    {% endfor %}
+ {% if user.is_authenticated %}
+                <li><a   href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a></li>
+                <!--<li>Hello, {{user.get_full_name}}!</li>-->
+           {% else %}
+                <li><a  href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a></li>
+            {% endif %}
+
         </ul>
    </div>
 </nav>
@@ -84,16 +98,7 @@
 </div>
 
 <div class="container-fluid" id="btnlangBox">
-    {% get_available_languages as languages %}
-                    {% for lang_code, lang_name in languages %}
-                    <a id="btnlang_{{ lang_code }}" type="button" class="btn btn-info   hidden-xs" href= "{% change_lang lang_code %}"> {{ lang_name }} </a>
-                    {% endfor %}
- {% if user.is_authenticated %}
-                <a id="btnlogin" type="button" class="btn btn-info  hidden-xs" href="/logout"><span class="glyphicon glyphicon-log-out"></span> {%trans "Logout"%}</a>
-                <!--<li>Hello, {{user.get_full_name}}!</li>-->
-           {% else %}
-                <a id="btnlogin2" type="button" class="btn btn-info  hidden-xs" href="/"><span class="glyphicon glyphicon-log-in"></span> {%trans "Login"%}</a>
-            {% endif %}
+
 </div>
 
 {% endblock %}
