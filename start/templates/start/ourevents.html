@@ -16,7 +16,7 @@
         <tbody>
                 {% for event in events %}
                 <tr id ="radBOD" data-toggle="modal" data-target="#{{event.id}}">
-                    <td id="editeventtd"><a href = "{% url "start:editevent" event.id %}"><strong>{%trans "Edit"%}</strong></a></td>
+                    <td id="editeventtd"><a href = "{% url "start:editevent" event.id %}"><strong>{%trans "Redigera"%}</strong></a></td>
 
 
 
@@ -44,6 +44,7 @@
                         {% endif %}
 
                         {{event.enddate.time}}
+
 
                     </td>
 
@@ -79,7 +80,7 @@
 
                                 <div class="modal-footer">
                                     <div class="fb-share-button" data-layout="button_count"></div>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
                                 </div>
 
 

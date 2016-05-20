@@ -515,8 +515,8 @@ width:100%;
 #id_description{
 
     border-radius: 10px;
-    width: 50%;
-    height: 30%;
+    width: 80%;
+    height: 25%;
     font-family: inherit;
     margin-right: 5px;
 
@@ -530,9 +530,10 @@ width:100%;
 #id_description_english{
 
     border-radius: 10px;
-    width: 50%;
-    height: 30%;
+    width: 80%;
+    height: 25%;
     font-family: inherit;
+    margin-right: 5px;
 
 }
 
@@ -554,15 +555,6 @@ width:100%;
 
 }
 
-#id_
-#addingevent{
-    float:left;
-    width:15%;
-    float: right;
-
-    width:200px;
-
-}
     /* Mellan INSTÃ„LLNINGAR*/
 
 /*#A8D6FF =R:168 G:214 B:255

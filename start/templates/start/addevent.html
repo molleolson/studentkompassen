@@ -15,16 +15,24 @@
 
     <tr>
     <form action="{% url "start:addevent" %}" method="POST">
-        <h2>{% trans "Create a new event"%}</h2>
+        <h2>{% trans "Skapa ett nytt event"%}</h2>
         {% csrf_token %}
 
         {% include "form.html" with form=form %}
         <tr>
-        <button class="btn btn-default btn-block" id="addingevent" type ="submit">{% trans "Create event" %}</button>
+        <div class="col-sm-5" style="padding:0; padding-right: 4%">
+        <button class="btn btn-success btn-block" id="addingeventbtn" type ="submit">{% trans "Skapa event" %}</button>
+</div>
+
     </form>
+<div class="col-sm-5" style="padding:0; padding-left: 4%">
+        <a href="{% url 'start:nationmain' %}" class="btn btn-primary btn-block" id="regrettaddingeventbtn">{% trans "Ångra" %}</a>
+</div>
          </tr>
 
     </div>
+
+
 
     </div>
 

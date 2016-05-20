@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-20 13:02+0200\n"
+"POT-Creation-Date: 2016-05-20 14:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,21 +17,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/templates/pagelayout.html:76
+#: start/templates/pagelayout.html:77
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:91
+#: start/templates/pagelayout.html:88
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:94
+#: start/templates/pagelayout.html:91
 msgid "Login"
 msgstr "Logga in"
 
 #: start/templates/start/about.html:10
 #: start/templates/start/calenderlista.html:17
-#: start/templates/start/main.html:60
+#: start/templates/start/main.html:58
 msgid "My saved events"
 msgstr "Mina sparade event"
 
@@ -39,13 +39,18 @@ msgstr "Mina sparade event"
 msgid "Create a new event"
 msgstr "Skapa ett nytt event"
 
-#: start/templates/start/addevent.html:23
+#: start/templates/start/addevent.html:24
 #: start/templates/start/nationmain.html:9
 msgid "Create event"
 msgstr "Skapa event"
 
+#: start/templates/start/addevent.html:29
+#: start/templates/start/editevent.html:30
+msgid "Regret"
+msgstr "Ångra"
+
 #: start/templates/start/calenderlista.html:41
-#: start/templates/start/main.html:37
+#, fuzzy
 msgid "Event"
 msgstr "Evanemang"
 
@@ -67,87 +72,73 @@ msgstr "Tid"
 msgid "Edit an event"
 msgstr "Redigera event"
 
-#: start/templates/start/editevent.html:24
+#: start/templates/start/editevent.html:25
 #, fuzzy
 msgid "Edit event"
 msgstr "Redigera event"
 
-#: start/templates/start/events.html:23
-msgid " By "
-msgstr "Av"
+#: start/templates/start/events.html:44
+msgid "Beskrivning: "
+msgstr "Beskrivning: "
 
-#: start/templates/start/events.html:23
-msgid " at "
-msgstr " på "
-
-#: start/templates/start/events.html:48
+#: start/templates/start/events.html:45
 #, fuzzy
-msgid "Swedish description: "
-msgstr "Svensk beskrivning: "
-
-#: start/templates/start/events.html:49
-#, fuzzy
-#| msgid "Edit a description"
-msgid "English description: "
-msgstr "Engelsk beskrivning: "
+msgid "Description: "
+msgstr "Description: "
 
 #: start/templates/start/main.html:3
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/main.html:36
-msgid "Right Now"
-msgstr "Just nu"
+#: start/templates/start/main.html:36 start/templates/start/nationmain.html:8
+#, fuzzy
+#| msgid "Start page"
+msgid "Start"
+msgstr "Startsida"
+
+#: start/templates/start/main.html:37
+msgid "Categories"
+msgstr "Kategorier"
 
 #: start/templates/start/main.html:42
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: start/templates/start/main.html:43
+#: start/templates/start/main.html:42
 msgid "Fika"
 msgstr "Fika"
 
-#: start/templates/start/main.html:44
+#: start/templates/start/main.html:43
 msgid "Lunch"
 msgstr "Lunch"
 
-#: start/templates/start/main.html:45
+#: start/templates/start/main.html:44
 msgid "Pub"
 msgstr "Pub"
 
-#: start/templates/start/main.html:46
+#: start/templates/start/main.html:45
 msgid "Restaurant"
 msgstr "Restaurang"
 
-#: start/templates/start/main.html:47
+#: start/templates/start/main.html:46
 msgid "Clubs"
 msgstr "Klubbar/Släpp"
 
-#: start/templates/start/main.html:48
+#: start/templates/start/main.html:47
 msgid "Gasque"
 msgstr "Gask"
 
-#: start/templates/start/main.html:49
+#: start/templates/start/main.html:48
 msgid "Other"
 msgstr "Övrigt"
 
-#: start/templates/start/main.html:56
-msgid "Close to you"
-msgstr "Nära dig"
-
-#: start/templates/start/main.html:57
+#: start/templates/start/main.html:52
 msgid "Nations and unions"
 msgstr "Nationer och kårer"
 
 #: start/templates/start/myprofile.html:4
 msgid "My profile"
 msgstr "Min profil"
-
-#: start/templates/start/nationmain.html:8
-#, fuzzy
-#| msgid "Right Now"
-msgid "Right now"
-msgstr "Just nu"
 
 #: start/templates/start/nationmain.html:10
 msgid "Our events"
@@ -157,7 +148,7 @@ msgstr "Våra event"
 msgid "Presentation"
 msgstr "Presentation"
 
-#: start/templates/start/nationmain.html:16
+#: start/templates/start/nationmain.html:20
 msgid "Welcome"
 msgstr "Välkommen"
 
@@ -178,6 +169,28 @@ msgstr "English"
 #: studentkompassen/settings.py:139
 msgid "Svenska"
 msgstr "Svenska"
+
+#~ msgid " By "
+#~ msgstr "Av"
+
+#~ msgid " at "
+#~ msgstr " på "
+
+#, fuzzy
+#~| msgid "Edit a description"
+#~ msgid "English description: "
+#~ msgstr "Engelsk beskrivning: "
+
+#~ msgid "Right Now"
+#~ msgstr "Just nu"
+
+#~ msgid "Close to you"
+#~ msgstr "Nära dig"
+
+#, fuzzy
+#~| msgid "Right Now"
+#~ msgid "Right now"
+#~ msgstr "Just nu"
 
 #~ msgid "Add event"
 #~ msgstr "Lägg till event"
