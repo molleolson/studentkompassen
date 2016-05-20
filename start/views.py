@@ -4,6 +4,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from .models import Host, Event, Location
+from django.db.models import Q
 from start.forms import EventForm, PresentationForm
 from django.utils import translation, timezone
 from django.template import loader
@@ -21,15 +22,29 @@ def index(request):
     menu_active_item = 'now'
     today = datetime.now()
     delta = timedelta(days=1)
-    events = Event.objects.filter(startdate__lte=timezone.now()+delta, enddate__gte=timezone.now()).order_by('startdate')
+    #events = Event.objects.filter(startdate__lte=timezone.now()+delta, enddate__gte=timezone.now()).order_by('startdate')
 
 
-    #events = Event.objects.get(pk=130)
-    # events.extend(Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()).order_by('startdate'))
-    #events.reccurrences.between(
-     #   datetime(2016, 1, 1, 0, 0, 0),
-    #    datetime(2016, 12, 31, 0, 0, 0)
-    #)
+    todays_weekday = today.strftime('%A')
+
+    if Event.objects.filter(Q(startdate__lte=timezone.now()+delta), Q(enddate__gte=timezone.now()), Q(weekdays__name__startswith=todays_weekday)).exists():
+        events = Event.objects.filter(
+            Q(startdate__lte=timezone.now() + delta),
+            Q(enddate__gte=timezone.now()),
+            Q(weekdays__name__startswith=todays_weekday) |
+            Q(weekdays__isnull=True)
+
+        ).order_by('startdate')
+
+    else:
+        print 'hello world'
+        events = Event.objects.filter(
+            Q(startdate__lte=timezone.now() + delta),
+            Q(enddate__gte=timezone.now()),
+            Q(weekdays__isnull=True)
+        ).order_by('startdate')
+
+
 
     return render(request, 'start/main.html', locals())
 
@@ -37,8 +52,28 @@ def index(request):
 def events(request):
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
                                         timezone.get_default_timezone())
-    events = Event.objects.filter(startdate__lt=selected_date + timedelta(days=1),
-                                 enddate__gte=selected_date).order_by('startdate')
+    delta = timedelta(days=1)
+    selected_weekday = selected_date.strftime('%A')
+
+    if Event.objects.filter(Q(startdate__lte=selected_date + delta), Q(enddate__gte=selected_date),
+                            Q(weekdays__name__startswith=selected_weekday)).exists():
+
+        events = Event.objects.filter(
+            Q(startdate__lt=selected_date + delta),
+            Q(enddate__gte=selected_date),
+            Q(weekdays__name__startswith=selected_weekday) |
+            Q(weekdays__isnull=True)
+        ).order_by('startdate')
+
+    else:
+        print 'Hello World'
+        events = Event.objects.filter(
+            Q(startdate__lt=selected_date + delta),
+            Q(enddate__gte=selected_date),
+            Q(weekdays__isnull=True)
+        ).order_by('startdate')
+
+
     return render(request, 'start/events.html', locals())
 
 
@@ -270,7 +305,6 @@ def presentation(request):
         form = PresentationForm(instance=activehost)
 
     return render(request, 'start/presentation.html', locals())
-
 
 
 @login_required(login_url='/accounts/login')
