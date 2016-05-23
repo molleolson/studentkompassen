@@ -60,7 +60,7 @@ class Event(models.Model):
     enddate = models.DateTimeField('Slutdatum och tid')
     #reccurrences = RecurrenceField(null=True,verbose_name='Upprepade event')
     categories = models.ManyToManyField(Category, verbose_name='Taggar')
-    weekdays = models.ManyToManyField(Weekdays, verbose_name='Veckodagar')
+    weekdays = models.ManyToManyField(Weekdays, verbose_name='Veckodagar', null=True, blank=True)
     #multipledates = models.DateTimeField('multiple dates')
     host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True, verbose_name='Nation')
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, verbose_name='Plats')

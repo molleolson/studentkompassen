@@ -18,8 +18,11 @@ from datetime import timedelta, datetime
 # funktion. De flesta funktioner liknar varandra till stor del.
 
 
-def index(request):
-    menu_active_item = 'now'
+def index(request, category=None):
+    if category is None:
+        menu_active_item = 'now'
+    else:
+        menu_active_item = category
     today = datetime.now()
     delta = timedelta(days=1)
     #events = Event.objects.filter(startdate__lte=timezone.now()+delta, enddate__gte=timezone.now()).order_by('startdate')
@@ -27,7 +30,12 @@ def index(request):
 
     todays_weekday = today.strftime('%A')
 
-    if Event.objects.filter(Q(startdate__lte=timezone.now()+delta), Q(enddate__gte=timezone.now()), Q(weekdays__name__startswith=todays_weekday)).exists():
+    event_test = Event.objects.filter(Q(startdate__lte=timezone.now() + delta), Q(enddate__gte=timezone.now()),
+                         Q(weekdays__name__startswith=todays_weekday))
+    if category is not None:
+        event_test = event_test.filter(categories__name__istartswith=category)
+
+    if event_test.exists():
         events = Event.objects.filter(
             Q(startdate__lte=timezone.now() + delta),
             Q(enddate__gte=timezone.now()),
@@ -44,20 +52,25 @@ def index(request):
             Q(weekdays__isnull=True)
         ).order_by('startdate')
 
-
+    if category is not None:
+        events = events.filter(categories__name__istartswith=category)
 
     return render(request, 'start/main.html', locals())
 
 
-def events(request):
+def events(request, category=None):
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
                                         timezone.get_default_timezone())
     delta = timedelta(days=1)
     selected_weekday = selected_date.strftime('%A')
 
-    if Event.objects.filter(Q(startdate__lte=selected_date + delta), Q(enddate__gte=selected_date),
-                            Q(weekdays__name__startswith=selected_weekday)).exists():
+    event_test = Event.objects.filter(Q(startdate__lte=selected_date + delta), Q(enddate__gte=selected_date),
+                                      Q(weekdays__name__startswith=selected_weekday))
 
+    if category is not None:
+        event_test = event_test.filter(categories__name__istartswith=category)
+
+    if event_test.exists():
         events = Event.objects.filter(
             Q(startdate__lt=selected_date + delta),
             Q(enddate__gte=selected_date),
@@ -73,6 +86,8 @@ def events(request):
             Q(weekdays__isnull=True)
         ).order_by('startdate')
 
+    if category is not None:
+        events = events.filter(categories__name__istartswith=category)
 
     return render(request, 'start/events.html', locals())
 

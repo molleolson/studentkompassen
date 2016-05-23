@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
 
     url(r'^$', views.index, name='index'),
+    url(r'index/([a-zA-Z]+)?/$', views.index, name='index_with_type'),
 
     # Sorting for categories
     url(r'^breakfast/$', views.event_breakfast, name='breakfast'),
@@ -27,8 +28,8 @@ urlpatterns = [
 
 
     # End sorting for categories
-
     url(r'^events/$', views.events, name='events'),
+    url(r'^events/([a-zA-Z]+)?/$', views.events, name='events_with_type'),
     url(r'^nationmain/$', views.nationmain, name='nationmain'),
     url(r'^nationmain/addevent/$', views.addevent, name='addevent'),
     url(r'^nationmain/editevent/(?P<event_id>\d+)/$', views.editevent, name='editevent'),
