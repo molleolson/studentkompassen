@@ -113,157 +113,6 @@ def events(request, category=None):
     return render(request, 'start/events.html', locals())
 
 
-# Start category-stuff for student user #################################
-
-
-def event_pub(request):
-    menu_active_item = 'pub'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Pub',
-                                  startdate__lt=timezone.now()+delta, enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/pub.html', locals())
-
-
-def reload_pub(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Pub', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_breakfast(request):
-    menu_active_item = 'breakfast'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Frukost', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/breakfast.html', locals())
-
-
-def reload_breakfast(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Frukost', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_lunch(request):
-    menu_active_item = 'lunch'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Lunch', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/lunch.html', locals())
-
-
-def reload_lunch(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Lunch', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_cafe(request):
-    menu_active_item = 'cafe'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Fika', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/cafe.html', locals())
-
-
-def reload_cafe(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Fika', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_restaurang(request):
-    menu_active_item = 'restaurang'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Restaurang', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/restaurang.html', locals())
-
-
-def reload_restaurang(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Restaurang', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_club(request):
-    menu_active_item = 'club'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Klubb', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/club.html', locals())
-
-
-def reload_club(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Klubb', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_gasque(request):
-    menu_active_item = 'gasque'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Gasque', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/gasque.html', locals())
-
-
-def reload_gasque(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Gasque', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-def event_other(request):
-    menu_active_item = 'other'
-    delta = timedelta(days=1)
-    events = Event.objects.filter(categories__name__startswith='Other', startdate__lt=timezone.now()+delta,
-                                enddate__gte=timezone.now()).order_by('startdate')
-    return render(request, 'start/other.html', locals())
-
-
-def reload_other(request):
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
-    #print "Selected date", selected_date
-    events = Event.objects.filter(categories__name__startswith='Other', startdate__lt=selected_date + timedelta(days=1),
-                                  enddate__gte=selected_date).order_by('startdate')
-    return render(request, 'start/events.html', locals())
-
-
-# End category-stuff for student user ########################
-
-def about(request):
-    menu_active_item = 'about'
-
-   # if language == 'sv':
-    #    translation.activate('sv')
-   # elif language == 'en':
-    #    translation.activate('en')
-    return render(request, 'start/about.html', locals())
-
-
 def nationinfo(request):
     menu_active_item = 'info'
 
@@ -290,12 +139,32 @@ def skapa(request, id):
 @login_required(login_url='/accounts/login')
 def nationmain(request):
     menu_active_item = 'now'
+    today = datetime.now()
     delta = timedelta(days=1)
+    todays_weekday = today.strftime('%A')
     nationname = request.user.get_username()
     nbr = nationname.find("_")
     nationname = nationname[:(nbr)]
-    events = Event.objects.filter(startdate__lt=timezone.now()+delta, enddate__gte=timezone.now()) \
-        .order_by('startdate')
+
+    event_test = Event.objects.filter(Q(startdate__lte=timezone.now() + delta), Q(enddate__gte=timezone.now()),
+                                      Q(weekdays__name__startswith=todays_weekday))
+
+    if event_test.exists():
+        events = Event.objects.filter(
+            Q(startdate__lte=timezone.now() + delta),
+            Q(enddate__gte=timezone.now()),
+            Q(weekdays__name__startswith=todays_weekday) |
+            Q(weekdays__isnull=True)
+
+        ).order_by('startdate')
+
+    else:
+        events = Event.objects.filter(
+            Q(startdate__lte=timezone.now() + delta),
+            Q(enddate__gte=timezone.now()),
+            Q(weekdays__isnull=True)
+        ).order_by('startdate')
+
     return render(request, 'start/nationmain.html', locals())
 
 
