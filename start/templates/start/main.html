@@ -2,7 +2,9 @@
 {% load i18n %}
 {% block title %}{%trans "Start page"%}{% endblock %}
 {% block additional_scripts %}
+ {{menu_active_item}}
 <script>
+
 $(function() {
     $( "#datepicker" ).datepicker({
         onSelect: function()
@@ -12,7 +14,7 @@ $(function() {
             datum = new Date(date-tzoffset);
             eventDate = date;
             writeDate();
-            $("div.calendar").load("{% url "start:events_with_type" "breakfast" %}?date=" + datum.toISOString().slice(0, 10), function()
+            $("div.calendar").load("{% url "start:events_with_type" menu_active_item %}?date=" + datum.toISOString().slice(0, 10), function()
             {
                 FB.XFBML.parse();
             });
@@ -20,19 +22,23 @@ $(function() {
         /*eventDate = date;*/
     });
 });
+
 function switchDateCalender(eventDate){
     $('#datepicker').datepicker('setDate', eventDate);
     var date=eventDate;
     var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
     datum = new Date(date-tzoffset);
-    $("div.calendar").load("{% url "start:events_with_type" "breakfast" %}?date=" + datum.toISOString().slice(0, 10), function()
+
+    $("div.calendar").load("{% url "start:events_with_type" menu_active_item %}?date=" + datum.toISOString().slice(0, 10), function()
             {
                 FB.XFBML.parse();
             });
 }
 </script>
 {% endblock %}
+
 {% block menu_item_1 %}
+
         <li {% if menu_active_item == 'now' %} class="active"{% endif %} ><a href = "{% url 'start:index' %}">{%trans "Start" %} </a></li>
          <li {% if menu_active_item == 'breakfast' or menu_active_item == 'pub' or menu_active_item == 'lunch' or menu_active_item == 'restaurang' or menu_active_item == 'gasque' or menu_active_item == 'club' or menu_active_item == 'other' or menu_active_item == 'cafe' %} class="active"{% endif %} class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{%trans "Categories"%}
          <span class="caret"></span></a>
