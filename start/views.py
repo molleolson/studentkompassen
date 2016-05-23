@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+import sys
+import codecs
+koden=sys.stdin.encoding
+
+
 from django.shortcuts import render, redirect, render_to_response, RequestContext, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import logout as auth_logout
@@ -25,15 +31,17 @@ def index(request, category=None):
         menu_active_item = category
     today = datetime.now()
     delta = timedelta(days=1)
-    #events = Event.objects.filter(startdate__lte=timezone.now()+delta, enddate__gte=timezone.now()).order_by('startdate')
-
-
     todays_weekday = today.strftime('%A')
 
     event_test = Event.objects.filter(Q(startdate__lte=timezone.now() + delta), Q(enddate__gte=timezone.now()),
                          Q(weekdays__name__startswith=todays_weekday))
+
     if category is not None:
-        event_test = event_test.filter(categories__name__istartswith=category)
+        if category == 'club':
+            afterparty = 'släpp'
+            event_test = event_test.filter(Q(categories__name__istartswith=category) | Q(categories__name__istartswith=afterparty))
+        else:
+            event_test = event_test.filter(categories__name__istartswith=category)
 
     if event_test.exists():
         events = Event.objects.filter(
@@ -45,7 +53,6 @@ def index(request, category=None):
         ).order_by('startdate')
 
     else:
-        print 'hello world'
         events = Event.objects.filter(
             Q(startdate__lte=timezone.now() + delta),
             Q(enddate__gte=timezone.now()),
@@ -53,12 +60,18 @@ def index(request, category=None):
         ).order_by('startdate')
 
     if category is not None:
-        events = events.filter(categories__name__istartswith=category)
+        if category == 'club':
+            afterparty = 'släpp'
+            events = events.filter(Q(categories__name__istartswith=category) | Q(categories__name__istartswith=afterparty))
+        else:
+            events = events.filter(categories__name__istartswith=category)
 
     return render(request, 'start/main.html', locals())
 
 
+########### Inläsning via kalendern ###########
 def events(request, category=None):
+
     selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
                                         timezone.get_default_timezone())
     delta = timedelta(days=1)
@@ -67,8 +80,13 @@ def events(request, category=None):
     event_test = Event.objects.filter(Q(startdate__lte=selected_date + delta), Q(enddate__gte=selected_date),
                                       Q(weekdays__name__startswith=selected_weekday))
 
-    if category is not None:
-        event_test = event_test.filter(categories__name__istartswith=category)
+    if category != 'now':
+        if category == 'club':
+            afterparty = 'släpp'
+            event_test = event_test.filter(
+                Q(categories__name__istartswith=category) | Q(categories__name__istartswith=afterparty))
+        else:
+            event_test = event_test.filter(categories__name__istartswith=category)
 
     if event_test.exists():
         events = Event.objects.filter(
@@ -79,15 +97,18 @@ def events(request, category=None):
         ).order_by('startdate')
 
     else:
-        print 'Hello World'
         events = Event.objects.filter(
             Q(startdate__lt=selected_date + delta),
             Q(enddate__gte=selected_date),
             Q(weekdays__isnull=True)
         ).order_by('startdate')
 
-    if category is not None:
-        events = events.filter(categories__name__istartswith=category)
+    if category != 'now':
+        if category == 'club':
+            afterparty = 'släpp'
+            events = events.filter(Q(categories__name__istartswith=category) | Q(categories__name__istartswith=afterparty))
+        else:
+            events = events.filter(categories__name__istartswith=category)
 
     return render(request, 'start/events.html', locals())
 
