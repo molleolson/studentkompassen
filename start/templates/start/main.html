@@ -60,10 +60,14 @@ function switchDateCalender(eventDate){
 
 {% endblock %}
 {% block menu_item_2 %}
-<!--
+
          {% if user.is_authenticated %}
-         <li {% if menu_active_item == 'myprofile' %} class="active"{% endif %} ><a href="{% url 'start:myprofile' %}"> {% trans "My saved events"%}</a></li>
-         {% endif %}-->
+        {% if request.user.social_auth.count %}
+        {% else %}
+<li><a href="{% url 'start:nationmain' %}" >{% trans "To host view" %}</a></li>
+
+        {% endif %}
+          {% endif %}
 {% endblock %}
 {% block left%}
 <div class="container-fluid" id="calendarBox" style ="opacity: 1">
