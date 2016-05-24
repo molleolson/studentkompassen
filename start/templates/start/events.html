@@ -65,10 +65,10 @@
                                     </p>
                                     {% get_current_language as LANGUAGE_CODE %}
                                     {%if LANGUAGE_CODE == 'sv'%}
-                                    <p>Beskrivning:  {{event.description}} </p>
+                                    <p>Beskrivning:  {{event.description | linebreaksbr}}}} </p>
 
                                     {%elif LANGUAGE_CODE == 'en'%}
-                                    <p>Description: {{event.description_english}} </p>
+                                    <p>Description: {{event.description_english | linebreaksbr}}}} </p>
                                     {%endif%}
 
 
