@@ -1085,3 +1085,6 @@ outline:0;
     background-color: white;
     border: 1px solid lightgray;
 }
+.fade.in{
+    background-color: #484848;
+}

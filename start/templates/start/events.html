@@ -1,5 +1,7 @@
 {% load i18n %}
  <!-- /ourevents-->
+
+
     <table class="responsive-table calendar-list active table table-striped"  data-day="1" cellspacing="0">
         <thead>
 
@@ -7,6 +9,7 @@
         <tbody>
                 {% for event in events %}
                 <tr id ="radBOD" data-toggle="modal" data-target="#{{event.id}}">
+                    <tr data-toggle="modal" data-target="#{{event.id}}">
 
 
                     <td id="aktivitetTD" data-title="Aktivitet">{{ event.name }}</td>
@@ -16,6 +19,7 @@
 
                         </span></td>
                     <td id="kategoriTD">{{ event.e_names }}</td>
+
                                                 <!-- POP UP SKITEN -->
 
 
@@ -40,7 +44,8 @@
                             <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <!-- Modal -->
 
-                    <div class="modal fade" id="{{event.id}}" role="dialog">
+                </tr>
+   <div class="modal fade" id="{{event.id}}" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
                             <div class="modal-content">
@@ -90,7 +95,8 @@
                         </div>
                     </div>
                     <!-- POP UP SKITEN -->
-                </tr>
+
             {% endfor %}
         </tbody>
     </table>
+
