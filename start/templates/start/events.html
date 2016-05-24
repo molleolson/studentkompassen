@@ -63,8 +63,15 @@
                                     {{event.enddate.time}}
 
                                     </p>
-                                    <p>{% trans "Beskrivning: " %} {{event.description}} </p>
-                                    <p>{% trans "Description: " %} {{event.description_english}} </p>
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {%if LANGUAGE_CODE == 'sv'%}
+                                    <p>Beskrivning:  {{event.description}} </p>
+
+                                    {%elif LANGUAGE_CODE == 'en'%}
+                                    <p>Description: {{event.description_english}} </p>
+                                    {%endif%}
+
+
                                 </div>
 
                                 <div class="modal-footer">
