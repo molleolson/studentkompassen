@@ -46,7 +46,7 @@ function switchDateCalender(eventDate){
          <ul class ="dropdown-menu">
 
          <li {% if menu_active_item == 'breakfast' %} class="active"{% endif %}><a href = "{% url 'start:index_with_type' "breakfast" %}">{%trans "Breakfast"%}</a></li>
-             <li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:index_with_type' "fika" %}">{%trans "Fika"%}</a></li>
+         <li {% if menu_active_item == 'cafe' %} class="active"{% endif %} ><a href = "{% url 'start:index_with_type' "fika" %}">{%trans "Fika"%}</a></li>
          <li {% if menu_active_item == 'lunch' %} class="active"{% endif %} ><a href = "{% url 'start:index_with_type' "lunch" %}">{%trans "Lunch"%}</a></li>
          <li {% if menu_active_item == 'pub' %} class="active"{% endif %} ><a href = "{% url 'start:index_with_type' "pub" %}">{%trans "Pub"%}</a></li>
          <li {% if menu_active_item == 'restaurang' %} class="active"{% endif %} ><a href = "{% url 'start:index_with_type' "restaurant" %}">{%trans "Restaurant"%}</a></li>
