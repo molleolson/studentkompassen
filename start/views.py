@@ -179,6 +179,8 @@ def ourevents(request):
     events = Event.objects.all().filter(host=activeHost, enddate__gte=timezone.now()).order_by('startdate')
     return render(request, 'start/ourevents.html', locals())
 
+
+
 @login_required(login_url='/accounts/login')
 def reload_ourevents(request):
     username = request.user.get_username()
@@ -249,4 +251,11 @@ def editevent(request, event_id):
         form = EventForm(allowed_hosts=[activeHost.id], instance=event)
 
     return render(request, 'start/editevent.html', locals())
+
+@login_required(login_url='/accounts/login')
+def deleteevent(request, event_id):
+    event=get_object_or_404(Event,pk=event_id)
+    event.delete()
+
+    return redirect('/start/nationmain/ourevents')
 

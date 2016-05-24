@@ -746,12 +746,21 @@ border-top: 0px;
 }
 #platsTDee{
     width:55%;
+
 border-top: 0px;
 }
+
+#deleteeventtd a {
+    color:red;
+    }
 
 #editeventtd{
     width:10%;
 
+}
+#deleteeventtd{
+    width:10%;
+    float:left;
 }
 
 #kategoriTDee{

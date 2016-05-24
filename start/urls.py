@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^nationmain/$', views.nationmain, name='nationmain'),
     url(r'^nationmain/addevent/$', views.addevent, name='addevent'),
     url(r'^nationmain/editevent/(?P<event_id>\d+)/$', views.editevent, name='editevent'),
+    url(r'^nationmain/deleteevent/(?P<event_id>\d+)/$', views.deleteevent, name='deleteevent'),
     url(r'^nationmain/presentation/$', views.presentation, name='presentation'),
     url(r'^nationmain/ourevents/$', views.ourevents, name='ourevents'),
     url(r'^nationinfo/$', views.nationinfo, name='nationinfo'),
