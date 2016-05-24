@@ -140,7 +140,7 @@ LANGUAGES =(
 
 )
 
-LANGUAGE_CODE = 'en'
+#LANGUAGE_CODE = 'en'
 
 #LANGUAGE_SESSION_KEY = 'en'
 

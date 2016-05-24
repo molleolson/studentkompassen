@@ -4,6 +4,7 @@ from start.models import Event, Location, Host
 from django.forms import inlineformset_factory, ModelForm,ChoiceField,RadioSelect,MultiWidget, CharField, DateField, TextInput
 from start.models import Event, Host
 from functools import partial
+from django.utils.translation import ugettext_lazy as _
 from datetimewidget.widgets import DateTimeWidget, DateWidget
 
 

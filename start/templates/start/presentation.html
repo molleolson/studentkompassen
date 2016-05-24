@@ -17,7 +17,7 @@
                         <form action="{% url "start:presentation" %}" method="POST">
                                 {% csrf_token %}
                                 {% include "form.html" with form=form %}
-                        <button id="presentation_btn" class="btn btn-default" type ="submit" >{% trans "Confirm edited description"%}</button>
+                        <button id="presentation_btn" class="btn btn-default" type ="submit" >{% trans "Confirm edited description" %}</button>
                         </form>
                     </div>
 

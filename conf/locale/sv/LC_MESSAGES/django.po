@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 10:48+0200\n"
+"POT-Creation-Date: 2016-05-24 11:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,42 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: start/models.py:31 start/models.py:57
+msgid "Swedish description"
+msgstr "Beskrivning på svenska"
+
+#: start/models.py:32 start/models.py:58
+msgid "English description"
+msgstr "Beskrivning på engelska"
+
+#: start/models.py:56
+msgid "Name of Event"
+msgstr "Eventnamn"
+
+#: start/models.py:59
+msgid "Startdate and time"
+msgstr "Startdatum och tid"
+
+#: start/models.py:60
+msgid "Enddate and time"
+msgstr "Slutdatum och tid"
+
+#: start/models.py:62
+msgid "Tags"
+msgstr "Taggar"
+
+#: start/models.py:63
+msgid "Weekdays"
+msgstr "Veckodagar"
+
+#: start/models.py:65
+msgid "Host"
+msgstr "Värd"
+
+#: start/models.py:66
+msgid "Location"
+msgstr "Plats"
 
 #: start/templates/pagelayout.html:77
 msgid "Sign Up"
@@ -46,7 +82,6 @@ msgid "My saved events"
 msgstr "Mina sparade event"
 
 #: start/templates/start/calenderlista.html:41
-#, fuzzy
 msgid "Event"
 msgstr "Evanemang"
 
@@ -63,14 +98,10 @@ msgid "Time"
 msgstr "Tid"
 
 #: start/templates/start/editevent.html:19
-#, fuzzy
-#| msgid "Create a new event"
 msgid "Editing event:"
 msgstr "Redigera eventet:"
 
 #: start/templates/start/editevent.html:25
-#, fuzzy
-#| msgid "Create a new event"
 msgid "Edit event"
 msgstr "Redigera event"
 
@@ -79,7 +110,6 @@ msgid "Beskrivning: "
 msgstr "Beskrivning: "
 
 #: start/templates/start/events.html:67
-#, fuzzy
 msgid "Description: "
 msgstr "Description: "
 
@@ -88,8 +118,6 @@ msgid "Start page"
 msgstr "Startsida"
 
 #: start/templates/start/main.html:42 start/templates/start/nationmain.html:8
-#, fuzzy
-#| msgid "Start page"
 msgid "Start"
 msgstr "Startsida"
 
@@ -158,8 +186,6 @@ msgid "Close"
 msgstr "Stäng"
 
 #: start/templates/start/presentation.html:20
-#, fuzzy
-#| msgid "Create event"
 msgid "Confirm edited description"
 msgstr "Bekräfta ändrad beskrivning"
 
@@ -170,116 +196,3 @@ msgstr "English"
 #: studentkompassen/settings.py:139
 msgid "Svenska"
 msgstr "Svenska"
-
-#, fuzzy
-#~| msgid "Create event"
-#~ msgid "Create a new event"
-#~ msgstr "Skapa ett nytt event"
-
-#, fuzzy
-#~| msgid "Create a new event"
-#~ msgid "Edit an event"
-#~ msgstr "Redigera event"
-
-#, fuzzy
-#~| msgid "Hello !"
-#~ msgid "Hello, "
-#~ msgstr "Hej, "
-
-#, fuzzy
-#~| msgid "Sign Up"
-#~ msgid "Sign in"
-#~ msgstr "Registrera dig"
-
-#~ msgid "Login with Facebook"
-#~ msgstr "Logga in med Facebook"
-
-#~ msgid "Login as a host"
-#~ msgstr "Logga in som värd"
-
-#~ msgid "Need help?"
-#~ msgstr "Behöver du hjälp?"
-
-#, fuzzy
-#~| msgid "Create a new event"
-#~ msgid "Create an account"
-#~ msgstr "Skapa ett nytt event"
-
-#~ msgid "Please sign in"
-#~ msgstr "Logga in här"
-
-#, fuzzy
-#~| msgid "Create a new event"
-#~ msgid "Redigera event"
-#~ msgstr "Redigera event"
-
-#~ msgid "Skapa ett nytt event"
-#~ msgstr "Create a new event"
-
-#, fuzzy
-#~| msgid "Reappearing events"
-#~ msgid "Skapa event"
-#~ msgstr "Återkommande event"
-
-#, fuzzy
-#~ msgid "Redigera ett event"
-#~ msgstr "Redigera event"
-
-#~ msgid " By "
-#~ msgstr "Av"
-
-#~ msgid " at "
-#~ msgstr " på "
-
-#, fuzzy
-#~| msgid "Edit a description"
-#~ msgid "English description: "
-#~ msgstr "Engelsk beskrivning: "
-
-#~ msgid "Right Now"
-#~ msgstr "Just nu"
-
-#~ msgid "Close to you"
-#~ msgstr "Nära dig"
-
-#, fuzzy
-#~| msgid "Right Now"
-#~ msgid "Right now"
-#~ msgstr "Just nu"
-
-#~ msgid "Add event"
-#~ msgstr "Lägg till event"
-
-#, fuzzy
-#~| msgid "Create event"
-#~ msgid "Confirm edited event"
-#~ msgstr "Skapa event"
-
-#~ msgid "to the admin page"
-#~ msgstr "till adminsidan"
-
-#, fuzzy
-#~| msgid "Event"
-#~ msgid "Events"
-#~ msgstr "Evanemang"
-
-#~ msgid "Days"
-#~ msgstr "Dagar"
-
-#~ msgid "Norwegian "
-#~ msgstr "Norska"
-
-#~ msgid "Log in"
-#~ msgstr "Logga in"
-
-#~ msgid "Hej och nått"
-#~ msgstr "gd"
-
-#~ msgid "Hello2!"
-#~ msgstr "hi3"
-
-#~ msgid "Hello26!"
-#~ msgstr "hif"
-
-#~ msgid "Hej5 och nått"
-#~ msgstr "54"

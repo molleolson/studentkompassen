@@ -28,8 +28,8 @@ class Host(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     logo = models.CharField(max_length=200, blank=True, null=True)
-    hostdescription = models.TextField(blank=True, null=True, verbose_name="Beskrivning")
-    hostdescription_english = models.TextField(blank=True, null=True, verbose_name="Description")
+    hostdescription = models.TextField(_("Swedish description"),blank=True, null=True)
+    hostdescription_english = models.TextField(blank=True, null=True, verbose_name=_("English description"))
     location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
 
 
@@ -53,17 +53,17 @@ class Weekdays(models.Model):
 
 
 class Event(models.Model):
-    name = models.CharField(max_length=200, blank=True, null=True, verbose_name='Name of Event')
-    description = models.CharField(max_length=400, blank=True, null=True, verbose_name='Swedish description')
-    description_english = models.CharField(max_length=400, blank=True, null=True, verbose_name='English description')
-    startdate = models.DateTimeField('Startdate and time')
-    enddate = models.DateTimeField('Enddate and time')
+    name = models.CharField(max_length=200, blank=True, null=True, verbose_name=_('Name of Event'))
+    description = models.CharField(max_length=400, blank=True, null=True, verbose_name=_('Swedish description'))
+    description_english = models.CharField(max_length=400, blank=True, null=True, verbose_name=_('English description'))
+    startdate = models.DateTimeField(_('Startdate and time'))
+    enddate = models.DateTimeField(_('Enddate and time'))
     #reccurrences = RecurrenceField(null=True,verbose_name='Upprepade event')
-    categories = models.ManyToManyField(Category, verbose_name='Tags')
-    weekdays = models.ManyToManyField(Weekdays, verbose_name='Weekdays', null=True, blank=True)
+    categories = models.ManyToManyField(Category, verbose_name=_('Tags'))
+    weekdays = models.ManyToManyField(Weekdays, verbose_name=_('Weekdays'), null=True, blank=True)
     #multipledates = models.DateTimeField('multiple dates')
-    host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True, verbose_name='Host')
-    location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, verbose_name='Location')
+    host = models.ForeignKey(Host, on_delete=models.CASCADE, null=True, verbose_name=_('Host'))
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, verbose_name=_('Location'))
 
     def e_names(self):
         return u', '.join([c.name for c in self.categories.all()])
