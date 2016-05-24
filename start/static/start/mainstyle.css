@@ -89,6 +89,8 @@ body {
             position: relative;
             padding-bottom: 0px;
             padding-top: 0px;
+                padding-right: 50px;
+                padding-left: 50px;
             }
             .navbar-collapse .navbar-nav > .active > a:hover {
              /*why you no work? jo, det Ã¤r about background!*/
@@ -105,7 +107,10 @@ body {
             position: relative;
             padding-bottom: 0px;
             padding-top: 0px;
+                padding-right: 50px;
+                padding-left: 50px;
                 bottom:2px;
+
             }
 
             .navbar-collapse .navbar-nav > li > a:hover {
@@ -386,6 +391,8 @@ margin:5px;
             position: relative;
             padding-bottom: 0px;
             padding-top: 0px;
+                padding-right: 50px;
+                padding-left: 50px;
             }
             .navbar-collapse .navbar-nav > .active > a:hover {
              /*why you no work? jo, det Ã¤r about background!*/
@@ -402,6 +409,8 @@ margin:5px;
             position: relative;
             padding-bottom: 0px;
             padding-top: 0px;
+                padding-right: 50px;
+                padding-left: 50px;
                 bottom:2px;
             }
 
@@ -691,6 +700,7 @@ li.dropdown.open > a:focus {
     border-right: 1px solid lightgray;
     border-top: 0px solid lightgray;
     background-color: rgba(250,250,250,0.9);
+    width: 182.12px;
 }
 .dropdown-menu > li > a{
     padding:10px 15px;
