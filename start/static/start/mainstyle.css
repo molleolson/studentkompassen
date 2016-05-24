@@ -124,7 +124,7 @@ body {
             width: 0px;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
-            margin-top: 30px;
+            margin-top: 31px;
             }
 
             .navbar-collapse .navbar-nav > li > a:hover:after {
@@ -421,7 +421,7 @@ margin:5px;
             width: 0px;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
-            margin-top: 30px;
+            margin-top: 31px;
             }
 
             .navbar-collapse .navbar-nav > li > a:hover:after {
