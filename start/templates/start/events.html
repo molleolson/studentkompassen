@@ -46,7 +46,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">{{ event.name }}</h4>
+                                    <h4 class="modal-title"><strong>{{ event.name }}</strong></h4>
                                 </div>
                                 <div class="modal-body">
                                     <p>
@@ -66,10 +66,10 @@
                                     </p>
                                     {% get_current_language as LANGUAGE_CODE %}
                                     {%if LANGUAGE_CODE == 'sv'%}
-                                    <p>Beskrivning:  {{event.description | linebreaksbr}} </p>
+                                    <p>{{event.description | linebreaksbr}} </p>
 
                                     {%elif LANGUAGE_CODE == 'en'%}
-                                    <p>Description: {{event.description_english | linebreaksbr}} </p>
+                                    <p>{{event.description_english | linebreaksbr}} </p>
                                     {%endif%}
 
 
