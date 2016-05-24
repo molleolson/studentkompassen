@@ -24,10 +24,10 @@
                 <div id="beskrivning" class="comment more ">
                     {% get_current_language as LANGUAGE_CODE %}
                     {%if LANGUAGE_CODE == 'sv'%}
-                    {{host.hostdescription}}
+                    {{host.hostdescription | linebreaksbr}}
 
                     {%elif LANGUAGE_CODE == 'en'%}
-                    {{host.hostdescription_english}}
+                    {{host.hostdescription_english | linebreaksbr}}
                     {%endif%}
 
                 </div>
