@@ -1,4 +1,4 @@
-from django import forms
+from django.forms import Form
 from django.forms import inlineformset_factory, ModelForm, Textarea, DateField,CheckboxSelectMultiple, TextInput, MultipleChoiceField
 from start.models import Event, Location, Host
 from django.forms import inlineformset_factory, ModelForm,ChoiceField,RadioSelect,MultiWidget, CharField, DateField, TextInput
@@ -36,6 +36,13 @@ class EventForm(ModelForm):
         super(EventForm, self).__init__(*args, **kwargs)
         self.fields['host'].queryset = Host.objects.filter(id__in=allowed_hosts)
 
+    def clean(self):
+        cleaned_data = super(EventForm, self).clean()
+        startdate = cleaned_data.get('startdate')
+        enddate = cleaned_data.get('enddate')
+        if enddate < startdate:
+            msg=u"End date must be after start date"
+            self._errors['enddate'] = self.error_class([msg])
 
 class PresentationForm(ModelForm):
     class Meta:

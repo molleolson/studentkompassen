@@ -1,6 +1,6 @@
 {% extends "start/nationmain.html" %}
 {% load i18n %}
-{% block title %}Lägg till event{% endblock %}
+{% block title %}Create a new event{% endblock %}
 
 {% block additional_scripts %}
 
@@ -15,18 +15,18 @@
 
     <tr>
     <form action="{% url "start:addevent" %}" method="POST">
-        <h2>{% trans "Skapa ett nytt event"%}</h2>
+
         {% csrf_token %}
 
         {% include "form.html" with form=form %}
         <tr>
         <div class="col-sm-5" style="padding:0; padding-right: 4%">
-        <button class="btn btn-success btn-block" id="addingeventbtn" type ="submit">{% trans "Skapa event" %}</button>
+        <button class="btn btn-success btn-block" id="addingeventbtn" type ="submit">{% trans "Create event" %}</button>
 </div>
 
     </form>
 <div class="col-sm-5" style="padding:0; padding-left: 4%">
-        <a href="{% url 'start:nationmain' %}" class="btn btn-primary btn-block" id="regrettaddingeventbtn">{% trans "Ångra" %}</a>
+        <a href="{% url 'start:nationmain' %}" class="btn btn-primary btn-block" id="regrettaddingeventbtn">{% trans "Regret" %}</a>
 </div>
          </tr>
 

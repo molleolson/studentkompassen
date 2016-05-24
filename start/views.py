@@ -226,7 +226,7 @@ def addevent(request):
 
         if form.is_valid():
             instance = form.save()
-            return redirect('/start/nationmain/')
+            return redirect('/start/nationmain/ourevents')
     else:
         form = EventForm(allowed_hosts=[activeHost.id])
 
