@@ -2,7 +2,7 @@
 <!--inlogg för facebook, vanliga användare -->
 {% block left%}
 {% if user and not user.is_anonymous %}
-<a>Hello, {{user.get_full_name}} !</a>
+<a>{{user.get_full_name}} !</a>
 <!--<meta http-equiv="REFRESH" content="0;url=start:studentmain">-->
 <br>
 <!--<a href="/logout">Logout</a>-->
@@ -18,10 +18,10 @@
     <span class="fa fa-facebook"></span> Login with Facebook</a>
 
                     <a class="btn btn-block btn-social " id="nationinlogBTN" href="accounts/login">
-    <span class=""></span> Login as a nation</a>
+    <span class=""></span> Login as a host</a>
 
 
-                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                <a href="#" class="pull-right need-help">Need help </a><span class="clearfix"></span>
                 </form>
             </div>
             <a href="#" class="text-center new-account">Create an account </a>

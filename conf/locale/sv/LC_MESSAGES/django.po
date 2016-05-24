@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-20 14:56+0200\n"
+"POT-Creation-Date: 2016-05-24 10:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,23 +21,13 @@ msgstr ""
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:88
+#: start/templates/pagelayout.html:90
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:91
+#: start/templates/pagelayout.html:93
 msgid "Login"
 msgstr "Logga in"
-
-#: start/templates/start/about.html:10
-#: start/templates/start/calenderlista.html:17
-#: start/templates/start/main.html:58
-msgid "My saved events"
-msgstr "Mina sparade event"
-
-#: start/templates/start/addevent.html:18
-msgid "Create a new event"
-msgstr "Skapa ett nytt event"
 
 #: start/templates/start/addevent.html:24
 #: start/templates/start/nationmain.html:9
@@ -48,6 +38,12 @@ msgstr "Skapa event"
 #: start/templates/start/editevent.html:30
 msgid "Regret"
 msgstr "Ångra"
+
+#: start/templates/start/calenderlista.html:17
+#: start/templates/start/main.html:65
+#: start/templates/start/not_used/about.html:10
+msgid "My saved events"
+msgstr "Mina sparade event"
 
 #: start/templates/start/calenderlista.html:41
 #, fuzzy
@@ -69,19 +65,20 @@ msgstr "Tid"
 #: start/templates/start/editevent.html:19
 #, fuzzy
 #| msgid "Create a new event"
-msgid "Edit an event"
-msgstr "Redigera event"
+msgid "Editing event:"
+msgstr "Redigera eventet:"
 
 #: start/templates/start/editevent.html:25
 #, fuzzy
+#| msgid "Create a new event"
 msgid "Edit event"
 msgstr "Redigera event"
 
-#: start/templates/start/events.html:44
+#: start/templates/start/events.html:66
 msgid "Beskrivning: "
 msgstr "Beskrivning: "
 
-#: start/templates/start/events.html:45
+#: start/templates/start/events.html:67
 #, fuzzy
 msgid "Description: "
 msgstr "Description: "
@@ -90,49 +87,49 @@ msgstr "Description: "
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/main.html:36 start/templates/start/nationmain.html:8
+#: start/templates/start/main.html:42 start/templates/start/nationmain.html:8
 #, fuzzy
 #| msgid "Start page"
 msgid "Start"
 msgstr "Startsida"
 
-#: start/templates/start/main.html:37
+#: start/templates/start/main.html:43
 msgid "Categories"
 msgstr "Kategorier"
 
-#: start/templates/start/main.html:42
+#: start/templates/start/main.html:48
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: start/templates/start/main.html:42
+#: start/templates/start/main.html:49
 msgid "Fika"
 msgstr "Fika"
 
-#: start/templates/start/main.html:43
+#: start/templates/start/main.html:50
 msgid "Lunch"
 msgstr "Lunch"
 
-#: start/templates/start/main.html:44
+#: start/templates/start/main.html:51
 msgid "Pub"
 msgstr "Pub"
 
-#: start/templates/start/main.html:45
+#: start/templates/start/main.html:52
 msgid "Restaurant"
 msgstr "Restaurang"
 
-#: start/templates/start/main.html:46
+#: start/templates/start/main.html:53
 msgid "Clubs"
 msgstr "Klubbar/Släpp"
 
-#: start/templates/start/main.html:47
+#: start/templates/start/main.html:54
 msgid "Gasque"
 msgstr "Gask"
 
-#: start/templates/start/main.html:48
+#: start/templates/start/main.html:55
 msgid "Other"
 msgstr "Övrigt"
 
-#: start/templates/start/main.html:52
+#: start/templates/start/main.html:59
 msgid "Nations and unions"
 msgstr "Nationer och kårer"
 
@@ -156,6 +153,10 @@ msgstr "Välkommen"
 msgid "Edit"
 msgstr "Redigera"
 
+#: start/templates/start/ourevents.html:83
+msgid "Close"
+msgstr "Stäng"
+
 #: start/templates/start/presentation.html:20
 #, fuzzy
 #| msgid "Create event"
@@ -169,6 +170,60 @@ msgstr "English"
 #: studentkompassen/settings.py:139
 msgid "Svenska"
 msgstr "Svenska"
+
+#, fuzzy
+#~| msgid "Create event"
+#~ msgid "Create a new event"
+#~ msgstr "Skapa ett nytt event"
+
+#, fuzzy
+#~| msgid "Create a new event"
+#~ msgid "Edit an event"
+#~ msgstr "Redigera event"
+
+#, fuzzy
+#~| msgid "Hello !"
+#~ msgid "Hello, "
+#~ msgstr "Hej, "
+
+#, fuzzy
+#~| msgid "Sign Up"
+#~ msgid "Sign in"
+#~ msgstr "Registrera dig"
+
+#~ msgid "Login with Facebook"
+#~ msgstr "Logga in med Facebook"
+
+#~ msgid "Login as a host"
+#~ msgstr "Logga in som värd"
+
+#~ msgid "Need help?"
+#~ msgstr "Behöver du hjälp?"
+
+#, fuzzy
+#~| msgid "Create a new event"
+#~ msgid "Create an account"
+#~ msgstr "Skapa ett nytt event"
+
+#~ msgid "Please sign in"
+#~ msgstr "Logga in här"
+
+#, fuzzy
+#~| msgid "Create a new event"
+#~ msgid "Redigera event"
+#~ msgstr "Redigera event"
+
+#~ msgid "Skapa ett nytt event"
+#~ msgstr "Create a new event"
+
+#, fuzzy
+#~| msgid "Reappearing events"
+#~ msgid "Skapa event"
+#~ msgstr "Återkommande event"
+
+#, fuzzy
+#~ msgid "Redigera ett event"
+#~ msgstr "Redigera event"
 
 #~ msgid " By "
 #~ msgstr "Av"
@@ -208,9 +263,6 @@ msgstr "Svenska"
 #~ msgid "Events"
 #~ msgstr "Evanemang"
 
-#~ msgid "Reappearing events"
-#~ msgstr "Återkommande event"
-
 #~ msgid "Days"
 #~ msgstr "Dagar"
 
@@ -219,9 +271,6 @@ msgstr "Svenska"
 
 #~ msgid "Log in"
 #~ msgstr "Logga in"
-
-#~ msgid "Hello !"
-#~ msgstr "hi"
 
 #~ msgid "Hej och nått"
 #~ msgstr "gd"
