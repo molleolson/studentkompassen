@@ -690,11 +690,14 @@ http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/#/products
 }
 #radBOD:hover{
     border-bottom: solid 1px #cccccc;
-    background: red;
-
-    cursor: hand;
+    background: #f2f2f2;
+    cursor: pointer;
 }
+#radBOD2{
+        border-bottom: solid 1px #cccccc;
+    background: transparent;
 
+}
 .dropdown-menu form:after {
     content: "";
     display: table;
@@ -755,15 +758,30 @@ text-align: right;
 
 border-top: 0px;
 }
+#aktivitetTDee:hover{
+    background-color: #f2f2f2;
+        cursor: pointer;
+
+}
 #platsTDee{
     width:55%;
 
 border-top: 0px;
 }
+#platsTDee:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
 
 #deleteeventtd a {
     color:red;
     }
+#ejb{
+    width: 50%;
+}
+#ejb1{
+    width: 30px;
+}
 
 #editeventtd{
     width:10%;
@@ -781,6 +799,11 @@ border-top: 0px;
     font-weight: bold;
     text-align: right;
 }
+#kategoriTDee:hover{
+    background-color: #f2f2f2;
+        cursor: pointer;
+
+}
 #startTDee {
     width: 35%;
     border-top: 0px;
@@ -789,7 +812,11 @@ border-top: 0px;
         text-align: right;
 
 }
+#startTDee:hover{
+    background-color: #f2f2f2;
+        cursor: pointer;
 
+}
 
 .responsive-table th{
     font-family: Raleway;
