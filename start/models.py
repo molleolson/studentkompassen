@@ -82,3 +82,4 @@ class Event(models.Model):
 
 
 vinaigrette.register(Weekdays, ['name'])
+vinaigrette.register(Category, ['name'])

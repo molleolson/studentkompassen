@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-25 11:35+0200\n"
+"POT-Creation-Date: 2016-05-25 11:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/models.py:32 start/models.py:58
+#: start/models.py:33 start/models.py:59
 msgid "Swedish description"
 msgstr "Beskrivning på svenska"
 
-#: start/models.py:33 start/models.py:59
+#: start/models.py:34 start/models.py:60
 msgid "English description"
 msgstr "Beskrivning på engelska"
 
-#: start/models.py:57
+#: start/models.py:58
 msgid "Name of Event"
 msgstr "Eventnamn"
 
-#: start/models.py:60
+#: start/models.py:61
 msgid "Startdate and time"
 msgstr "Startdatum och tid"
 
-#: start/models.py:61
+#: start/models.py:62
 msgid "Enddate and time"
 msgstr "Slutdatum och tid"
 
-#: start/models.py:63
+#: start/models.py:64
 msgid "Tags"
 msgstr "Taggar"
 
-#: start/models.py:64
+#: start/models.py:65
 msgid "Weekdays"
 msgstr "Veckodagar"
 
-#: start/models.py:66
+#: start/models.py:67
 msgid "Host"
 msgstr "Arrangör"
 
-#: start/models.py:67
+#: start/models.py:68
 msgid "Location"
 msgstr "Plats"
 
@@ -116,23 +116,23 @@ msgstr "Startsida"
 msgid "Categories"
 msgstr "Kategorier"
 
-#: start/templates/start/main.html:48
+#: start/templates/start/main.html:48 start.Category/name:8
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: start/templates/start/main.html:49
+#: start/templates/start/main.html:49 start.Category/name:3
 msgid "Fika"
 msgstr "Fika"
 
-#: start/templates/start/main.html:50
+#: start/templates/start/main.html:50 start.Category/name:1
 msgid "Lunch"
 msgstr "Lunch"
 
-#: start/templates/start/main.html:51
+#: start/templates/start/main.html:51 start.Category/name:6
 msgid "Pub"
 msgstr "Pub"
 
-#: start/templates/start/main.html:52
+#: start/templates/start/main.html:52 start.Category/name:9
 msgid "Restaurant"
 msgstr "Restaurang"
 
@@ -140,11 +140,11 @@ msgstr "Restaurang"
 msgid "Clubs"
 msgstr "Klubbar/Släpp"
 
-#: start/templates/start/main.html:54
+#: start/templates/start/main.html:54 start.Category/name:2
 msgid "Gasque"
 msgstr "Gask"
 
-#: start/templates/start/main.html:55
+#: start/templates/start/main.html:55 start.Category/name:10
 msgid "Other"
 msgstr "Övrigt"
 
@@ -195,6 +195,15 @@ msgstr "English"
 #: studentkompassen/settings.py:140
 msgid "Svenska"
 msgstr "Svenska"
+
+#: start.Category/name:4
+#| msgid "Clubs"
+msgid "Club"
+msgstr "Klubb"
+
+#: start.Category/name:11
+msgid "Släpp"
+msgstr "Släpp"
 
 #: start.Weekdays/name:1
 msgid "Monday"
