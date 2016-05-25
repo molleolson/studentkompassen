@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 14:56+0200\n"
+"POT-Creation-Date: 2016-05-25 10:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,15 +53,15 @@ msgstr "Arrangör"
 msgid "Location"
 msgstr "Plats"
 
-#: start/templates/pagelayout.html:77
+#: start/templates/pagelayout.html:78
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:90
+#: start/templates/pagelayout.html:91
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:93
+#: start/templates/pagelayout.html:94
 msgid "Login"
 msgstr "Logga in"
 
@@ -71,7 +71,7 @@ msgid "Create event"
 msgstr "Skapa event"
 
 #: start/templates/start/addevent.html:29
-#: start/templates/start/editevent.html:26
+#: start/templates/start/editevent.html:28
 msgid "Regret"
 msgstr "Ångra"
 
@@ -100,7 +100,7 @@ msgstr "Tid"
 msgid "Editing event:"
 msgstr "Redigera eventet:"
 
-#: start/templates/start/editevent.html:29
+#: start/templates/start/editevent.html:25
 msgid "Edit event"
 msgstr "Redigera event"
 
@@ -195,5 +195,3 @@ msgstr "English"
 #: studentkompassen/settings.py:139
 msgid "Svenska"
 msgstr "Svenska"
-
-
