@@ -9,11 +9,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.http import HttpResponse
 import vinaigrette
 
-
-
-
-
-
 class Location(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     gps = models.CharField(max_length=400, blank=True, null=True)
