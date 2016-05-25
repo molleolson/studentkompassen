@@ -7,6 +7,7 @@ from recurrence.fields import RecurrenceField
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from django.http import HttpResponse
+import vinaigrette
 
 
 
@@ -80,4 +81,4 @@ class Event(models.Model):
         return u'%s / %s / %s' % (self.name, self.description, self.description_english)
 
 
-
+vinaigrette.register(Weekdays, ['name'])

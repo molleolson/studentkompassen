@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-25 10:59+0200\n"
+"POT-Creation-Date: 2016-05-25 11:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/models.py:31 start/models.py:57
+#: start/models.py:32 start/models.py:58
 msgid "Swedish description"
 msgstr "Beskrivning på svenska"
 
-#: start/models.py:32 start/models.py:58
+#: start/models.py:33 start/models.py:59
 msgid "English description"
 msgstr "Beskrivning på engelska"
 
-#: start/models.py:56
+#: start/models.py:57
 msgid "Name of Event"
 msgstr "Eventnamn"
 
-#: start/models.py:59
+#: start/models.py:60
 msgid "Startdate and time"
 msgstr "Startdatum och tid"
 
-#: start/models.py:60
+#: start/models.py:61
 msgid "Enddate and time"
 msgstr "Slutdatum och tid"
 
-#: start/models.py:62
+#: start/models.py:63
 msgid "Tags"
 msgstr "Taggar"
 
-#: start/models.py:63
+#: start/models.py:64
 msgid "Weekdays"
 msgstr "Veckodagar"
 
-#: start/models.py:65
+#: start/models.py:66
 msgid "Host"
 msgstr "Arrangör"
 
-#: start/models.py:66
+#: start/models.py:67
 msgid "Location"
 msgstr "Plats"
 
@@ -188,10 +188,38 @@ msgstr "Radera"
 msgid "Confirm edited description"
 msgstr "Bekräfta ändrad beskrivning"
 
-#: studentkompassen/settings.py:138
+#: studentkompassen/settings.py:139
 msgid "English"
 msgstr "English"
 
-#: studentkompassen/settings.py:139
+#: studentkompassen/settings.py:140
 msgid "Svenska"
 msgstr "Svenska"
+
+#: start.Weekdays/name:1
+msgid "Monday"
+msgstr "Måndag"
+
+#: start.Weekdays/name:2
+msgid "Tuesday"
+msgstr "Tisdag"
+
+#: start.Weekdays/name:3
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: start.Weekdays/name:4
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: start.Weekdays/name:5
+msgid "Friday"
+msgstr "Fredag"
+
+#: start.Weekdays/name:6
+msgid "Saturday"
+msgstr "Lördag"
+
+#: start.Weekdays/name:7
+msgid "Sunday"
+msgstr "Söndag"
