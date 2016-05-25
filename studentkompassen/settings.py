@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'datetimewidget.widgets',
     'recurrence',
     'studentkompassen',
+    'vinaigrette',
     'django_social_app',
     'social.apps.django_app.default',
 ]
