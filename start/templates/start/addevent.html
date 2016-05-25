@@ -21,13 +21,14 @@
         {% include "form.html" with form=form %}
         <tr>
         <div class="col-sm-5" style="padding:0; padding-right: 4%">
+        <a href="{% url 'start:nationmain' %}" class="btn btn-primary btn-block" id="regrettaddingeventbtn">{% trans "Regret" %}</a>
+</div>
+        <div class="col-sm-5" style="padding:0; padding-left: 4%">
         <button class="btn btn-success btn-block" id="addingeventbtn" type ="submit">{% trans "Create event" %}</button>
 </div>
 
     </form>
-<div class="col-sm-5" style="padding:0; padding-left: 4%">
-        <a href="{% url 'start:nationmain' %}" class="btn btn-primary btn-block" id="regrettaddingeventbtn">{% trans "Regret" %}</a>
-</div>
+
          </tr>
 
     </div>
