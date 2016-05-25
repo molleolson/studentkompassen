@@ -12,6 +12,7 @@ from django.http import HttpResponse
 
 
 
+
 class Location(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     gps = models.CharField(max_length=400, blank=True, null=True)
