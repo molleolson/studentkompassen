@@ -21,13 +21,13 @@
         {% csrf_token %}
         {% include "form.html" with form=form %}
         </tr>
-
         <div class="col-sm-5" style="padding:0; padding-right: 4%">
-        <a href="{% url 'start:ourevents' %}" class="btn btn-primary btn-block" id="regrettediteventbtn">{% trans "Regret" %}</a>
-        </div>
-        <div class="col-sm-5" style="padding:0; padding-left: 4%">
         <button class="btn btn-success btn-block" id="editeventbtn" type ="submit">{% trans "Edit event" %}</button>
         </div>
+        <div class="col-sm-5" style="padding:0; padding-left: 4%">
+        <a href="{% url 'start:ourevents' %}" class="btn btn-primary btn-block" id="regrettediteventbtn">{% trans "Regret" %}</a>
+        </div>
+
 
 
     </form>

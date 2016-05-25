@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 11:57+0200\n"
+"POT-Creation-Date: 2016-05-25 10:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,21 +47,21 @@ msgstr "Veckodagar"
 
 #: start/models.py:65
 msgid "Host"
-msgstr "Värd"
+msgstr "Arrangör"
 
 #: start/models.py:66
 msgid "Location"
 msgstr "Plats"
 
-#: start/templates/pagelayout.html:77
+#: start/templates/pagelayout.html:78
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:90
+#: start/templates/pagelayout.html:91
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:93
+#: start/templates/pagelayout.html:94
 msgid "Login"
 msgstr "Logga in"
 
@@ -71,12 +71,11 @@ msgid "Create event"
 msgstr "Skapa event"
 
 #: start/templates/start/addevent.html:29
-#: start/templates/start/editevent.html:30
+#: start/templates/start/editevent.html:28
 msgid "Regret"
 msgstr "Ångra"
 
 #: start/templates/start/calenderlista.html:17
-#: start/templates/start/main.html:65
 #: start/templates/start/not_used/about.html:10
 msgid "My saved events"
 msgstr "Mina sparade event"
@@ -105,19 +104,11 @@ msgstr "Redigera eventet:"
 msgid "Edit event"
 msgstr "Redigera event"
 
-#: start/templates/start/events.html:66
-msgid "Beskrivning: "
-msgstr "Beskrivning: "
-
-#: start/templates/start/events.html:67
-msgid "Description: "
-msgstr "Description: "
-
 #: start/templates/start/main.html:3
 msgid "Start page"
 msgstr "Startsida"
 
-#: start/templates/start/main.html:42 start/templates/start/nationmain.html:8
+#: start/templates/start/main.html:42
 msgid "Start"
 msgstr "Startsida"
 
@@ -161,29 +152,37 @@ msgstr "Övrigt"
 msgid "Nations and unions"
 msgstr "Nationer och kårer"
 
+#: start/templates/start/main.html:66
+msgid "To host view"
+msgstr "Till arrangörssida"
+
 #: start/templates/start/myprofile.html:4
 msgid "My profile"
 msgstr "Min profil"
 
-#: start/templates/start/nationmain.html:10
+#: start/templates/start/nationmain.html:8
 msgid "Our events"
 msgstr "Våra event"
 
-#: start/templates/start/nationmain.html:11
+#: start/templates/start/nationmain.html:10
 msgid "Presentation"
 msgstr "Presentation"
 
-#: start/templates/start/nationmain.html:20
+#: start/templates/start/nationmain.html:11
+msgid "All events"
+msgstr "Alla event"
+
+#: start/templates/start/ourevents.html:9
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: start/templates/start/ourevents.html:19
+#: start/templates/start/ourevents.html:24
 msgid "Edit"
 msgstr "Redigera"
 
-#: start/templates/start/ourevents.html:83
-msgid "Close"
-msgstr "Stäng"
+#: start/templates/start/ourevents.html:36
+msgid "Delete"
+msgstr "Radera"
 
 #: start/templates/start/presentation.html:20
 msgid "Confirm edited description"

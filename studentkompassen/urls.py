@@ -18,13 +18,14 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 import start.views, django_social_app.views, django.contrib.auth.views
 from django.conf.urls.i18n import i18n_patterns
+from django.views.i18n import javascript_catalog
 
 js_info_dict = {
-    'packages': ('recurrence', ),
+    'packages': ('recurrence', 'dateAndTime', ),
 }
 
 urlpatterns = i18n_patterns(
-    url(r'^jsi18n/$', 'django.views.i18n.javascript_catalog', js_info_dict),
+    url(r'^jsi18n/$', javascript_catalog, js_info_dict, name='javascript-catalog'),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login', django.contrib.auth.views.login, ),
     url(r'^start/', include('start.urls', namespace="start")),

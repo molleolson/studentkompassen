@@ -76,14 +76,14 @@ function switchDateCalender(eventDate){
     <div class="datetimepicker ll-skin-cangas hidden-xs pull-right"  id="datepicker"></div>
 
     <div class="container-fluid col-sm-8 col-md-8 col-lg-8" id = "calendarMinibox">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <button class=" glyphicon glyphicon-chevron-left" id="dayPickerBtnLeft" href="#"></button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <button class=" glyphicon glyphicon-chevron-left" id="dayPickerBtnLeft" href="#"></button>
         <button  class = "glyphicon" id="dayPickerBtn"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></></button>
         <button class="next glyphicon glyphicon-chevron-right" id="dayPickerBtnRight" style="display: inline;" href="#" ></button>
-        <div class="calendar" style="background: transparent">
+
             {% block calendercontent %}
                 {% include "start/events.html" %}
             {% endblock %}
-        </div>
+
 </div>
 </div>
       </div>

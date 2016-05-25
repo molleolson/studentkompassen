@@ -162,6 +162,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/start/nationmain/'
+LOGIN_REDIRECT_URL = '/start/nationmain/ourevents'
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/start/'
