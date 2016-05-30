@@ -197,20 +197,23 @@ body {
 /*******************************************/
 @media screen and (max-width: 767px) and (min-width: 0px) {
 body {
+    overflow-y: hidden;
 }
+    #calendarMinibox{
+    }
 
 #navbarbackgrounded{
     background-image: none!important;
 
 }
   #calendarBckg{
-            height:500px;
-            width:98%;
-         background: url('/static/start/SiluettUA_blue.png') no-repeat;
-                    background-size: 100%;
-                    background-position: bottom;
-                    opacity: 1;
-                    position: absolute;
+      height:500px;
+      width:98%;
+      background: url('/static/start/SiluettUA_blue.png') no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      opacity: 1;
+      position: absolute;
 
         }
 
@@ -595,11 +598,10 @@ rgb(51,153,255); #3399FF*/
     position:relative;
     display: block;
     max-width: 150px;
-
     width:100px;
     left: 50%;
     margin-left:-50px;
-    bottom:0px;
+    bottom: 30px;
 }
 div{
     display: block;
