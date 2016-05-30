@@ -16,7 +16,7 @@
     <div class="control-label">
         {{field.label_tag}}
     </div>
-<span class="controls-{{ field.auto_id }} ">
+<span class="controls-{{ field.auto_id }} " id="form-username">
     {{field}}
 
     {% if field.errors %}<span class="help-inline">{{ field.errors|join:", " }}</span>{% endif %}

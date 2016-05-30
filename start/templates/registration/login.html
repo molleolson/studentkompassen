@@ -2,13 +2,21 @@
 <!-- inlogg för nationer -->
 
 {% block main %}
-<div class = "container col-xs-8 col-xs-offset-3 col-md-offset-4 col-md-2 " style = "background-color: #A8D6FF	 ">
+<div class="container-fluid" id="loginBox2" >
+    <div class="row">
+        <div class="col-sm-12 col-md-12 "  >
+            <h1 class="text-center login-title">Sign in</h1>
+            <div class="account-wall">
+                      <form class = "form-signin" action="/sv/accounts/login" method="post">
 
-    <form class = "form-signin" action="/sv/accounts/login" method="post">
-        <h2 class = "form-signin-heading"> Please sign in </h2>
     {% csrf_token %}
     {% include "form.html" with form=form %}
-    <input type="submit" value="Login"/>
-</form>
-{% endblock %}
+    <input type="submit" class="btn btn-block btn-social btn-facebook" id="loginbtnNation" value="Login">
+    </form>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+{% endblock %}
