@@ -197,20 +197,23 @@ body {
 /*******************************************/
 @media screen and (max-width: 767px) and (min-width: 0px) {
 body {
+    overflow-y: hidden;
 }
+    #calendarMinibox{
+    }
 
 #navbarbackgrounded{
     background-image: none!important;
 
 }
   #calendarBckg{
-            height:500px;
-            width:98%;
-         background: url('/static/start/SiluettUA_blue.png') no-repeat;
-                    background-size: 100%;
-                    background-position: bottom;
-                    opacity: 1;
-                    position: absolute;
+      height:500px;
+      width:98%;
+      background: url('/static/start/SiluettUA_blue.png') no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      opacity: 1;
+      position: absolute;
 
         }
 
@@ -317,6 +320,9 @@ margin:5px;
 /*******************************************/
 /*******************************************/
 @media screen and (min-width:1200px) {
+#calendarMinibox{
+    height:600px;
+    }
 
     #calendarBckg{
             height:600px;
@@ -595,11 +601,10 @@ rgb(51,153,255); #3399FF*/
     position:relative;
     display: block;
     max-width: 150px;
-
     width:100px;
     left: 50%;
     margin-left:-50px;
-    bottom:0px;
+    bottom: 30px;
 }
 div{
     display: block;
@@ -1107,6 +1112,94 @@ outline:0;
     width:600px;
     border-radius: 5px;
     background-color:#fafafa;
+}
+#loginBox2{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+    height:260px;
+}
+#id_username {
+    height: 50px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#id_username {
+    height: 33px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#id_password {
+    height: 33px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#loginbtnNation{
+    margin-top: 15px;
+        width:550px;
+    height:40px;
+
 }
 #nationinlogBTN{
     background-color: white;
