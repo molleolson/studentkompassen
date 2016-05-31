@@ -30,7 +30,7 @@ def index(request, category=None):
     else:
         menu_active_item = category
     today = datetime.now()
-    todayhour = today.hour-1
+    todayhour = today.hour+1
     todayminute = today.minute
     delta = timedelta(days=1)
     todays_weekday = today.strftime('%A')
@@ -95,7 +95,7 @@ def events(request, category=None):
     delta = timedelta(days=1)
     selected_weekday = selected_date.strftime('%A')
     today = datetime.now()
-    todayhour = today.hour-1
+    todayhour = today.hour+1
 
     event_test = Event.objects.filter(Q(startdate__lte=selected_date + delta), Q(enddate__gte=selected_date),
                                       Q(weekdays__name__startswith=selected_weekday))
