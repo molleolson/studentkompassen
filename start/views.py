@@ -69,21 +69,20 @@ def index(request, category=None):
             events = events.filter(categories__name__istartswith=category)
 
     events = sorted(events, key=lambda e: e.startdate.time())
-
-    def filtering_fn(event):
-        eventfiltering = Event.objects.filter(
-            Q(weekdays__isnull=True))
-        if event in eventfiltering:
-            return True
-        else:
-            eventfiltering=Event.objects.filter(
-            Q(weekdays__name__startswith=todays_weekday), Q(enddate__hour__gte=todayhour)|Q(startdate__hour__gte=todayhour))
-            if event in eventfiltering:
-                return True
-        return False
+    # def filtering_fn(event):
+    #     eventfiltering = Event.objects.filter(
+    #         Q(weekdays__isnull=True))
+    #     if event in eventfiltering:
+    #         return True
+    #     else:
+    #         eventfiltering=Event.objects.filter(
+    #         Q(weekdays__name__startswith=todays_weekday), Q(enddate__hour__lte=todayhour))
+    #         if event in eventfiltering:
+    #             return True
+    #     return False
 
     #events = filter(lambda e: e.name.startswith('F'), events)
-    events = filter(filtering_fn, events)
+    #events = filter(filtering_fn, events)
 
     return render(request, 'start/main.html', locals())
 
@@ -130,21 +129,6 @@ def events(request, category=None):
         else:
             events = events.filter(categories__name__istartswith=category)
 
-    def filtering_fn(event):
-        eventfiltering = Event.objects.filter(
-            Q(weekdays__isnull=True))
-        if event in eventfiltering:
-            return True
-        else:
-            eventfiltering = Event.objects.filter(
-                Q(weekdays__name__startswith=todays_weekday),
-                Q(enddate__hour__gte=todayhour) | Q(startdate__hour__gte=todayhour))
-            if event in eventfiltering:
-                return True
-        return False
-
-    if selected_date == today.date:
-        events = filter(filtering_fn, events)
 
     events = sorted(events, key=lambda e: e.startdate.time())
 
