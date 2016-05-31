@@ -71,37 +71,4 @@ function writeDate() {
     var month = monthList[eventDate.getMonth()];
 
     document.getElementById("getMonth").innerHTML = month;
-    /*
-    var weekdaysv = new Array(7);
-    weekday[0] = "Söndag";
-    weekday[1] = "Måndag";
-    weekday[2] = "Tisdag";
-    weekday[3] = "Onsdag";
-    weekday[4] = "Torsdag";
-    weekday[5] = "Fredag";
-    weekday[6] = "Lördag";
-
-    var daysv = weekdaysv[eventDate.getDay()];
-    document.getElementById("getDaysv").innerHTML = daysv;
-
-    var datesv = eventDate.getDate();
-    document.getElementById("getDatesv").innerHTML = datesv;
-
-    var monthListsv = new Array(12);
-
-    monthList[0] = "Januari";
-    monthList[1] = "Februari";
-    monthList[2] = "Mars";
-    monthList[3] = "April";
-    monthList[4] = "Maj";
-    monthList[5] = "Juni";
-    monthList[6] = "Juli";
-    monthList[7] = "Augusti";
-    monthList[8] = "September";
-    monthList[9] = "Oktober";
-    monthList[10] = "November";
-    monthList[11] = "December";
-
-    var monthsv = monthListsv[eventDate.getMonth()];
-    document.getElementById("getMonthsv").innerHTML = monthsv; */
 }

@@ -30,10 +30,12 @@ def index(request, category=None):
     else:
         menu_active_item = category
     today = datetime.now()
+    todayhour = today.hour-1
+    todayminute = today.minute
     delta = timedelta(days=1)
     todays_weekday = today.strftime('%A')
 
-    event_test = Event.objects.filter(Q(startdate__lte=timezone.now() + delta), Q(enddate__gte=timezone.now()),
+    event_test = Event.objects.filter(Q(startdate__lte=today + delta), Q(enddate__gte=today),
                          Q(weekdays__name__startswith=todays_weekday))
 
     if category is not None:
@@ -45,8 +47,8 @@ def index(request, category=None):
 
     if event_test.exists():
         events = Event.objects.filter(
-            Q(startdate__lte=timezone.now() + delta),
-            Q(enddate__gte=timezone.now()),
+            Q(startdate__lte=today + delta),
+            Q(enddate__gte=today),
             Q(weekdays__name__startswith=todays_weekday) |
             Q(weekdays__isnull=True)
 
@@ -54,8 +56,8 @@ def index(request, category=None):
 
     else:
         events = Event.objects.filter(
-            Q(startdate__lte=timezone.now() + delta),
-            Q(enddate__gte=timezone.now()),
+            Q(startdate__lte=today + delta),
+            Q(enddate__gte=today),
             Q(weekdays__isnull=True)
         ).order_by('startdate')
 
@@ -66,16 +68,34 @@ def index(request, category=None):
         else:
             events = events.filter(categories__name__istartswith=category)
 
+    events = sorted(events, key=lambda e: e.startdate.time())
+
+    def filtering_fn(event):
+        eventfiltering = Event.objects.filter(
+            Q(weekdays__isnull=True))
+        if event in eventfiltering:
+            return True
+        else:
+            eventfiltering=Event.objects.filter(
+            Q(weekdays__name__startswith=todays_weekday), Q(enddate__hour__gte=todayhour)|Q(startdate__hour__gte=todayhour))
+            if event in eventfiltering:
+                return True
+        return False
+
+    #events = filter(lambda e: e.name.startswith('F'), events)
+    events = filter(filtering_fn, events)
+
     return render(request, 'start/main.html', locals())
 
 
 ########### Inläsning via kalendern ###########
 def events(request, category=None):
 
-    selected_date = timezone.make_aware(datetime.strptime(request.GET.get('date'), "%Y-%m-%d"),
-                                        timezone.get_default_timezone())
+    selected_date = datetime.strptime(request.GET.get('date'), "%Y-%m-%d")
     delta = timedelta(days=1)
     selected_weekday = selected_date.strftime('%A')
+    today = datetime.now()
+    todayhour = today.hour-1
 
     event_test = Event.objects.filter(Q(startdate__lte=selected_date + delta), Q(enddate__gte=selected_date),
                                       Q(weekdays__name__startswith=selected_weekday))
@@ -110,6 +130,24 @@ def events(request, category=None):
         else:
             events = events.filter(categories__name__istartswith=category)
 
+    def filtering_fn(event):
+        eventfiltering = Event.objects.filter(
+            Q(weekdays__isnull=True))
+        if event in eventfiltering:
+            return True
+        else:
+            eventfiltering = Event.objects.filter(
+                Q(weekdays__name__startswith=todays_weekday),
+                Q(enddate__hour__gte=todayhour) | Q(startdate__hour__gte=todayhour))
+            if event in eventfiltering:
+                return True
+        return False
+
+    if selected_date == today.date:
+        events = filter(filtering_fn, events)
+
+    events = sorted(events, key=lambda e: e.startdate.time())
+
     return render(request, 'start/events.html', locals())
 
 
@@ -125,6 +163,7 @@ def myprofile(request):
     menu_active_item = 'myprofile'
     events = Event.objects.filter(startdate__lt=timezone.now(), enddate__gte=timezone.now()) \
         .order_by('startdate')
+    events = sorted(events, key=lambda e: e.startdate.time())
 
     return render(request, 'start/myprofile.html', locals())
 
@@ -146,13 +185,13 @@ def nationmain(request):
     nbr = nationname.find("_")
     nationname = nationname[:(nbr)]
 
-    event_test = Event.objects.filter(Q(startdate__lte=timezone.now() + delta), Q(enddate__gte=timezone.now()),
+    event_test = Event.objects.filter(Q(startdate__lte=today + delta), Q(enddate__gte=today),
                                       Q(weekdays__name__startswith=todays_weekday))
 
     if event_test.exists():
         events = Event.objects.filter(
-            Q(startdate__lte=timezone.now() + delta),
-            Q(enddate__gte=timezone.now()),
+            Q(startdate__lte=today + delta),
+            Q(enddate__gte=today),
             Q(weekdays__name__startswith=todays_weekday) |
             Q(weekdays__isnull=True)
 
@@ -160,10 +199,11 @@ def nationmain(request):
 
     else:
         events = Event.objects.filter(
-            Q(startdate__lte=timezone.now() + delta),
-            Q(enddate__gte=timezone.now()),
+            Q(startdate__lte=today + delta),
+            Q(enddate__gte=today),
             Q(weekdays__isnull=True)
         ).order_by('startdate')
+    events = sorted(events, key=lambda e: e.startdate.time())
 
     return render(request, 'start/nationmain.html', locals())
 
@@ -177,6 +217,7 @@ def ourevents(request):
     activeHost = Host.objects.filter(name__startswith=username)
     menu_active_item = 'ourevents'
     events = Event.objects.all().filter(host=activeHost, enddate__gte=timezone.now()).order_by('startdate')
+    events = sorted(events, key=lambda e: e.startdate.time())
     return render(request, 'start/ourevents.html', locals())
 
 
@@ -189,6 +230,7 @@ def reload_ourevents(request):
     activeHost = Host.objects.filter(name__startswith=username)
 
     events = Event.objects.all().filter(host=activeHost).order_by('startdate')
+    events = sorted(events, key=lambda e: e.startdate.time())
     return render(request, 'start/events.html', locals())
 
 

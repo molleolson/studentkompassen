@@ -10,8 +10,8 @@ $(function() {
         onSelect: function()
         {
             var date = $(this).datepicker('getDate');
-            var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-            datum = new Date(date-tzoffset);
+            /*var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds*/
+            datum = new Date(date);
             eventDate = date;
             writeDate();
             $("div.calendar").load("{% url "start:events_with_type" menu_active_item %}?date=" + datum.toISOString().slice(0, 10), function()
@@ -26,8 +26,8 @@ $(function() {
 function switchDateCalender(eventDate){
     $('#datepicker').datepicker('setDate', eventDate);
     var date=eventDate;
-    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-    datum = new Date(date-tzoffset);
+    /*var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds*/
+    datum = new Date(date);
 
     $("div.calendar").load("{% url "start:events_with_type" menu_active_item %}?date=" + datum.toISOString().slice(0, 10), function()
             {
@@ -79,11 +79,11 @@ function switchDateCalender(eventDate){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <button class=" glyphicon glyphicon-chevron-left" id="dayPickerBtnLeft" href="#"></button>
         <button  class = "glyphicon" id="dayPickerBtn"><span id="getDay"></span> <span id="getDate" ></span> <span id="getMonth" ></span></></button>
         <button class="next glyphicon glyphicon-chevron-right" id="dayPickerBtnRight" style="display: inline;" href="#" ></button>
-
+<div class="calendar" style="background: transparent">
             {% block calendercontent %}
                 {% include "start/events.html" %}
             {% endblock %}
-
+</div>
 </div>
 </div>
       </div>
