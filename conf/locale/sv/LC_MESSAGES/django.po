@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-25 11:39+0200\n"
+"POT-Creation-Date: 2016-06-01 10:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: start/models.py:33 start/models.py:59
+#: start/models.py:28 start/models.py:54
 msgid "Swedish description"
 msgstr "Beskrivning på svenska"
 
-#: start/models.py:34 start/models.py:60
+#: start/models.py:29 start/models.py:55
 msgid "English description"
 msgstr "Beskrivning på engelska"
 
-#: start/models.py:58
+#: start/models.py:53
 msgid "Name of Event"
 msgstr "Eventnamn"
 
-#: start/models.py:61
+#: start/models.py:56
 msgid "Startdate and time"
 msgstr "Startdatum och tid"
 
-#: start/models.py:62
+#: start/models.py:57
 msgid "Enddate and time"
 msgstr "Slutdatum och tid"
 
-#: start/models.py:64
+#: start/models.py:59
 msgid "Tags"
 msgstr "Taggar"
 
-#: start/models.py:65
+#: start/models.py:60
 msgid "Weekdays"
 msgstr "Veckodagar"
 
-#: start/models.py:67
+#: start/models.py:62
 msgid "Host"
 msgstr "Arrangör"
 
-#: start/models.py:68
+#: start/models.py:63
 msgid "Location"
 msgstr "Plats"
 
-#: start/templates/pagelayout.html:78
+#: start/templates/pagelayout.html:80
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: start/templates/pagelayout.html:91
+#: start/templates/pagelayout.html:93
 msgid "Logout"
 msgstr "Logga ut"
 
-#: start/templates/pagelayout.html:94
+#: start/templates/pagelayout.html:96
 msgid "Login"
 msgstr "Logga in"
 
 #: start/templates/start/addevent.html:24
+#: start/templates/start/editevent.html:26
+msgid "Regret"
+msgstr "Ångra"
+
+#: start/templates/start/addevent.html:27
 #: start/templates/start/nationmain.html:9
 msgid "Create event"
 msgstr "Skapa event"
-
-#: start/templates/start/addevent.html:29
-#: start/templates/start/editevent.html:28
-msgid "Regret"
-msgstr "Ångra"
 
 #: start/templates/start/calenderlista.html:17
 #: start/templates/start/not_used/about.html:10
@@ -100,7 +100,7 @@ msgstr "Tid"
 msgid "Editing event:"
 msgstr "Redigera eventet:"
 
-#: start/templates/start/editevent.html:25
+#: start/templates/start/editevent.html:29
 msgid "Edit event"
 msgstr "Redigera event"
 
@@ -172,6 +172,10 @@ msgstr "Presentation"
 msgid "All events"
 msgstr "Alla event"
 
+#: start/templates/start/nationmain.html:23
+msgid "To student view"
+msgstr "Till studentsida"
+
 #: start/templates/start/ourevents.html:9
 msgid "Welcome"
 msgstr "Välkommen"
@@ -197,7 +201,6 @@ msgid "Svenska"
 msgstr "Svenska"
 
 #: start.Category/name:4
-#| msgid "Clubs"
 msgid "Club"
 msgstr "Klubb"
 

@@ -17,7 +17,13 @@ href = "{% url 'start:nationmain' %}"
 
 {% block menu_item_2 %}
 
+{% if user.is_authenticated %}
+        {% if request.user.social_auth.count %}
+        {% else %}
+<li><a href="{% url 'start:index' %}" >{% trans "To student view" %}</a></li>
 
+        {% endif %}
+          {% endif %}
 
 {% if request.user.social_auth.count %}
 <meta http-equiv="refresh" content="0;url=http://130.238.15.202:8000/start">
