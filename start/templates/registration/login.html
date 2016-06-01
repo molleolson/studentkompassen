@@ -2,12 +2,12 @@
 <!-- inlogg för nationer -->
 
 {% block main %}
-<div class="container-fluid" id="loginBox2" >
+<div class="container-fluid " id="loginBox2" >
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 "  >
             <h1 class="text-center login-title">Sign in host users</h1>
                 <div class="account-wall">
-                      <form class="form-signin" action="/sv/accounts/login" method="post">
+                      <form class="form-signin" id ="loginFrmNation"action="/sv/accounts/login" method="post">
                             {% csrf_token %}
                             {% include "form.html" with form=form %}
                             <button type="submit" class="btn btn-block btn-social btn-facebook" id="loginbtnNation">Login</button>

@@ -34,6 +34,76 @@ body{
 body {
             background-color: #fafafa;
         }
+    #loginBox{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+}
+    #loginBox2{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+    height:260px;
+}
+    #loginbtnNation{
+    margin-top: 15px;
+        width:550px;
+    height:40px;
+
+}
+
+#id_username {
+    height: 33px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#id_password {
+    height: 33px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
      #calendarBckg{
             height:600px;
             width:1130px;
@@ -56,7 +126,7 @@ body {
         padding-left: 0;
         margin-right: auto;
         margin-left: auto;
-        height: 250px;
+        height: 120px;
         position:relative;
 
         }
@@ -199,9 +269,87 @@ body {
 body {
     overflow-y: hidden;
 }
+    #nationinlogBTN{
+        width:349px;
+        margin-left:5px;
+    }
+    #fbBtn{
+        width:349px;
+        margin-left:5px;
+    }
     #calendarMinibox{
     }
+    #loginBox{
+    border: 1px solid lightgray;
+    width:359px;
+    border-radius: 5px;
+    background-color:#fafafa;
+}
+#loginBox2{
+    width:300px;
+     border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color:#fafafa;
+    height:260px;
+}
+#loginbtnNation{
+    width:280px;
+}
+#loginFrmNation{
+     width:280px;
+    margin-left:10px;
+}
 
+#id_username {
+    height: 33px;
+    width:280px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#id_password {
+    height: 33px;
+    width:280px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
 #navbarbackgrounded{
     background-image: none!important;
 
@@ -323,7 +471,76 @@ margin:5px;
 #calendarMinibox{
     height:600px;
     }
+    #loginBox{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+}
+#loginBox2{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+    height:260px;
+}
+#loginbtnNation{
+    margin-top: 15px;
+        width:550px;
+    height:40px;
 
+}
+
+#id_username {
+    height: 33px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+#id_password {
+    height: 33px;
+    width:550px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
     #calendarBckg{
             height:600px;
             width:1150px;
@@ -1003,7 +1220,19 @@ a.ui-state-highlight {
 
 
 @media screen and (min-width: 768px)and (max-width: 1199px) {
+#loginBox2{
+    border: 1px solid lightgray;
+    width:600px;
+    border-radius: 5px;
+    background-color:#fafafa;
+    height:260px;
+}
+    #loginbtnNation{
+    margin-top: 15px;
+        width:550px;
+    height:40px;
 
+}
   #btnlogin{
                     display: inline-block;
 
@@ -1107,104 +1336,14 @@ outline:0;
     #btnBox{
         margin-bottom: 10px;
     }
-#loginBox{
-    border: 1px solid lightgray;
-    width:600px;
-    border-radius: 5px;
-    background-color:#fafafa;
-}
-#loginBox2{
-    border: 1px solid lightgray;
-    width:600px;
-    border-radius: 5px;
-    background-color:#fafafa;
-    height:260px;
-}
-#id_username {
-    height: 50px;
-    width:550px;
-    margin: 0;
-    padding: 0 20px;
-    vertical-align: middle;
-    background: #f8f8f8;
-    border: 3px solid #ddd;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 50px;
-    color: #888;
-        -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;
-}
-#id_username {
-    height: 33px;
-    width:550px;
-    margin: 0;
-    padding: 0 20px;
-    vertical-align: middle;
-    background: #f8f8f8;
-    border: 3px solid #ddd;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 50px;
-    color: #888;
-        -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;
-}
-#id_password {
-    height: 33px;
-    width:550px;
-    margin: 0;
-    padding: 0 20px;
-    vertical-align: middle;
-    background: #f8f8f8;
-    border: 3px solid #ddd;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 50px;
-    color: #888;
-        -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;
-}
-#loginbtnNation{
-    margin-top: 15px;
-        width:550px;
-    height:40px;
 
-}
+
 #nationinlogBTN{
     background-color: white;
     border: 1px solid lightgray;
 }
+
+
 .fade.in{
     background-color: #484848;
 }
