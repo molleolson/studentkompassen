@@ -63,7 +63,7 @@ function switchDateCalender(eventDate){
          {% if user.is_authenticated %}
         {% if request.user.social_auth.count %}
         {% else %}
-<li><a href="{% url 'start:nationmain' %}" >{% trans "To host view" %}</a></li>
+<li><a href="{% url 'start:ourevents' %}" >{% trans "To host view" %}</a></li>
 
         {% endif %}
           {% endif %}
