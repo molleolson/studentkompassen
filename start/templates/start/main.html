@@ -10,8 +10,11 @@ $(function() {
         onSelect: function()
         {
             var date = $(this).datepicker('getDate');
-            /*var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds*/
+            tzoffset = (new Date()).getTimezoneOffset() ; //* 60000 offset in milliseconds*/
             datum = new Date(date);
+            datum.setMinutes(-tzoffset)
+            console.log(datum)
+            console.log(tzoffset)
             eventDate = date;
             writeDate();
             $("div.calendar").load("{% url "start:events_with_type" menu_active_item %}?date=" + datum.toISOString().slice(0, 10), function()
@@ -27,7 +30,9 @@ function switchDateCalender(eventDate){
     $('#datepicker').datepicker('setDate', eventDate);
     var date=eventDate;
     /*var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds*/
+    tzoffset = (new Date()).getTimezoneOffset() ; //* 60000 offset in milliseconds*/
     datum = new Date(date);
+    datum.setMinutes(-tzoffset)
 
     $("div.calendar").load("{% url "start:events_with_type" menu_active_item %}?date=" + datum.toISOString().slice(0, 10), function()
             {
